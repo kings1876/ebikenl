@@ -1,12 +1,10 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { Link } from '@/lib/router';
 import { PRODUCTS, ALL_BRANDS, TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
-import { FilterSidebar } from '../components/FilterSidebar';
 import { TrustpilotWidget } from '../components/TrustpilotWidget';
-import { FilterState } from '../types/ebike';
 import {
   Compass,
   ArrowRight,
@@ -15,9 +13,19 @@ import {
   Coins,
   ShieldCheck,
   Truck,
-  SlidersHorizontal,
   ChevronRight
 } from 'lucide-react';
+
+const BIKE_TYPES = [
+  { sub: 'Stadsfietsen', blurb: 'Comfortabel en betrouwbaar voor woon-werkverkeer en dagelijks gebruik.' },
+  { sub: 'Trekkingfietsen', blurb: 'Sportief en vol uitrusting voor lange tochten en vakanties.' },
+  { sub: 'Elektrische mountainbikes', blurb: 'Kracht en grip voor bos, heuvels en technische paden.' },
+  { sub: 'Speed pedelecs', blurb: 'Tot 45 km/u voor lange forenzen-afstanden. Kenteken vereist.' },
+  { sub: 'Vouwfietsen', blurb: 'Compact mee in trein, auto of camper.' },
+  { sub: 'Bakfietsen', blurb: 'Ruimte voor kinderen, boodschappen en bagage.' },
+  { sub: 'Gravel & racefietsen', blurb: 'Snelle, lichte e-bikes voor sportieve rijders.' },
+  { sub: 'Kinder- & jongerenfietsen', blurb: 'Veilige elektrische fietsen voor jongeren.' }
+];
 
 export const HomePage: React.FC = () => {
   useEffect(() => {
@@ -25,67 +33,13 @@ export const HomePage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-
-  const initialFilters: FilterState = {
-    search: '',
-    category: 'Alle',
-    subCategory: 'Alle',
-    brands: [],
-    doelgroep: [],
-    motorpositie: [],
-    motormerk: [],
-    accucapaciteit: [],
-    actieradius: [],
-    framemaat: [],
-    versnelling: [],
-    aandrijving: [],
-    remtype: [],
-    wielmaat: [],
-    gewichtKlasse: [],
-    kleur: [],
-    maximaleSnelheid: [],
-    leverbaarheid: [],
-    tags: [],
-    maxPrice: 8000,
-    minPrice: 0,
-    sortBy: 'populariteit'
-  };
-
-  const [filters, setFilters] = useState<FilterState>(initialFilters);
-
-  const filteredProducts = useMemo(() => {
-    return PRODUCTS.filter((p) => {
-      if (filters.search) {
-        const query = filters.search.toLowerCase();
-        if (
-          !p.title.toLowerCase().includes(query) &&
-          !p.brand.toLowerCase().includes(query) &&
-          !p.model.toLowerCase().includes(query)
-        ) {
-          return false;
-        }
-      }
-
-      if (filters.category !== 'Alle' && p.category !== filters.category) return false;
-      if (filters.subCategory !== 'Alle' && p.subCategory !== filters.subCategory) return false;
-      if (filters.brands.length > 0 && !filters.brands.includes(p.brand)) return false;
-      if (filters.doelgroep.length > 0 && !filters.doelgroep.includes(p.doelgroep)) return false;
-      if (filters.motorpositie.length > 0 && !filters.motorpositie.includes(p.motorpositie)) return false;
-      if (filters.motormerk.length > 0 && !filters.motormerk.includes(p.motormerk)) return false;
-      if (filters.accucapaciteit.length > 0 && !filters.accucapaciteit.includes(p.accucapaciteit)) return false;
-      if (filters.tags.length > 0) {
-        if (!p.tags.some((t) => filters.tags.includes(t))) return false;
-      }
-      if (p.price > filters.maxPrice) return false;
-      return true;
-    }).sort((a, b) => {
-      if (filters.sortBy === 'prijs-laag-hoog') return a.price - b.price;
-      if (filters.sortBy === 'prijs-hoog-laag') return b.price - a.price;
-      if (filters.sortBy === 'beoordeling') return b.rating - a.rating;
-      return b.reviewCount - a.reviewCount;
-    });
-  }, [filters]);
+  const featuredProducts = useMemo(
+    () =>
+      PRODUCTS.filter((p) => p.category === 'Elektrische fietsen')
+        .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)
+        .slice(0, 6),
+    []
+  );
 
   return (
     <div className="space-y-8">
@@ -228,13 +182,9 @@ export const HomePage: React.FC = () => {
             <span className="font-bold text-slate-800 uppercase tracking-wider">
               Onze 24 A-Merken via Distributeur:
             </span>
-            <Link to="/taxonomie" className="text-blue-600 hover:underline font-semibold flex items-center gap-1">
-              <span>Bekijk alle merken</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </Link>
           </div>
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-semibold text-slate-700">
-            {ALL_BRANDS.slice(0, 12).map((brand) => (
+          <div className="flex flex-wrap items-center gap-2 pb-1 text-xs font-semibold text-slate-700">
+            {ALL_BRANDS.map((brand) => (
               <Link
                 key={brand}
                 to={`/merk/${brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
@@ -247,78 +197,84 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Faceted Catalog Section */}
+      {/* Shop by category */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-200">
+        <div className="mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight font-display">
+            Shop per categorie
+          </h2>
+          <p className="text-xs text-slate-500 mt-0.5">
+            Van stadsfiets tot speed pedelec: kies het type e-bike dat bij je past.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {BIKE_TYPES.map((t) => (
+            <Link
+              key={t.sub}
+              to={`/categorie/elektrische-fietsen?sub=${encodeURIComponent(t.sub)}`}
+              className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-md transition-all"
+            >
+              <div className="font-bold text-slate-900 font-display group-hover:text-blue-600">{t.sub}</div>
+              <p className="text-xs text-slate-500 mt-1 leading-relaxed">{t.blurb}</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-blue-600">
+                Bekijk <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Featured bikes */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex items-end justify-between gap-4 mb-6 pb-4 border-b border-slate-200">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight font-display">
-              Actueel Aanbod Elektrische Fietsen
+              Populaire e-bikes
             </h2>
-            <p className="text-xs text-slate-500 mt-0.5">
-              Toont {filteredProducts.length} modellen conform geselecteerde filters
+            <p className="text-xs text-slate-500 mt-0.5">Onze best beoordeelde modellen</p>
+          </div>
+          <Link
+            to="/categorie/elektrische-fietsen"
+            className="text-xs font-semibold text-blue-600 hover:underline flex items-center gap-1 shrink-0"
+          >
+            <span>Alle e-bikes</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          {featuredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Why us */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-2">
+            <ShieldCheck className="w-6 h-6 text-blue-600" />
+            <div className="font-bold text-slate-900 font-display">Alleen nieuwe A-merken</div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Officiële distributiekanalen met volledige fabrieksgarantie op frame, motor en accu.
             </p>
           </div>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
-              className="lg:hidden flex items-center gap-1.5 px-3 py-2 bg-white rounded-lg border border-slate-200 text-xs font-semibold text-slate-700 shadow-2xs"
-            >
-              <SlidersHorizontal className="w-3.5 h-3.5" />
-              <span>Filters ({filteredProducts.length})</span>
-            </button>
-
-            <div className="flex items-center gap-2 text-xs">
-              <span className="text-slate-500 font-medium hidden sm:inline">Sorteer op:</span>
-              <select
-                value={filters.sortBy}
-                onChange={(e) =>
-                  setFilters({ ...filters, sortBy: e.target.value as any })
-                }
-                className="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium focus:outline-none focus:ring-1 focus:ring-blue-600"
-              >
-                <option value="populariteit">Meest populair</option>
-                <option value="prijs-laag-hoog">Prijs laag → hoog</option>
-                <option value="prijs-hoog-laag">Prijs hoog → laag</option>
-                <option value="nieuw">Nieuwste modellen</option>
-                <option value="beoordeling">Hoogste TrustScore</option>
-              </select>
-            </div>
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-2">
+            <Truck className="w-6 h-6 text-blue-600" />
+            <div className="font-bold text-slate-900 font-display">100% rijklaar geleverd</div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Thuisbezorgd en afgesteld op jouw lengte, of in de fabrieksdoos voor zelfmontage.
+            </p>
           </div>
-        </div>
-
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Desktop Filter Sidebar */}
-          <div className="hidden lg:block lg:col-span-3 sticky top-24">
-            <FilterSidebar
-              filters={filters}
-              onFilterChange={setFilters}
-              onResetFilters={() => setFilters(initialFilters)}
-              totalProductsCount={filteredProducts.length}
-            />
-          </div>
-
-          {/* Mobile Filter Drawer */}
-          {isMobileFilterOpen && (
-            <div className="lg:hidden col-span-12 mb-6">
-              <FilterSidebar
-                filters={filters}
-                onFilterChange={setFilters}
-                onResetFilters={() => setFilters(initialFilters)}
-                totalProductsCount={filteredProducts.length}
-              />
-            </div>
-          )}
-
-          {/* Product Grid */}
-          <div className="col-span-12 lg:col-span-9">
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          </div>
+          <Link
+            to="/keuzehulp"
+            className="bg-blue-600 hover:bg-blue-700 text-white rounded-2xl p-5 space-y-2 transition-colors"
+          >
+            <Compass className="w-6 h-6" />
+            <div className="font-bold font-display">Weet je niet welke e-bike?</div>
+            <p className="text-xs text-blue-100 leading-relaxed">
+              Beantwoord een paar vragen en vind in 1 minuut jouw ideale fiets.
+            </p>
+          </Link>
         </div>
       </section>
 
