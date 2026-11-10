@@ -2,7 +2,7 @@
 
 import React, { useMemo, useEffect } from 'react';
 import { Link } from '@/lib/router';
-import { PRODUCTS, ALL_BRANDS, TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
+import { PRODUCTS, TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { TrustpilotWidget } from '../components/TrustpilotWidget';
 import {
@@ -176,29 +176,6 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 24 Brands Quick Ribbon */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white p-5 rounded-2xl border border-slate-200">
-          <div className="flex items-center justify-between mb-3 text-xs">
-            <span className="font-bold text-slate-800 uppercase tracking-wider">
-              {tr("Onze 24 A-Merken via Distributeur:")}
-            </span>
-          </div>
-          <div className="flex flex-wrap items-center gap-2 pb-1 text-xs font-semibold text-slate-700">
-            {ALL_BRANDS.map((brand) => (
-              <Link
-                key={brand}
-                to={`/merk/${brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                className="px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 border border-slate-200 whitespace-nowrap transition-colors"
-              >
-                {tr(brand)}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Shop by category */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="mb-6">
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight font-display">
