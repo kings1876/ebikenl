@@ -205,6 +205,9 @@ export const CategoryPage: React.FC = () => {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
+          {filteredProducts.length === 0 && (
+            <p className="text-sm text-slate-600 py-10 text-center">{tr("Geen modellen gevonden. Het assortiment wordt binnenkort aangevuld.")}</p>
+          )}
         </div>
       </div>
     </div>

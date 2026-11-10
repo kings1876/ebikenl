@@ -2,7 +2,6 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Product, CartItem, Framemaat, Kleur } from '../types/ebike';
-import { PRODUCTS } from '../data/ebikes';
 
 interface ShopContextType {
   cart: CartItem[];
@@ -34,18 +33,7 @@ interface ShopContextType {
 const ShopContext = createContext<ShopContextType | undefined>(undefined);
 
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Initial cart with 1 demo item
-  const [cart, setCart] = useState<CartItem[]>(() => {
-    return [
-      {
-        product: PRODUCTS[0],
-        quantity: 1,
-        selectedFramemaat: '53 cm',
-        selectedKleur: 'Blauw',
-        assemblyOption: '100% Rijklaar thuisbezorgd'
-      }
-    ];
-  });
+  const [cart, setCart] = useState<CartItem[]>([]);
 
   const [comparedProducts, setComparedProducts] = useState<Product[]>([]);
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);

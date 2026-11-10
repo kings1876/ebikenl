@@ -203,6 +203,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Featured bikes */}
+      {featuredProducts.length > 0 && (
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-end justify-between gap-4 mb-6 pb-4 border-b border-slate-200">
           <div>
@@ -225,6 +226,7 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
       </section>
+      )}
 
       {/* Why us */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

@@ -41,7 +41,7 @@ export const KeuzehulpPage: React.FC = () => {
   };
 
   const recommendations = getRecommendations();
-  const topMatch = recommendations[0] || PRODUCTS[0];
+  const topMatch = recommendations[0];
 
   const resetQuiz = () => {
     setStep(1);
@@ -201,7 +201,15 @@ export const KeuzehulpPage: React.FC = () => {
           </div>
         )}
 
-        {step === 5 && (
+        {step === 5 && !topMatch && (
+          <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center space-y-2">
+            <h2 className="text-lg font-bold text-slate-900">{tr("Ons assortiment wordt geladen")}</h2>
+            <p className="text-xs text-slate-600">{tr("We vullen momenteel de catalogus met nieuwe modellen. Kom binnenkort terug of bekijk alvast onze categorieën.")}</p>
+            <Link to="/categorie/elektrische-fietsen" className="inline-block px-5 py-2.5 bg-blue-600 text-white rounded-xl text-xs font-bold">{tr("Bekijk alle e-bikes")}</Link>
+          </div>
+        )}
+
+        {step === 5 && topMatch && (
           <div className="space-y-6">
             <div className="text-center">
               <div className="w-12 h-12 bg-emerald-100 text-[#00b67a] rounded-full flex items-center justify-center mx-auto mb-2">
