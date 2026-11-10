@@ -12,7 +12,6 @@ export const ComparePage: React.FC = () => {
   const { comparedProducts, removeFromCompare, clearCompare, quickAddToCart } = useShop();
 
   useEffect(() => {
-    document.title = 'E-Bikes Vergelijken | E-BIKE-TEKOOP.NL';
     window.scrollTo(0, 0);
   }, []);
 

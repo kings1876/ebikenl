@@ -8,7 +8,6 @@ import { Database, Layers, Tag, Filter, Globe, Code, ArrowRight } from 'lucide-r
 
 export const TaxonomyPage: React.FC = () => {
   useEffect(() => {
-    document.title = 'WooCommerce Taxonomie & Database Architectuur | E-BIKE-TEKOOP.NL';
     window.scrollTo(0, 0);
   }, []);
 

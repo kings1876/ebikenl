@@ -47,7 +47,6 @@ export const ProductDetailPage: React.FC = () => {
 
   useEffect(() => {
     if (product) {
-      document.title = `${product.title} | E-BIKE-TEKOOP.NL`;
       setSelectedImage(product.image);
       setSelectedFramemaat(product.framematen[0] || '50 cm');
       setSelectedKleur(product.kleuren[0] || 'Zwart');

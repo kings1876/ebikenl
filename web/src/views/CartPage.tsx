@@ -12,7 +12,6 @@ export const CartPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Winkelwagen | E-BIKE-TEKOOP.NL';
     window.scrollTo(0, 0);
   }, []);
 

@@ -11,7 +11,6 @@ export const OrderConfirmationPage: React.FC = () => {
   const state = location.state as any;
 
   useEffect(() => {
-    document.title = `Bestelling ${orderId} Bevestigd | E-BIKE-TEKOOP.NL`;
     window.scrollTo(0, 0);
   }, [orderId]);
 

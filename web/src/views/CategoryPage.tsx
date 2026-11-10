@@ -67,7 +67,6 @@ export const CategoryPage: React.FC = () => {
       category: currentCategory,
       subCategory: (subCategoryParam as SubCategory) || 'Alle'
     }));
-    document.title = `${subCategoryParam ? subCategoryParam : currentCategory} Kopen | E-BIKE-TEKOOP.NL`;
     window.scrollTo(0, 0);
   }, [currentCategory, subCategoryParam]);
 

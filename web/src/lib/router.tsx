@@ -2,6 +2,7 @@
 
 /**
  * Thin adapter so components ported from the react-router prototype keep working on Next.js.
+ * Also makes every internal link and navigation locale-aware (English lives under /en).
  */
 import NextLink from 'next/link';
 import {
@@ -12,17 +13,21 @@ import {
 } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import type { ComponentProps } from 'react';
+import { stripLocale, withLocale } from '@/i18n/config';
+import { useLocale } from '@/i18n/locale';
 
 type LinkProps = Omit<ComponentProps<typeof NextLink>, 'href'> & { to: string };
 
 export function Link({ to, ...rest }: LinkProps) {
-  return <NextLink href={to} {...rest} />;
+  const locale = useLocale();
+  return <NextLink href={withLocale(to, locale)} {...rest} />;
 }
 
 const STATE_KEY = 'ebt:nav-state';
 
 export function useNavigate() {
   const router = useRouter();
+  const locale = useLocale();
   return useCallback(
     (to: string, opts?: { state?: unknown }) => {
       try {
@@ -32,14 +37,14 @@ export function useNavigate() {
       } catch {
         /* storage unavailable: navigation still works, just without state */
       }
-      router.push(to);
+      router.push(withLocale(to, locale));
     },
-    [router],
+    [router, locale],
   );
 }
 
 export function useLocation() {
-  const pathname = usePathname();
+  const pathname = stripLocale(usePathname());
   const [state, setState] = useState<unknown>(undefined);
   useEffect(() => {
     try {
@@ -65,7 +70,7 @@ export function useSearchParams(): [
 ] {
   const params = useNextSearchParams();
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname(); // already includes /en when English
   const set = useCallback(
     (next: Record<string, string>) => {
       const qs = new URLSearchParams(next).toString();

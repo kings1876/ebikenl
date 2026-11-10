@@ -19,7 +19,6 @@ export const BrandPage: React.FC = () => {
 
   useEffect(() => {
     if (matchedBrand) {
-      document.title = `${matchedBrand} Elektrische Fietsen Kopen | Dealer E-BIKE-TEKOOP.NL`;
       window.scrollTo(0, 0);
     }
   }, [matchedBrand]);

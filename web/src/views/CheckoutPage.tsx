@@ -22,7 +22,6 @@ export const CheckoutPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Veilig Afrekenen | E-BIKE-TEKOOP.NL';
     window.scrollTo(0, 0);
   }, []);
 

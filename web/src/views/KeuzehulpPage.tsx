@@ -10,7 +10,6 @@ import { Sparkles, Check, ArrowRight, RotateCcw, Compass, ArrowLeft } from 'luci
 
 export const KeuzehulpPage: React.FC = () => {
   useEffect(() => {
-    document.title = 'E-Bike Keuzehulp (Vind jouw ideale fiets) | E-BIKE-TEKOOP.NL';
     window.scrollTo(0, 0);
   }, []);
 

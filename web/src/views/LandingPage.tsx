@@ -19,7 +19,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
     SEO_LANDING_PAGES.find((l) => l.slug === activeSlug) || SEO_LANDING_PAGES[0];
 
   useEffect(() => {
-    document.title = landing.metaTitle;
     window.scrollTo(0, 0);
   }, [landing]);
 

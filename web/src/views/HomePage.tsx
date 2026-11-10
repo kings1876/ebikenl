@@ -29,7 +29,6 @@ const BIKE_TYPES = [
 
 export const HomePage: React.FC = () => {
   useEffect(() => {
-    document.title = 'E-BIKE-TEKOOP.NL - Nieuwe Elektrische Fietsen van A-Merken';
     window.scrollTo(0, 0);
   }, []);
 
