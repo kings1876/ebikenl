@@ -3,6 +3,7 @@
 import React from 'react';
 import { Link } from '@/lib/router';
 import { ChevronRight, Home } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export interface BreadcrumbItem {
   label: string;
@@ -14,8 +15,10 @@ interface BreadcrumbsProps {
 }
 
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
+  const tr = useTr();
+
   return (
-    <nav aria-label="Kruimelpad" className="py-2.5 text-xs text-slate-500 overflow-x-auto">
+    <nav aria-label={tr("Kruimelpad")} className="py-2.5 text-xs text-slate-500 overflow-x-auto">
       <ol className="flex items-center gap-1.5 whitespace-nowrap">
         <li>
           <Link
@@ -23,7 +26,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
             className="flex items-center gap-1 text-slate-600 hover:text-blue-600 transition-colors"
           >
             <Home className="w-3.5 h-3.5" />
-            <span>Home</span>
+            <span>{tr("Home")}</span>
           </Link>
         </li>
 
@@ -37,11 +40,11 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
                   to={item.path}
                   className="text-slate-600 hover:text-blue-600 transition-colors"
                 >
-                  {item.label}
+                  {tr(item.label)}
                 </Link>
               ) : (
                 <span className="font-semibold text-slate-900 truncate max-w-xs sm:max-w-md">
-                  {item.label}
+                  {tr(item.label)}
                 </span>
               )}
             </li>

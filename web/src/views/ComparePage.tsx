@@ -7,8 +7,11 @@ import { Product } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Trash2, Plus, ShoppingBag, ArrowLeft } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export const ComparePage: React.FC = () => {
+  const tr = useTr();
+
   const { comparedProducts, removeFromCompare, clearCompare, quickAddToCart } = useShop();
 
   useEffect(() => {
@@ -22,10 +25,10 @@ export const ComparePage: React.FC = () => {
       <div className="flex items-center justify-between pb-4 border-b border-slate-200">
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
-            E-Bikes Vergelijken ({comparedProducts.length}/4)
+            {tr("E-Bikes Vergelijken (")}{tr(comparedProducts.length)}/4)
           </h1>
           <p className="text-xs text-slate-500 mt-0.5">
-            Vergelijk specificaties, motor, actieradius en prijzen zij aan zij
+            {tr("Vergelijk specificaties, motor, actieradius en prijzen zij aan zij")}
           </p>
         </div>
 
@@ -34,7 +37,7 @@ export const ComparePage: React.FC = () => {
             onClick={clearCompare}
             className="text-xs font-semibold text-rose-600 hover:text-rose-800"
           >
-            Alle modellen wissen
+            {tr("Alle modellen wissen")}
           </button>
         )}
       </div>
@@ -42,17 +45,17 @@ export const ComparePage: React.FC = () => {
       {comparedProducts.length === 0 ? (
         <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center space-y-4 max-w-lg mx-auto">
           <p className="text-sm font-bold text-slate-900">
-            Je hebt nog geen e-bikes geselecteerd om te vergelijken.
+            {tr("Je hebt nog geen e-bikes geselecteerd om te vergelijken.")}
           </p>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Klik op het weegschaal-icoon op een productkaart om maximaal 4 fietsen naast elkaar te zetten.
+            {tr("Klik op het weegschaal-icoon op een productkaart om maximaal 4 fietsen naast elkaar te zetten.")}
           </p>
           <Link
             to="/categorie/elektrische-fietsen"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Bekijk aanbod e-bikes</span>
+            <span>{tr("Bekijk aanbod e-bikes")}</span>
           </Link>
         </div>
       ) : (
@@ -62,7 +65,7 @@ export const ComparePage: React.FC = () => {
             <div className="grid grid-cols-5 gap-6 pb-6 border-b border-slate-200">
               <div className="col-span-1 flex flex-col justify-end">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                  Model Overzicht
+                  {tr("Model Overzicht")}
                 </span>
               </div>
 
@@ -71,7 +74,7 @@ export const ComparePage: React.FC = () => {
                   <button
                     onClick={() => removeFromCompare(p.id)}
                     className="absolute top-1 right-1 p-1 bg-white/80 hover:bg-rose-50 text-slate-400 hover:text-rose-600 rounded-md transition-colors"
-                    title="Verwijder"
+                    title={tr("Verwijder")}
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
@@ -88,12 +91,12 @@ export const ComparePage: React.FC = () => {
                     />
                   </Link>
 
-                  <div className="text-[11px] font-bold text-slate-400 uppercase">{p.brand}</div>
+                  <div className="text-[11px] font-bold text-slate-400 uppercase">{tr(p.brand)}</div>
                   <Link
                     to={`/product/${p.slug}`}
                     className="text-xs font-bold text-slate-900 hover:text-blue-600 line-clamp-2 h-8"
                   >
-                    {p.model}
+                    {tr(p.model)}
                   </Link>
                   <div className="text-sm font-black text-blue-700 tabular-nums mt-1">
                     {formatEur(p.price)}
@@ -104,7 +107,7 @@ export const ComparePage: React.FC = () => {
                     className="mt-3 py-2 px-2.5 bg-blue-600 text-white hover:bg-blue-700 rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1.5"
                   >
                     <ShoppingBag className="w-3.5 h-3.5" />
-                    <span>Bestel</span>
+                    <span>{tr("Bestel")}</span>
                   </button>
                 </div>
               ))}
@@ -132,11 +135,11 @@ export const ComparePage: React.FC = () => {
               ].map((row, idx) => (
                 <div key={idx} className="grid grid-cols-5 gap-6 py-2.5 items-center">
                   <div className="col-span-1 font-semibold text-slate-500">
-                    {row.label}
+                    {tr(row.label)}
                   </div>
                   {comparedProducts.map((p) => (
                     <div key={p.id} className="col-span-1 font-medium text-slate-800">
-                      {row.key(p)}
+                      {tr(row.key(p))}
                     </div>
                   ))}
                 </div>

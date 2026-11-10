@@ -6,12 +6,15 @@ import { Product } from '../types/ebike';
 import { formatEur, eurToCrypto } from '../utils/format';
 import { Battery, Zap, Truck, Scale, Plus } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { useTr } from '@/i18n/locale';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const tr = useTr();
+
   const { quickAddToCart, toggleCompare, isCompared } = useShop();
   const compared = isCompared(product.id);
 
@@ -23,16 +26,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="pointer-events-auto">
           {product.tags.includes('Bestseller') ? (
             <span className="text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/60">
-              Bestseller
+              {tr("Bestseller")}
             </span>
           ) : product.tags.includes('Aanbieding') ? (
             <span className="text-[11px] font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200/60">
-              Aanbieding
+              {tr("Aanbieding")}
             </span>
           ) : (
             <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 flex items-center gap-1">
               <Truck className="w-3 h-3" />
-              <span>{product.leverbaarheid}</span>
+              <span>{tr(product.leverbaarheid)}</span>
             </span>
           )}
         </div>
@@ -50,7 +53,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               : 'bg-white/90 backdrop-blur-xs text-slate-500 border-slate-200 hover:text-slate-900 hover:bg-white shadow-xs'
           }`}
           title={compared ? 'Verwijder uit vergelijking' : 'Vergelijk deze e-bike'}
-          aria-label="Vergelijk model"
+          aria-label={tr("Vergelijk model")}
         >
           <Scale className="w-3.5 h-3.5" />
         </button>
@@ -78,10 +81,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             to={`/merk/${product.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
             className="font-bold text-slate-800 tracking-wide uppercase text-[11px] hover:text-blue-600"
           >
-            {product.brand}
+            {tr(product.brand)}
           </Link>
           <span aria-hidden="true">·</span>
-          <span>{product.subCategory}</span>
+          <span>{tr(product.subCategory)}</span>
         </div>
 
         {/* Title linking to dedicated PDP */}
@@ -91,21 +94,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             className="hover:text-blue-600 transition-colors"
             title={product.title}
           >
-            {product.title}
+            {tr(product.title)}
           </Link>
         </h3>
 
         {/* Key Specs unboxed metadata */}
         <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600 mb-4 py-2 border-y border-slate-100">
-          <div className="flex items-center gap-1" title="Motormerk en koppel">
+          <div className="flex items-center gap-1" title={tr("Motormerk en koppel")}>
             <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-            <span className="font-medium">{product.motormerk}</span>
-            {product.motorTorqueNm > 0 && <span className="text-slate-400">({product.motorTorqueNm}Nm)</span>}
+            <span className="font-medium">{tr(product.motormerk)}</span>
+            {product.motorTorqueNm > 0 && <span className="text-slate-400">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
-          <div className="flex items-center gap-1" title="Accucapaciteit">
+          <div className="flex items-center gap-1" title={tr("Accucapaciteit")}>
             <Battery className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span>{product.accucapaciteit}</span>
+            <span>{tr(product.accucapaciteit)}</span>
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
           <span className="text-slate-600">{product.doelgroep.split(' ')[0]}</span>
@@ -119,7 +122,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               <span className="text-slate-400">({product.reviewCount || 24})</span>
             </div>
             <span className="text-[11px] text-slate-500 font-mono">
-              ≈ {eurToCrypto(product.price, 'BTC')} BTC
+              ≈ {eurToCrypto(product.price, 'BTC')} {tr("BTC")}
             </span>
           </div>
 
@@ -136,7 +139,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 )}
               </div>
               <span className="text-[10px] text-slate-400 block -mt-0.5">
-                incl. 21% BTW · Rijklaar leverbaar
+                {tr("incl. 21% BTW · Rijklaar leverbaar")}
               </span>
             </div>
 
@@ -146,8 +149,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 quickAddToCart(product);
               }}
               className="p-2.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white transition-colors"
-              title="Voeg toe aan winkelwagen"
-              aria-label="Snel toevoegen"
+              title={tr("Voeg toe aan winkelwagen")}
+              aria-label={tr("Snel toevoegen")}
             >
               <Plus className="w-4 h-4" />
             </button>

@@ -7,8 +7,11 @@ import { Product } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Sparkles, Check, ArrowRight, RotateCcw, Compass, ArrowLeft } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export const KeuzehulpPage: React.FC = () => {
+  const tr = useTr();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -57,13 +60,13 @@ export const KeuzehulpPage: React.FC = () => {
       <div className="text-center space-y-2 pb-2">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">
           <Compass className="w-4 h-4" />
-          <span>Binnen 1 minuut de juiste e-bike</span>
+          <span>{tr("Binnen 1 minuut de juiste e-bike")}</span>
         </div>
         <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 font-display">
-          Online E-Bike Keuzehulp
+          {tr("Online E-Bike Keuzehulp")}
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto">
-          Beantwoord 4 korte vragen en ontdek direct welk model perfect aansluit bij jouw wensen en rijstijl.
+          {tr("Beantwoord 4 korte vragen en ontdek direct welk model perfect aansluit bij jouw wensen en rijstijl.")}
         </p>
       </div>
 
@@ -71,10 +74,10 @@ export const KeuzehulpPage: React.FC = () => {
         {step === 1 && (
           <div className="space-y-4">
             <div className="text-xs font-bold text-blue-600 uppercase tracking-wider">
-              Stap 1 van 4: Gebruiksdoel
+              {tr("Stap 1 van 4: Gebruiksdoel")}
             </div>
             <h2 className="text-xl font-bold text-slate-900">
-              Waar ga je de e-bike voornamelijk voor gebruiken?
+              {tr("Waar ga je de e-bike voornamelijk voor gebruiken?")}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
@@ -94,8 +97,8 @@ export const KeuzehulpPage: React.FC = () => {
                       : 'border-slate-200 hover:border-slate-300'
                   }`}
                 >
-                  <div className="font-bold text-slate-900 text-sm">{opt.label}</div>
-                  <div className="text-xs text-slate-500 mt-1">{opt.desc}</div>
+                  <div className="font-bold text-slate-900 text-sm">{tr(opt.label)}</div>
+                  <div className="text-xs text-slate-500 mt-1">{tr(opt.desc)}</div>
                 </button>
               ))}
             </div>
@@ -105,10 +108,10 @@ export const KeuzehulpPage: React.FC = () => {
         {step === 2 && (
           <div className="space-y-4">
             <div className="text-xs font-bold text-blue-600 uppercase tracking-wider">
-              Stap 2 van 4: Framevorm
+              {tr("Stap 2 van 4: Framevorm")}
             </div>
             <h2 className="text-xl font-bold text-slate-900">
-              Welk type framevorm past bij jouw voorkeur?
+              {tr("Welk type framevorm past bij jouw voorkeur?")}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
@@ -126,8 +129,8 @@ export const KeuzehulpPage: React.FC = () => {
                       : 'border-slate-200 hover:border-slate-300'
                   }`}
                 >
-                  <div className="font-bold text-slate-900 text-sm">{opt.label}</div>
-                  <div className="text-xs text-slate-500 mt-1">{opt.desc}</div>
+                  <div className="font-bold text-slate-900 text-sm">{tr(opt.label)}</div>
+                  <div className="text-xs text-slate-500 mt-1">{tr(opt.desc)}</div>
                 </button>
               ))}
             </div>
@@ -137,10 +140,10 @@ export const KeuzehulpPage: React.FC = () => {
         {step === 3 && (
           <div className="space-y-4">
             <div className="text-xs font-bold text-blue-600 uppercase tracking-wider">
-              Stap 3 van 4: Accucapaciteit
+              {tr("Stap 3 van 4: Accucapaciteit")}
             </div>
             <h2 className="text-xl font-bold text-slate-900">
-              Hoeveel kilometer wil je kunnen rijden op één lading?
+              {tr("Hoeveel kilometer wil je kunnen rijden op één lading?")}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
@@ -158,8 +161,8 @@ export const KeuzehulpPage: React.FC = () => {
                       : 'border-slate-200 hover:border-slate-300'
                   }`}
                 >
-                  <div className="font-bold text-slate-900 text-sm">{opt.label}</div>
-                  <div className="text-xs text-slate-500 mt-1">{opt.desc}</div>
+                  <div className="font-bold text-slate-900 text-sm">{tr(opt.label)}</div>
+                  <div className="text-xs text-slate-500 mt-1">{tr(opt.desc)}</div>
                 </button>
               ))}
             </div>
@@ -169,10 +172,10 @@ export const KeuzehulpPage: React.FC = () => {
         {step === 4 && (
           <div className="space-y-4">
             <div className="text-xs font-bold text-blue-600 uppercase tracking-wider">
-              Stap 4 van 4: Aandrijving
+              {tr("Stap 4 van 4: Aandrijving")}
             </div>
             <h2 className="text-xl font-bold text-slate-900">
-              Heb je een voorkeur voor riemaandrijving of ketting?
+              {tr("Heb je een voorkeur voor riemaandrijving of ketting?")}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
@@ -190,8 +193,8 @@ export const KeuzehulpPage: React.FC = () => {
                       : 'border-slate-200 hover:border-slate-300'
                   }`}
                 >
-                  <div className="font-bold text-slate-900 text-sm">{opt.label}</div>
-                  <div className="text-xs text-slate-500 mt-1">{opt.desc}</div>
+                  <div className="font-bold text-slate-900 text-sm">{tr(opt.label)}</div>
+                  <div className="text-xs text-slate-500 mt-1">{tr(opt.desc)}</div>
                 </button>
               ))}
             </div>
@@ -205,10 +208,10 @@ export const KeuzehulpPage: React.FC = () => {
                 <Check className="w-6 h-6" />
               </div>
               <h2 className="text-2xl font-bold text-slate-900">
-                Jouw Aanbevolen E-Bike
+                {tr("Jouw Aanbevolen E-Bike")}
               </h2>
               <p className="text-xs text-slate-500 mt-1">
-                Geselecteerd op basis van jouw antwoorden en rijwensen:
+                {tr("Geselecteerd op basis van jouw antwoorden en rijwensen:")}
               </p>
             </div>
 
@@ -224,13 +227,13 @@ export const KeuzehulpPage: React.FC = () => {
 
               <div className="flex-1 text-center sm:text-left space-y-2">
                 <span className="text-xs font-bold text-blue-600 uppercase tracking-wide">
-                  Top Match · {topMatch.brand}
+                  {tr("Top Match ·")} {tr(topMatch.brand)}
                 </span>
                 <h3 className="text-lg font-bold text-slate-900">
-                  {topMatch.title}
+                  {tr(topMatch.title)}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  {topMatch.shortDescription}
+                  {tr(topMatch.shortDescription)}
                 </p>
 
                 <div className="pt-2 flex items-center justify-between">
@@ -241,7 +244,7 @@ export const KeuzehulpPage: React.FC = () => {
                     to={`/product/${topMatch.slug}`}
                     className="px-5 py-2.5 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition-colors inline-flex items-center gap-1.5"
                   >
-                    <span>Bekijk model</span>
+                    <span>{tr("Bekijk model")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -257,7 +260,7 @@ export const KeuzehulpPage: React.FC = () => {
               onClick={() => setStep(step - 1)}
               className="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900"
             >
-              Vorige vraag
+              {tr("Vorige vraag")}
             </button>
           )}
 
@@ -267,7 +270,7 @@ export const KeuzehulpPage: React.FC = () => {
               className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>Opnieuw beginnen</span>
+              <span>{tr("Opnieuw beginnen")}</span>
             </button>
           )}
 
@@ -276,7 +279,7 @@ export const KeuzehulpPage: React.FC = () => {
               onClick={() => setStep(step + 1)}
               className="ml-auto px-6 py-3 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition-colors flex items-center gap-2"
             >
-              <span>Volgende stap</span>
+              <span>{tr("Volgende stap")}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           ) : step === 4 ? (
@@ -284,7 +287,7 @@ export const KeuzehulpPage: React.FC = () => {
               onClick={() => setStep(5)}
               className="ml-auto px-6 py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold hover:bg-emerald-700 transition-colors flex items-center gap-2"
             >
-              <span>Bekijk resultaat</span>
+              <span>{tr("Bekijk resultaat")}</span>
               <Sparkles className="w-4 h-4" />
             </button>
           ) : null}

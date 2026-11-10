@@ -21,6 +21,7 @@ import {
 import { TAXONOMY_CATEGORIES, ALL_BRANDS } from '../data/ebikes';
 import { ChevronDown, ChevronUp, RotateCcw, Search, Check } from 'lucide-react';
 import { formatEur } from '../utils/format';
+import { useTr } from '@/i18n/locale';
 
 interface FilterSidebarProps {
   filters: FilterState;
@@ -35,6 +36,8 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   onResetFilters,
   totalProductsCount
 }) => {
+  const tr = useTr();
+
   const [brandSearch, setBrandSearch] = useState('');
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     categorie: true,
@@ -150,10 +153,10 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
       <div className="flex items-center justify-between pb-4 border-b border-slate-200">
         <div>
           <h2 className="text-base font-bold text-slate-900 tracking-tight">
-            Filters & Eigenschappen
+            {tr("Filters & Eigenschappen")}
           </h2>
           <div className="text-xs text-slate-500 mt-0.5">
-            {totalProductsCount} fietsen gevonden
+            {tr(totalProductsCount)} {tr("fietsen gevonden")}
           </div>
         </div>
 
@@ -163,7 +166,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-medium"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Reset ({activeCount})</span>
+            <span>{tr("Reset (")}{tr(activeCount)})</span>
           </button>
         )}
       </div>
@@ -175,7 +178,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('categorie')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Productcategorie</span>
+            <span>{tr("Productcategorie")}</span>
             {openSections.categorie ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -196,7 +199,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     : 'text-slate-600 hover:bg-slate-50'
                 }`}
               >
-                <span>Alle categorieën</span>
+                <span>{tr("Alle categorieën")}</span>
                 {filters.category === 'Alle' && <Check className="w-3.5 h-3.5 text-blue-600" />}
               </button>
 
@@ -213,7 +216,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                         : 'text-slate-700 hover:bg-slate-50 font-medium'
                     }`}
                   >
-                    <span>{cat.main}</span>
+                    <span>{tr(cat.main)}</span>
                     {filters.category === cat.main && filters.subCategory === 'Alle' && (
                       <Check className="w-3.5 h-3.5 text-blue-600" />
                     )}
@@ -232,7 +235,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                               : 'text-slate-500 hover:text-slate-900'
                           }`}
                         >
-                          {sub}
+                          {tr(sub)}
                         </button>
                       ))}
                     </div>
@@ -249,7 +252,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('merk')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Merk ({filters.brands.length > 0 ? filters.brands.length : 'Alle'})</span>
+            <span>{tr("Merk (")}{filters.brands.length > 0 ? filters.brands.length : tr("Alle")})</span>
             {openSections.merk ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -263,7 +266,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400" />
                 <input
                   type="text"
-                  placeholder="Zoek merk (bijv. Gazelle, Cube)..."
+                  placeholder={tr("Zoek merk (bijv. Gazelle, Cube)...")}
                   value={brandSearch}
                   onChange={(e) => setBrandSearch(e.target.value)}
                   className="w-full pl-8 pr-2 py-1.5 text-xs rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -286,7 +289,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                         }
                         className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                       />
-                      <span>{brand}</span>
+                      <span>{tr(brand)}</span>
                     </label>
                   );
                 })}
@@ -301,7 +304,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('prijs')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Maximale Prijs</span>
+            <span>{tr("Maximale Prijs")}</span>
             {openSections.prijs ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -312,13 +315,13 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
           {openSections.prijs && (
             <div className="mt-3 space-y-2">
               <div className="flex items-center justify-between text-xs font-semibold text-slate-900">
-                <span>Tot: {formatEur(filters.maxPrice)}</span>
+                <span>{tr("Tot:")} {formatEur(filters.maxPrice)}</span>
                 {filters.maxPrice < 8000 && (
                   <button
                     onClick={() => updateFilter('maxPrice', 8000)}
                     className="text-[11px] text-blue-600 hover:underline"
                   >
-                    Reset
+                    {tr("Reset")}
                   </button>
                 )}
               </div>
@@ -346,7 +349,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('doelgroep')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Doelgroep & Framevorm</span>
+            <span>{tr("Doelgroep & Framevorm")}</span>
             {openSections.doelgroep ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -369,7 +372,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     }
                     className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span>{dg}</span>
+                  <span>{tr(dg)}</span>
                 </label>
               ))}
             </div>
@@ -382,7 +385,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('motor')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Motor (Merk & Positie)</span>
+            <span>{tr("Motor (Merk & Positie)")}</span>
             {openSections.motor ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -394,7 +397,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             <div className="mt-3 space-y-3">
               <div>
                 <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                  Motormerk
+                  {tr("Motormerk")}
                 </div>
                 {MOTORMERK_OPTIONS.map((merk) => (
                   <label
@@ -409,14 +412,14 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                       }
                       className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span>{merk}</span>
+                    <span>{tr(merk)}</span>
                   </label>
                 ))}
               </div>
 
               <div>
                 <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                  Motorpositie
+                  {tr("Motorpositie")}
                 </div>
                 {MOTORPOSITIE_OPTIONS.map((pos) => (
                   <label
@@ -431,7 +434,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                       }
                       className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span>{pos}</span>
+                    <span>{tr(pos)}</span>
                   </label>
                 ))}
               </div>
@@ -445,7 +448,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('accu')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Accucapaciteit (Wh)</span>
+            <span>{tr("Accucapaciteit (Wh)")}</span>
             {openSections.accu ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -468,7 +471,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     }
                     className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span>{cap}</span>
+                  <span>{tr(cap)}</span>
                 </label>
               ))}
             </div>
@@ -481,7 +484,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('aandrijving')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Aandrijving & Versnelling</span>
+            <span>{tr("Aandrijving & Versnelling")}</span>
             {openSections.aandrijving ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -493,7 +496,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             <div className="mt-3 space-y-3">
               <div>
                 <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                  Aandrijving
+                  {tr("Aandrijving")}
                 </div>
                 {AANDRIJVING_OPTIONS.map((aandrijving) => (
                   <label
@@ -508,14 +511,14 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                       }
                       className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span>{aandrijving === 'Riem' ? 'Belt drive / Riem (Onderhoudsvrij)' : 'Ketting'}</span>
+                    <span>{aandrijving === 'Riem' ? tr("Belt drive / Riem (Onderhoudsvrij)") : tr("Ketting")}</span>
                   </label>
                 ))}
               </div>
 
               <div>
                 <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                  Type versnelling
+                  {tr("Type versnelling")}
                 </div>
                 {VERSNELLING_OPTIONS.map((v) => (
                   <label
@@ -530,7 +533,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                       }
                       className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span>{v}</span>
+                    <span>{tr(v)}</span>
                   </label>
                 ))}
               </div>
@@ -544,7 +547,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('framemaat')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Framemaat</span>
+            <span>{tr("Framemaat")}</span>
             {openSections.framemaat ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -568,7 +571,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                         : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400'
                     }`}
                   >
-                    {maat}
+                    {tr(maat)}
                   </button>
                 );
               })}
@@ -582,7 +585,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onClick={() => toggleSection('tags')}
             className="flex items-center justify-between w-full font-semibold text-slate-800 hover:text-blue-600 text-left"
           >
-            <span>Thema's & Tags</span>
+            <span>{tr("Thema's & Tags")}</span>
             {openSections.tags ? (
               <ChevronUp className="w-4 h-4 text-slate-400" />
             ) : (
@@ -604,7 +607,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                     }`}
                   >
-                    {tag}
+                    {tr(tag)}
                   </button>
                 );
               })}

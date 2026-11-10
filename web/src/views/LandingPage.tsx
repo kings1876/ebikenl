@@ -6,12 +6,15 @@ import { SEO_LANDING_PAGES, PRODUCTS, LandingPageDef } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { CheckCircle, Tag, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 interface LandingPageProps {
   customSlug?: string;
 }
 
 export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
+  const tr = useTr();
+
   const params = useParams<{ slug?: string }>();
   const activeSlug = customSlug || params.slug || 'bosch-middenmotor';
 
@@ -43,17 +46,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
 
       {/* SEO Landingspagina Hero */}
       <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-10 border border-slate-800 space-y-4">
-        <div className="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider">
-          <Tag className="w-3.5 h-3.5" />
-          <span>SEO Landingspagina · Indexeerbaar (DoFollow)</span>
-        </div>
 
         <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight font-display">
-          {landing.h1}
+          {tr(landing.h1)}
         </h1>
 
         <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-          {landing.subtitle} {landing.metaDescription}
+          {tr(landing.subtitle)} {tr(landing.metaDescription)}
         </p>
 
         {/* Highlight points */}
@@ -61,21 +60,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
           {landing.highlightPoints.map((point, idx) => (
             <div key={idx} className="flex items-start gap-2 bg-slate-800/70 p-3 rounded-lg border border-slate-700/60">
               <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-              <span>{point}</span>
+              <span>{tr(point)}</span>
             </div>
           ))}
         </div>
 
-        {/* Canonical preview */}
-        <div className="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex flex-wrap items-center justify-between gap-2">
-          <span>&lt;title&gt;{landing.metaTitle}&lt;/title&gt;</span>
-          <span className="text-emerald-400">Canonical: https://e-bike-tekoop.nl/{landing.slug}</span>
-        </div>
       </div>
 
       {/* Other Curated Landing Pages Switcher */}
       <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-semibold">
-        <span className="text-slate-400 shrink-0 mr-1">Andere thema's:</span>
+        <span className="text-slate-400 shrink-0 mr-1">{tr("Andere thema's:")}</span>
         {SEO_LANDING_PAGES.map((l) => (
           <Link
             key={l.slug}
@@ -86,7 +80,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
                 : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
             }`}
           >
-            {l.title}
+            {tr(l.title)}
           </Link>
         ))}
       </div>
@@ -95,10 +89,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
       <div>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-900">
-            Aanbod {landing.title} ({matchingProducts.length})
+            {tr("Aanbod")} {tr(landing.title)} ({tr(matchingProducts.length)})
           </h2>
           <span className="text-xs text-slate-500">
-            100% Nieuw met fabrieksgarantie via distributeur
+            {tr("100% Nieuw met fabrieksgarantie via distributeur")}
           </span>
         </div>
 

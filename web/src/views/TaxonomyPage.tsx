@@ -5,8 +5,11 @@ import { Link } from '@/lib/router';
 import { TAXONOMY_CATEGORIES, ALL_BRANDS } from '../data/ebikes';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Database, Layers, Tag, Filter, Globe, Code, ArrowRight } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export const TaxonomyPage: React.FC = () => {
+  const tr = useTr();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -45,13 +48,13 @@ export const TaxonomyPage: React.FC = () => {
       <div className="pb-4 border-b border-slate-200">
         <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
           <Database className="w-4 h-4" />
-          <span>WooCommerce Data Model</span>
+          <span>{tr("WooCommerce Data Model")}</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
-          E-BIKE-TEKOOP.NL Taxonomie Specificatie
+          {tr("E-BIKE-TEKOOP.NL Taxonomie Specificatie")}
         </h1>
         <p className="text-xs text-slate-500 mt-0.5">
-          Distributeur taxonomie, product-level velden, attributen en SEO regels
+          {tr("Distributeur taxonomie, product-level velden, attributen en SEO regels")}
         </p>
       </div>
 
@@ -75,7 +78,7 @@ export const TaxonomyPage: React.FC = () => {
                   : 'border-transparent text-slate-500 hover:text-slate-900'
               }`}
             >
-              {tab.label}
+              {tr(tab.label)}
             </button>
           ))}
         </div>
@@ -85,18 +88,18 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'categories' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                Hiërarchische structuur voor productcategorieën en subcategorieën in WooCommerce:
+                {tr("Hiërarchische structuur voor productcategorieën en subcategorieën in WooCommerce:")}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {TAXONOMY_CATEGORIES.map((cat) => (
                   <div key={cat.main} className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
                     <div className="font-bold text-slate-900 text-sm flex items-center justify-between">
-                      <span>{cat.main}</span>
+                      <span>{tr(cat.main)}</span>
                       <Link
                         to={`/categorie/${cat.main.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                         className="text-[11px] text-blue-600 hover:underline flex items-center gap-0.5"
                       >
-                        <span>Bekijk</span>
+                        <span>{tr("Bekijk")}</span>
                         <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
@@ -107,7 +110,7 @@ export const TaxonomyPage: React.FC = () => {
                             to={`/categorie/${cat.main.toLowerCase().replace(/[^a-z0-9]+/g, '-')}?sub=${encodeURIComponent(sub)}`}
                             className="hover:text-blue-600"
                           >
-                            └─ {sub}
+                            └─ {tr(sub)}
                           </Link>
                         </li>
                       ))}
@@ -121,7 +124,7 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'brands' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                24 A-Merken via distributeur, elk met een eigen geoptimaliseerde merkpagina:
+                {tr("24 A-Merken via distributeur, elk met een eigen geoptimaliseerde merkpagina:")}
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                 {ALL_BRANDS.map((brand) => (
@@ -130,8 +133,8 @@ export const TaxonomyPage: React.FC = () => {
                     to={`/merk/${brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                     className="p-3 bg-slate-50 hover:bg-blue-50 hover:border-blue-300 rounded-xl border border-slate-200 text-center font-bold text-slate-800 transition-colors block"
                   >
-                    <div>{brand}</div>
-                    <div className="text-[10px] text-blue-600 font-normal mt-0.5">/merk/{brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}</div>
+                    <div>{tr(brand)}</div>
+                    <div className="text-[10px] text-blue-600 font-normal mt-0.5">{tr("/merk/")}{brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}</div>
                   </Link>
                 ))}
               </div>
@@ -141,21 +144,21 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'attributes' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                16 Vaste product attributen voor multi-select faceted filtering:
+                {tr("16 Vaste product attributen voor multi-select faceted filtering:")}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {ATTRIBUTES_DEFINITIONS.map((attr) => (
                   <div key={attr.name} className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-slate-900 text-xs">{attr.name}</span>
+                      <span className="font-bold text-slate-900 text-xs">{tr(attr.name)}</span>
                       <code className="text-[10px] bg-slate-200 px-1.5 py-0.5 rounded text-slate-700 font-mono">
-                        {attr.slug}
+                        {tr(attr.slug)}
                       </code>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {attr.terms.map((term) => (
                         <span key={term} className="px-2 py-0.5 bg-white rounded border border-slate-200 text-slate-700 text-[11px]">
-                          {term}
+                          {tr(term)}
                         </span>
                       ))}
                     </div>
@@ -168,7 +171,7 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'tags' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                13 Commerciële e-commerce tags voor thema-landingspagina's:
+                {tr("13 Commerciële e-commerce tags voor thema-landingspagina's:")}
               </p>
               <div className="flex flex-wrap gap-2">
                 {TAGS_LIST.map((tag) => (
@@ -176,7 +179,7 @@ export const TaxonomyPage: React.FC = () => {
                     key={tag}
                     className="px-3 py-1.5 bg-slate-100 rounded-lg text-slate-800 font-semibold border border-slate-200 text-xs"
                   >
-                    #{tag}
+                    #{tr(tag)}
                   </span>
                 ))}
               </div>
@@ -186,24 +189,24 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'fields' && (
             <div className="space-y-3">
               <p className="text-slate-600">
-                Product-level velden vereist per e-bike in de database:
+                {tr("Product-level velden vereist per e-bike in de database:")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                  <div className="font-bold text-slate-900">EAN / GTIN & Fabrikant-SKU</div>
-                  <p className="text-slate-600">Unieke 13-cijferige barcode en distributeur referentie voor voorraadkoppeling.</p>
+                  <div className="font-bold text-slate-900">{tr("EAN / GTIN & Fabrikant-SKU")}</div>
+                  <p className="text-slate-600">{tr("Unieke 13-cijferige barcode en distributeur referentie voor voorraadkoppeling.")}</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                  <div className="font-bold text-slate-900">Garantie & Termijnen</div>
-                  <p className="text-slate-600">Frame (5-10 jaar), Accu (2 jaar / 75% capaciteit), Motor (2 jaar).</p>
+                  <div className="font-bold text-slate-900">{tr("Garantie & Termijnen")}</div>
+                  <p className="text-slate-600">{tr("Frame (5-10 jaar), Accu (2 jaar / 75% capaciteit), Motor (2 jaar).")}</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                  <div className="font-bold text-slate-900">EN 15194 & CE Normering</div>
-                  <p className="text-slate-600">Europese veiligheidsnorm voor elektrische trapondersteuning tot 250W en 25 km/u.</p>
+                  <div className="font-bold text-slate-900">{tr("EN 15194 & CE Normering")}</div>
+                  <p className="text-slate-600">{tr("Europese veiligheidsnorm voor elektrische trapondersteuning tot 250W en 25 km/u.")}</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                  <div className="font-bold text-slate-900">Speed Pedelec (45 km/u) Regels</div>
-                  <p className="text-slate-600">Geel bromfietskenteken, NTA 8776 gekeurde helm, AM-rijbewijs en WA-verzekering.</p>
+                  <div className="font-bold text-slate-900">{tr("Speed Pedelec (45 km/u) Regels")}</div>
+                  <p className="text-slate-600">{tr("Geel bromfietskenteken, NTA 8776 gekeurde helm, AM-rijbewijs en WA-verzekering.")}</p>
                 </div>
               </div>
             </div>
@@ -212,30 +215,29 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'seo' && (
             <div className="space-y-4">
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-                <div className="font-bold text-slate-900 text-sm">SEO Titels Formule</div>
+                <div className="font-bold text-slate-900 text-sm">{tr("SEO Titels Formule")}</div>
                 <div className="p-2.5 bg-white rounded border border-slate-200 font-mono text-blue-700 text-xs">
-                  Merk Model, motormerk, accu Wh, framevorm
+                  {tr("Merk Model, motormerk, accu Wh, framevorm")}
                 </div>
                 <p className="text-slate-600">
-                  Voorbeeld: <em>Gazelle Grenoble C8 HMB, Bosch Middenmotor, 500 Wh, Lage instap</em>
+                  {tr("Voorbeeld:")} <em>{tr("Gazelle Grenoble C8 HMB, Bosch Middenmotor, 500 Wh, Lage instap")}</em>
                 </p>
               </div>
 
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-                <div className="font-bold text-slate-900 text-sm">Indexatie & Filter-URL's</div>
+                <div className="font-bold text-slate-900 text-sm">{tr("Indexatie & Filter-URL's")}</div>
                 <p className="text-slate-600">
-                  Dynamische facetfilter queries krijgen <code>noindex, follow</code> om duplicate content te voorkomen.
-                  Alleen gecureerde SEO landingspagina's en merkpagina's worden geïndexeerd in Google.
+                  {tr("Dynamische facetfilter queries krijgen")} <code>{tr("noindex, follow")}</code> {tr("om duplicate content te voorkomen. Alleen gecureerde SEO landingspagina's en merkpagina's worden geïndexeerd in Google.")}
                 </p>
               </div>
 
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-                <div className="font-bold text-slate-900 text-sm">Site Settings</div>
+                <div className="font-bold text-slate-900 text-sm">{tr("Site Settings")}</div>
                 <div className="grid grid-cols-2 gap-2 text-slate-700">
-                  <div><strong>Taal:</strong> Nederlands (nl_NL)</div>
-                  <div><strong>Valuta:</strong> EUR (€ incl. 21% BTW)</div>
-                  <div><strong>Land:</strong> Nederland</div>
-                  <div><strong>Betaling:</strong> iDEAL + SEPA + Crypto (BTC/ETH/USDT)</div>
+                  <div><strong>{tr("Taal:")}</strong> {tr("Nederlands (nl_NL)")}</div>
+                  <div><strong>{tr("Valuta:")}</strong> {tr("EUR (€ incl. 21% BTW)")}</div>
+                  <div><strong>{tr("Land:")}</strong> {tr("Nederland")}</div>
+                  <div><strong>{tr("Betaling:")}</strong> {tr("iDEAL + SEPA + Crypto (BTC/ETH/USDT)")}</div>
                 </div>
               </div>
             </div>

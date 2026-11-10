@@ -23,8 +23,11 @@ import {
   ShoppingBag,
   ArrowLeft
 } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export const ProductDetailPage: React.FC = () => {
+  const tr = useTr();
+
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { addToCart, toggleCompare, isCompared } = useShop();
@@ -57,14 +60,14 @@ export const ProductDetailPage: React.FC = () => {
   if (!product) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-2xl font-bold text-slate-900 mb-2">E-bike niet gevonden</h1>
-        <p className="text-slate-600 mb-6">Het gezochte e-bike model bestaat niet of is niet meer leverbaar.</p>
+        <h1 className="text-2xl font-bold text-slate-900 mb-2">{tr("E-bike niet gevonden")}</h1>
+        <p className="text-slate-600 mb-6">{tr("Het gezochte e-bike model bestaat niet of is niet meer leverbaar.")}</p>
         <Link
           to="/categorie/elektrische-fietsen"
           className="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold text-sm inline-flex items-center gap-2 hover:bg-blue-700"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Bekijk alle elektrische fietsen</span>
+          <span>{tr("Bekijk alle elektrische fietsen")}</span>
         </Link>
       </div>
     );
@@ -138,7 +141,7 @@ export const ProductDetailPage: React.FC = () => {
                 >
                   <img
                     src={img}
-                    alt="Thumbnail"
+                    alt={tr("Thumbnail")}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />
@@ -153,19 +156,19 @@ export const ProductDetailPage: React.FC = () => {
               <div className="w-5 h-5 bg-[#00b67a] text-white flex items-center justify-center rounded-[2px] text-xs font-bold">
                 ★
               </div>
-              <span className="font-bold text-slate-900">Trustpilot Score 4.8 / 5</span>
-              <span className="text-slate-600">· Uitstekend ({product.reviewCount} geverifieerde reviews)</span>
+              <span className="font-bold text-slate-900">{tr("Trustpilot Score 4.8 / 5")}</span>
+              <span className="text-slate-600">{tr("· Uitstekend (")}{tr(product.reviewCount)} {tr("geverifieerde reviews)")}</span>
             </div>
-            <span className="text-emerald-700 font-semibold hidden sm:inline">✓ Geverifieerde aankoop</span>
+            <span className="text-emerald-700 font-semibold hidden sm:inline">{tr("✓ Geverifieerde aankoop")}</span>
           </div>
 
           {/* Detailed Description */}
           <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
             <h2 className="text-base font-bold text-slate-900">
-              Over de {product.brand} {product.model}
+              {tr("Over de")} {tr(product.brand)} {tr(product.model)}
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
-              {product.description}
+              {tr(product.description)}
             </p>
           </div>
         </div>
@@ -178,13 +181,13 @@ export const ProductDetailPage: React.FC = () => {
                 to={`/merk/${product.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                 className="font-bold text-blue-600 uppercase tracking-wide hover:underline"
               >
-                {product.brand}
+                {tr(product.brand)}
               </Link>
-              <span className="font-mono">SKU: {product.sku}</span>
+              <span className="font-mono">{tr("SKU:")} {tr(product.sku)}</span>
             </div>
 
             <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
-              {product.title}
+              {tr(product.title)}
             </h1>
           </div>
 
@@ -202,22 +205,22 @@ export const ProductDetailPage: React.FC = () => {
                 )}
               </div>
               <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200">
-                {product.leverbaarheid}
+                {tr(product.leverbaarheid)}
               </span>
             </div>
 
             <div className="text-xs text-slate-500 mt-1">
-              Inclusief 21% BTW ({formatEur(vatAmount)}) · Netto excl. BTW: {formatEur(exclVat)}
+              {tr("Inclusief 21% BTW (")}{formatEur(vatAmount)}{tr(") · Netto excl. BTW:")} {formatEur(exclVat)}
             </div>
 
             {/* Crypto Conversion Preview */}
             <div className="mt-3 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs font-mono text-slate-600">
               <div className="flex items-center gap-1.5">
                 <Coins className="w-3.5 h-3.5 text-amber-500" />
-                <span>Betaal met Crypto:</span>
+                <span>{tr("Betaal met Crypto:")}</span>
               </div>
               <div className="font-medium text-slate-900">
-                ≈ {eurToCrypto(product.price, 'BTC')} BTC · {eurToCrypto(product.price, 'USDT')} USDT
+                ≈ {eurToCrypto(product.price, 'BTC')} {tr("BTC ·")} {eurToCrypto(product.price, 'USDT')} {tr("USDT")}
               </div>
             </div>
           </div>
@@ -225,7 +228,7 @@ export const ProductDetailPage: React.FC = () => {
           {/* Framemaat Selector */}
           <div>
             <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-              Kies Framemaat
+              {tr("Kies Framemaat")}
             </label>
             <div className="grid grid-cols-4 gap-2">
               {product.framematen.map((maat) => (
@@ -238,7 +241,7 @@ export const ProductDetailPage: React.FC = () => {
                       : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400'
                   }`}
                 >
-                  {maat}
+                  {tr(maat)}
                 </button>
               ))}
             </div>
@@ -251,7 +254,7 @@ export const ProductDetailPage: React.FC = () => {
           {/* Kleur Selector */}
           <div>
             <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
-              Kleur: <span className="font-normal text-slate-600">{selectedKleur}</span>
+              {tr("Kleur:")} <span className="font-normal text-slate-600">{tr(selectedKleur)}</span>
             </label>
             <div className="flex items-center gap-2">
               {product.kleuren.map((kleur) => (
@@ -264,7 +267,7 @@ export const ProductDetailPage: React.FC = () => {
                       : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400'
                   }`}
                 >
-                  {kleur}
+                  {tr(kleur)}
                 </button>
               ))}
             </div>
@@ -273,7 +276,7 @@ export const ProductDetailPage: React.FC = () => {
           {/* Rijklaar Montage Optie */}
           <div className="space-y-2">
             <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider">
-              Aflevermethode
+              {tr("Aflevermethode")}
             </label>
             <div className="space-y-1.5 text-xs">
               <label className="flex items-start gap-2.5 p-2.5 rounded-lg border bg-white cursor-pointer border-blue-500/80">
@@ -286,13 +289,13 @@ export const ProductDetailPage: React.FC = () => {
                 />
                 <div>
                   <div className="font-semibold text-slate-900 flex items-center gap-1.5">
-                    <span>100% Rijklaar thuisbezorgd door monteur</span>
+                    <span>{tr("100% Rijklaar thuisbezorgd door monteur")}</span>
                     <span className="text-[10px] text-emerald-700 bg-emerald-100 font-bold px-1.5 py-0.2 rounded">
-                      Gratis service
+                      {tr("Gratis service")}
                     </span>
                   </div>
                   <div className="text-[11px] text-slate-500">
-                    Zadel en stuur op lengte afgesteld, software update & pedalen gemonteerd.
+                    {tr("Zadel en stuur op lengte afgesteld, software update & pedalen gemonteerd.")}
                   </div>
                 </div>
               </label>
@@ -307,10 +310,10 @@ export const ProductDetailPage: React.FC = () => {
                 />
                 <div>
                   <div className="font-semibold text-slate-900">
-                    In fabrieksdoos (90% gemonteerd)
+                    {tr("In fabrieksdoos (90% gemonteerd)")}
                   </div>
                   <div className="text-[11px] text-slate-500">
-                    Zelf voorwiel, stuur en pedalen monteren.
+                    {tr("Zelf voorwiel, stuur en pedalen monteren.")}
                   </div>
                 </div>
               </label>
@@ -324,7 +327,7 @@ export const ProductDetailPage: React.FC = () => {
               className="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 active:scale-[0.99]"
             >
               <ShoppingBag className="w-5 h-5" />
-              <span>In winkelwagen · {formatEur(product.price)}</span>
+              <span>{tr("In winkelwagen ·")} {formatEur(product.price)}</span>
             </button>
 
             <button
@@ -336,7 +339,7 @@ export const ProductDetailPage: React.FC = () => {
               }`}
             >
               <Scale className="w-4 h-4" />
-              <span>{compared ? 'Toegevoegd aan vergelijking' : 'Vergelijk met andere e-bikes'}</span>
+              <span>{compared ? tr("Toegevoegd aan vergelijking") : tr("Vergelijk met andere e-bikes")}</span>
             </button>
           </div>
 
@@ -347,24 +350,24 @@ export const ProductDetailPage: React.FC = () => {
           >
             <span className="flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-amber-600" />
-              <span>Fietsplan calculator: bespaar tot {formatEur(Math.round(product.price * 0.495))}</span>
+              <span>{tr("Fietsplan calculator: bespaar tot")} {formatEur(Math.round(product.price * 0.495))}</span>
             </span>
             <span className="text-blue-600 underline text-[11px]">
-              {showWkrCalculator ? 'Sluiten' : 'Bereken voordeel'}
+              {showWkrCalculator ? tr("Sluiten") : tr("Bereken voordeel")}
             </span>
           </button>
 
           {showWkrCalculator && (
             <div className="p-3.5 bg-slate-50 rounded-xl border border-amber-200 text-xs space-y-2.5">
               <div className="font-bold text-slate-900">
-                Zakelijk Fietsplan (WKR Belastingvoordeel)
+                {tr("Zakelijk Fietsplan (WKR Belastingvoordeel)")}
               </div>
               <p className="text-slate-600 text-[11px]">
-                Koop deze e-bike via je brutoloon en betaal tot 49,5% minder inkomstenbelasting.
+                {tr("Koop deze e-bike via je brutoloon en betaal tot 49,5% minder inkomstenbelasting.")}
               </p>
 
               <div className="flex items-center gap-2">
-                <span className="text-[11px] text-slate-600">Belastingschijf:</span>
+                <span className="text-[11px] text-slate-600">{tr("Belastingschijf:")}</span>
                 <button
                   onClick={() => setTaxBracket(36.93)}
                   className={`px-2.5 py-1 rounded text-[11px] font-semibold border ${
@@ -388,13 +391,13 @@ export const ProductDetailPage: React.FC = () => {
               </div>
 
               <div className="pt-2 border-t border-slate-200 flex items-center justify-between font-bold">
-                <span>Jouw netto aankoopprijs:</span>
+                <span>{tr("Jouw netto aankoopprijs:")}</span>
                 <span className="text-emerald-700 tabular-nums text-sm">
                   {formatEur(netPrice)}
                 </span>
               </div>
               <div className="text-[10px] text-slate-400">
-                Factuur voldoet aan de eisen voor WKR, FiscFree en Hellorider.
+                {tr("Factuur voldoet aan de eisen voor WKR, FiscFree en Hellorider.")}
               </div>
             </div>
           )}
@@ -407,12 +410,10 @@ export const ProductDetailPage: React.FC = () => {
           <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <span className="font-bold text-sm block">
-              Speed Pedelec Regelgeving (45 km/u)
+              {tr("Speed Pedelec Regelgeving (45 km/u)")}
             </span>
             <p>
-              Voor deze snelle e-bike geldt de Nederlandse wetgeving voor bromfietsen:
-              geel bromfietskenteken verplicht, NTA 8776 gekeurde helm verplicht, en minimaal
-              een AM-rijbewijs. Wij verzorgen de RDW-registratie en het kenteken direct bij aflevering!
+              {tr("Voor deze snelle e-bike geldt de Nederlandse wetgeving voor bromfietsen: geel bromfietskenteken verplicht, NTA 8776 gekeurde helm verplicht, en minimaal een AM-rijbewijs. Wij verzorgen de RDW-registratie en het kenteken direct bij aflevering!")}
             </p>
           </div>
         </div>
@@ -436,7 +437,7 @@ export const ProductDetailPage: React.FC = () => {
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
-              {tab.label}
+              {tr(tab.label)}
             </button>
           ))}
         </div>
@@ -445,60 +446,60 @@ export const ProductDetailPage: React.FC = () => {
         {activeTab === 'specificaties' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 text-xs">
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Merk & Model</span>
-              <span className="font-semibold text-slate-900">{product.brand} {product.model}</span>
+              <span className="text-slate-500">{tr("Merk & Model")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.brand)} {tr(product.model)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Motormerk & Type</span>
-              <span className="font-semibold text-slate-900">{product.motormerk} ({product.motorModel})</span>
+              <span className="text-slate-500">{tr("Motormerk & Type")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.motormerk)} ({tr(product.motorModel)})</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Motorpositie</span>
-              <span className="font-semibold text-slate-900">{product.motorpositie}</span>
+              <span className="text-slate-500">{tr("Motorpositie")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.motorpositie)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Motorkoppel</span>
-              <span className="font-semibold text-slate-900">{product.motorTorqueNm} Nm</span>
+              <span className="text-slate-500">{tr("Motorkoppel")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.motorTorqueNm)} {tr("Nm")}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Accucapaciteit</span>
-              <span className="font-semibold text-slate-900">{product.accucapaciteit} ({product.accuWhNumber} Wh)</span>
+              <span className="text-slate-500">{tr("Accucapaciteit")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.accucapaciteit)} ({tr(product.accuWhNumber)} {tr("Wh)")}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Actieradius</span>
-              <span className="font-semibold text-slate-900">{product.actieradius}</span>
+              <span className="text-slate-500">{tr("Actieradius")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.actieradius)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Versnellingssysteem</span>
-              <span className="font-semibold text-slate-900">{product.versnelling} ({product.versnellingDetail})</span>
+              <span className="text-slate-500">{tr("Versnellingssysteem")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.versnelling)} ({tr(product.versnellingDetail)})</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Aandrijving</span>
-              <span className="font-semibold text-slate-900">{product.aandrijving === 'Riem' ? 'Gates Carbon Riem (Onderhoudsvrij)' : 'Ketting'}</span>
+              <span className="text-slate-500">{tr("Aandrijving")}</span>
+              <span className="font-semibold text-slate-900">{product.aandrijving === 'Riem' ? tr("Gates Carbon Riem (Onderhoudsvrij)") : tr("Ketting")}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Remsysteem</span>
-              <span className="font-semibold text-slate-900">{product.remtype}</span>
+              <span className="text-slate-500">{tr("Remsysteem")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.remtype)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Wielmaat</span>
-              <span className="font-semibold text-slate-900">{product.wielmaat}</span>
+              <span className="text-slate-500">{tr("Wielmaat")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.wielmaat)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Gewicht</span>
-              <span className="font-semibold text-slate-900">{product.gewichtKg} kg ({product.gewichtKlasse})</span>
+              <span className="text-slate-500">{tr("Gewicht")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.gewichtKg)} {tr("kg (")}{tr(product.gewichtKlasse)})</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Max. toelaatbaar gewicht</span>
-              <span className="font-semibold text-slate-900">{product.maxGebruikersgewicht}</span>
+              <span className="text-slate-500">{tr("Max. toelaatbaar gewicht")}</span>
+              <span className="font-semibold text-slate-900">{tr(product.maxGebruikersgewicht)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">EAN / GTIN Barcode</span>
-              <span className="font-mono text-slate-900">{product.ean}</span>
+              <span className="text-slate-500">{tr("EAN / GTIN Barcode")}</span>
+              <span className="font-mono text-slate-900">{tr(product.ean)}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">Fabrikant-SKU</span>
-              <span className="font-mono text-slate-900">{product.sku}</span>
+              <span className="text-slate-500">{tr("Fabrikant-SKU")}</span>
+              <span className="font-mono text-slate-900">{tr(product.sku)}</span>
             </div>
           </div>
         )}
@@ -508,21 +509,21 @@ export const ProductDetailPage: React.FC = () => {
           <div className="space-y-4 text-xs">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <div className="text-slate-500">Framegarantie</div>
-                <div className="font-bold text-slate-900 text-sm mt-1">{product.warranty.frame}</div>
+                <div className="text-slate-500">{tr("Framegarantie")}</div>
+                <div className="font-bold text-slate-900 text-sm mt-1">{tr(product.warranty.frame)}</div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <div className="text-slate-500">Accugarantie</div>
-                <div className="font-bold text-slate-900 text-sm mt-1">{product.warranty.battery}</div>
+                <div className="text-slate-500">{tr("Accugarantie")}</div>
+                <div className="font-bold text-slate-900 text-sm mt-1">{tr(product.warranty.battery)}</div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <div className="text-slate-500">Motorgarantie</div>
-                <div className="font-bold text-slate-900 text-sm mt-1">{product.warranty.motor}</div>
+                <div className="text-slate-500">{tr("Motorgarantie")}</div>
+                <div className="font-bold text-slate-900 text-sm mt-1">{tr(product.warranty.motor)}</div>
               </div>
             </div>
             <div className="flex items-center gap-2 text-slate-700 pt-2">
               <CheckCircle className="w-4 h-4 text-[#00b67a]" />
-              <span>Conform EN 15194 en Europese CE-keuring voor elektrische trapondersteuning.</span>
+              <span>{tr("Conform EN 15194 en Europese CE-keuring voor elektrische trapondersteuning.")}</span>
             </div>
           </div>
         )}
@@ -532,26 +533,26 @@ export const ProductDetailPage: React.FC = () => {
           <div className="space-y-4 text-xs">
             <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-200">
               <div className="flex items-center gap-3">
-                <span className="font-bold text-slate-900 text-base">Trustpilot</span>
+                <span className="font-bold text-slate-900 text-base">{tr("Trustpilot")}</span>
                 <span className="text-[#00b67a] font-bold">★★★★★ 4.8 / 5</span>
               </div>
-              <span className="text-slate-500">{product.reviewCount} geverifieerde kopersbeoordelingen</span>
+              <span className="text-slate-500">{tr(product.reviewCount)} {tr("geverifieerde kopersbeoordelingen")}</span>
             </div>
 
             <div className="space-y-3">
               {product.reviews.map((r) => (
                 <div key={r.id} className="p-4 rounded-xl border border-slate-200 bg-white">
                   <div className="flex items-center justify-between mb-1">
-                    <div className="font-bold text-slate-900">{r.title}</div>
-                    <span className="text-slate-400">{r.date}</span>
+                    <div className="font-bold text-slate-900">{tr(r.title)}</div>
+                    <span className="text-slate-400">{tr(r.date)}</span>
                   </div>
-                  <p className="text-slate-600 leading-relaxed mb-2">{r.content}</p>
+                  <p className="text-slate-600 leading-relaxed mb-2">{tr(r.content)}</p>
                   <div className="text-slate-400 flex items-center gap-2">
-                    <span className="font-medium text-slate-700">{r.author}</span>
+                    <span className="font-medium text-slate-700">{tr(r.author)}</span>
                     <span>·</span>
-                    <span>{r.city}</span>
+                    <span>{tr(r.city)}</span>
                     <span>·</span>
-                    <span className="text-emerald-700 font-medium">Geverifieerde koper</span>
+                    <span className="text-emerald-700 font-medium">{tr("Geverifieerde koper")}</span>
                   </div>
                 </div>
               ))}
@@ -565,22 +566,22 @@ export const ProductDetailPage: React.FC = () => {
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <div className="font-bold text-slate-900 text-sm flex items-center gap-2">
                 <Truck className="w-4 h-4 text-blue-600" />
-                <span>Bezorging & Transport</span>
+                <span>{tr("Bezorging & Transport")}</span>
               </div>
               <ul className="space-y-1.5 text-slate-600">
-                <li><strong>Transportgewicht:</strong> {product.shipping.weightKg} kg</li>
-                <li><strong>Doosafmetingen:</strong> {product.shipping.boxDimensions}</li>
-                <li><strong>Bezorging:</strong> Gratis in heel Nederland</li>
+                <li><strong>{tr("Transportgewicht:")}</strong> {tr(product.shipping.weightKg)} {tr("kg")}</li>
+                <li><strong>{tr("Doosafmetingen:")}</strong> {tr(product.shipping.boxDimensions)}</li>
+                <li><strong>{tr("Bezorging:")}</strong> {tr("Gratis in heel Nederland")}</li>
               </ul>
             </div>
 
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <div className="font-bold text-slate-900 text-sm flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-emerald-600" />
-                <span>100% Rijklaar Aflevering</span>
+                <span>{tr("100% Rijklaar Aflevering")}</span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                De bezorger belt 30 minuten van tevoren. Zadel en stuur worden persoonlijk afgesteld en u krijgt een korte instructie over de boordcomputer en batterij.
+                {tr("De bezorger belt 30 minuten van tevoren. Zadel en stuur worden persoonlijk afgesteld en u krijgt een korte instructie over de boordcomputer en batterij.")}
               </p>
             </div>
           </div>
@@ -591,7 +592,7 @@ export const ProductDetailPage: React.FC = () => {
       {relatedProducts.length > 0 && (
         <div className="pt-6 border-t border-slate-200">
           <h2 className="text-lg font-bold text-slate-900 mb-4">
-            Bekijk ook deze modellen van {product.brand}
+            {tr("Bekijk ook deze modellen van")} {tr(product.brand)}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {relatedProducts.map((p) => (

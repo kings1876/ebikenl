@@ -3,12 +3,15 @@
 import React, { useState } from 'react';
 import { TRUSTPILOT_OVERALL_SCORE, SITE_TRUSTPILOT_REVIEWS } from '../data/ebikes';
 import { CheckCircle, ChevronLeft, ChevronRight, MessageSquareQuote } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 interface TrustpilotWidgetProps {
   variant?: 'banner' | 'full' | 'compact';
 }
 
 export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'full' }) => {
+  const tr = useTr();
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextReview = () => {
@@ -46,10 +49,10 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'f
   if (variant === 'compact') {
     return (
       <div className="flex items-center gap-2.5 text-xs text-slate-700">
-        <span className="font-semibold text-slate-900">Trustpilot</span>
+        <span className="font-semibold text-slate-900">{tr("Trustpilot")}</span>
         {renderStars(5, 'sm')}
         <span className="font-bold tabular-nums">4.8</span>
-        <span className="text-slate-500">· 1.428 reviews</span>
+        <span className="text-slate-500">{tr("· 1.428 reviews")}</span>
       </div>
     );
   }
@@ -60,18 +63,18 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'f
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs md:text-sm">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5">
-              <span className="font-bold text-white tracking-tight">Trustpilot</span>
+              <span className="font-bold text-white tracking-tight">{tr("Trustpilot")}</span>
               {renderStars(5, 'sm')}
             </div>
             <span className="text-slate-300">
-              Score <strong className="text-white">4.8 / 5</strong> gebaseerd op{' '}
-              <strong className="text-white">1.428 geverifieerde reviews</strong>
+              {tr("Score")} <strong className="text-white">4.8 / 5</strong> {tr("gebaseerd op")}{' '}
+              <strong className="text-white">{tr("1.428 geverifieerde reviews")}</strong>
             </span>
           </div>
           <div className="hidden sm:flex items-center gap-6 text-slate-300">
-            <span>✓ 100% Rijklaar bezorgd aan huis</span>
-            <span>✓ Betaal veilig met iDEAL, SEPA & Crypto</span>
-            <span>✓ Tot 10 jaar fabrieksgarantie</span>
+            <span>{tr("✓ 100% Rijklaar bezorgd aan huis")}</span>
+            <span>{tr("✓ Betaal veilig met iDEAL, SEPA & Crypto")}</span>
+            <span>{tr("✓ Tot 10 jaar fabrieksgarantie")}</span>
           </div>
         </div>
       </div>
@@ -85,13 +88,13 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'f
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 pb-6 border-b border-slate-100">
           <div>
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#00b67a] uppercase mb-1">
-              <span>Geverifieerde Klantbeoordelingen</span>
+              <span>{tr("Geverifieerde Klantbeoordelingen")}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
-              Wat onze klanten zeggen op Trustpilot
+              {tr("Wat onze klanten zeggen op Trustpilot")}
             </h2>
             <p className="mt-1 text-sm text-slate-600">
-              Echte ervaringen van e-bike rijders in heel Nederland over onze service, levering en betaling.
+              {tr("Echte ervaringen van e-bike rijders in heel Nederland over onze service, levering en betaling.")}
             </p>
           </div>
 
@@ -99,16 +102,16 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'f
           <div className="flex items-center gap-4 p-3 bg-slate-50 rounded-xl border border-slate-200/80 shrink-0">
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-slate-900 text-base">Trustpilot</span>
+                <span className="font-extrabold text-slate-900 text-base">{tr("Trustpilot")}</span>
                 {renderStars(5, 'sm')}
               </div>
               <div className="text-xs text-slate-600 mt-0.5">
-                TrustScore <strong className="text-slate-900">4.8</strong> | {TRUSTPILOT_OVERALL_SCORE.totalReviews} reviews
+                {tr("TrustScore")} <strong className="text-slate-900">4.8</strong> | {tr(TRUSTPILOT_OVERALL_SCORE.totalReviews)} {tr("reviews")}
               </div>
             </div>
             <div className="pl-3 border-l border-slate-200 text-right">
               <span className="inline-block text-xs font-bold text-[#00b67a] bg-emerald-50 px-2 py-0.5 rounded">
-                Uitstekend
+                {tr("Uitstekend")}
               </span>
             </div>
           </div>
@@ -124,27 +127,27 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'f
               <div>
                 <div className="flex items-center justify-between mb-3">
                   {renderStars(review.rating, 'sm')}
-                  <span className="text-xs text-slate-400">{review.date}</span>
+                  <span className="text-xs text-slate-400">{tr(review.date)}</span>
                 </div>
 
                 <h3 className="font-semibold text-slate-900 text-sm mb-2 leading-snug">
-                  "{review.title}"
+                  "{tr(review.title)}"
                 </h3>
 
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  {review.content}
+                  {tr(review.content)}
                 </p>
               </div>
 
               <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs">
                 <div>
-                  <div className="font-medium text-slate-900">{review.author}</div>
-                  <div className="text-slate-500">{review.city}</div>
+                  <div className="font-medium text-slate-900">{tr(review.author)}</div>
+                  <div className="text-slate-500">{tr(review.city)}</div>
                 </div>
                 {review.verified && (
                   <div className="flex items-center gap-1 text-[#00b67a] font-medium text-[11px]">
                     <CheckCircle className="w-3.5 h-3.5" />
-                    <span>Geverifieerd</span>
+                    <span>{tr("Geverifieerd")}</span>
                   </div>
                 )}
               </div>
@@ -156,12 +159,12 @@ export const TrustpilotWidget: React.FC<TrustpilotWidgetProps> = ({ variant = 'f
         <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <MessageSquareQuote className="w-4 h-4 text-slate-400" />
-            <span>89% van onze klanten geeft ons de maximale 5-sterren waardering</span>
+            <span>{tr("89% van onze klanten geeft ons de maximale 5-sterren waardering")}</span>
           </div>
           <div className="flex items-center gap-6">
-            <span>✓ Onafhankelijk getoetst door Trustpilot</span>
-            <span>✓ Transparante garantievoorwaarden</span>
-            <span>✓ Eigen bezorgservice in héél Nederland</span>
+            <span>{tr("✓ Onafhankelijk getoetst door Trustpilot")}</span>
+            <span>{tr("✓ Transparante garantievoorwaarden")}</span>
+            <span>{tr("✓ Eigen bezorgservice in héél Nederland")}</span>
           </div>
         </div>
       </div>

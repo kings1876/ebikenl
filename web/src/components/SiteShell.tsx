@@ -6,8 +6,11 @@ import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
 import { CartDrawer } from '@/components/CartDrawer';
 import { CreditCard, Building, Coins } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
+  const tr = useTr();
+
   return (
     <ShopProvider>
         <div className="min-h-screen bg-slate-50 flex flex-col text-slate-900 selection:bg-blue-600 selection:text-white">
@@ -29,52 +32,51 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                     to="/"
                     className="text-base font-black text-white font-display block"
                   >
-                    E-BIKE-TEKOOP<span className="text-blue-500">.NL</span>
+                    {tr("E-BIKE-TEKOOP")}<span className="text-blue-500">{tr(".NL")}</span>
                   </Link>
                   <p className="leading-relaxed text-slate-400 text-xs">
-                    De grootste online e-bike speciaalzaak van Nederland. Uitsluitend nieuwe elektrische
-                    fietsen van toonaangevende A-merken via officiële distributiekanalen.
+                    {tr("De grootste online e-bike speciaalzaak van Nederland. Uitsluitend nieuwe elektrische fietsen van toonaangevende A-merken via officiële distributiekanalen.")}
                   </p>
                   <div className="pt-1 flex items-center gap-2 text-white font-semibold">
-                    <span className="text-[#00b67a]">★ Trustpilot</span>
-                    <span>Score 4.8 / 5 (1.428 reviews)</span>
+                    <span className="text-[#00b67a]">{tr("★ Trustpilot")}</span>
+                    <span>{tr("Score 4.8 / 5 (1.428 reviews)")}</span>
                   </div>
                 </div>
 
                 {/* Col 2: Landingspagina's & SEO Links */}
                 <div className="space-y-3">
                   <div className="font-bold text-white uppercase tracking-wider text-xs">
-                    SEO Landingspagina's
+                    {tr("SEO Landingspagina's")}
                   </div>
                   <ul className="space-y-2">
                     <li>
                       <Link to="/bosch-middenmotor" className="hover:text-white transition-colors">
-                        Bosch Middenmotor E-bikes
+                        {tr("Bosch Middenmotor E-bikes")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/elektrische-damesfiets" className="hover:text-white transition-colors">
-                        Elektrische Damesfietsen (Lage instap)
+                        {tr("Elektrische Damesfietsen (Lage instap)")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/e-bike-onder-2000" className="hover:text-white transition-colors">
-                        E-bike onder €2.000
+                        {tr("E-bike onder €2.000")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/fietsplan-e-bikes" className="hover:text-white transition-colors">
-                        Fietsplan & WKR Leasen
+                        {tr("Fietsplan & WKR Leasen")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/speed-pedelecs" className="hover:text-white transition-colors">
-                        Speed Pedelecs (45 km/u)
+                        {tr("Speed Pedelecs (45 km/u)")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/keuzehulp" className="text-blue-400 hover:text-blue-300 font-semibold">
-                        Online E-Bike Keuzehulp
+                        {tr("Online E-Bike Keuzehulp")}
                       </Link>
                     </li>
                   </ul>
@@ -83,37 +85,37 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 {/* Col 3: Categorieën & Merken */}
                 <div className="space-y-3">
                   <div className="font-bold text-white uppercase tracking-wider text-xs">
-                    Categorieën & Merken
+                    {tr("Categorieën & Merken")}
                   </div>
                   <ul className="space-y-2">
                     <li>
                       <Link to="/categorie/elektrische-fietsen" className="hover:text-white transition-colors">
-                        Elektrische Fietsen
+                        {tr("Elektrische Fietsen")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/categorie/accus-en-opladers" className="hover:text-white transition-colors">
-                        Accu's & Opladers
+                        {tr("Accu's & Opladers")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/categorie/accessoires" className="hover:text-white transition-colors">
-                        Accessoires & Sloten
+                        {tr("Accessoires & Sloten")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/merk/gazelle" className="hover:text-white transition-colors">
-                        Gazelle E-Bikes
+                        {tr("Gazelle E-Bikes")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/merk/cube" className="hover:text-white transition-colors">
-                        Cube E-Bikes
+                        {tr("Cube E-Bikes")}
                       </Link>
                     </li>
                     <li>
                       <Link to="/merk/stromer" className="hover:text-white transition-colors">
-                        Stromer Speed Pedelecs
+                        {tr("Stromer Speed Pedelecs")}
                       </Link>
                     </li>
                   </ul>
@@ -122,26 +124,26 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 {/* Col 4: Bedrijfsgegevens & Betaling */}
                 <div className="space-y-3">
                   <div className="font-bold text-white uppercase tracking-wider text-xs">
-                    Betaling & Vestiging
+                    {tr("Betaling & Vestiging")}
                   </div>
                   <ul className="space-y-2 text-slate-400">
                     <li className="flex items-center gap-1.5">
                       <CreditCard className="w-3.5 h-3.5 text-pink-500" />
-                      <span>iDEAL (Direct via internetbankieren)</span>
+                      <span>{tr("iDEAL (Direct via internetbankieren)")}</span>
                     </li>
                     <li className="flex items-center gap-1.5">
                       <Building className="w-3.5 h-3.5 text-blue-400" />
-                      <span>SEPA Bankoverschrijving</span>
+                      <span>{tr("SEPA Bankoverschrijving")}</span>
                     </li>
                     <li className="flex items-center gap-1.5">
                       <Coins className="w-3.5 h-3.5 text-amber-400" />
-                      <span>Crypto (BTC / ETH / USDT)</span>
+                      <span>{tr("Crypto (BTC / ETH / USDT)")}</span>
                     </li>
                     <li className="pt-2 text-[11px] text-slate-500">
-                      Telefoon: 085 - 200 78 90 (Ma - Za)
+                      {tr("Telefoon: 085 - 200 78 90 (Ma - Za)")}
                     </li>
                     <li className="text-[11px] text-slate-500">
-                      KvK: 84920194 | BTW: NL863492810B01
+                      {tr("KvK: 84920194 | BTW: NL863492810B01")}
                     </li>
                   </ul>
                 </div>
@@ -149,22 +151,22 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
               <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4 text-[11px]">
                 <div>
-                  © {new Date().getFullYear()} E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.
+                  © {new Date().getFullYear()} {tr("E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.")}
                 </div>
                 <div className="flex items-center gap-4">
                   <Link to="/taxonomie" className="text-slate-400 hover:text-white underline">
-                    Taxonomie & Architectuur
+                    {tr("Taxonomie & Architectuur")}
                   </Link>
                   <span>·</span>
                   <Link to="/vergelijken" className="hover:text-white">
-                    Vergelijk E-bikes
+                    {tr("Vergelijk E-bikes")}
                   </Link>
                   <span>·</span>
                   <Link to="/winkelwagen" className="hover:text-white">
-                    Winkelwagen
+                    {tr("Winkelwagen")}
                   </Link>
                   <span>·</span>
-                  <span>EN 15194 & CE Gecertificeerd</span>
+                  <span>{tr("EN 15194 & CE Gecertificeerd")}</span>
                 </div>
               </div>
             </div>

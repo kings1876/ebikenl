@@ -8,8 +8,11 @@ import { FilterSidebar } from '../components/FilterSidebar';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { FilterState, MainCategory, SubCategory } from '../types/ebike';
 import { SlidersHorizontal } from 'lucide-react';
+import { useTr } from '@/i18n/locale';
 
 export const CategoryPage: React.FC = () => {
+  const tr = useTr();
+
   const { categorySlug } = useParams<{ categorySlug: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const subCategoryParam = searchParams.get('sub');
@@ -106,10 +109,10 @@ export const CategoryPage: React.FC = () => {
       {/* Category Header */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
-          {subCategoryParam ? `${subCategoryParam} (${currentCategory})` : currentCategory}
+          {subCategoryParam ? `${tr(subCategoryParam)} (${tr(currentCategory)})` : tr(currentCategory)}
         </h1>
         <p className="text-sm text-slate-600 mt-1 max-w-2xl">
-          Nieuwe modellen van officiële topmerken met fabrieksgarantie. Direct rijklaar leverbaar aan huis.
+          {tr("Nieuwe modellen van officiële topmerken met fabrieksgarantie. Direct rijklaar leverbaar aan huis.")}
         </p>
 
         {/* Subcategory pills */}
@@ -126,7 +129,7 @@ export const CategoryPage: React.FC = () => {
                   : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
               }`}
             >
-              Alle ({categoryData.main})
+              {tr("Alle (")}{tr(categoryData.main)})
             </button>
             {categoryData.subs.map((sub) => (
               <button
@@ -141,7 +144,7 @@ export const CategoryPage: React.FC = () => {
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                {sub}
+                {tr(sub)}
               </button>
             ))}
           </div>
@@ -167,7 +170,7 @@ export const CategoryPage: React.FC = () => {
             className="w-full flex items-center justify-center gap-2 p-3 bg-white rounded-xl border border-slate-200 text-xs font-bold text-slate-800"
           >
             <SlidersHorizontal className="w-4 h-4" />
-            <span>Filters ({filteredProducts.length} resultaten)</span>
+            <span>{tr("Filters (")}{tr(filteredProducts.length)} {tr("resultaten)")}</span>
           </button>
           {isMobileFilterOpen && (
             <div className="mt-3">
@@ -184,16 +187,16 @@ export const CategoryPage: React.FC = () => {
         {/* Products */}
         <div className="col-span-12 lg:col-span-9">
           <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-200 text-xs text-slate-500">
-            <span>{filteredProducts.length} producten gevonden</span>
+            <span>{tr(filteredProducts.length)} {tr("producten gevonden")}</span>
             <select
               value={filters.sortBy}
               onChange={(e) => setFilters({ ...filters, sortBy: e.target.value as any })}
               className="bg-white border border-slate-200 rounded-lg p-1.5 text-xs text-slate-700"
             >
-              <option value="populariteit">Meest populair</option>
-              <option value="prijs-laag-hoog">Prijs laag → hoog</option>
-              <option value="prijs-hoog-laag">Prijs hoog → laag</option>
-              <option value="beoordeling">Hoogste reviewscore</option>
+              <option value="populariteit">{tr("Meest populair")}</option>
+              <option value="prijs-laag-hoog">{tr("Prijs laag → hoog")}</option>
+              <option value="prijs-hoog-laag">{tr("Prijs hoog → laag")}</option>
+              <option value="beoordeling">{tr("Hoogste reviewscore")}</option>
             </select>
           </div>
 
