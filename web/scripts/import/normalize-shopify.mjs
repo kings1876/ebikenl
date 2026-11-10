@@ -107,7 +107,7 @@ const tenways = build({
   category: (p) => (/cargo|longtail/i.test(p.title) ? 'Bakfietsen' : 'Stadsfietsen'),
   priceSource: 'tenways.com (adviesprijs fabrikant, EUR)', nlMarketNote: 'Prijs van de fabrikant (EUR, webshop Tenways).',
 });
-stripBrand(tenways, /^TENWAYSs+/i);
+stripBrand(tenways, /^TENWAYS\s+/i);
 const ghost = build({
   brand: 'Ghost', host: 'www.ghost-bikes.com',
   feed: load('shopify-www.ghost-bikes.com.json'), beFeed: [],
@@ -123,7 +123,7 @@ const sushi = build({
   category: () => 'Stadsfietsen',
   priceSource: 'sushi-bikes.com (prijs fabrikant, EUR)', nlMarketNote: 'Prijs van de fabrikant (EUR, webshop Sushi Bikes).',
 });
-stripBrand(sushi, /^E-Bikes+/i);
+stripBrand(sushi, /^E-Bike\s+(SUSHI BIKE\s+)?/i);
 
 const winora = build({
   brand: 'Winora', host: 'www.winora.com',
