@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { CartDrawer } from '@/components/CartDrawer';
 import { CreditCard, Building, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
+import { Logo } from './Logo';
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const tr = useTr();
@@ -30,9 +31,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 <div className="space-y-3">
                   <Link
                     to="/"
-                    className="text-base font-black text-white font-display block"
+                    className="text-lg block"
                   >
-                    {tr("E-BIKE-TEKOOP")}<span className="text-blue-500">{tr(".NL")}</span>
+                    <Logo onDark />
                   </Link>
                   <p className="leading-relaxed text-slate-400 text-xs">
                     {tr("De grootste online e-bike speciaalzaak van Nederland. Uitsluitend nieuwe elektrische fietsen van toonaangevende A-merken via officiële distributiekanalen.")}

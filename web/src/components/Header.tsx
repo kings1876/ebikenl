@@ -7,6 +7,7 @@ import { formatEur } from '../utils/format';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { Logo } from './Logo';
 
 export const Header: React.FC = () => {
   const tr = useTr();
@@ -47,9 +48,9 @@ export const Header: React.FC = () => {
         {/* Zone 1: Single text element Brand Zone */}
         <Link
           to="/"
-          className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 whitespace-nowrap shrink-0 hover:text-blue-700 transition-colors font-display"
+          className="text-xl sm:text-2xl shrink-0 hover:opacity-90 transition-opacity"
         >
-          {tr("E-BIKE-TEKOOP")}<span className="text-blue-600">{tr(".NL")}</span>
+          <Logo />
         </Link>
 
         {/* Zone 2: 4-5 single-line clean nav links with real URLs */}

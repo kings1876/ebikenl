@@ -19,6 +19,7 @@ export function rootMetadata(locale: Locale) {
       locale,
       'Nieuwe elektrische fietsen van A-merken met fabrieksgarantie en snelle levering. Betaal met iDEAL, bankoverschrijving of crypto.',
     ),
+    applicationName: 'E-BIKE-TEKOOP.NL',
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://e-bike-tekoop.vercel.app'),
     openGraph: {
       locale: locale === 'en' ? 'en_US' : 'nl_NL',
@@ -28,10 +29,20 @@ export function rootMetadata(locale: Locale) {
   };
 }
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://e-bike-tekoop.vercel.app';
+const ORGANIZATION_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'E-BIKE-TEKOOP.NL',
+  url: SITE_URL,
+  logo: `${SITE_URL}/apple-icon.png`,
+};
+
 export function RootLayoutBase({ locale, children }: { locale: Locale; children: ReactNode }) {
   return (
     <html lang={locale} className={`${jakarta.variable} ${outfit.variable} h-full`}>
       <body className="min-h-full flex flex-col">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_LD) }} />
         <LocaleProvider locale={locale}>
           <SiteShell>{children}</SiteShell>
         </LocaleProvider>
