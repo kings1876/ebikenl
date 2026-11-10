@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
 import { SEO_LANDING_PAGES, PRODUCTS, LandingPageDef } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { CheckCircle, Tag, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 
@@ -21,8 +22,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
   const landing: LandingPageDef =
     SEO_LANDING_PAGES.find((l) => l.slug === activeSlug) || SEO_LANDING_PAGES[0];
 
+  const [page, setPage] = useState(1);
+  const gridTop = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    setPage(1);
   }, [landing]);
 
   // Filter matching products
@@ -34,6 +39,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
     if (landing.matchFilter.maximaleSnelheid && p.maximaleSnelheid !== landing.matchFilter.maximaleSnelheid) return false;
     return true;
   });
+
+  const totalPages = Math.max(1, Math.ceil(matchingProducts.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pageProducts = matchingProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const goToPage = (n: number) => {
+    setPage(n);
+    gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
@@ -86,21 +99,22 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
       </div>
 
       {/* Matching Products */}
-      <div>
+      <div ref={gridTop} className="scroll-mt-24">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-900">
             {tr("Aanbod")} {tr(landing.title)} ({tr(matchingProducts.length)})
           </h2>
           <span className="text-xs text-slate-500">
-            {tr("100% Nieuw met fabrieksgarantie via distributeur")}
+            {tr("100% nieuw, met de fabrieksgarantie van de fabrikant")}
           </span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {matchingProducts.map((p) => (
+          {pageProducts.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
         </div>
+        <Pagination page={currentPage} totalItems={matchingProducts.length} onPageChange={goToPage} />
       </div>
     </div>
   );
