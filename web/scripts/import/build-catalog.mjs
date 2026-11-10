@@ -132,8 +132,12 @@ const normalised = (r) => ({ ...r, subCategory: r.category, category: '', slugBa
 adapters.batavus = normalised;
 adapters.haibike = normalised;
 adapters.raleigh = normalised;
+adapters.tenways = normalised;
+adapters.ghost = normalised;
+adapters.sushi = normalised;
+adapters.winora = normalised;
 adapters.liv = adapters.giant; // same platform and fields as Giant
-const files = fs.readdirSync(RAW).filter((f) => /^(giant|liv|batavus|haibike|raleigh)\.json$/.test(f));
+const files = fs.readdirSync(RAW).filter((f) => /^(giant|liv|batavus|haibike|raleigh|tenways|ghost|sushi|winora)\.json$/.test(f));
 const catalog = [];
 const en = {};
 const report = { products: 0, images: 0, failedImages: 0, lowRes: [], bytes: 0 };

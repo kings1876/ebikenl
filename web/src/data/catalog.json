@@ -629,6 +629,908 @@
   "reviews": []
  },
  {
+  "id": "ghost-e-asx-essential-eq-low-gbet2",
+  "slug": "ghost-e-asx-essential-eq-low-gbet2",
+  "title": "Ghost E-ASX ESSENTIAL EQ LOW",
+  "brand": "Ghost",
+  "model": "E-ASX ESSENTIAL EQ LOW",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4999,
+  "image": "/images/catalog/ghost-e-asx-essential-eq-low-gbet2-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-asx-essential-eq-low-gbet2-1.webp",
+   "/images/catalog/ghost-e-asx-essential-eq-low-gbet2-2.webp",
+   "/images/catalog/ghost-e-asx-essential-eq-low-gbet2-3.webp",
+   "/images/catalog/ghost-e-asx-essential-eq-low-gbet2-4.webp"
+  ],
+  "description": "Ghost E-ASX ESSENTIAL EQ LOW is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-ASX ESSENTIAL EQ LOW is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "rebel red",
+   "coffee pebble - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "rebel red/coffee pebble - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-asx-essential-eq-low-gbet2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-asx-universal-gbbu2",
+  "slug": "ghost-e-asx-universal-gbbu2",
+  "title": "Ghost E-ASX UNIVERSAL",
+  "brand": "Ghost",
+  "model": "E-ASX UNIVERSAL",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4999,
+  "image": "/images/catalog/ghost-e-asx-universal-gbbu2-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-asx-universal-gbbu2-1.webp",
+   "/images/catalog/ghost-e-asx-universal-gbbu2-2.webp",
+   "/images/catalog/ghost-e-asx-universal-gbbu2-3.webp",
+   "/images/catalog/ghost-e-asx-universal-gbbu2-4.webp"
+  ],
+  "description": "Ghost E-ASX UNIVERSAL is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-ASX UNIVERSAL is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "candy blue",
+   "coffee arctic dust - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "candy blue/coffee arctic dust - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-asx-universal-gbbu2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-asx-abs-gbdu1",
+  "slug": "ghost-e-asx-abs-gbdu1",
+  "title": "Ghost E-ASX ABS",
+  "brand": "Ghost",
+  "model": "E-ASX ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 6499,
+  "image": "/images/catalog/ghost-e-asx-abs-gbdu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-asx-abs-gbdu1-1.webp",
+   "/images/catalog/ghost-e-asx-abs-gbdu1-2.webp",
+   "/images/catalog/ghost-e-asx-abs-gbdu1-3.webp",
+   "/images/catalog/ghost-e-asx-abs-gbdu1-4.webp"
+  ],
+  "description": "Ghost E-ASX ABS is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-ASX ABS is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "shadowed slate",
+   "light navy blue - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "shadowed slate/light navy blue - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-asx-abs-gbdu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-asx-advanced-gbau1",
+  "slug": "ghost-e-asx-advanced-gbau1",
+  "title": "Ghost E-ASX ADVANCED",
+  "brand": "Ghost",
+  "model": "E-ASX ADVANCED",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 5999,
+  "image": "/images/catalog/ghost-e-asx-advanced-gbau1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-asx-advanced-gbau1-1.webp",
+   "/images/catalog/ghost-e-asx-advanced-gbau1-2.webp",
+   "/images/catalog/ghost-e-asx-advanced-gbau1-3.webp",
+   "/images/catalog/ghost-e-asx-advanced-gbau1-4.webp"
+  ],
+  "description": "Ghost E-ASX ADVANCED is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-ASX ADVANCED is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "brown bear",
+   "stone - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "brown bear/stone - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-asx-advanced-gbau1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-riot-full-party-gebu1",
+  "slug": "ghost-e-riot-full-party-gebu1",
+  "title": "Ghost E-RIOT FULL PARTY, Bosch Performance",
+  "brand": "Ghost",
+  "model": "E-RIOT FULL PARTY",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 9500,
+  "image": "/images/catalog/ghost-e-riot-full-party-gebu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-riot-full-party-gebu1-1.webp",
+   "/images/catalog/ghost-e-riot-full-party-gebu1-2.webp",
+   "/images/catalog/ghost-e-riot-full-party-gebu1-3.webp",
+   "/images/catalog/ghost-e-riot-full-party-gebu1-4.webp"
+  ],
+  "description": "Ghost E-RIOT FULL PARTY is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-RIOT FULL PARTY is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "kleuren": [
+   "mist blue",
+   "pure elegance - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Kleuren": "mist blue/pure elegance - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-riot-full-party-gebu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 9500,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-riot-ltd-gecu1",
+  "slug": "ghost-e-riot-ltd-gecu1",
+  "title": "Ghost E-RIOT LTD, Bosch Performance",
+  "brand": "Ghost",
+  "model": "E-RIOT LTD",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 11000,
+  "image": "/images/catalog/ghost-e-riot-ltd-gecu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-riot-ltd-gecu1-1.webp",
+   "/images/catalog/ghost-e-riot-ltd-gecu1-2.webp",
+   "/images/catalog/ghost-e-riot-ltd-gecu1-3.webp",
+   "/images/catalog/ghost-e-riot-ltd-gecu1-4.webp"
+  ],
+  "description": "Ghost E-RIOT LTD is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-RIOT LTD is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "kleuren": [
+   "visible carbon",
+   "dirt brown - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Kleuren": "visible carbon/dirt brown - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-riot-ltd-gecu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 11000,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-riot-pro-geau1",
+  "slug": "ghost-e-riot-pro-geau1",
+  "title": "Ghost E-RIOT PRO, Bosch Performance",
+  "brand": "Ghost",
+  "model": "E-RIOT PRO",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 8000,
+  "image": "/images/catalog/ghost-e-riot-pro-geau1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-riot-pro-geau1-1.webp",
+   "/images/catalog/ghost-e-riot-pro-geau1-2.webp",
+   "/images/catalog/ghost-e-riot-pro-geau1-3.webp",
+   "/images/catalog/ghost-e-riot-pro-geau1-4.webp"
+  ],
+  "description": "Ghost E-RIOT PRO is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-RIOT PRO is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "kleuren": [
+   "heavy metal",
+   "deep coffee - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Kleuren": "heavy metal/deep coffee - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-riot-pro-geau1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 8000,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-path-riot-cf-full-party-gfau1",
+  "slug": "ghost-path-riot-cf-full-party-gfau1",
+  "title": "Ghost PATH RIOT CF FULL PARTY, Fazua Ride 60",
+  "brand": "Ghost",
+  "model": "PATH RIOT CF FULL PARTY",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 8500,
+  "image": "/images/catalog/ghost-path-riot-cf-full-party-gfau1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-path-riot-cf-full-party-gfau1-1.webp",
+   "/images/catalog/ghost-path-riot-cf-full-party-gfau1-2.webp",
+   "/images/catalog/ghost-path-riot-cf-full-party-gfau1-3.webp",
+   "/images/catalog/ghost-path-riot-cf-full-party-gfau1-4.webp"
+  ],
+  "description": "Ghost PATH RIOT CF FULL PARTY is een e-mountainbike met Fazua Ride 60. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost PATH RIOT CF FULL PARTY is een e-mountainbike met Fazua Ride 60. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Fazua Ride 60",
+  "motormerk": "Fazua",
+  "kleuren": [
+   "dusty rose",
+   "pearl dark grey - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Fazua Ride 60",
+   "Kleuren": "dusty rose/pearl dark grey - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/path-riot-cf-full-party-gfau1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 8500,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-riot-advanced-gedu2",
+  "slug": "ghost-e-riot-advanced-gedu2",
+  "title": "Ghost E-RIOT ADVANCED, Bosch Performance",
+  "brand": "Ghost",
+  "model": "E-RIOT ADVANCED",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 6499,
+  "image": "/images/catalog/ghost-e-riot-advanced-gedu2-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-riot-advanced-gedu2-1.webp",
+   "/images/catalog/ghost-e-riot-advanced-gedu2-2.webp",
+   "/images/catalog/ghost-e-riot-advanced-gedu2-3.webp",
+   "/images/catalog/ghost-e-riot-advanced-gedu2-4.webp"
+  ],
+  "description": "Ghost E-RIOT ADVANCED is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-RIOT ADVANCED is een e-mountainbike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "kleuren": [
+   "rebel red",
+   "misty gray - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Kleuren": "rebel red/misty gray - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-riot-advanced-gedu2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-path-riot-advanced-gfat1",
+  "slug": "ghost-path-riot-advanced-gfat1",
+  "title": "Ghost PATH RIOT ADVANCED, Fazua",
+  "brand": "Ghost",
+  "model": "PATH RIOT ADVANCED",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 6999,
+  "image": "/images/catalog/ghost-path-riot-advanced-gfat1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-path-riot-advanced-gfat1-1.webp",
+   "/images/catalog/ghost-path-riot-advanced-gfat1-2.webp",
+   "/images/catalog/ghost-path-riot-advanced-gfat1-3.webp",
+   "/images/catalog/ghost-path-riot-advanced-gfat1-4.webp"
+  ],
+  "description": "Ghost PATH RIOT ADVANCED is een e-mountainbike met Fazua. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost PATH RIOT ADVANCED is een e-mountainbike met Fazua. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Fazua",
+  "motormerk": "Fazua",
+  "kleuren": [
+   "ink blue",
+   "coffee ice rose - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Fazua",
+   "Kleuren": "ink blue/coffee ice rose - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/path-riot-advanced-gfat1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-asx-universal-eq-gbft1",
+  "slug": "ghost-e-asx-universal-eq-gbft1",
+  "title": "Ghost E-ASX UNIVERSAL EQ",
+  "brand": "Ghost",
+  "model": "E-ASX UNIVERSAL EQ",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 5499,
+  "image": "/images/catalog/ghost-e-asx-universal-eq-gbft1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-asx-universal-eq-gbft1-1.webp",
+   "/images/catalog/ghost-e-asx-universal-eq-gbft1-2.webp",
+   "/images/catalog/ghost-e-asx-universal-eq-gbft1-3.webp",
+   "/images/catalog/ghost-e-asx-universal-eq-gbft1-4.webp"
+  ],
+  "description": "Ghost E-ASX UNIVERSAL EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-ASX UNIVERSAL EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "blazing black",
+   "misty gray - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "blazing black/misty gray - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-asx-universal-eq-gbft1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-asx-abs-eq-gbgt1",
+  "slug": "ghost-e-asx-abs-eq-gbgt1",
+  "title": "Ghost E-ASX ABS EQ",
+  "brand": "Ghost",
+  "model": "E-ASX ABS EQ",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 6499,
+  "image": "/images/catalog/ghost-e-asx-abs-eq-gbgt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-asx-abs-eq-gbgt1-1.webp",
+   "/images/catalog/ghost-e-asx-abs-eq-gbgt1-2.webp",
+   "/images/catalog/ghost-e-asx-abs-eq-gbgt1-3.webp",
+   "/images/catalog/ghost-e-asx-abs-eq-gbgt1-4.webp"
+  ],
+  "description": "Ghost E-ASX ABS EQ is een toer-e-bike. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-ASX ABS EQ is een toer-e-bike. Beschikbare maten: S, M, L, XL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "coffee tropic rose",
+   "coffee arctic dust - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L, XL",
+   "Kleuren": "coffee tropic rose/coffee arctic dust - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-asx-abs-eq-gbgt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-pro-eq-abs-gtfu1",
+  "slug": "ghost-e-teru-pro-eq-abs-gtfu1",
+  "title": "Ghost E-TERU Pro EQ ABS",
+  "brand": "Ghost",
+  "model": "E-TERU Pro EQ ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4999,
+  "image": "/images/catalog/ghost-e-teru-pro-eq-abs-gtfu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-pro-eq-abs-gtfu1-1.webp",
+   "/images/catalog/ghost-e-teru-pro-eq-abs-gtfu1-2.webp",
+   "/images/catalog/ghost-e-teru-pro-eq-abs-gtfu1-3.webp",
+   "/images/catalog/ghost-e-teru-pro-eq-abs-gtfu1-4.webp"
+  ],
+  "description": "Ghost E-TERU Pro EQ ABS is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU Pro EQ ABS is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "cocoa bean",
+   "graphite noir - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "cocoa bean/graphite noir - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-pro-eq-abs-gtfu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-pro-275-gtbu1",
+  "slug": "ghost-e-teru-pro-275-gtbu1",
+  "title": "Ghost E-TERU PRO 27.5, Bosch Performance",
+  "brand": "Ghost",
+  "model": "E-TERU PRO 27.5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/ghost-e-teru-pro-275-gtbu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-pro-275-gtbu1-1.webp",
+   "/images/catalog/ghost-e-teru-pro-275-gtbu1-2.webp",
+   "/images/catalog/ghost-e-teru-pro-275-gtbu1-3.webp",
+   "/images/catalog/ghost-e-teru-pro-275-gtbu1-4.webp"
+  ],
+  "description": "Ghost E-TERU PRO 27.5 is een toer-e-bike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU PRO 27.5 is een toer-e-bike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "kleuren": [
+   "storm gray",
+   "chilly white - glossy",
+   "old copper",
+   "darkened steel - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Kleuren": "storm gray/chilly white - glossy, old copper/darkened steel - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-pro-275-gtbu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-advanced-eq-gtiu1",
+  "slug": "ghost-e-teru-advanced-eq-gtiu1",
+  "title": "Ghost E-TERU ADVANCED EQ",
+  "brand": "Ghost",
+  "model": "E-TERU ADVANCED EQ",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3999,
+  "image": "/images/catalog/ghost-e-teru-advanced-eq-gtiu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-advanced-eq-gtiu1-1.webp",
+   "/images/catalog/ghost-e-teru-advanced-eq-gtiu1-2.webp",
+   "/images/catalog/ghost-e-teru-advanced-eq-gtiu1-3.webp",
+   "/images/catalog/ghost-e-teru-advanced-eq-gtiu1-4.webp"
+  ],
+  "description": "Ghost E-TERU ADVANCED EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU ADVANCED EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "eerie black",
+   "beaver - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "eerie black/beaver - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-advanced-eq-gtiu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-gtau1",
+  "slug": "ghost-e-teru-gtau1",
+  "title": "Ghost E-TERU",
+  "brand": "Ghost",
+  "model": "E-TERU",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 2999,
+  "image": "/images/catalog/ghost-e-teru-gtau1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-gtau1-1.webp",
+   "/images/catalog/ghost-e-teru-gtau1-2.webp",
+   "/images/catalog/ghost-e-teru-gtau1-3.webp",
+   "/images/catalog/ghost-e-teru-gtau1-4.webp"
+  ],
+  "description": "Ghost E-TERU is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "black eel",
+   "cactus - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "black eel/cactus - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-gtau1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-universal-eq-gtgu1",
+  "slug": "ghost-e-teru-universal-eq-gtgu1",
+  "title": "Ghost E-TERU UNIVERSAL EQ",
+  "brand": "Ghost",
+  "model": "E-TERU UNIVERSAL EQ",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3499,
+  "image": "/images/catalog/ghost-e-teru-universal-eq-gtgu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-universal-eq-gtgu1-1.webp",
+   "/images/catalog/ghost-e-teru-universal-eq-gtgu1-2.webp",
+   "/images/catalog/ghost-e-teru-universal-eq-gtgu1-3.webp",
+   "/images/catalog/ghost-e-teru-universal-eq-gtgu1-4.webp"
+  ],
+  "description": "Ghost E-TERU UNIVERSAL EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU UNIVERSAL EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "dark gunmetal",
+   "abbey - glossy",
+   "harvest yellow",
+   "cocoa brown - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "dark gunmetal/abbey - glossy, harvest yellow/cocoa brown - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-universal-eq-gtgu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-eq-gtdu2",
+  "slug": "ghost-e-teru-eq-gtdu2",
+  "title": "Ghost E-TERU EQ",
+  "brand": "Ghost",
+  "model": "E-TERU EQ",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 2999,
+  "image": "/images/catalog/ghost-e-teru-eq-gtdu2-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-eq-gtdu2-1.webp",
+   "/images/catalog/ghost-e-teru-eq-gtdu2-2.webp",
+   "/images/catalog/ghost-e-teru-eq-gtdu2-3.webp",
+   "/images/catalog/ghost-e-teru-eq-gtdu2-4.webp"
+  ],
+  "description": "Ghost E-TERU EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU EQ is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "black eel",
+   "cactus - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "black eel/cactus - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-eq-gtdu2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-advanced-gtet1",
+  "slug": "ghost-e-teru-advanced-gtet1",
+  "title": "Ghost E-TERU ADVANCED",
+  "brand": "Ghost",
+  "model": "E-TERU ADVANCED",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3999,
+  "image": "/images/catalog/ghost-e-teru-advanced-gtet1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-advanced-gtet1-1.webp",
+   "/images/catalog/ghost-e-teru-advanced-gtet1-2.webp",
+   "/images/catalog/ghost-e-teru-advanced-gtet1-3.webp",
+   "/images/catalog/ghost-e-teru-advanced-gtet1-4.webp"
+  ],
+  "description": "Ghost E-TERU ADVANCED is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU ADVANCED is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "carbon red",
+   "chilly white - glossy",
+   "misty green",
+   "earth green - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "carbon red / chilly white - glossy, misty green / earth green - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-advanced-gtet1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-pro-29-gtbu1",
+  "slug": "ghost-e-teru-pro-29-gtbu1",
+  "title": "Ghost E-TERU PRO 29, Bosch Performance",
+  "brand": "Ghost",
+  "model": "E-TERU PRO 29",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/ghost-e-teru-pro-29-gtbu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-pro-29-gtbu1-1.webp",
+   "/images/catalog/ghost-e-teru-pro-29-gtbu1-2.webp",
+   "/images/catalog/ghost-e-teru-pro-29-gtbu1-3.webp",
+   "/images/catalog/ghost-e-teru-pro-29-gtbu1-4.webp"
+  ],
+  "description": "Ghost E-TERU PRO 29 is een toer-e-bike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU PRO 29 is een toer-e-bike met Bosch Performance. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "kleuren": [
+   "storm gray",
+   "chilly white - glossy",
+   "old copper",
+   "darkened steel - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Kleuren": "storm gray/chilly white - glossy, old copper/darkened steel - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-pro-29-gtbu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "ghost-e-teru-universal-29-gtct1",
+  "slug": "ghost-e-teru-universal-29-gtct1",
+  "title": "Ghost E-TERU UNIVERSAL 29",
+  "brand": "Ghost",
+  "model": "E-TERU UNIVERSAL 29",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3499,
+  "image": "/images/catalog/ghost-e-teru-universal-29-gtct1-1.webp",
+  "galleryImages": [
+   "/images/catalog/ghost-e-teru-universal-29-gtct1-1.webp",
+   "/images/catalog/ghost-e-teru-universal-29-gtct1-2.webp",
+   "/images/catalog/ghost-e-teru-universal-29-gtct1-3.webp",
+   "/images/catalog/ghost-e-teru-universal-29-gtct1-4.webp"
+  ],
+  "description": "Ghost E-TERU UNIVERSAL 29 is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Ghost E-TERU UNIVERSAL 29 is een toer-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "atlantic blue",
+   "coffee ice rose - glossy",
+   "shadow gray",
+   "dazzling mango - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "atlantic blue / coffee ice rose - glossy, shadow gray / dazzling mango - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.ghost-bikes.com/products/e-teru-universal-29-gtct1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "ghost-bikes.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
   "id": "giant-entour-eplus-0-dd-2027",
   "slug": "giant-entour-eplus-0-dd-2027",
   "title": "Giant Entour E+ 0 DD, Giant SyncDrive Core3, 375 Wh",
@@ -8475,6 +9377,2137 @@
    "originalAmount": 2247.81,
    "originalCurrency": "EUR",
    "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "sushi-bikes-sushi-bike-tabi",
+  "slug": "sushi-bikes-sushi-bike-tabi",
+  "title": "Sushi Bikes E-Bike SUSHI BIKE TABI, 360 Wh",
+  "brand": "Sushi Bikes",
+  "model": "E-Bike SUSHI BIKE TABI",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1699,
+  "image": "/images/catalog/sushi-bikes-sushi-bike-tabi-1.webp",
+  "galleryImages": [
+   "/images/catalog/sushi-bikes-sushi-bike-tabi-1.webp",
+   "/images/catalog/sushi-bikes-sushi-bike-tabi-2.webp",
+   "/images/catalog/sushi-bikes-sushi-bike-tabi-3.webp",
+   "/images/catalog/sushi-bikes-sushi-bike-tabi-4.webp"
+  ],
+  "description": "Sushi Bikes E-Bike SUSHI BIKE TABI is een stads-e-bike met een 360 Wh accu. Remmen: Hydraulische schijfrem. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Sushi Bikes E-Bike SUSHI BIKE TABI is een stads-e-bike met een 360 Wh accu. Remmen: Hydraulische schijfrem.",
+  "accuWhNumber": 360,
+  "accucapaciteit": "400 Wh",
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Accu": "360 Wh",
+   "Remmen": "Hydraulische schijfrem"
+  },
+  "source": {
+   "brandUrl": "https://www.sushi-bikes.com/products/sushi-bike-tabi",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "sushi-bikes.com (prijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1699,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Sushi Bikes)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "sushi-bikes-sushi-bike-3-0-plus",
+  "slug": "sushi-bikes-sushi-bike-3-0-plus",
+  "title": "Sushi Bikes E-Bike SUSHI BIKE 3.0+",
+  "brand": "Sushi Bikes",
+  "model": "E-Bike SUSHI BIKE 3.0+",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1399,
+  "image": "/images/catalog/sushi-bikes-sushi-bike-3-0-plus-1.webp",
+  "galleryImages": [
+   "/images/catalog/sushi-bikes-sushi-bike-3-0-plus-1.webp",
+   "/images/catalog/sushi-bikes-sushi-bike-3-0-plus-2.webp",
+   "/images/catalog/sushi-bikes-sushi-bike-3-0-plus-3.webp",
+   "/images/catalog/sushi-bikes-sushi-bike-3-0-plus-4.webp"
+  ],
+  "description": "Sushi Bikes E-Bike SUSHI BIKE 3.0+ is een stads-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Sushi Bikes E-Bike SUSHI BIKE 3.0+ is een stads-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "Matcha",
+   "Black",
+   "Ocean Drive",
+   "Lava",
+   "Bubblegum"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "Matcha, Black, Ocean Drive, Lava, Bubblegum"
+  },
+  "source": {
+   "brandUrl": "https://www.sushi-bikes.com/products/sushi-bike-3-0-plus",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "sushi-bikes.com (prijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1399,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Sushi Bikes)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-ago-performance",
+  "slug": "tenways-ago-performance",
+  "title": "Tenways TENWAYS AGO Performance, Bosch Performance Line, 540 Wh",
+  "brand": "Tenways",
+  "model": "TENWAYS AGO Performance",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3299,
+  "image": "/images/catalog/tenways-ago-performance-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-ago-performance-1.webp",
+   "/images/catalog/tenways-ago-performance-2.webp",
+   "/images/catalog/tenways-ago-performance-3.webp",
+   "/images/catalog/tenways-ago-performance-4.webp"
+  ],
+  "description": "Tenways TENWAYS AGO Performance is een stads-e-bike met Bosch Performance Line en een 540 Wh accu. Versnellingen: Enviolo (traploos). Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS AGO Performance is een stads-e-bike met Bosch Performance Line en een 540 Wh accu. Versnellingen: Enviolo (traploos).",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "accuWhNumber": 540,
+  "accucapaciteit": "500 Wh",
+  "kleuren": [
+   "Walnut Brown",
+   "Mineral Blue"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Accu": "540 Wh",
+   "Versnelling": "Enviolo (traploos)",
+   "Aandrijving": "Riem",
+   "Kleuren": "Walnut Brown, Mineral Blue"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/ago-performance",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3299,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-ago-air",
+  "slug": "tenways-ago-air",
+  "title": "Tenways TENWAYS AGO AIR, 560 Wh",
+  "brand": "Tenways",
+  "model": "TENWAYS AGO AIR",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1999,
+  "image": "/images/catalog/tenways-ago-air-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-ago-air-1.webp",
+   "/images/catalog/tenways-ago-air-2.webp",
+   "/images/catalog/tenways-ago-air-3.webp",
+   "/images/catalog/tenways-ago-air-4.webp"
+  ],
+  "description": "Tenways TENWAYS AGO AIR is een stads-e-bike met een 560 Wh accu. Remmen: Hydraulische schijfrem. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS AGO AIR is een stads-e-bike met een 560 Wh accu. Remmen: Hydraulische schijfrem.",
+  "accuWhNumber": 560,
+  "accucapaciteit": "625 Wh",
+  "kleuren": [
+   "Velvet Red",
+   "Walnut Brown",
+   "Midnight Black",
+   "Arctic Grey"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Accu": "560 Wh",
+   "Remmen": "Hydraulische schijfrem",
+   "Kleuren": "Velvet Red, Walnut Brown, Midnight Black, Arctic Grey"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/ago-air",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1999,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-cgo009",
+  "slug": "tenways-cgo009",
+  "title": "Tenways TENWAYS CGO009",
+  "brand": "Tenways",
+  "model": "TENWAYS CGO009",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1999,
+  "image": "/images/catalog/tenways-cgo009-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-cgo009-1.webp",
+   "/images/catalog/tenways-cgo009-2.webp",
+   "/images/catalog/tenways-cgo009-3.webp",
+   "/images/catalog/tenways-cgo009-4.webp"
+  ],
+  "description": "Tenways TENWAYS CGO009 is een stads-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS CGO009 is een stads-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "Sage Green",
+   "Olive Green",
+   "Midnight Black",
+   "Ice Blue"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Aandrijving": "Riem",
+   "Kleuren": "Sage Green, Olive Green, Midnight Black, Ice Blue"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/cgo009",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1999,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-ago-x",
+  "slug": "tenways-ago-x",
+  "title": "Tenways TENWAYS AGO X",
+  "brand": "Tenways",
+  "model": "TENWAYS AGO X",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2199,
+  "image": "/images/catalog/tenways-ago-x-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-ago-x-1.webp",
+   "/images/catalog/tenways-ago-x-2.webp",
+   "/images/catalog/tenways-ago-x-3.webp",
+   "/images/catalog/tenways-ago-x-4.webp"
+  ],
+  "description": "Tenways TENWAYS AGO X is een stads-e-bike. Remmen: Hydraulische schijfrem. Beschikbare maten: L. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS AGO X is een stads-e-bike. Remmen: Hydraulische schijfrem.",
+  "framematen": [
+   "L"
+  ],
+  "kleuren": [
+   "Starlight Silver",
+   "Olive Moss"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "L",
+   "Kleuren": "Starlight Silver, Olive Moss"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/ago-x",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2199,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-cgo-compact",
+  "slug": "tenways-cgo-compact",
+  "title": "Tenways TENWAYS CGO COMPACT, 500 Wh",
+  "brand": "Tenways",
+  "model": "TENWAYS CGO COMPACT",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1999,
+  "image": "/images/catalog/tenways-cgo-compact-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-cgo-compact-1.webp",
+   "/images/catalog/tenways-cgo-compact-2.webp",
+   "/images/catalog/tenways-cgo-compact-3.webp",
+   "/images/catalog/tenways-cgo-compact-4.webp"
+  ],
+  "description": "Tenways TENWAYS CGO COMPACT is een stads-e-bike met een 500 Wh accu. Remmen: Hydraulische schijfrem. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS CGO COMPACT is een stads-e-bike met een 500 Wh accu. Remmen: Hydraulische schijfrem.",
+  "accuWhNumber": 500,
+  "accucapaciteit": "500 Wh",
+  "kleuren": [
+   "Sandstone Beige"
+  ],
+  "aandrijving": "Riem",
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Accu": "500 Wh",
+   "Aandrijving": "Riem",
+   "Remmen": "Hydraulische schijfrem",
+   "Kleuren": "Sandstone Beige"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/cgo-compact",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1999,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-cgo600",
+  "slug": "tenways-cgo600",
+  "title": "Tenways TENWAYS CGO600",
+  "brand": "Tenways",
+  "model": "TENWAYS CGO600",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1099,
+  "image": "/images/catalog/tenways-cgo600-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-cgo600-1.webp",
+   "/images/catalog/tenways-cgo600-2.webp",
+   "/images/catalog/tenways-cgo600-3.webp",
+   "/images/catalog/tenways-cgo600-4.webp"
+  ],
+  "description": "Tenways TENWAYS CGO600 is een stads-e-bike. Beschikbare maten: L, M. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS CGO600 is een stads-e-bike. Beschikbare maten: L, M.",
+  "framematen": [
+   "L",
+   "M"
+  ],
+  "kleuren": [
+   "Midnight Black",
+   "Moss Green",
+   "Pebble Grey"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Aandrijving": "Riem",
+   "Maten": "L, M",
+   "Kleuren": "Midnight Black, Moss Green, Pebble Grey"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/cgo600",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1099,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-longtail",
+  "slug": "tenways-longtail",
+  "title": "Tenways TENWAYS Longtail, 720 Wh",
+  "brand": "Tenways",
+  "model": "TENWAYS Longtail",
+  "category": "Elektrische fietsen",
+  "subCategory": "Bakfietsen",
+  "price": 3499,
+  "image": "/images/catalog/tenways-longtail-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-longtail-1.webp",
+   "/images/catalog/tenways-longtail-2.webp",
+   "/images/catalog/tenways-longtail-3.webp",
+   "/images/catalog/tenways-longtail-4.webp"
+  ],
+  "description": "Tenways TENWAYS Longtail is een e-bakfiets met een 720 Wh accu. Versnellingen: Enviolo (traploos). Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS Longtail is een e-bakfiets met een 720 Wh accu. Versnellingen: Enviolo (traploos).",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "kleuren": [
+   "Galaxy Grey"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Accu": "720 Wh",
+   "Versnelling": "Enviolo (traploos)",
+   "Aandrijving": "Riem",
+   "Kleuren": "Galaxy Grey"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/longtail",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3499,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-cgo600-pro",
+  "slug": "tenways-cgo600-pro",
+  "title": "Tenways TENWAYS CGO600 Pro | Plus",
+  "brand": "Tenways",
+  "model": "TENWAYS CGO600 Pro | Plus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1699,
+  "image": "/images/catalog/tenways-cgo600-pro-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-cgo600-pro-1.webp",
+   "/images/catalog/tenways-cgo600-pro-2.webp",
+   "/images/catalog/tenways-cgo600-pro-3.webp",
+   "/images/catalog/tenways-cgo600-pro-4.webp"
+  ],
+  "description": "Tenways TENWAYS CGO600 Pro | Plus is een stads-e-bike. Beschikbare maten: M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS CGO600 Pro | Plus is een stads-e-bike. Beschikbare maten: M, L, XL.",
+  "framematen": [
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Willow Mist",
+   "Midnight Black",
+   "Pebble Grey",
+   "Sky Blue",
+   "Avocado Green",
+   "Mint Green"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Maten": "M, L, XL",
+   "Kleuren": "Willow Mist, Midnight Black, Pebble Grey, Sky Blue, Avocado Green, Mint Green"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/cgo600-pro",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1699,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-cgo800s",
+  "slug": "tenways-cgo800s",
+  "title": "Tenways TENWAYS CGO800S | Plus",
+  "brand": "Tenways",
+  "model": "TENWAYS CGO800S | Plus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 1799,
+  "image": "/images/catalog/tenways-cgo800s-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-cgo800s-1.webp",
+   "/images/catalog/tenways-cgo800s-2.webp",
+   "/images/catalog/tenways-cgo800s-3.webp",
+   "/images/catalog/tenways-cgo800s-4.webp"
+  ],
+  "description": "Tenways TENWAYS CGO800S | Plus is een stads-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS CGO800S | Plus is een stads-e-bike. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "kleuren": [
+   "Sky Blue",
+   "Midnight Black",
+   "Pebble Grey",
+   "Wild Berry",
+   "Lavender Purple"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Kleuren": "Sky Blue, Midnight Black, Pebble Grey, Wild Berry, Lavender Purple"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/cgo800s",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 1799,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-cargo-one",
+  "slug": "tenways-cargo-one",
+  "title": "Tenways TENWAYS CARGO ONE, 960 Wh",
+  "brand": "Tenways",
+  "model": "TENWAYS CARGO ONE",
+  "category": "Elektrische fietsen",
+  "subCategory": "Bakfietsen",
+  "price": 4499,
+  "image": "/images/catalog/tenways-cargo-one-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-cargo-one-1.webp",
+   "/images/catalog/tenways-cargo-one-2.webp",
+   "/images/catalog/tenways-cargo-one-3.webp",
+   "/images/catalog/tenways-cargo-one-4.webp"
+  ],
+  "description": "Tenways TENWAYS CARGO ONE is een e-bakfiets met een 960 Wh accu. Versnellingen: Enviolo (traploos). Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS CARGO ONE is een e-bakfiets met een 960 Wh accu. Versnellingen: Enviolo (traploos).",
+  "accuWhNumber": 960,
+  "accucapaciteit": "1000 Wh of meer",
+  "kleuren": [
+   "Midnight Black"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Accu": "960 Wh",
+   "Versnelling": "Enviolo (traploos)",
+   "Aandrijving": "Riem",
+   "Kleuren": "Midnight Black"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/cargo-one",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "tenways-ago-t",
+  "slug": "tenways-ago-t",
+  "title": "Tenways TENWAYS AGO T, 504 Wh",
+  "brand": "Tenways",
+  "model": "TENWAYS AGO T",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2499,
+  "image": "/images/catalog/tenways-ago-t-1.webp",
+  "galleryImages": [
+   "/images/catalog/tenways-ago-t-1.webp",
+   "/images/catalog/tenways-ago-t-2.webp",
+   "/images/catalog/tenways-ago-t-3.webp",
+   "/images/catalog/tenways-ago-t-4.webp"
+  ],
+  "description": "Tenways TENWAYS AGO T is een stads-e-bike met een 504 Wh accu. Versnellingen: Enviolo (traploos). Remmen: Hydraulische schijfrem. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Tenways TENWAYS AGO T is een stads-e-bike met een 504 Wh accu. Versnellingen: Enviolo (traploos).",
+  "accuWhNumber": 504,
+  "accucapaciteit": "500 Wh",
+  "kleuren": [
+   "Pearl White",
+   "Jungle Green",
+   "Midnight Black"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "aandrijving": "Riem",
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Accu": "504 Wh",
+   "Versnelling": "Enviolo (traploos)",
+   "Aandrijving": "Riem",
+   "Remmen": "Hydraulische schijfrem",
+   "Kleuren": "Pearl White, Jungle Green, Midnight Black"
+  },
+  "source": {
+   "brandUrl": "https://www.tenways.com/products/ago-t",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "tenways.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2499,
+   "originalCurrency": "EUR",
+   "note": "Prijs van de fabrikant (EUR, webshop Tenways)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yucatan-x12-wyep1",
+  "slug": "winora-yucatan-x12-wyep1",
+  "title": "Winora Yucatan X12, Yamaha PW",
+  "brand": "Winora",
+  "model": "Yucatan X12",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3999,
+  "image": "/images/catalog/winora-yucatan-x12-wyep1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yucatan-x12-wyep1-1.webp",
+   "/images/catalog/winora-yucatan-x12-wyep1-2.webp",
+   "/images/catalog/winora-yucatan-x12-wyep1-3.webp",
+   "/images/catalog/winora-yucatan-x12-wyep1-4.webp"
+  ],
+  "description": "Winora Yucatan X12 is een toer-e-bike met Yamaha PW. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Yucatan X12 is een toer-e-bike met Yamaha PW. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "metallic stone blue - matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "metallic stone blue - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yucatan-x12-wyep1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-x11-wtdu1",
+  "slug": "winora-tria-x11-wtdu1",
+  "title": "Winora Tria X11, Bosch Performance",
+  "brand": "Winora",
+  "model": "Tria X11",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3299,
+  "image": "/images/catalog/winora-tria-x11-wtdu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-x11-wtdu1-1.webp",
+   "/images/catalog/winora-tria-x11-wtdu1-2.webp"
+  ],
+  "description": "Winora Tria X11 is een stads-e-bike met Bosch Performance. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Tria X11 is een stads-e-bike met Bosch Performance. Beschikbare maten: XS, S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "classic cognac - glossy",
+   "amber sky - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "classic cognac - glossy, amber sky - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-x11-wtdu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3299,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-x9-wtcu1",
+  "slug": "winora-tria-x9-wtcu1",
+  "title": "Winora Tria X9, Bosch Performance",
+  "brand": "Winora",
+  "model": "Tria X9",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2999,
+  "image": "/images/catalog/winora-tria-x9-wtcu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-x9-wtcu1-1.webp",
+   "/images/catalog/winora-tria-x9-wtcu1-2.webp"
+  ],
+  "description": "Winora Tria X9 is een stads-e-bike met Bosch Performance. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Tria X9 is een stads-e-bike met Bosch Performance. Beschikbare maten: XS, S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "brandied pears - glossy",
+   "muted mantis - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "brandied pears - glossy, muted mantis - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-x9-wtcu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-r8-wthu1",
+  "slug": "winora-tria-r8-wthu1",
+  "title": "Winora Tria R8, Bosch Active Line Plus",
+  "brand": "Winora",
+  "model": "Tria R8",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3199,
+  "image": "/images/catalog/winora-tria-r8-wthu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-r8-wthu1-1.webp",
+   "/images/catalog/winora-tria-r8-wthu1-2.webp"
+  ],
+  "description": "Winora Tria R8 is een stads-e-bike met Bosch Active Line Plus. Versnellingen: Shimano Nexus 8-speed. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Tria R8 is een stads-e-bike met Bosch Active Line Plus. Versnellingen: Shimano Nexus 8-speed.",
+  "motorModel": "Bosch Active Line Plus",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "steeple grey - glossy",
+   "frosty blue - glossy"
+  ],
+  "versnelling": "Naafschakeling",
+  "versnellingDetail": "Shimano Nexus 8-speed",
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "45 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Active Line Plus",
+   "Versnelling": "Shimano Nexus 8-speed",
+   "Aandrijving": "Riem",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "steeple grey - glossy, frosty blue - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-r8-wthu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3199,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-n5-wtfu1",
+  "slug": "winora-tria-n5-wtfu1",
+  "title": "Winora Tria N5, Bosch Performance",
+  "brand": "Winora",
+  "model": "Tria N5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3399,
+  "image": "/images/catalog/winora-tria-n5-wtfu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-n5-wtfu1-1.webp",
+   "/images/catalog/winora-tria-n5-wtfu1-2.webp",
+   "/images/catalog/winora-tria-n5-wtfu1-3.webp",
+   "/images/catalog/winora-tria-n5-wtfu1-4.webp"
+  ],
+  "description": "Winora Tria N5 is een stads-e-bike met Bosch Performance. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Tria N5 is een stads-e-bike met Bosch Performance. Beschikbare maten: XS, S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "earthy granite - glossy",
+   "muted fig - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "earthy granite - glossy, muted fig - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-n5-wtfu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3399,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yucatan-x12-pro-wyft1",
+  "slug": "winora-yucatan-x12-pro-wyft1",
+  "title": "Winora Yucatan X12 Pro, Yamaha PW",
+  "brand": "Winora",
+  "model": "Yucatan X12 Pro",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/winora-yucatan-x12-pro-wyft1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yucatan-x12-pro-wyft1-1.webp",
+   "/images/catalog/winora-yucatan-x12-pro-wyft1-2.webp",
+   "/images/catalog/winora-yucatan-x12-pro-wyft1-3.webp",
+   "/images/catalog/winora-yucatan-x12-pro-wyft1-4.webp"
+  ],
+  "description": "Winora Yucatan X12 Pro is een toer-e-bike met Yamaha PW. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Yucatan X12 Pro is een toer-e-bike met Yamaha PW. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "smoke - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "smoke - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yucatan-x12-pro-wyft1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yucatan-x10-wyat1",
+  "slug": "winora-yucatan-x10-wyat1",
+  "title": "Winora Yucatan X10, Bosch Performance Line",
+  "brand": "Winora",
+  "model": "Yucatan X10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3699,
+  "image": "/images/catalog/winora-yucatan-x10-wyat1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yucatan-x10-wyat1-1.webp",
+   "/images/catalog/winora-yucatan-x10-wyat1-2.webp",
+   "/images/catalog/winora-yucatan-x10-wyat1-3.webp",
+   "/images/catalog/winora-yucatan-x10-wyat1-4.webp"
+  ],
+  "description": "Winora Yucatan X10 is een toer-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Yucatan X10 is een toer-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "pastel pistachio - glossy",
+   "plush pigeon - matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "pastel pistachio - glossy, plush pigeon - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yucatan-x10-wyat1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3699,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yucatan-x9-wyct5",
+  "slug": "winora-yucatan-x9-wyct5",
+  "title": "Winora Yucatan X9, Bosch Performance Line, 600 Wh",
+  "brand": "Winora",
+  "model": "Yucatan X9",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3399,
+  "image": "/images/catalog/winora-yucatan-x9-wyct5-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yucatan-x9-wyct5-1.webp",
+   "/images/catalog/winora-yucatan-x9-wyct5-2.webp",
+   "/images/catalog/winora-yucatan-x9-wyct5-3.webp",
+   "/images/catalog/winora-yucatan-x9-wyct5-4.webp"
+  ],
+  "description": "Winora Yucatan X9 is een toer-e-bike met Bosch Performance Line en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Yucatan X9 is een toer-e-bike met Bosch Performance Line en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "lush glacier - glossy",
+   "silver dollar - matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Accu": "600 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "lush glacier - glossy, silver dollar - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yucatan-x9-wyct5",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3399,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-iride-pure-x10-wpar2",
+  "slug": "winora-iride-pure-x10-wpar2",
+  "title": "Winora iRide Pure X10, Bosch Performance",
+  "brand": "Winora",
+  "model": "iRide Pure X10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3399,
+  "image": "/images/catalog/winora-iride-pure-x10-wpar2-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-iride-pure-x10-wpar2-1.webp",
+   "/images/catalog/winora-iride-pure-x10-wpar2-2.webp",
+   "/images/catalog/winora-iride-pure-x10-wpar2-3.webp",
+   "/images/catalog/winora-iride-pure-x10-wpar2-4.webp"
+  ],
+  "description": "Winora iRide Pure X10 is een stads-e-bike met Bosch Performance. Beschikbare maten: S, M, L, XL, XS. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora iRide Pure X10 is een stads-e-bike met Bosch Performance. Beschikbare maten: S, M, L, XL, XS.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XS"
+  ],
+  "kleuren": [
+   "chrystal red",
+   "black - glossy",
+   "nile blue matt",
+   "black - matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Maten": "S, M, L, XL, XS",
+   "Kleuren": "chrystal red / black - glossy, nile blue matt / black - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/iride-pure-x10-wpar2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3399,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-iride-pure-r5f-wpbr2",
+  "slug": "winora-iride-pure-r5f-wpbr2",
+  "title": "Winora iRide PURE R5f",
+  "brand": "Winora",
+  "model": "iRide PURE R5f",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3999,
+  "image": "/images/catalog/winora-iride-pure-r5f-wpbr2-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-iride-pure-r5f-wpbr2-1.webp",
+   "/images/catalog/winora-iride-pure-r5f-wpbr2-2.webp",
+   "/images/catalog/winora-iride-pure-r5f-wpbr2-3.webp",
+   "/images/catalog/winora-iride-pure-r5f-wpbr2-4.webp"
+  ],
+  "description": "Winora iRide PURE R5f is een stads-e-bike. Beschikbare maten: S, M, L, XL, XS. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora iRide PURE R5f is een stads-e-bike. Beschikbare maten: S, M, L, XL, XS.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XS"
+  ],
+  "kleuren": [
+   "black",
+   "black - matt&glossy",
+   "red velvet",
+   "rose tan - matt"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL, XS",
+   "Kleuren": "black / black - matt&glossy, red velvet / rose tan - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/iride-pure-r5f-wpbr2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-x7-wtbr1",
+  "slug": "winora-tria-x7-wtbr1",
+  "title": "Winora TRIA X7, Bosch Active",
+  "brand": "Winora",
+  "model": "TRIA X7",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2499,
+  "image": "/images/catalog/winora-tria-x7-wtbr1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-x7-wtbr1-1.webp",
+   "/images/catalog/winora-tria-x7-wtbr1-2.webp",
+   "/images/catalog/winora-tria-x7-wtbr1-3.webp",
+   "/images/catalog/winora-tria-x7-wtbr1-4.webp"
+  ],
+  "description": "Winora TRIA X7 is een stads-e-bike met Bosch Active. Remmen: Hydraulische schijfrem. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora TRIA X7 is een stads-e-bike met Bosch Active. Remmen: Hydraulische schijfrem.",
+  "motorModel": "Bosch Active",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "mystic black - glossy"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Active",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "mystic black - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-x7-wtbr1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-n8-e-wter1",
+  "slug": "winora-tria-n8-e-wter1",
+  "title": "Winora TRIA N8 E, Bosch Active Plus Smart",
+  "brand": "Winora",
+  "model": "TRIA N8 E",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2999,
+  "image": "/images/catalog/winora-tria-n8-e-wter1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-n8-e-wter1-1.webp",
+   "/images/catalog/winora-tria-n8-e-wter1-2.webp",
+   "/images/catalog/winora-tria-n8-e-wter1-3.webp",
+   "/images/catalog/winora-tria-n8-e-wter1-4.webp"
+  ],
+  "description": "Winora TRIA N8 E is een stads-e-bike met Bosch Active Plus Smart. Remmen: Hydraulische schijfrem. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora TRIA N8 E is een stads-e-bike met Bosch Active Plus Smart. Remmen: Hydraulische schijfrem.",
+  "motorModel": "Bosch Active Plus Smart",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "espresso - matt",
+   "pure blue - matt"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Active Plus Smart",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "espresso - matt, pure blue - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-n8-e-wter1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-n8f-e-wter3",
+  "slug": "winora-tria-n8f-e-wter3",
+  "title": "Winora TRIA N8f E, Bosch Active Plus Smart",
+  "brand": "Winora",
+  "model": "TRIA N8f E",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2999,
+  "image": "/images/catalog/winora-tria-n8f-e-wter3-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-n8f-e-wter3-1.webp",
+   "/images/catalog/winora-tria-n8f-e-wter3-2.webp",
+   "/images/catalog/winora-tria-n8f-e-wter3-3.webp",
+   "/images/catalog/winora-tria-n8f-e-wter3-4.webp"
+  ],
+  "description": "Winora TRIA N8f E is een stads-e-bike met Bosch Active Plus Smart. Remmen: Hydraulische schijfrem. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora TRIA N8f E is een stads-e-bike met Bosch Active Plus Smart. Remmen: Hydraulische schijfrem.",
+  "motorModel": "Bosch Active Plus Smart",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "espresso - matt"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Active Plus Smart",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "espresso - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-n8f-e-wter3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-tria-n8-wtfr2",
+  "slug": "winora-tria-n8-wtfr2",
+  "title": "Winora TRIA N8, Bosch Performance Line",
+  "brand": "Winora",
+  "model": "TRIA N8",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3199,
+  "image": "/images/catalog/winora-tria-n8-wtfr2-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-tria-n8-wtfr2-1.webp",
+   "/images/catalog/winora-tria-n8-wtfr2-2.webp",
+   "/images/catalog/winora-tria-n8-wtfr2-3.webp",
+   "/images/catalog/winora-tria-n8-wtfr2-4.webp"
+  ],
+  "description": "Winora TRIA N8 is een stads-e-bike met Bosch Performance Line. Beschikbare maten: XS, S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora TRIA N8 is een stads-e-bike met Bosch Performance Line. Beschikbare maten: XS, S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "classic red - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Maten": "XS, S, M, L, XL",
+   "Kleuren": "classic red - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/tria-n8-wtfr2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3199,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-env-abs-wiju1",
+  "slug": "winora-yakun-env-abs-wiju1",
+  "title": "Winora Yakun ENV ABS, Bosch Performance",
+  "brand": "Winora",
+  "model": "Yakun ENV ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 5799,
+  "image": "/images/catalog/winora-yakun-env-abs-wiju1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-env-abs-wiju1-1.webp",
+   "/images/catalog/winora-yakun-env-abs-wiju1-2.webp"
+  ],
+  "description": "Winora Yakun ENV ABS is een toer-e-bike met Bosch Performance. Versnellingen: Enviolo (traploos). Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Yakun ENV ABS is een toer-e-bike met Bosch Performance. Versnellingen: Enviolo (traploos).",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "cavalry",
+   "nightlife denim - glossy"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Versnelling": "Enviolo (traploos)",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "cavalry/nightlife denim - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-env-abs-wiju1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5799,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yucatan-x8-wycr2",
+  "slug": "winora-yucatan-x8-wycr2",
+  "title": "Winora YUCATAN X8, Yamaha PW",
+  "brand": "Winora",
+  "model": "YUCATAN X8",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3199,
+  "image": "/images/catalog/winora-yucatan-x8-wycr2-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yucatan-x8-wycr2-1.webp",
+   "/images/catalog/winora-yucatan-x8-wycr2-2.webp",
+   "/images/catalog/winora-yucatan-x8-wycr2-3.webp",
+   "/images/catalog/winora-yucatan-x8-wycr2-4.webp"
+  ],
+  "description": "Winora YUCATAN X8 is een toer-e-bike met Yamaha PW, 75 Nm. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YUCATAN X8 is een toer-e-bike met Yamaha PW, 75 Nm. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Yamaha PW, 75 Nm",
+  "motormerk": "Yamaha",
+  "motorTorqueNm": 75,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "darkblue - matt",
+   "mocaccino - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW, 75 Nm",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "darkblue - matt, mocaccino - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yucatan-x8-wycr2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3199,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-r5-wsgp1",
+  "slug": "winora-sinus-r5-wsgp1",
+  "title": "Winora Sinus R5, Bosch Performance Line",
+  "brand": "Winora",
+  "model": "Sinus R5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3999,
+  "image": "/images/catalog/winora-sinus-r5-wsgp1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-r5-wsgp1-1.webp",
+   "/images/catalog/winora-sinus-r5-wsgp1-2.webp",
+   "/images/catalog/winora-sinus-r5-wsgp1-3.webp",
+   "/images/catalog/winora-sinus-r5-wsgp1-4.webp"
+  ],
+  "description": "Winora Sinus R5 is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus R5 is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "peat - matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "peat - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-r5-wsgp1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-r5f-wshp1",
+  "slug": "winora-sinus-r5f-wshp1",
+  "title": "Winora Sinus R5f",
+  "brand": "Winora",
+  "model": "Sinus R5f",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3999,
+  "image": "/images/catalog/winora-sinus-r5f-wshp1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-r5f-wshp1-1.webp",
+   "/images/catalog/winora-sinus-r5f-wshp1-2.webp",
+   "/images/catalog/winora-sinus-r5f-wshp1-3.webp",
+   "/images/catalog/winora-sinus-r5f-wshp1-4.webp"
+  ],
+  "description": "Winora Sinus R5f is een stads-e-bike. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus R5f is een stads-e-bike. Beschikbare maten: S, M, L, XL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "peat - matt"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "peat - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-r5f-wshp1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-r5-pro-wiat1",
+  "slug": "winora-yakun-r5-pro-wiat1",
+  "title": "Winora YAKUN R5 Pro, Bosch Performance",
+  "brand": "Winora",
+  "model": "YAKUN R5 Pro",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4799,
+  "image": "/images/catalog/winora-yakun-r5-pro-wiat1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-r5-pro-wiat1-1.webp",
+   "/images/catalog/winora-yakun-r5-pro-wiat1-2.webp",
+   "/images/catalog/winora-yakun-r5-pro-wiat1-3.webp"
+  ],
+  "description": "Winora YAKUN R5 Pro is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YAKUN R5 Pro is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "downtown grey",
+   "haze grey - glossy"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "downtown grey/haze grey - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-r5-pro-wiat1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4799,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-x12-wibt1",
+  "slug": "winora-yakun-x12-wibt1",
+  "title": "Winora YAKUN X12, Bosch Performance",
+  "brand": "Winora",
+  "model": "YAKUN X12",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/winora-yakun-x12-wibt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-x12-wibt1-1.webp",
+   "/images/catalog/winora-yakun-x12-wibt1-2.webp",
+   "/images/catalog/winora-yakun-x12-wibt1-3.webp",
+   "/images/catalog/winora-yakun-x12-wibt1-4.webp"
+  ],
+  "description": "Winora YAKUN X12 is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YAKUN X12 is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "blue monday",
+   "aqua - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "blue monday / aqua - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-x12-wibt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-x10-wigt1",
+  "slug": "winora-yakun-x10-wigt1",
+  "title": "Winora YAKUN X10, Bosch Performance",
+  "brand": "Winora",
+  "model": "YAKUN X10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3999,
+  "image": "/images/catalog/winora-yakun-x10-wigt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-x10-wigt1-1.webp",
+   "/images/catalog/winora-yakun-x10-wigt1-2.webp",
+   "/images/catalog/winora-yakun-x10-wigt1-3.webp",
+   "/images/catalog/winora-yakun-x10-wigt1-4.webp"
+  ],
+  "description": "Winora YAKUN X10 is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YAKUN X10 is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "ivory green - glossy",
+   "warm red - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "ivory green - glossy, warm red - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-x10-wigt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-x10e-widt1",
+  "slug": "winora-yakun-x10e-widt1",
+  "title": "Winora YAKUN X10E, Bosch Performance",
+  "brand": "Winora",
+  "model": "YAKUN X10E",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3699,
+  "image": "/images/catalog/winora-yakun-x10e-widt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-x10e-widt1-1.webp",
+   "/images/catalog/winora-yakun-x10e-widt1-2.webp",
+   "/images/catalog/winora-yakun-x10e-widt1-3.webp"
+  ],
+  "description": "Winora YAKUN X10E is een toer-e-bike met Bosch Performance, 120 Nm. Remmen: Hydraulische schijfrem. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YAKUN X10E is een toer-e-bike met Bosch Performance, 120 Nm. Remmen: Hydraulische schijfrem.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "night purple - glossy"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "night purple - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-x10e-widt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3699,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-r5-wiht1",
+  "slug": "winora-yakun-r5-wiht1",
+  "title": "Winora YAKUN R5, Bosch Performance",
+  "brand": "Winora",
+  "model": "YAKUN R5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/winora-yakun-r5-wiht1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-r5-wiht1-1.webp",
+   "/images/catalog/winora-yakun-r5-wiht1-2.webp",
+   "/images/catalog/winora-yakun-r5-wiht1-3.webp"
+  ],
+  "description": "Winora YAKUN R5 is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YAKUN R5 is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "night red",
+   "violet red - glossy"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "night red / violet red - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-r5-wiht1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-yakun-r5-pro-abs-wiit1",
+  "slug": "winora-yakun-r5-pro-abs-wiit1",
+  "title": "Winora YAKUN R5 Pro ABS, Bosch Performance",
+  "brand": "Winora",
+  "model": "YAKUN R5 Pro ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 5299,
+  "image": "/images/catalog/winora-yakun-r5-pro-abs-wiit1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-yakun-r5-pro-abs-wiit1-1.webp",
+   "/images/catalog/winora-yakun-r5-pro-abs-wiit1-2.webp",
+   "/images/catalog/winora-yakun-r5-pro-abs-wiit1-3.webp",
+   "/images/catalog/winora-yakun-r5-pro-abs-wiit1-4.webp"
+  ],
+  "description": "Winora YAKUN R5 Pro ABS is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora YAKUN R5 Pro ABS is een toer-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "downtown grey",
+   "haze grey - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "downtown grey/haze grey - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/yakun-r5-pro-abs-wiit1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5299,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-fs-x12-waft1",
+  "slug": "winora-sinus-fs-x12-waft1",
+  "title": "Winora Sinus FS X12, Bosch Performance",
+  "brand": "Winora",
+  "model": "Sinus FS X12",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 5699,
+  "image": "/images/catalog/winora-sinus-fs-x12-waft1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-fs-x12-waft1-1.webp",
+   "/images/catalog/winora-sinus-fs-x12-waft1-2.webp"
+  ],
+  "description": "Winora Sinus FS X12 is een stads-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus FS X12 is een stads-e-bike met Bosch Performance, 120 Nm. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance, 120 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 120,
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "stone",
+   "blue - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance, 120 Nm",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "stone / blue - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-fs-x12-waft1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5699,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-fs-r5f-pro-wagt1",
+  "slug": "winora-sinus-fs-r5f-pro-wagt1",
+  "title": "Winora Sinus FS R5f Pro, Bosch Performance",
+  "brand": "Winora",
+  "model": "Sinus FS R5f Pro",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 6299,
+  "image": "/images/catalog/winora-sinus-fs-r5f-pro-wagt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-fs-r5f-pro-wagt1-1.webp",
+   "/images/catalog/winora-sinus-fs-r5f-pro-wagt1-2.webp"
+  ],
+  "description": "Winora Sinus FS R5f Pro is een stads-e-bike met Bosch Performance. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus FS R5f Pro is een stads-e-bike met Bosch Performance. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "sand",
+   "deep red - glossy"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "sand / deep red - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-fs-r5f-pro-wagt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6299,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-as-wait1",
+  "slug": "winora-sinus-as-wait1",
+  "title": "Winora Sinus AS",
+  "brand": "Winora",
+  "model": "Sinus AS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 6499,
+  "image": "/images/catalog/winora-sinus-as-wait1-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-as-wait1-1.webp",
+   "/images/catalog/winora-sinus-as-wait1-2.webp",
+   "/images/catalog/winora-sinus-as-wait1-3.webp",
+   "/images/catalog/winora-sinus-as-wait1-4.webp"
+  ],
+  "description": "Winora Sinus AS is een stads-e-bike. Beschikbare maten: S, M, L. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus AS is een stads-e-bike. Beschikbare maten: S, M, L.",
+  "framematen": [
+   "S",
+   "M",
+   "L"
+  ],
+  "kleuren": [
+   "traffic",
+   "night grey - glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L",
+   "Kleuren": "traffic / night grey - glossy"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-as-wait1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-r8e-wsgp4",
+  "slug": "winora-sinus-r8e-wsgp4",
+  "title": "Winora Sinus R8E, Bosch Performance Line",
+  "brand": "Winora",
+  "model": "Sinus R8E",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3699,
+  "image": "/images/catalog/winora-sinus-r8e-wsgp4-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-r8e-wsgp4-1.webp",
+   "/images/catalog/winora-sinus-r8e-wsgp4-2.webp",
+   "/images/catalog/winora-sinus-r8e-wsgp4-3.webp",
+   "/images/catalog/winora-sinus-r8e-wsgp4-4.webp"
+  ],
+  "description": "Winora Sinus R8E is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus R8E is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "grey",
+   "blue - matt"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "grey / blue - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-r8e-wsgp4",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3699,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "winora-sinus-r8ef-wshp4",
+  "slug": "winora-sinus-r8ef-wshp4",
+  "title": "Winora Sinus R8Ef, Bosch Performance Line",
+  "brand": "Winora",
+  "model": "Sinus R8Ef",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3699,
+  "image": "/images/catalog/winora-sinus-r8ef-wshp4-1.webp",
+  "galleryImages": [
+   "/images/catalog/winora-sinus-r8ef-wshp4-1.webp",
+   "/images/catalog/winora-sinus-r8ef-wshp4-2.webp",
+   "/images/catalog/winora-sinus-r8ef-wshp4-3.webp",
+   "/images/catalog/winora-sinus-r8ef-wshp4-4.webp"
+  ],
+  "description": "Winora Sinus R8Ef is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Winora Sinus R8Ef is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "grey",
+   "blue - matt"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "grey / blue - matt"
+  },
+  "source": {
+   "brandUrl": "https://www.winora.com/products/sinus-r8ef-wshp4",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "winora.com (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3699,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (EUR)."
   },
   "reviews": []
  }

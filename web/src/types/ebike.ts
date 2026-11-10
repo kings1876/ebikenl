@@ -59,7 +59,11 @@ export type Brand =
   | 'Brompton'
   | 'Babboe'
   | 'Urban Arrow'
-  | 'Liv';
+  | 'Liv'
+  | 'Tenways'
+  | 'Ghost'
+  | 'Sushi Bikes'
+  | 'Winora';
 
 export type Doelgroep = string;
 export type Motorpositie = string;

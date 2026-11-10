@@ -97,7 +97,44 @@ haibike.splice(0, haibike.length, ...dedupe(haibike));
 const bestPer = (arr) => [...arr.reduce((m, r) => { const cur = m.get(r.name); const better = !cur || (!!r.price > !!cur.price) || (!!r.price === !!cur.price && r.images.length > cur.images.length); return better ? m.set(r.name, r) : m; }, new Map()).values()];
 batavus.splice(0, batavus.length, ...bestPer(batavus).filter((r) => r.price));
 
-for (const [n, d] of Object.entries({ batavus, haibike, raleigh })) {
+
+// ---- European D2C / EU-market brands (store currency EUR, checked via /meta.json) ----
+const stripBrand = (arr, re) => arr.forEach((r) => (r.name = r.name.replace(re, '').trim()));
+const tenways = build({
+  brand: 'Tenways', host: 'www.tenways.com',
+  feed: load('shopify-www.tenways.com.json'), beFeed: [],
+  pick: (p) => p.product_type === 'Electric Bikes' && p.images.length >= 2,
+  category: (p) => (/cargo|longtail/i.test(p.title) ? 'Bakfietsen' : 'Stadsfietsen'),
+  priceSource: 'tenways.com (adviesprijs fabrikant, EUR)', nlMarketNote: 'Prijs van de fabrikant (EUR, webshop Tenways).',
+});
+stripBrand(tenways, /^TENWAYSs+/i);
+const ghost = build({
+  brand: 'Ghost', host: 'www.ghost-bikes.com',
+  feed: load('shopify-www.ghost-bikes.com.json'), beFeed: [],
+  pick: (p) => p.product_type === 'E-Bikes' && p.images.length >= 2,
+  category: (p) => (/riot/i.test(p.title) ? 'Elektrische mountainbikes' : 'Trekkingfietsen'),
+  priceSource: 'ghost-bikes.com (adviesprijs fabrikant, EUR)', nlMarketNote: 'Adviesprijs van de fabrikant (EUR).',
+});
+ghost.splice(0, ghost.length, ...dedupe(ghost));
+const sushi = build({
+  brand: 'Sushi Bikes', host: 'www.sushi-bikes.com',
+  feed: load('shopify-www.sushi-bikes.com.json'), beFeed: [],
+  pick: (p) => p.product_type === 'Bike' && /^e-bike/i.test(p.title) && p.images.length >= 2,
+  category: () => 'Stadsfietsen',
+  priceSource: 'sushi-bikes.com (prijs fabrikant, EUR)', nlMarketNote: 'Prijs van de fabrikant (EUR, webshop Sushi Bikes).',
+});
+stripBrand(sushi, /^E-Bikes+/i);
+
+const winora = build({
+  brand: 'Winora', host: 'www.winora.com',
+  feed: load('shopify-www.winora.com.json'), beFeed: [],
+  pick: (p) => p.product_type === 'E-Bikes' && p.images.length >= 2 && !/flitzer/i.test(p.title),
+  category: (p) => (p.tags.some((t) => /trekking/i.test(t)) ? 'Trekkingfietsen' : 'Stadsfietsen'),
+  priceSource: 'winora.com (adviesprijs fabrikant, EUR)', nlMarketNote: 'Adviesprijs van de fabrikant (EUR).',
+});
+winora.splice(0, winora.length, ...[...winora.reduce((m, r) => { const k = r.name.toLowerCase(); return !m.has(k) || m.get(k).images.length < r.images.length ? m.set(k, r) : m; }, new Map()).values()]);
+
+for (const [n, d] of Object.entries({ batavus, haibike, raleigh, tenways, ghost, sushi, winora })) {
   writeJson(path.join(RAW, `${n}.json`), d);
   console.log(n.padEnd(8), 'models', d.length, '| priced', d.filter((x) => x.price).length, '| missing price', d.filter((x) => x.priceMissing).map((x) => x.name).join('; ') || '-', '| >=3 imgs', d.filter((x) => x.images.length >= 3).length);
 }
