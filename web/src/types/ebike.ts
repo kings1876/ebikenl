@@ -63,7 +63,9 @@ export type Brand =
   | 'Tenways'
   | 'Ghost'
   | 'Sushi Bikes'
-  | 'Winora';
+  | 'Winora'
+  | 'BMC'
+  | 'Thömus';
 
 export type Doelgroep = string;
 export type Motorpositie = string;

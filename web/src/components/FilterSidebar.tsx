@@ -91,7 +91,11 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     'Brose',
     'Fazua',
     'Bafang',
-    'Giant SyncDrive'
+    'Giant SyncDrive',
+    'TQ',
+    'Specialized',
+    'Stromer',
+    'Avinox'
   ];
 
   const ACCU_OPTIONS: Accucapaciteit[] = [

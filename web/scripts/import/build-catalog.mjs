@@ -30,6 +30,10 @@ function interpret(specs = {}, name = '') {
     else if (/fazua/i.test(motorText)) out.motormerk = 'Fazua';
     else if (/bafang/i.test(motorText)) out.motormerk = 'Bafang';
     else if (/syncdrive/i.test(motorText)) out.motormerk = 'Giant SyncDrive';
+    else if (/^tq\b/i.test(motorText)) out.motormerk = 'TQ';
+    else if (/specialized/i.test(motorText)) out.motormerk = 'Specialized';
+    else if (/stromer/i.test(motorText)) out.motormerk = 'Stromer';
+    else if (/avinox/i.test(motorText)) out.motormerk = 'Avinox';
     const nm = /(\d{2,3})\s?Nm/i.exec(motorText);
     if (nm) out.motorTorqueNm = +nm[1];
   }
@@ -82,8 +86,13 @@ function describe(rec, a) {
   if (a.versnellingDetail) { nl.push(`Versnellingen: ${a.versnellingDetail}.`); en.push(`Gears: ${a.versnellingDetail}.`); }
   if (rec.specs.Remmen) { nl.push(`Remmen: ${rec.specs.Remmen}.`); en.push(`Brakes: ${rec.specs.Remmen}.`); }
   if (a.framematen?.length) { nl.push(`Beschikbare maten: ${a.framematen.join(', ')}.`); en.push(`Available sizes: ${a.framematen.join(', ')}.`); }
-  nl.push('Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.');
-  en.push('Specifications and recommended price come from the manufacturer and are subject to change.');
+  if (rec.fx) {
+    nl.push('Specificaties volgens openbare modelgegevens; de prijs is indicatief (omgerekend uit de Zwitserse adviesprijs). Wijzigingen voorbehouden.');
+    en.push('Specifications follow public model data; the price is indicative (converted from the Swiss list price). Subject to change.');
+  } else {
+    nl.push('Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.');
+    en.push('Specifications and recommended price come from the manufacturer and are subject to change.');
+  }
   const short = (s) => s.slice(0, 2).join(' ');
   return { nl: nl.join(' '), en: en.join(' '), shortNl: short(nl), shortEn: short(en) };
 }
@@ -136,8 +145,9 @@ adapters.tenways = normalised;
 adapters.ghost = normalised;
 adapters.sushi = normalised;
 adapters.winora = normalised;
+adapters.zuverkaufen = (r) => ({ ...r, subCategory: r.category, category: '', slugBase: r.handle, currency: 'CHF' });
 adapters.liv = adapters.giant; // same platform and fields as Giant
-const files = fs.readdirSync(RAW).filter((f) => /^(giant|liv|batavus|haibike|raleigh|tenways|ghost|sushi|winora)\.json$/.test(f));
+const files = fs.readdirSync(RAW).filter((f) => /^(giant|liv|batavus|haibike|raleigh|tenways|ghost|sushi|winora|zuverkaufen)\.json$/.test(f));
 const catalog = [];
 const en = {};
 const report = { products: 0, images: 0, failedImages: 0, lowRes: [], bytes: 0 };
@@ -149,6 +159,7 @@ for (const f of files) {
     const r = adapters[brandKey](raw);
     if (!r.price || !r.name || !r.images.length) continue; // no sourced price or no photos: not listed
     const a = interpret(r.specs, r.name);
+    if (r.maxSpeed) a.maximaleSnelheid = r.maxSpeed; // stated by category, not guessed from spec words
     const slug = `${slugify(r.brand)}-${r.slugBase}`;
     const motorShort = a.motorModel ? a.motorModel.replace(/\s*,?\s*\d+\s?Nm/i, '') : '';
     const title = `${r.brand} ${r.name}${motorShort ? ', ' + motorShort : ''}${a.accuWhNumber ? ', ' + a.accuWhNumber + ' Wh' : ''}`;
@@ -179,7 +190,7 @@ for (const f of files) {
       tags: [],
       specs: r.specs,
       source: { brandUrl: r.url, retrieved: TODAY },
-      priceInfo: { source: r.priceSource, retrieved: TODAY, originalAmount: r.price, originalCurrency: r.currency, note: r.priceNote || 'Adviesprijs van de fabrikant (incl. BTW).' },
+      priceInfo: { source: r.priceSource, retrieved: TODAY, originalAmount: r.priceChf ?? r.price, originalCurrency: r.currency, ...(r.fx ? { fxRate: r.fx.chfPerEur } : {}), note: r.priceNote || 'Adviesprijs van de fabrikant (incl. BTW).' },
       reviews: [],
     };
     catalog.push(p);
