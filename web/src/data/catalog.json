@@ -1,5 +1,634 @@
 [
  {
+  "id": "batavus-altura-cp-plus-bebt2",
+  "slug": "batavus-altura-cp-plus-bebt2",
+  "title": "Batavus Altura CP Plus",
+  "brand": "Batavus",
+  "model": "Altura CP Plus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2624,
+  "image": "/images/catalog/batavus-altura-cp-plus-bebt2-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-altura-cp-plus-bebt2-1.webp",
+   "/images/catalog/batavus-altura-cp-plus-bebt2-2.webp",
+   "/images/catalog/batavus-altura-cp-plus-bebt2-3.webp",
+   "/images/catalog/batavus-altura-cp-plus-bebt2-4.webp"
+  ],
+  "description": "Batavus Altura CP Plus is een stads-e-bike. Beschikbare maten: M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Altura CP Plus is een stads-e-bike. Beschikbare maten: M, L, XL.",
+  "framematen": [
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Gray Turquoise Matt",
+   "Smoking Black Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Maten": "M, L, XL",
+   "Kleuren": "Gray Turquoise Matt, Smoking Black Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/altura-cp-plus-bebt2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2624,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-altura-cp-beat3",
+  "slug": "batavus-altura-cp-beat3",
+  "title": "Batavus Altura CP",
+  "brand": "Batavus",
+  "model": "Altura CP",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2424,
+  "image": "/images/catalog/batavus-altura-cp-beat3-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-altura-cp-beat3-1.webp",
+   "/images/catalog/batavus-altura-cp-beat3-2.webp",
+   "/images/catalog/batavus-altura-cp-beat3-3.webp",
+   "/images/catalog/batavus-altura-cp-beat3-4.webp"
+  ],
+  "description": "Batavus Altura CP is een stads-e-bike. Beschikbare maten: M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Altura CP is een stads-e-bike. Beschikbare maten: M, L, XL.",
+  "framematen": [
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Smoking Black Matt",
+   "Gray Turquoise Matt",
+   "Light sea green Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Maten": "M, L, XL",
+   "Kleuren": "Smoking Black Matt, Gray Turquoise Matt, Light sea green Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/altura-cp-beat3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2424,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-altura-power-sport",
+  "slug": "batavus-altura-power-sport",
+  "title": "Batavus Altura Power Sport",
+  "brand": "Batavus",
+  "model": "Altura Power Sport",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3199,
+  "image": "/images/catalog/batavus-altura-power-sport-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-altura-power-sport-1.webp"
+  ],
+  "description": "Batavus Altura Power Sport is een stads-e-bike. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Altura Power Sport is een stads-e-bike. Beschikbare maten: S, M, L, XL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Foggy gray matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Foggy gray matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/altura-power-sport",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3199,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-finez-pro-exclusive-bapt1",
+  "slug": "batavus-finez-pro-exclusive-bapt1",
+  "title": "Batavus Finez PT Pro Exclusive, Bosch Performance Line",
+  "brand": "Batavus",
+  "model": "Finez PT Pro Exclusive",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 4399,
+  "image": "/images/catalog/batavus-finez-pro-exclusive-bapt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-finez-pro-exclusive-bapt1-1.webp"
+  ],
+  "description": "Batavus Finez PT Pro Exclusive is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Finez PT Pro Exclusive is een stads-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Volcano Black Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Volcano Black Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/finez-pro-exclusive-bapt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4399,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-finez-pt-plus-bamt2",
+  "slug": "batavus-finez-pt-plus-bamt2",
+  "title": "Batavus Finez PT Plus",
+  "brand": "Batavus",
+  "model": "Finez PT Plus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 4199,
+  "image": "/images/catalog/batavus-finez-pt-plus-bamt2-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-finez-pt-plus-bamt2-1.webp"
+  ],
+  "description": "Batavus Finez PT Plus is een stads-e-bike. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Finez PT Plus is een stads-e-bike. Beschikbare maten: S, M, L, XL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Steel Blue Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Steel Blue Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/finez-pt-plus-bamt2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4199,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-finez-pt-exclusive-blft3",
+  "slug": "batavus-finez-pt-exclusive-blft3",
+  "title": "Batavus Finez PT Exclusive",
+  "brand": "Batavus",
+  "model": "Finez PT Exclusive",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3724,
+  "image": "/images/catalog/batavus-finez-pt-exclusive-blft3-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-finez-pt-exclusive-blft3-1.webp",
+   "/images/catalog/batavus-finez-pt-exclusive-blft3-2.webp",
+   "/images/catalog/batavus-finez-pt-exclusive-blft3-3.webp",
+   "/images/catalog/batavus-finez-pt-exclusive-blft3-4.webp"
+  ],
+  "description": "Batavus Finez PT Exclusive is een stads-e-bike. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Finez PT Exclusive is een stads-e-bike. Beschikbare maten: S, M, L, XL, XXL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "Volcano Black Matt",
+   "Steel Blue Matt",
+   "Burgundy Red Matt"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "Volcano Black Matt, Steel Blue Matt, Burgundy Red Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/finez-pt-exclusive-blft3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3724,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-finez-pt-exclusive-plus-blgt2",
+  "slug": "batavus-finez-pt-exclusive-plus-blgt2",
+  "title": "Batavus Finez PT Exclusive Plus",
+  "brand": "Batavus",
+  "model": "Finez PT Exclusive Plus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 4324,
+  "image": "/images/catalog/batavus-finez-pt-exclusive-plus-blgt2-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-finez-pt-exclusive-plus-blgt2-1.webp",
+   "/images/catalog/batavus-finez-pt-exclusive-plus-blgt2-2.webp",
+   "/images/catalog/batavus-finez-pt-exclusive-plus-blgt2-3.webp",
+   "/images/catalog/batavus-finez-pt-exclusive-plus-blgt2-4.webp"
+  ],
+  "description": "Batavus Finez PT Exclusive Plus is een stads-e-bike. Versnellingen: Enviolo (traploos). Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Finez PT Exclusive Plus is een stads-e-bike. Versnellingen: Enviolo (traploos).",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Volcano Black Matt",
+   "Steel Blue Matt"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Versnelling": "Enviolo (traploos)",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Volcano Black Matt, Steel Blue Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/finez-pt-exclusive-plus-blgt2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4324,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-finez-pt-blet3",
+  "slug": "batavus-finez-pt-blet3",
+  "title": "Batavus Finez PT",
+  "brand": "Batavus",
+  "model": "Finez PT",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3524,
+  "image": "/images/catalog/batavus-finez-pt-blet3-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-finez-pt-blet3-1.webp",
+   "/images/catalog/batavus-finez-pt-blet3-2.webp",
+   "/images/catalog/batavus-finez-pt-blet3-3.webp",
+   "/images/catalog/batavus-finez-pt-blet3-4.webp"
+  ],
+  "description": "Batavus Finez PT is een stads-e-bike. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Finez PT is een stads-e-bike. Beschikbare maten: S, M, L, XL, XXL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "Volcano Black Matt",
+   "Burgundy Red Matt",
+   "Steel Blue Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "Volcano Black Matt, Burgundy Red Matt, Steel Blue Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/finez-pt-blet3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3524,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-fier-3-bbfn3",
+  "slug": "batavus-fier-3-bbfn3",
+  "title": "Batavus Fier 3",
+  "brand": "Batavus",
+  "model": "Fier 3",
+  "category": "Elektrische fietsen",
+  "subCategory": "Bakfietsen",
+  "price": 4924,
+  "image": "/images/catalog/batavus-fier-3-bbfn3-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-fier-3-bbfn3-1.webp",
+   "/images/catalog/batavus-fier-3-bbfn3-2.webp",
+   "/images/catalog/batavus-fier-3-bbfn3-3.webp"
+  ],
+  "description": "Batavus Fier 3 is een e-bakfiets. Versnellingen: Enviolo (traploos). Beschikbare maten: Uni. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Fier 3 is een e-bakfiets. Versnellingen: Enviolo (traploos).",
+  "framematen": [
+   "Uni"
+  ],
+  "kleuren": [
+   "Smoking Black"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Versnelling": "Enviolo (traploos)",
+   "Maten": "Uni",
+   "Kleuren": "Smoking Black"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/fier-3-bbfn3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4924,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-fier-2-bben2",
+  "slug": "batavus-fier-2-bben2",
+  "title": "Batavus Fier 2",
+  "brand": "Batavus",
+  "model": "Fier 2",
+  "category": "Elektrische fietsen",
+  "subCategory": "Bakfietsen",
+  "price": 4724,
+  "image": "/images/catalog/batavus-fier-2-bben2-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-fier-2-bben2-1.webp",
+   "/images/catalog/batavus-fier-2-bben2-2.webp",
+   "/images/catalog/batavus-fier-2-bben2-3.webp"
+  ],
+  "description": "Batavus Fier 2 is een e-bakfiets. Versnellingen: Enviolo (traploos). Beschikbare maten: Uni. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Fier 2 is een e-bakfiets. Versnellingen: Enviolo (traploos).",
+  "framematen": [
+   "Uni"
+  ],
+  "kleuren": [
+   "Smoking Black"
+  ],
+  "versnelling": "Stepless (Enviolo)",
+  "versnellingDetail": "Enviolo (traploos)",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Versnelling": "Enviolo (traploos)",
+   "Maten": "Uni",
+   "Kleuren": "Smoking Black"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/fier-2-bben2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4724,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-altura-pt-power-pro-bnbt3",
+  "slug": "batavus-altura-pt-power-pro-bnbt3",
+  "title": "Batavus Altura PT Power Pro",
+  "brand": "Batavus",
+  "model": "Altura PT Power Pro",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3349,
+  "image": "/images/catalog/batavus-altura-pt-power-pro-bnbt3-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-altura-pt-power-pro-bnbt3-1.webp",
+   "/images/catalog/batavus-altura-pt-power-pro-bnbt3-2.webp",
+   "/images/catalog/batavus-altura-pt-power-pro-bnbt3-3.webp",
+   "/images/catalog/batavus-altura-pt-power-pro-bnbt3-4.webp"
+  ],
+  "description": "Batavus Altura PT Power Pro is een stads-e-bike. Beschikbare maten: S. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Altura PT Power Pro is een stads-e-bike. Beschikbare maten: S.",
+  "framematen": [
+   "S"
+  ],
+  "kleuren": [
+   "Light Sea Green Gloss",
+   "Turquoise Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Maten": "S",
+   "Kleuren": "Light Sea Green Gloss, Turquoise Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/altura-pt-power-pro-bnbt3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3349,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-altura-pt-pro-bnbt2",
+  "slug": "batavus-altura-pt-pro-bnbt2",
+  "title": "Batavus Altura PT Pro",
+  "brand": "Batavus",
+  "model": "Altura PT Pro",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3374,
+  "image": "/images/catalog/batavus-altura-pt-pro-bnbt2-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-altura-pt-pro-bnbt2-1.webp",
+   "/images/catalog/batavus-altura-pt-pro-bnbt2-2.webp",
+   "/images/catalog/batavus-altura-pt-pro-bnbt2-3.webp",
+   "/images/catalog/batavus-altura-pt-pro-bnbt2-4.webp"
+  ],
+  "description": "Batavus Altura PT Pro is een stads-e-bike. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Altura PT Pro is een stads-e-bike. Beschikbare maten: S, M, L, XL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Smoking Black Matt",
+   "Gray Turquoise Matt",
+   "Light sea green Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Smoking Black Matt, Gray Turquoise Matt, Light sea green Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/altura-pt-pro-bnbt2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3374,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "batavus-altura-pt-bnat2",
+  "slug": "batavus-altura-pt-bnat2",
+  "title": "Batavus Altura PT Power, Bosch Active Line",
+  "brand": "Batavus",
+  "model": "Altura PT Power",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2974,
+  "image": "/images/catalog/batavus-altura-pt-bnat2-1.webp",
+  "galleryImages": [
+   "/images/catalog/batavus-altura-pt-bnat2-1.webp",
+   "/images/catalog/batavus-altura-pt-bnat2-2.webp",
+   "/images/catalog/batavus-altura-pt-bnat2-3.webp",
+   "/images/catalog/batavus-altura-pt-bnat2-4.webp"
+  ],
+  "description": "Batavus Altura PT Power is een stads-e-bike met Bosch Active Line. Beschikbare maten: M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Batavus Altura PT Power is een stads-e-bike met Bosch Active Line. Beschikbare maten: M, L, XL.",
+  "motorModel": "Bosch Active Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Gray Turquoise Matt",
+   "Light sea green Matt",
+   "Smoking Black Matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Active Line",
+   "Maten": "M, L, XL",
+   "Kleuren": "Gray Turquoise Matt, Light sea green Matt, Smoking Black Matt"
+  },
+  "source": {
+   "brandUrl": "https://batavus.com/products/altura-pt-bnat2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "batavus.com (adviesprijs fabrikant)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2974,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant (NL-markt)."
+  },
+  "reviews": []
+ },
+ {
   "id": "giant-entour-eplus-0-dd-2027",
   "slug": "giant-entour-eplus-0-dd-2027",
   "title": "Giant Entour E+ 0 DD, Giant SyncDrive Core3, 375 Wh",
@@ -4891,6 +5520,2463 @@
    "originalAmount": 4499,
    "originalCurrency": "EUR",
    "note": "Adviesprijs van de fabrikant (incl. BTW)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrack-10-hkiu1",
+  "slug": "haibike-alltrack-10-hkiu1",
+  "title": "Haibike ALLTRACK 10, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLTRACK 10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4199,
+  "image": "/images/catalog/haibike-alltrack-10-hkiu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrack-10-hkiu1-1.webp",
+   "/images/catalog/haibike-alltrack-10-hkiu1-2.webp",
+   "/images/catalog/haibike-alltrack-10-hkiu1-3.webp",
+   "/images/catalog/haibike-alltrack-10-hkiu1-4.webp"
+  ],
+  "description": "Haibike ALLTRACK 10 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRACK 10 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "blue",
+   "titan",
+   "yellow glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "blue/titan/yellow glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrack-10-hkiu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4199,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmtn-4-hmcu1",
+  "slug": "haibike-allmtn-4-hmcu1",
+  "title": "Haibike ALLMTN 4, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLMTN 4",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4999,
+  "image": "/images/catalog/haibike-allmtn-4-hmcu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmtn-4-hmcu1-1.webp",
+   "/images/catalog/haibike-allmtn-4-hmcu1-2.webp",
+   "/images/catalog/haibike-allmtn-4-hmcu1-3.webp",
+   "/images/catalog/haibike-allmtn-4-hmcu1-4.webp"
+  ],
+  "description": "Haibike ALLMTN 4 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN 4 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "silver",
+   "red",
+   "black glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "silver/red/black glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmtn-4-hmcu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrail-10-hlet1",
+  "slug": "haibike-alltrail-10-hlet1",
+  "title": "Haibike ALLTRAIL 10, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLTRAIL 10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 5499,
+  "image": "/images/catalog/haibike-alltrail-10-hlet1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrail-10-hlet1-1.webp",
+   "/images/catalog/haibike-alltrail-10-hlet1-2.webp",
+   "/images/catalog/haibike-alltrail-10-hlet1-3.webp",
+   "/images/catalog/haibike-alltrail-10-hlet1-4.webp"
+  ],
+  "description": "Haibike ALLTRAIL 10 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRAIL 10 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "black",
+   "ninja gold",
+   "grey glossy",
+   "slate blue",
+   "blue",
+   "black glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "black/ninja gold/grey glossy, slate blue/blue/black glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrail-10-hlet1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrail-8-hldt1",
+  "slug": "haibike-alltrail-8-hldt1",
+  "title": "Haibike ALLTRAIL 8, Bosch Performance, 600 Wh",
+  "brand": "Haibike",
+  "model": "ALLTRAIL 8",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4999,
+  "image": "/images/catalog/haibike-alltrail-8-hldt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrail-8-hldt1-1.webp",
+   "/images/catalog/haibike-alltrail-8-hldt1-2.webp",
+   "/images/catalog/haibike-alltrail-8-hldt1-3.webp",
+   "/images/catalog/haibike-alltrail-8-hldt1-4.webp"
+  ],
+  "description": "Haibike ALLTRAIL 8 is een e-mountainbike met Bosch Performance en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRAIL 8 is een e-mountainbike met Bosch Performance en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "white",
+   "blue",
+   "gold glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "600 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "white/blue/gold glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrail-8-hldt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-4-haku1",
+  "slug": "haibike-adventr-4-haku1",
+  "title": "Haibike ADVENTR 4, Bosch Performance Line, 600 Wh",
+  "brand": "Haibike",
+  "model": "ADVENTR 4",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/haibike-adventr-4-haku1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-4-haku1-1.webp",
+   "/images/catalog/haibike-adventr-4-haku1-2.webp",
+   "/images/catalog/haibike-adventr-4-haku1-3.webp",
+   "/images/catalog/haibike-adventr-4-haku1-4.webp"
+  ],
+  "description": "Haibike ADVENTR 4 is een toer-e-bike met Bosch Performance Line en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR 4 is een toer-e-bike met Bosch Performance Line en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "grey",
+   "bamboo green matt",
+   "glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Accu": "600 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "grey/bamboo green matt/glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-4-haku1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-hybe-cf-11-hmtu1",
+  "slug": "haibike-hybe-cf-11-hmtu1",
+  "title": "Haibike HYBE CF 11, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "HYBE CF 11",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 11000,
+  "image": "/images/catalog/haibike-hybe-cf-11-hmtu1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-hybe-cf-11-hmtu1-1.webp",
+   "/images/catalog/haibike-hybe-cf-11-hmtu1-2.webp",
+   "/images/catalog/haibike-hybe-cf-11-hmtu1-3.webp",
+   "/images/catalog/haibike-hybe-cf-11-hmtu1-4.webp"
+  ],
+  "description": "Haibike HYBE CF 11 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike HYBE CF 11 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "sparkling white",
+   "splatter black",
+   "radiant green glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "sparkling white/splatter black/radiant green glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/hybe-cf-11-hmtu1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 11000,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrack-65-hkjt1",
+  "slug": "haibike-alltrack-65-hkjt1",
+  "title": "Haibike ALLTRACK 6.5, Bosch Performance Line CX, 600 Wh",
+  "brand": "Haibike",
+  "model": "ALLTRACK 6.5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 3599,
+  "image": "/images/catalog/haibike-alltrack-65-hkjt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrack-65-hkjt1-1.webp",
+   "/images/catalog/haibike-alltrack-65-hkjt1-2.webp",
+   "/images/catalog/haibike-alltrack-65-hkjt1-3.webp",
+   "/images/catalog/haibike-alltrack-65-hkjt1-4.webp"
+  ],
+  "description": "Haibike ALLTRACK 6.5 is een e-mountainbike met Bosch Performance Line CX en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRACK 6.5 is een e-mountainbike met Bosch Performance Line CX en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line CX",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "grey",
+   "blue",
+   "yellow glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line CX",
+   "Accu": "600 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "grey/blue/yellow glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrack-65-hkjt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3599,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-lyke-cf-11-hmqt1",
+  "slug": "haibike-lyke-cf-11-hmqt1",
+  "title": "Haibike LYKE CF 11, Fazua Ride 60 Mot, 480 Wh",
+  "brand": "Haibike",
+  "model": "LYKE CF 11",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 8000,
+  "image": "/images/catalog/haibike-lyke-cf-11-hmqt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-lyke-cf-11-hmqt1-1.webp",
+   "/images/catalog/haibike-lyke-cf-11-hmqt1-2.webp",
+   "/images/catalog/haibike-lyke-cf-11-hmqt1-3.webp",
+   "/images/catalog/haibike-lyke-cf-11-hmqt1-4.webp"
+  ],
+  "description": "Haibike LYKE CF 11 is een e-mountainbike met Fazua Ride 60 Mot en een 480 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike LYKE CF 11 is een e-mountainbike met Fazua Ride 60 Mot en een 480 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Fazua Ride 60 Mot",
+  "motormerk": "Fazua",
+  "accuWhNumber": 480,
+  "accucapaciteit": "500 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "carbon",
+   "sand",
+   "lime - gloss glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Fazua Ride 60 Mot",
+   "Accu": "480 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "carbon/sand/lime - gloss glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/lyke-cf-11-hmqt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 8000,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-lyke-cf-10-hmpt1",
+  "slug": "haibike-lyke-cf-10-hmpt1",
+  "title": "Haibike LYKE CF 10, Fazua Ride 60 Mot",
+  "brand": "Haibike",
+  "model": "LYKE CF 10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 6999,
+  "image": "/images/catalog/haibike-lyke-cf-10-hmpt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-lyke-cf-10-hmpt1-1.webp",
+   "/images/catalog/haibike-lyke-cf-10-hmpt1-2.webp",
+   "/images/catalog/haibike-lyke-cf-10-hmpt1-3.webp",
+   "/images/catalog/haibike-lyke-cf-10-hmpt1-4.webp"
+  ],
+  "description": "Haibike LYKE CF 10 is een e-mountainbike met Fazua Ride 60 Mot. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike LYKE CF 10 is een e-mountainbike met Fazua Ride 60 Mot. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Fazua Ride 60 Mot",
+  "motormerk": "Fazua",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "carbon",
+   "silver matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Fazua Ride 60 Mot",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "carbon/silver matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/lyke-cf-10-hmpt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmtn-cf-11-trniq-hmft2",
+  "slug": "haibike-allmtn-cf-11-trniq-hmft2",
+  "title": "Haibike ALLMTN CF 11 TRN/IQ, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLMTN CF 11 TRN/IQ",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 9000,
+  "image": "/images/catalog/haibike-allmtn-cf-11-trniq-hmft2-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmtn-cf-11-trniq-hmft2-1.webp",
+   "/images/catalog/haibike-allmtn-cf-11-trniq-hmft2-2.webp",
+   "/images/catalog/haibike-allmtn-cf-11-trniq-hmft2-3.webp",
+   "/images/catalog/haibike-allmtn-cf-11-trniq-hmft2-4.webp"
+  ],
+  "description": "Haibike ALLMTN CF 11 TRN/IQ is een e-mountainbike met een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN CF 11 TRN/IQ is een e-mountainbike met een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "rock",
+   "carbon",
+   "grey glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "rock/carbon/grey glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmtn-cf-11-trniq-hmft2",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 9000,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmtn-cf-9-hmlt1",
+  "slug": "haibike-allmtn-cf-9-hmlt1",
+  "title": "Haibike ALLMTN CF 9, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLMTN CF 9",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 6999,
+  "image": "/images/catalog/haibike-allmtn-cf-9-hmlt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmtn-cf-9-hmlt1-1.webp",
+   "/images/catalog/haibike-allmtn-cf-9-hmlt1-2.webp",
+   "/images/catalog/haibike-allmtn-cf-9-hmlt1-3.webp",
+   "/images/catalog/haibike-allmtn-cf-9-hmlt1-4.webp"
+  ],
+  "description": "Haibike ALLMTN CF 9 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN CF 9 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "red",
+   "black",
+   "platinum glossy",
+   "black",
+   "platinum glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh / 250 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "red/black/platinum glossy, black/platinum glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmtn-cf-9-hmlt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmtn-6-hmkt1",
+  "slug": "haibike-allmtn-6-hmkt1",
+  "title": "Haibike ALLMTN 6, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLMTN 6",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 5999,
+  "image": "/images/catalog/haibike-allmtn-6-hmkt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmtn-6-hmkt1-1.webp",
+   "/images/catalog/haibike-allmtn-6-hmkt1-2.webp",
+   "/images/catalog/haibike-allmtn-6-hmkt1-3.webp",
+   "/images/catalog/haibike-allmtn-6-hmkt1-4.webp"
+  ],
+  "description": "Haibike ALLMTN 6 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN 6 is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "ocean black",
+   "grey glossy",
+   "nebular lime",
+   "black glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "ocean black/grey glossy, nebular lime/black glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmtn-6-hmkt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-se-hact1",
+  "slug": "haibike-adventr-se-hact1",
+  "title": "Haibike ADVENTR SE, Yamaha PW",
+  "brand": "Haibike",
+  "model": "ADVENTR SE",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 6499,
+  "image": "/images/catalog/haibike-adventr-se-hact1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-se-hact1-1.webp",
+   "/images/catalog/haibike-adventr-se-hact1-2.webp",
+   "/images/catalog/haibike-adventr-se-hact1-3.webp",
+   "/images/catalog/haibike-adventr-se-hact1-4.webp"
+  ],
+  "description": "Haibike ADVENTR SE is een toer-e-bike met Yamaha PW. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR SE is een toer-e-bike met Yamaha PW. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "purple",
+   "cognac glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "purple/cognac glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-se-hact1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-11-abs-habt1",
+  "slug": "haibike-adventr-11-abs-habt1",
+  "title": "Haibike ADVENTR 11 ABS, Bosch Performance Line CX, 800 Wh",
+  "brand": "Haibike",
+  "model": "ADVENTR 11 ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 6499,
+  "image": "/images/catalog/haibike-adventr-11-abs-habt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-11-abs-habt1-1.webp",
+   "/images/catalog/haibike-adventr-11-abs-habt1-2.webp",
+   "/images/catalog/haibike-adventr-11-abs-habt1-3.webp",
+   "/images/catalog/haibike-adventr-11-abs-habt1-4.webp"
+  ],
+  "description": "Haibike ADVENTR 11 ABS is een toer-e-bike met Bosch Performance Line CX en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR 11 ABS is een toer-e-bike met Bosch Performance Line CX en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line CX",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "anthracite",
+   "acacia glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line CX",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "anthracite/acacia glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-11-abs-habt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-10-hajt1",
+  "slug": "haibike-adventr-10-hajt1",
+  "title": "Haibike ADVENTR 10, Bosch Performance Line CX, 800 Wh",
+  "brand": "Haibike",
+  "model": "ADVENTR 10",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 5699,
+  "image": "/images/catalog/haibike-adventr-10-hajt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-10-hajt1-1.webp",
+   "/images/catalog/haibike-adventr-10-hajt1-2.webp",
+   "/images/catalog/haibike-adventr-10-hajt1-3.webp",
+   "/images/catalog/haibike-adventr-10-hajt1-4.webp"
+  ],
+  "description": "Haibike ADVENTR 10 is een toer-e-bike met Bosch Performance Line CX en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR 10 is een toer-e-bike met Bosch Performance Line CX en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line CX",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "met.sand",
+   "black glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line CX",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "met.sand/black glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-10-hajt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5699,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-85-hait1",
+  "slug": "haibike-adventr-85-hait1",
+  "title": "Haibike ADVENTR 8.5, Bosch Performance Line CX, 600 Wh",
+  "brand": "Haibike",
+  "model": "ADVENTR 8.5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 5199,
+  "image": "/images/catalog/haibike-adventr-85-hait1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-85-hait1-1.webp",
+   "/images/catalog/haibike-adventr-85-hait1-2.webp",
+   "/images/catalog/haibike-adventr-85-hait1-3.webp",
+   "/images/catalog/haibike-adventr-85-hait1-4.webp"
+  ],
+  "description": "Haibike ADVENTR 8.5 is een toer-e-bike met Bosch Performance Line CX en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR 8.5 is een toer-e-bike met Bosch Performance Line CX en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line CX",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "copper",
+   "mystery glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line CX",
+   "Accu": "600 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "copper/mystery glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-85-hait1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5199,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-65-htpt1",
+  "slug": "haibike-trekking-65-htpt1",
+  "title": "Haibike TREKKING 6.5, Bosch Performance, 600 Wh",
+  "brand": "Haibike",
+  "model": "TREKKING 6.5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3999,
+  "image": "/images/catalog/haibike-trekking-65-htpt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-65-htpt1-1.webp",
+   "/images/catalog/haibike-trekking-65-htpt1-2.webp",
+   "/images/catalog/haibike-trekking-65-htpt1-3.webp",
+   "/images/catalog/haibike-trekking-65-htpt1-4.webp"
+  ],
+  "description": "Haibike TREKKING 6.5 is een toer-e-bike met Bosch Performance en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 6.5 is een toer-e-bike met Bosch Performance en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "toffee",
+   "sand",
+   "silver glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "600 Wh / 250 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "toffee/sand/silver glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-65-htpt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-9-abs-htjt1",
+  "slug": "haibike-trekking-9-abs-htjt1",
+  "title": "Haibike TREKKING 9 ABS, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "TREKKING 9 ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4999,
+  "image": "/images/catalog/haibike-trekking-9-abs-htjt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-9-abs-htjt1-1.webp",
+   "/images/catalog/haibike-trekking-9-abs-htjt1-2.webp",
+   "/images/catalog/haibike-trekking-9-abs-htjt1-3.webp",
+   "/images/catalog/haibike-trekking-9-abs-htjt1-4.webp"
+  ],
+  "description": "Haibike TREKKING 9 ABS is een toer-e-bike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 9 ABS is een toer-e-bike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "dynamite red",
+   "blue glossy"
+  ],
+  "aandrijving": "Riem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Aandrijving": "Riem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "dynamite red/blue glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-9-abs-htjt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-7-htlt3",
+  "slug": "haibike-trekking-7-htlt3",
+  "title": "Haibike TREKKING 7, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "TREKKING 7",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4499,
+  "image": "/images/catalog/haibike-trekking-7-htlt3-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-7-htlt3-1.webp",
+   "/images/catalog/haibike-trekking-7-htlt3-2.webp",
+   "/images/catalog/haibike-trekking-7-htlt3-3.webp",
+   "/images/catalog/haibike-trekking-7-htlt3-4.webp"
+  ],
+  "description": "Haibike TREKKING 7 is een toer-e-bike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 7 is een toer-e-bike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "soft grey",
+   "red",
+   "blue glossy",
+   "dynamite red",
+   "blue glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "soft grey/red/blue glossy, dynamite red/blue glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-7-htlt3",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-75-htdt1",
+  "slug": "haibike-trekking-75-htdt1",
+  "title": "Haibike TREKKING 7.5, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "TREKKING 7.5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 4299,
+  "image": "/images/catalog/haibike-trekking-75-htdt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-75-htdt1-1.webp",
+   "/images/catalog/haibike-trekking-75-htdt1-2.webp",
+   "/images/catalog/haibike-trekking-75-htdt1-3.webp",
+   "/images/catalog/haibike-trekking-75-htdt1-4.webp"
+  ],
+  "description": "Haibike TREKKING 7.5 is een toer-e-bike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 7.5 is een toer-e-bike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "blue slate",
+   "yellow - gloss glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "blue slate/yellow - gloss glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-75-htdt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4299,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-5-htmt1",
+  "slug": "haibike-trekking-5-htmt1",
+  "title": "Haibike TREKKING 5, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "TREKKING 5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3699,
+  "image": "/images/catalog/haibike-trekking-5-htmt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-5-htmt1-1.webp",
+   "/images/catalog/haibike-trekking-5-htmt1-2.webp",
+   "/images/catalog/haibike-trekking-5-htmt1-3.webp",
+   "/images/catalog/haibike-trekking-5-htmt1-4.webp"
+  ],
+  "description": "Haibike TREKKING 5 is een toer-e-bike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 5 is een toer-e-bike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "lime",
+   "black - gloss glossy",
+   "olive",
+   "red - gloss glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "lime/black - gloss glossy, olive/red - gloss glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-5-htmt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3699,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-4-htct1",
+  "slug": "haibike-trekking-4-htct1",
+  "title": "Haibike TREKKING 4, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "TREKKING 4",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 3399,
+  "image": "/images/catalog/haibike-trekking-4-htct1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-4-htct1-1.webp",
+   "/images/catalog/haibike-trekking-4-htct1-2.webp",
+   "/images/catalog/haibike-trekking-4-htct1-3.webp",
+   "/images/catalog/haibike-trekking-4-htct1-4.webp"
+  ],
+  "description": "Haibike TREKKING 4 is een toer-e-bike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL, XXL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 4 is een toer-e-bike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL, XXL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "kleuren": [
+   "blue",
+   "orange",
+   "silver glossy",
+   "orange",
+   "silver glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL, XXL",
+   "Kleuren": "blue/orange/silver glossy, orange/silver glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-4-htct1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3399,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrail-9-hlft1",
+  "slug": "haibike-alltrail-9-hlft1",
+  "title": "Haibike ALLTRAIL 9, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "ALLTRAIL 9",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 5299,
+  "image": "/images/catalog/haibike-alltrail-9-hlft1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrail-9-hlft1-1.webp",
+   "/images/catalog/haibike-alltrail-9-hlft1-2.webp",
+   "/images/catalog/haibike-alltrail-9-hlft1-3.webp",
+   "/images/catalog/haibike-alltrail-9-hlft1-4.webp"
+  ],
+  "description": "Haibike ALLTRAIL 9 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRAIL 9 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "titan",
+   "lime",
+   "black - matt matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "titan/lime/black - matt matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrail-9-hlft1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5299,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrail-5-hlbt1",
+  "slug": "haibike-alltrail-5-hlbt1",
+  "title": "Haibike ALLTRAIL 5",
+  "brand": "Haibike",
+  "model": "ALLTRAIL 5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4599,
+  "image": "/images/catalog/haibike-alltrail-5-hlbt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrail-5-hlbt1-1.webp",
+   "/images/catalog/haibike-alltrail-5-hlbt1-2.webp",
+   "/images/catalog/haibike-alltrail-5-hlbt1-3.webp",
+   "/images/catalog/haibike-alltrail-5-hlbt1-4.webp"
+  ],
+  "description": "Haibike ALLTRAIL 5 is een e-mountainbike. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRAIL 5 is een e-mountainbike. Beschikbare maten: S, M, L, XL.",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "dusty",
+   "blue",
+   "black",
+   "red glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Maten": "S, M, L, XL",
+   "Kleuren": "dusty/blue/black/red glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrail-5-hlbt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4599,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrail-3-hlht1",
+  "slug": "haibike-alltrail-3-hlht1",
+  "title": "Haibike ALLTRAIL 3, Yamaha PW",
+  "brand": "Haibike",
+  "model": "ALLTRAIL 3",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4299,
+  "image": "/images/catalog/haibike-alltrail-3-hlht1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrail-3-hlht1-1.webp",
+   "/images/catalog/haibike-alltrail-3-hlht1-2.webp",
+   "/images/catalog/haibike-alltrail-3-hlht1-3.webp",
+   "/images/catalog/haibike-alltrail-3-hlht1-4.webp"
+  ],
+  "description": "Haibike ALLTRAIL 3 is een e-mountainbike met Yamaha PW. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRAIL 3 is een e-mountainbike met Yamaha PW. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "ocean black",
+   "blue matt",
+   "caramel",
+   "orange",
+   "black glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "ocean black/blue matt, caramel/orange/black glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrail-3-hlht1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4299,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-alltrail-105-abs-hllt1",
+  "slug": "haibike-alltrail-105-abs-hllt1",
+  "title": "Haibike ALLTRAIL 10.5 ABS, Bosch Performance, 800 Wh",
+  "brand": "Haibike",
+  "model": "ALLTRAIL 10.5 ABS",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 6299,
+  "image": "/images/catalog/haibike-alltrail-105-abs-hllt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-alltrail-105-abs-hllt1-1.webp",
+   "/images/catalog/haibike-alltrail-105-abs-hllt1-2.webp",
+   "/images/catalog/haibike-alltrail-105-abs-hllt1-3.webp",
+   "/images/catalog/haibike-alltrail-105-abs-hllt1-4.webp"
+  ],
+  "description": "Haibike ALLTRAIL 10.5 ABS is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLTRAIL 10.5 ABS is een e-mountainbike met Bosch Performance en een 800 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "black",
+   "ninja gold",
+   "grey glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance",
+   "Accu": "800 Wh / 250 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "black/ninja gold/grey glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/alltrail-105-abs-hllt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6299,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-hybe-105-hmur1",
+  "slug": "haibike-hybe-105-hmur1",
+  "title": "Haibike HYBE 10.5, Yamaha PW",
+  "brand": "Haibike",
+  "model": "HYBE 10.5",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 7999,
+  "image": "/images/catalog/haibike-hybe-105-hmur1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-hybe-105-hmur1-1.webp",
+   "/images/catalog/haibike-hybe-105-hmur1-2.webp",
+   "/images/catalog/haibike-hybe-105-hmur1-3.webp",
+   "/images/catalog/haibike-hybe-105-hmur1-4.webp"
+  ],
+  "description": "Haibike HYBE 10.5 is een e-mountainbike met Yamaha PW. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike HYBE 10.5 is een e-mountainbike met Yamaha PW. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "choco",
+   "canary",
+   "grey - matt matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "choco/canary/grey - matt matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/hybe-105-hmur1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 7999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-8-hadr1",
+  "slug": "haibike-adventr-8-hadr1",
+  "title": "Haibike ADVENTR 8, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "ADVENTR 8",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4499,
+  "image": "/images/catalog/haibike-adventr-8-hadr1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-8-hadr1-1.webp",
+   "/images/catalog/haibike-adventr-8-hadr1-2.webp",
+   "/images/catalog/haibike-adventr-8-hadr1-3.webp"
+  ],
+  "description": "Haibike ADVENTR 8 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR 8 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "cognac",
+   "olive matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "cognac/olive matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-8-hadr1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-adventr-9-haar1",
+  "slug": "haibike-adventr-9-haar1",
+  "title": "Haibike ADVENTR 9, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "ADVENTR 9",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4999,
+  "image": "/images/catalog/haibike-adventr-9-haar1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-adventr-9-haar1-1.webp",
+   "/images/catalog/haibike-adventr-9-haar1-2.webp",
+   "/images/catalog/haibike-adventr-9-haar1-3.webp",
+   "/images/catalog/haibike-adventr-9-haar1-4.webp"
+  ],
+  "description": "Haibike ADVENTR 9 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ADVENTR 9 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "silver",
+   "dark blue matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "silver/dark blue matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/adventr-9-haar1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmtn-3-hmbr1",
+  "slug": "haibike-allmtn-3-hmbr1",
+  "title": "Haibike ALLMTN 3, Yamaha PW",
+  "brand": "Haibike",
+  "model": "ALLMTN 3",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 5199,
+  "image": "/images/catalog/haibike-allmtn-3-hmbr1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmtn-3-hmbr1-1.webp",
+   "/images/catalog/haibike-allmtn-3-hmbr1-2.webp",
+   "/images/catalog/haibike-allmtn-3-hmbr1-3.webp",
+   "/images/catalog/haibike-allmtn-3-hmbr1-4.webp"
+  ],
+  "description": "Haibike ALLMTN 3 is een e-mountainbike met Yamaha PW. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN 3 is een e-mountainbike met Yamaha PW. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "kleuren": [
+   "coffee",
+   "green",
+   "blue glossy",
+   "silver surf",
+   "white glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Kleuren": "coffee/green/blue glossy, silver surf/white glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmtn-3-hmbr1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5199,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmnt-7-hmdr1",
+  "slug": "haibike-allmnt-7-hmdr1",
+  "title": "Haibike ALLMTN 7, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "ALLMTN 7",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 5999,
+  "image": "/images/catalog/haibike-allmnt-7-hmdr1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmnt-7-hmdr1-1.webp",
+   "/images/catalog/haibike-allmnt-7-hmdr1-2.webp",
+   "/images/catalog/haibike-allmnt-7-hmdr1-3.webp",
+   "/images/catalog/haibike-allmnt-7-hmdr1-4.webp"
+  ],
+  "description": "Haibike ALLMTN 7 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN 7 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "ocean",
+   "black",
+   "orange - gloss glossy",
+   "soft grey",
+   "red",
+   "blue glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "ocean/black/orange - gloss glossy, soft grey/red/blue glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmnt-7-hmdr1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-allmtn-2-hmar1",
+  "slug": "haibike-allmtn-2-hmar1",
+  "title": "Haibike ALLMTN 2, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "ALLMTN 2",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 4999,
+  "image": "/images/catalog/haibike-allmtn-2-hmar1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-allmtn-2-hmar1-1.webp",
+   "/images/catalog/haibike-allmtn-2-hmar1-2.webp",
+   "/images/catalog/haibike-allmtn-2-hmar1-3.webp",
+   "/images/catalog/haibike-allmtn-2-hmar1-4.webp"
+  ],
+  "description": "Haibike ALLMTN 2 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike ALLMTN 2 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "blue",
+   "cyan",
+   "caramel - gloss glossy",
+   "pebble",
+   "black",
+   "red matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "blue/cyan/caramel - gloss glossy, pebble/black/red matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/allmtn-2-hmar1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 4999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-trekking-3-htbp1",
+  "slug": "haibike-trekking-3-htbp1",
+  "title": "Haibike TREKKING 3, Bosch Performance Line",
+  "brand": "Haibike",
+  "model": "TREKKING 3",
+  "category": "Elektrische fietsen",
+  "subCategory": "Trekkingfietsen",
+  "price": 2999,
+  "image": "/images/catalog/haibike-trekking-3-htbp1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-trekking-3-htbp1-1.webp",
+   "/images/catalog/haibike-trekking-3-htbp1-2.webp",
+   "/images/catalog/haibike-trekking-3-htbp1-3.webp",
+   "/images/catalog/haibike-trekking-3-htbp1-4.webp"
+  ],
+  "description": "Haibike TREKKING 3 is een toer-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike TREKKING 3 is een toer-e-bike met Bosch Performance Line. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "warm grey",
+   "black glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "warm grey/black glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/trekking-3-htbp1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-nduro-7-hnbr1",
+  "slug": "haibike-nduro-7-hnbr1",
+  "title": "Haibike NDURO 7, Yamaha PW",
+  "brand": "Haibike",
+  "model": "NDURO 7",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 6499,
+  "image": "/images/catalog/haibike-nduro-7-hnbr1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-nduro-7-hnbr1-1.webp",
+   "/images/catalog/haibike-nduro-7-hnbr1-2.webp",
+   "/images/catalog/haibike-nduro-7-hnbr1-3.webp",
+   "/images/catalog/haibike-nduro-7-hnbr1-4.webp"
+  ],
+  "description": "Haibike NDURO 7 is een e-mountainbike met Yamaha PW. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike NDURO 7 is een e-mountainbike met Yamaha PW. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "tuscan",
+   "black - matt&gloss matt",
+   "glossy"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "tuscan/black - matt&gloss matt/glossy"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/nduro-7-hnbr1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 6499,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "haibike-nduro-6-hnar1",
+  "slug": "haibike-nduro-6-hnar1",
+  "title": "Haibike NDURO 6, Yamaha PW, 720 Wh",
+  "brand": "Haibike",
+  "model": "NDURO 6",
+  "category": "Elektrische fietsen",
+  "subCategory": "Elektrische mountainbikes",
+  "price": 5999,
+  "image": "/images/catalog/haibike-nduro-6-hnar1-1.webp",
+  "galleryImages": [
+   "/images/catalog/haibike-nduro-6-hnar1-1.webp",
+   "/images/catalog/haibike-nduro-6-hnar1-2.webp",
+   "/images/catalog/haibike-nduro-6-hnar1-3.webp",
+   "/images/catalog/haibike-nduro-6-hnar1-4.webp"
+  ],
+  "description": "Haibike NDURO 6 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Haibike NDURO 6 is een e-mountainbike met Yamaha PW en een 720 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Yamaha PW",
+  "motormerk": "Yamaha",
+  "accuWhNumber": 720,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "urban grey",
+   "black - matt matt"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Motor": "Yamaha PW",
+   "Accu": "720 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "urban grey/black - matt matt"
+  },
+  "source": {
+   "brandUrl": "https://haibike.com/products/nduro-6-hnar1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "haibike.com (internationale adviesprijs, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 5999,
+   "originalCurrency": "EUR",
+   "note": "Internationale adviesprijs van de fabrikant in EUR."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-one-roet1",
+  "slug": "raleigh-one-roet1",
+  "title": "Raleigh One Step Through, 360 Wh",
+  "brand": "Raleigh",
+  "model": "One Step Through",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2484.54,
+  "image": "/images/catalog/raleigh-one-roet1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-one-roet1-1.webp",
+   "/images/catalog/raleigh-one-roet1-2.webp",
+   "/images/catalog/raleigh-one-roet1-3.webp",
+   "/images/catalog/raleigh-one-roet1-4.webp"
+  ],
+  "description": "Raleigh One Step Through is een stads-e-bike met een 360 Wh accu. Remmen: Hydraulische schijfrem. Beschikbare maten: One Size. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh One Step Through is een stads-e-bike met een 360 Wh accu. Remmen: Hydraulische schijfrem.",
+  "accuWhNumber": 360,
+  "accucapaciteit": "400 Wh",
+  "framematen": [
+   "One Size"
+  ],
+  "kleuren": [
+   "OFF WHITE",
+   "TEAL"
+  ],
+  "aandrijving": "Riem",
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Accu": "360 Wh",
+   "Aandrijving": "Riem",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "One Size",
+   "Kleuren": "OFF WHITE, TEAL"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/one-roet1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2484.54,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-one-vtas1",
+  "slug": "raleigh-one-vtas1",
+  "title": "Raleigh One",
+  "brand": "Raleigh",
+  "model": "One",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2399,
+  "image": "/images/catalog/raleigh-one-vtas1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-one-vtas1-1.webp",
+   "/images/catalog/raleigh-one-vtas1-2.webp",
+   "/images/catalog/raleigh-one-vtas1-3.webp",
+   "/images/catalog/raleigh-one-vtas1-4.webp"
+  ],
+  "description": "Raleigh One is een stads-e-bike. Beschikbare maten: One Size. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh One is een stads-e-bike. Beschikbare maten: One Size.",
+  "framematen": [
+   "One Size"
+  ],
+  "kleuren": [
+   "Sage Grey",
+   "Off White"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Heren (diamant)",
+  "tags": [],
+  "specs": {
+   "Maten": "One Size",
+   "Kleuren": "Sage Grey, Off White"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/one-vtas1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2399,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-novus-plus-rnht1",
+  "slug": "raleigh-novus-plus-rnht1",
+  "title": "Raleigh Novus Plus, Bosch Performance Line, 800 Wh",
+  "brand": "Raleigh",
+  "model": "Novus Plus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3549.85,
+  "image": "/images/catalog/raleigh-novus-plus-rnht1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-novus-plus-rnht1-1.webp",
+   "/images/catalog/raleigh-novus-plus-rnht1-2.webp",
+   "/images/catalog/raleigh-novus-plus-rnht1-3.webp",
+   "/images/catalog/raleigh-novus-plus-rnht1-4.webp"
+  ],
+  "description": "Raleigh Novus Plus is een stads-e-bike met Bosch Performance Line en een 800 Wh accu. Remmen: Hydraulische schijfrem. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Novus Plus is een stads-e-bike met Bosch Performance Line en een 800 Wh accu. Remmen: Hydraulische schijfrem.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "accuWhNumber": 800,
+  "accucapaciteit": "750 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Sherwood Green",
+   "Forest Green"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Accu": "800 Wh",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Sherwood Green, Forest Green"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/novus-plus-rnht1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3549.85,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-novus-hub-rnft1",
+  "slug": "raleigh-novus-hub-rnft1",
+  "title": "Raleigh Novus, Bosch Performance Line, 600 Wh",
+  "brand": "Raleigh",
+  "model": "Novus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3431.49,
+  "image": "/images/catalog/raleigh-novus-hub-rnft1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-novus-hub-rnft1-1.webp",
+   "/images/catalog/raleigh-novus-hub-rnft1-2.webp",
+   "/images/catalog/raleigh-novus-hub-rnft1-3.webp",
+   "/images/catalog/raleigh-novus-hub-rnft1-4.webp"
+  ],
+  "description": "Raleigh Novus is een stads-e-bike met Bosch Performance Line en een 600 Wh accu. Remmen: Hydraulische schijfrem. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Novus is een stads-e-bike met Bosch Performance Line en een 600 Wh accu. Remmen: Hydraulische schijfrem.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Titanium",
+   "Black"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Accu": "600 Wh",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Titanium, Black"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/novus-hub-rnft1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3431.49,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-novus-rndt1",
+  "slug": "raleigh-novus-rndt1",
+  "title": "Raleigh Novus, Bosch Performance Line, 600 Wh",
+  "brand": "Raleigh",
+  "model": "Novus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3313.12,
+  "image": "/images/catalog/raleigh-novus-rndt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-novus-rndt1-1.webp",
+   "/images/catalog/raleigh-novus-rndt1-2.webp",
+   "/images/catalog/raleigh-novus-rndt1-3.webp",
+   "/images/catalog/raleigh-novus-rndt1-4.webp"
+  ],
+  "description": "Raleigh Novus is een stads-e-bike met Bosch Performance Line en een 600 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Novus is een stads-e-bike met Bosch Performance Line en een 600 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line",
+  "motormerk": "Bosch",
+  "accuWhNumber": 600,
+  "accucapaciteit": "625 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Titanium",
+   "Black"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line",
+   "Accu": "600 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Titanium, Black"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/novus-rndt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3313.12,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-motus-hub-rmft1",
+  "slug": "raleigh-motus-hub-rmft1",
+  "title": "Raleigh Motus, Bosch Performance Line, 500 Wh",
+  "brand": "Raleigh",
+  "model": "Motus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2839.65,
+  "image": "/images/catalog/raleigh-motus-hub-rmft1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-motus-hub-rmft1-1.webp",
+   "/images/catalog/raleigh-motus-hub-rmft1-2.webp",
+   "/images/catalog/raleigh-motus-hub-rmft1-3.webp",
+   "/images/catalog/raleigh-motus-hub-rmft1-4.webp"
+  ],
+  "description": "Raleigh Motus is een stads-e-bike met Bosch Performance Line, 75 Nm en een 500 Wh accu. Beschikbare maten: XS, S, M, L. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Motus is een stads-e-bike met Bosch Performance Line, 75 Nm en een 500 Wh accu. Beschikbare maten: XS, S, M, L.",
+  "motorModel": "Bosch Performance Line, 75 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 75,
+  "accuWhNumber": 500,
+  "accucapaciteit": "500 Wh",
+  "framematen": [
+   "XS",
+   "S",
+   "M",
+   "L"
+  ],
+  "kleuren": [
+   "Night Blue",
+   "Sparkling White"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line, 75 Nm",
+   "Accu": "500 Wh",
+   "Maten": "XS, S, M, L",
+   "Kleuren": "Night Blue, Sparkling White"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/motus-hub-rmft1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2839.65,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-motus-rmet1",
+  "slug": "raleigh-motus-rmet1",
+  "title": "Raleigh Motus, 500 Wh",
+  "brand": "Raleigh",
+  "model": "Motus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2721.28,
+  "image": "/images/catalog/raleigh-motus-rmet1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-motus-rmet1-1.webp",
+   "/images/catalog/raleigh-motus-rmet1-2.webp",
+   "/images/catalog/raleigh-motus-rmet1-3.webp",
+   "/images/catalog/raleigh-motus-rmet1-4.webp"
+  ],
+  "description": "Raleigh Motus is een stads-e-bike met een 500 Wh accu. Beschikbare maten: S, M, L, XS. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Motus is een stads-e-bike met een 500 Wh accu. Beschikbare maten: S, M, L, XS.",
+  "accuWhNumber": 500,
+  "accucapaciteit": "500 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XS"
+  ],
+  "kleuren": [
+   "Night Blue",
+   "Sparkling White"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Accu": "500 Wh",
+   "Maten": "S, M, L, XS",
+   "Kleuren": "Night Blue, Sparkling White"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/motus-rmet1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2721.28,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-hockley-ribt1",
+  "slug": "raleigh-hockley-ribt1",
+  "title": "Raleigh Hockley Electric Bike, Bosch Performance Line SX, 400 Wh",
+  "brand": "Raleigh",
+  "model": "Hockley Electric Bike",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 3194.75,
+  "image": "/images/catalog/raleigh-hockley-ribt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-hockley-ribt1-1.webp",
+   "/images/catalog/raleigh-hockley-ribt1-2.webp",
+   "/images/catalog/raleigh-hockley-ribt1-3.webp",
+   "/images/catalog/raleigh-hockley-ribt1-4.webp"
+  ],
+  "description": "Raleigh Hockley Electric Bike is een stads-e-bike met Bosch Performance Line SX, 55 Nm en een 400 Wh accu. Beschikbare maten: S, M, L, XL. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Hockley Electric Bike is een stads-e-bike met Bosch Performance Line SX, 55 Nm en een 400 Wh accu. Beschikbare maten: S, M, L, XL.",
+  "motorModel": "Bosch Performance Line SX, 55 Nm",
+  "motormerk": "Bosch",
+  "motorTorqueNm": 55,
+  "accuWhNumber": 400,
+  "accucapaciteit": "400 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "kleuren": [
+   "Coffee",
+   "Black"
+  ],
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "tags": [],
+  "specs": {
+   "Motor": "Bosch Performance Line SX, 55 Nm",
+   "Accu": "400 Wh",
+   "Maten": "S, M, L, XL",
+   "Kleuren": "Coffee, Black"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/hockley-ribt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 3194.75,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-captus-rrgt1",
+  "slug": "raleigh-captus-rrgt1",
+  "title": "Raleigh Captus, 400 Wh",
+  "brand": "Raleigh",
+  "model": "Captus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2247.81,
+  "image": "/images/catalog/raleigh-captus-rrgt1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-captus-rrgt1-1.webp",
+   "/images/catalog/raleigh-captus-rrgt1-2.webp",
+   "/images/catalog/raleigh-captus-rrgt1-3.webp",
+   "/images/catalog/raleigh-captus-rrgt1-4.webp"
+  ],
+  "description": "Raleigh Captus is een stads-e-bike met een 400 Wh accu. Remmen: Hydraulische schijfrem. Beschikbare maten: S, M, L. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Captus is een stads-e-bike met een 400 Wh accu. Remmen: Hydraulische schijfrem.",
+  "accuWhNumber": 400,
+  "accucapaciteit": "400 Wh",
+  "framematen": [
+   "S",
+   "M",
+   "L"
+  ],
+  "kleuren": [
+   "TITANIUM"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Unisex (middeninstap)",
+  "tags": [],
+  "specs": {
+   "Accu": "400 Wh",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "S, M, L",
+   "Kleuren": "TITANIUM"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/captus-rrgt1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2247.81,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
+  },
+  "reviews": []
+ },
+ {
+  "id": "raleigh-captus-rrit1",
+  "slug": "raleigh-captus-rrit1",
+  "title": "Raleigh Captus, 400 Wh",
+  "brand": "Raleigh",
+  "model": "Captus",
+  "category": "Elektrische fietsen",
+  "subCategory": "Stadsfietsen",
+  "price": 2247.81,
+  "image": "/images/catalog/raleigh-captus-rrit1-1.webp",
+  "galleryImages": [
+   "/images/catalog/raleigh-captus-rrit1-1.webp",
+   "/images/catalog/raleigh-captus-rrit1-2.webp",
+   "/images/catalog/raleigh-captus-rrit1-3.webp"
+  ],
+  "description": "Raleigh Captus is een stads-e-bike met een 400 Wh accu. Remmen: Hydraulische schijfrem. Beschikbare maten: XS, S, M. Specificaties en adviesprijs zijn afkomstig van de fabrikant; wijzigingen voorbehouden.",
+  "shortDescription": "Raleigh Captus is een stads-e-bike met een 400 Wh accu. Remmen: Hydraulische schijfrem.",
+  "accuWhNumber": 400,
+  "accucapaciteit": "400 Wh",
+  "framematen": [
+   "XS",
+   "S",
+   "M"
+  ],
+  "kleuren": [
+   "Titanium"
+  ],
+  "remtype": "Hydraulische schijfrem",
+  "maximaleSnelheid": "25 km/u",
+  "opvouwbaar": "Nee",
+  "doelgroep": "Dames (lage instap)",
+  "tags": [],
+  "specs": {
+   "Accu": "400 Wh",
+   "Remmen": "Hydraulische schijfrem",
+   "Maten": "XS, S, M",
+   "Kleuren": "Titanium"
+  },
+  "source": {
+   "brandUrl": "https://www.raleigh.co.uk/products/captus-rrit1",
+   "retrieved": "2026-11-10"
+  },
+  "priceInfo": {
+   "source": "raleigh.co.uk, NL-markt (adviesprijs fabrikant, EUR)",
+   "retrieved": "2026-11-10",
+   "originalAmount": 2247.81,
+   "originalCurrency": "EUR",
+   "note": "Adviesprijs van de fabrikant voor de Nederlandse markt (EUR)."
   },
   "reviews": []
  }

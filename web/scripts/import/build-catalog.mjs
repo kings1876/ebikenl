@@ -73,11 +73,11 @@ function interpret(specs = {}, name = '') {
 
 // ---------- templated descriptions (own words from structured facts; never brand prose) ----------
 function describe(rec, a) {
-  const typeNl = { stadsfietsen: 'stads-e-bike', toerfietsen: 'toer-e-bike', mountainbikes: 'e-mountainbike', racefietsen: 'sportieve e-bike' }[rec.category] || 'e-bike';
-  const typeEn = { stadsfietsen: 'city e-bike', toerfietsen: 'touring e-bike', mountainbikes: 'electric mountain bike', racefietsen: 'sporty e-bike' }[rec.category] || 'e-bike';
+  const typeNl = { Stadsfietsen: 'stads-e-bike', Trekkingfietsen: 'toer-e-bike', 'Elektrische mountainbikes': 'e-mountainbike', 'Gravel & racefietsen': 'sportieve e-bike', Bakfietsen: 'e-bakfiets' }[rec.subCategory] || 'e-bike';
+  const typeEn = { Stadsfietsen: 'city e-bike', Trekkingfietsen: 'touring e-bike', 'Elektrische mountainbikes': 'electric mountain bike', 'Gravel & racefietsen': 'sporty e-bike', Bakfietsen: 'cargo e-bike' }[rec.subCategory] || 'e-bike';
   const motor = a.motorModel;
-  const nl = [`${rec.brand} ${rec.name} is een ${typeNl}${motor ? ` met ${motor}` : ''}${a.accuWhNumber ? ` en een ${a.accuWhNumber} Wh accu` : ''}.`];
-  const en = [`The ${rec.brand} ${rec.name} is a ${typeEn}${motor ? ` with ${motor}` : ''}${a.accuWhNumber ? ` and a ${a.accuWhNumber} Wh battery` : ''}.`];
+  const nl = [`${rec.brand} ${rec.name} is een ${typeNl}${motor ? ` met ${motor}` : ''}${a.accuWhNumber ? (motor ? ` en een ${a.accuWhNumber} Wh accu` : ` met een ${a.accuWhNumber} Wh accu`) : ''}.`];
+  const en = [`The ${rec.brand} ${rec.name} is a ${typeEn}${motor ? ` with ${motor}` : ''}${a.accuWhNumber ? (motor ? ` and a ${a.accuWhNumber} Wh battery` : ` with a ${a.accuWhNumber} Wh battery`) : ''}.`];
   if (rec.specs.Frame) { nl.push(`Frame: ${rec.specs.Frame}.`); en.push(`Frame: ${rec.specs.Frame}.`); }
   if (a.versnellingDetail) { nl.push(`Versnellingen: ${a.versnellingDetail}.`); en.push(`Gears: ${a.versnellingDetail}.`); }
   if (rec.specs.Remmen) { nl.push(`Remmen: ${rec.specs.Remmen}.`); en.push(`Brakes: ${rec.specs.Remmen}.`); }
@@ -127,7 +127,12 @@ const adapters = {
   },
 };
 
-const files = fs.readdirSync(RAW).filter((f) => /^(giant)\.json$/.test(f));
+// Shopify brands arrive already normalised (see normalize-shopify.mjs)
+const normalised = (r) => ({ ...r, subCategory: r.category, category: '', slugBase: r.handle, currency: 'EUR' });
+adapters.batavus = normalised;
+adapters.haibike = normalised;
+adapters.raleigh = normalised;
+const files = fs.readdirSync(RAW).filter((f) => /^(giant|batavus|haibike|raleigh)\.json$/.test(f));
 const catalog = [];
 const en = {};
 const report = { products: 0, images: 0, failedImages: 0, lowRes: [], bytes: 0 };
@@ -165,10 +170,11 @@ for (const f of files) {
       image: gallery[0], galleryImages: gallery,
       description: d.nl, shortDescription: d.shortNl,
       ...a,
+      ...(r.shape ? { doelgroep: r.shape } : {}),
       tags: [],
       specs: r.specs,
       source: { brandUrl: r.url, retrieved: TODAY },
-      priceInfo: { source: r.priceSource, retrieved: TODAY, originalAmount: r.price, originalCurrency: r.currency, note: 'Adviesprijs van de fabrikant (incl. BTW).' },
+      priceInfo: { source: r.priceSource, retrieved: TODAY, originalAmount: r.price, originalCurrency: r.currency, note: r.priceNote || 'Adviesprijs van de fabrikant (incl. BTW).' },
       reviews: [],
     };
     catalog.push(p);
