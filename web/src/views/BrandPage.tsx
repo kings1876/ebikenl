@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
 import { PRODUCTS, ALL_BRANDS } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { ShieldCheck, Truck, ArrowLeft } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 
@@ -20,9 +21,13 @@ export const BrandPage: React.FC = () => {
     );
   }, [brandSlug]);
 
+  const [page, setPage] = useState(1);
+  const gridTop = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (matchedBrand) {
       window.scrollTo(0, 0);
+      setPage(1);
     }
   }, [matchedBrand]);
 
@@ -43,6 +48,13 @@ export const BrandPage: React.FC = () => {
   }
 
   const brandProducts = PRODUCTS.filter((p) => p.brand === matchedBrand);
+  const totalPages = Math.max(1, Math.ceil(brandProducts.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pageProducts = brandProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const goToPage = (n: number) => {
+    setPage(n);
+    gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
@@ -81,7 +93,7 @@ export const BrandPage: React.FC = () => {
       </div>
 
       {/* Brand Products Grid */}
-      <div>
+      <div ref={gridTop} className="scroll-mt-24">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-900">
             {tr(matchedBrand)} {tr("Modellen op Voorraad (")}{tr(brandProducts.length)})
@@ -107,11 +119,14 @@ export const BrandPage: React.FC = () => {
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brandProducts.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pageProducts.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+            <Pagination page={currentPage} totalItems={brandProducts.length} onPageChange={goToPage} />
+          </>
         )}
       </div>
 

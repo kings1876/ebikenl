@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useParams, useSearchParams } from '@/lib/router';
 import { PRODUCTS, TAXONOMY_CATEGORIES } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { FilterSidebar } from '../components/FilterSidebar';
+import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { FilterState, MainCategory, SubCategory } from '../types/ebike';
 import { SlidersHorizontal } from 'lucide-react';
@@ -56,7 +57,7 @@ export const CategoryPage: React.FC = () => {
     maximaleSnelheid: [],
     leverbaarheid: [],
     tags: [],
-    maxPrice: 8000,
+    maxPrice: 16000,
     minPrice: 0,
     sortBy: 'populariteit'
   };
@@ -94,6 +95,18 @@ export const CategoryPage: React.FC = () => {
       return (b.reviewCount ?? 0) - (a.reviewCount ?? 0);
     });
   }, [filters]);
+
+  const [page, setPage] = useState(1);
+  const gridTop = useRef<HTMLDivElement>(null);
+  // any change to the result set starts again at page 1
+  useEffect(() => setPage(1), [filters]);
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pageProducts = filteredProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const goToPage = (n: number) => {
+    setPage(n);
+    gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const categoryData = TAXONOMY_CATEGORIES.find((c) => c.main === currentCategory);
 
@@ -185,7 +198,7 @@ export const CategoryPage: React.FC = () => {
         </div>
 
         {/* Products */}
-        <div className="col-span-12 lg:col-span-9">
+        <div ref={gridTop} className="col-span-12 lg:col-span-9 scroll-mt-24">
           <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-200 text-xs text-slate-500">
             <span>{tr(filteredProducts.length)} {tr("producten gevonden")}</span>
             <select
@@ -201,10 +214,11 @@ export const CategoryPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
+            {pageProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
+          <Pagination page={currentPage} totalItems={filteredProducts.length} onPageChange={goToPage} />
           {filteredProducts.length === 0 && (
             <p className="text-sm text-slate-600 py-10 text-center">{tr("Geen modellen gevonden. Het assortiment wordt binnenkort aangevuld.")}</p>
           )}

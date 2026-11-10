@@ -150,7 +150,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     filters.versnelling.length +
     filters.aandrijving.length +
     filters.tags.length +
-    (filters.maxPrice < 8000 ? 1 : 0);
+    (filters.maxPrice < 16000 ? 1 : 0);
 
   return (
     <aside className="w-full bg-white rounded-xl border border-slate-200 p-5 shadow-xs">
@@ -321,9 +321,9 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             <div className="mt-3 space-y-2">
               <div className="flex items-center justify-between text-xs font-semibold text-slate-900">
                 <span>{tr("Tot:")} {formatEur(filters.maxPrice)}</span>
-                {filters.maxPrice < 8000 && (
+                {filters.maxPrice < 16000 && (
                   <button
-                    onClick={() => updateFilter('maxPrice', 8000)}
+                    onClick={() => updateFilter('maxPrice', 16000)}
                     className="text-[11px] text-blue-600 hover:underline"
                   >
                     {tr("Reset")}
@@ -333,7 +333,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
               <input
                 type="range"
                 min="1000"
-                max="8000"
+                max="16000"
                 step="250"
                 value={filters.maxPrice}
                 onChange={(e) => updateFilter('maxPrice', Number(e.target.value))}
