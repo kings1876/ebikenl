@@ -78,7 +78,7 @@ const batavus = build({
 const haibike = build({
   brand: 'Haibike', host: 'haibike.com',
   feed: load('shopify-haibike.com.json'), beFeed: [],
-  pick: (p) => p.product_type === 'ebike' && !p.tags.some((t) => /do not launch/i.test(t)) && p.images.length >= 3,
+  pick: (p) => p.product_type === 'ebike' && !p.tags.some((t) => /do not launch/i.test(t)) && p.images.length >= 2,
   category: (p) => (p.tags.some((t) => /trekking/i.test(t)) ? 'Trekkingfietsen' : 'Elektrische mountainbikes'),
   priceSource: 'haibike.com (internationale adviesprijs, EUR)', nlMarketNote: 'Internationale adviesprijs van de fabrikant in EUR.',
 });

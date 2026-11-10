@@ -58,7 +58,8 @@ export type Brand =
   | 'Veloretti'
   | 'Brompton'
   | 'Babboe'
-  | 'Urban Arrow';
+  | 'Urban Arrow'
+  | 'Liv';
 
 export type Doelgroep = string;
 export type Motorpositie = string;

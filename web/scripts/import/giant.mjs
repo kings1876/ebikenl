@@ -4,9 +4,12 @@ import path from 'node:path';
 import { fetchText, getRobots, sitemapUrls, writeJson, decodeEntities } from './lib.mjs';
 
 const RAW = process.env.RAW;
-const CACHE = path.join(RAW, 'giant');
+// Giant and Liv share one platform: node giant.mjs [origin] [Brand] [outfile]
+const ORIGIN = process.argv[2] || 'https://www.giant-bicycles.com';
+const BRAND = process.argv[3] || 'Giant';
+const OUT = process.argv[4] || 'giant';
+const CACHE = path.join(RAW, OUT);
 fs.mkdirSync(CACHE, { recursive: true });
-const ORIGIN = 'https://www.giant-bicycles.com';
 
 async function cached(url) {
   const f = path.join(CACHE, Buffer.from(url).toString('base64url').slice(-90) + '.html');
@@ -20,8 +23,9 @@ const strip = (h) => h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style
 
 const robots = await getRobots(ORIGIN);
 const all = [];
-for (const s of robots.sitemaps) all.push(...(await sitemapUrls(s).catch(() => [])));
-const categories = [...new Set(all.filter((u) => /giant-bicycles\.com\/nl\/fietsen\/e-bikes\/[a-z-]+$/.test(u)))];
+for (const s of robots.sitemaps) for (const u of await sitemapUrls(s).catch(() => [])) all.push(u);
+const hostRe = new URL(ORIGIN).host.replace(/\./g, '\\.');
+const categories = [...new Set(all.filter((u) => new RegExp(hostRe + '/nl/fietsen/e-bikes/[a-z-]+$').test(u)))];
 console.log('e-bike category pages', categories.length, categories.map((c) => c.split('/').pop()).join(', '));
 
 const families = new Map(); // path -> category label
@@ -61,11 +65,11 @@ for (const [mpath, ctx] of models) {
       if (!m[2].toLowerCase().includes(familyWord)) continue; // keep only this bike's own photos
       if (!seen.has(m[1])) seen.set(m[1], `https://images2.giant-bicycles.com/b_white%2Cc_pad%2Cq_85%2Cw_1600/${m[1]}/${m[2]}`);
     }
-    out.push({ brand: 'Giant', url: ORIGIN + mpath, name, category: ctx.category, intro: ctx.intro, price, priceSource: 'giant-bicycles.com/nl (adviesprijs)', specs, images: [...seen.values()] });
+    out.push({ brand: BRAND, url: ORIGIN + mpath, name, category: ctx.category, intro: ctx.intro, price, priceSource: new URL(ORIGIN).host.replace('www.', '') + '/nl (adviesprijs)', specs, images: [...seen.values()] });
   } catch (e) {
     console.log('fail', mpath, e.message.slice(0, 60));
   }
 }
-writeJson(path.join(RAW, 'giant.json'), out);
+writeJson(path.join(RAW, OUT + '.json'), out);
 const priced = out.filter((o) => o.price).length;
-console.log('GIANT models', out.length, 'with price', priced, 'with >=3 images', out.filter((o) => o.images.length >= 3).length, 'avg imgs', (out.reduce((a, o) => a + o.images.length, 0) / (out.length || 1)).toFixed(1));
+console.log(BRAND, 'models', out.length, 'with price', priced, 'with >=3 images', out.filter((o) => o.images.length >= 3).length, 'avg imgs', (out.reduce((a, o) => a + o.images.length, 0) / (out.length || 1)).toFixed(1));

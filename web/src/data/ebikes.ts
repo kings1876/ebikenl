@@ -37,7 +37,7 @@ export const ALL_BRANDS: Brand[] = [
   'Gazelle', 'Batavus', 'Sparta', 'Koga', 'Cortina', 'Union', 'Qwic', 'Stella',
   'Cube', 'Giant', 'Trek', 'Specialized', 'Haibike', 'Cannondale', 'Scott',
   'Bergamont', 'Kalkhoff', 'Raleigh', 'Riese & Müller', 'Stromer', 'Veloretti',
-  'Brompton', 'Babboe', 'Urban Arrow'
+  'Brompton', 'Babboe', 'Urban Arrow', 'Liv'
 ];
 
 export const TRUSTPILOT_OVERALL_SCORE = {
