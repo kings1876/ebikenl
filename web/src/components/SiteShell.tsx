@@ -37,7 +37,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                     <Logo onDark />
                   </Link>
                   <p className="leading-relaxed text-slate-400 text-xs">
-                    {tr("De grootste online e-bike speciaalzaak van Nederland. Uitsluitend nieuwe elektrische fietsen van toonaangevende A-merken via officiële distributiekanalen.")}
+                    {tr("Online e-bike webwinkel met uitsluitend nieuwe elektrische fietsen van bekende merken. Modellen, specificaties en adviesprijzen overzichtelijk bij elkaar.")}
                   </p>
                   <div className="pt-1 flex items-center gap-2 text-white font-semibold">
                     <span className="text-[#00b67a]">{tr("★ Trustpilot")}</span>

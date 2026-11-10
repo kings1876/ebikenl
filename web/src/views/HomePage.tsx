@@ -67,7 +67,7 @@ export const HomePage: React.FC = () => {
               </h1>
 
               <p className="text-base text-slate-600 max-w-xl leading-relaxed">
-                {tr("De officiële online speciaalzaak van Nederland. Exclusieve nieuwe elektrische fietsen van Gazelle, Batavus, Cube, Stromer en Riese & Müller direct via de distributeur.")}
+                {tr("Nieuwe elektrische fietsen van onder meer Cube, Giant, Scott, Specialized en Kalkhoff. Vergelijk modellen, specificaties en adviesprijzen op één plek.")}
               </p>
 
               {/* CTAs */}
@@ -120,13 +120,13 @@ export const HomePage: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent flex flex-col justify-end p-6 text-white">
                   <div className="text-xs uppercase tracking-wider font-semibold text-blue-300">
-                    {tr("Distributeur Voorraad")}
+                    {tr("Nieuw in het assortiment")}
                   </div>
                   <div className="text-lg font-bold">
-                    {tr("Gazelle, Stromer, Cube, Riese & Müller direct leverbaar")}
+                    {tr("Cube, Giant, Scott, Specialized en Kalkhoff")}
                   </div>
                   <div className="text-xs text-slate-300 mt-0.5">
-                    {tr("Inclusief 100% rijklaar afstelling aan huis door gediplomeerd fietsmonteur")}
+                    {tr("Vergelijk specificaties en adviesprijzen per model")}
                   </div>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export const HomePage: React.FC = () => {
             <ShieldCheck className="w-6 h-6 text-blue-600" />
             <div className="font-bold text-slate-900 font-display">{tr("Alleen nieuwe A-merken")}</div>
             <p className="text-xs text-slate-600 leading-relaxed">
-              {tr("Officiële distributiekanalen met volledige fabrieksgarantie op frame, motor en accu.")}
+              {tr("Uitsluitend nieuwe e-bikes van bekende merken, met de fabrieksgarantie van de fabrikant.")}
             </p>
           </div>
           <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-2">

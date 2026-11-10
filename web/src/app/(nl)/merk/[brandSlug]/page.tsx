@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     ...pageMeta('nl', `/merk/${brandSlug}`, { title: '{brand} elektrische fietsen kopen' }),
     title: fill('{brand} elektrische fietsen kopen'),
-    description: fill('Nieuwe {brand} e-bikes via de officiële distributeur, met fabrieksgarantie en snelle levering.'),
+    description: fill('Nieuwe {brand} e-bikes met fabrieksgarantie en snelle levering.'),
   };
 }
 

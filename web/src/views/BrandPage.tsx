@@ -35,7 +35,7 @@ export const BrandPage: React.FC = () => {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h1 className="text-2xl font-bold text-slate-900 mb-2">{tr("Merk niet gevonden")}</h1>
-        <p className="text-slate-600 mb-6">{tr("Het gezochte e-bike merk is niet opgenomen in ons distributeursassortiment.")}</p>
+        <p className="text-slate-600 mb-6">{tr("Het gezochte e-bike merk is niet opgenomen in ons assortiment.")}</p>
         <Link
           to="/"
           className="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold text-sm inline-flex items-center gap-2 hover:bg-blue-700"
@@ -68,19 +68,19 @@ export const BrandPage: React.FC = () => {
       {/* Brand Hero Header */}
       <div className="bg-slate-900 text-white p-8 sm:p-12 rounded-2xl border border-slate-800 space-y-4">
         <div className="text-xs uppercase font-bold text-blue-400 tracking-wider">
-          {tr("Officiële Distributiepartner")}
+          {tr("Merk")}
         </div>
         <h1 className="text-3xl sm:text-5xl font-black font-display tracking-tight">
           {tr(matchedBrand)} {tr("Elektrische Fietsen")}
         </h1>
         <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-          {tr("Bekijk het actuele aanbod nieuwe")} {tr(matchedBrand)} {tr("e-bikes met officiële fabrieksgarantie. Elke fiets wordt 100% rijklaar afgemonteerd en gratis thuisbezorgd door onze eigen vakkundige monteurs.")}
+          {tr("Bekijk het actuele aanbod nieuwe")} {tr(matchedBrand)} {tr("e-bikes. Alle modellen zijn nieuw en worden met de fabrieksgarantie van de fabrikant geleverd.")}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-3 text-xs text-slate-400 border-t border-slate-800">
           <span className="flex items-center gap-1.5 text-white">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>{tr("Tot 10 jaar")} {tr(matchedBrand)} {tr("framegarantie")}</span>
+            <span>{tr("Fabrieksgarantie van de fabrikant")}</span>
           </span>
           <span>·</span>
           <span className="flex items-center gap-1.5 text-white">
@@ -106,7 +106,7 @@ export const BrandPage: React.FC = () => {
         {brandProducts.length === 0 ? (
           <div className="p-12 bg-white rounded-xl border border-slate-200 text-center space-y-3">
             <p className="text-slate-700 font-semibold">
-              {tr("Momenteel worden nieuwe")} {tr(matchedBrand)} {tr("modellen ingeladen vanuit de centrale distributeur database.")}
+              {tr("Momenteel worden nieuwe")} {tr(matchedBrand)} {tr("modellen toegevoegd.")}
             </p>
             <p className="text-xs text-slate-500">
               {tr("Neem contact op met onze klantenservice (085 - 200 78 90) voor specifieke modelaanvragen.")}
