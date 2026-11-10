@@ -110,7 +110,7 @@ export async function sitemapUrls(url, depth = 0) {
   const locs = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1].replace(/&amp;/g, '&'));
   if (/<sitemapindex/i.test(xml) && depth < 2) {
     const out = [];
-    for (const l of locs) out.push(...(await sitemapUrls(l, depth + 1)));
+    for (const l of locs) for (const u of await sitemapUrls(l, depth + 1)) out.push(u);
     if (cacheFile) writeJson(cacheFile, out);
     return out;
   }
