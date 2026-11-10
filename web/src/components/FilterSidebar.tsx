@@ -18,7 +18,7 @@ import {
   MaximaleSnelheid,
   ProductTag
 } from '../types/ebike';
-import { TAXONOMY_CATEGORIES, ALL_BRANDS } from '../data/ebikes';
+import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS } from '../data/ebikes';
 import { ChevronDown, ChevronUp, RotateCcw, Search, Check } from 'lucide-react';
 import { formatEur } from '../utils/format';
 import { useTr } from '@/i18n/locale';
@@ -67,7 +67,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     return arr.includes(item) ? arr.filter((x) => x !== item) : [...arr, item];
   };
 
-  const filteredBrands = ALL_BRANDS.filter((b) =>
+  const filteredBrands = BRANDS_WITH_PRODUCTS.filter((b) =>
     b.toLowerCase().includes(brandSearch.toLowerCase())
   );
 
@@ -208,7 +208,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 {filters.category === 'Alle' && <Check className="w-3.5 h-3.5 text-blue-600" />}
               </button>
 
-              {TAXONOMY_CATEGORIES.map((cat) => (
+              {ACTIVE_TAXONOMY_CATEGORIES.map((cat) => (
                 <div key={cat.main} className="space-y-0.5">
                   <button
                     onClick={() => {

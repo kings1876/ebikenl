@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useParams, useSearchParams } from '@/lib/router';
-import { PRODUCTS, TAXONOMY_CATEGORIES } from '../data/ebikes';
+import { PRODUCTS, ACTIVE_TAXONOMY_CATEGORIES } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { FilterSidebar } from '../components/FilterSidebar';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -108,7 +108,7 @@ export const CategoryPage: React.FC = () => {
     gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const categoryData = TAXONOMY_CATEGORIES.find((c) => c.main === currentCategory);
+  const categoryData = ACTIVE_TAXONOMY_CATEGORIES.find((c) => c.main === currentCategory);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">

@@ -8,8 +8,9 @@ import { CartDrawer } from '@/components/CartDrawer';
 import { CreditCard, Building, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
+import { brandSlug } from '@/lib/seo';
 
-export function SiteShell({ children }: { children: React.ReactNode }) {
+export function SiteShell({ children, popularBrands = [] }: { children: React.ReactNode; popularBrands?: string[] }) {
   const tr = useTr();
 
   return (
@@ -94,31 +95,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                         {tr("Elektrische Fietsen")}
                       </Link>
                     </li>
-                    <li>
-                      <Link to="/categorie/accus-en-opladers" className="hover:text-white transition-colors">
-                        {tr("Accu's & Opladers")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/categorie/accessoires" className="hover:text-white transition-colors">
-                        {tr("Accessoires & Sloten")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/merk/gazelle" className="hover:text-white transition-colors">
-                        {tr("Gazelle E-Bikes")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/merk/cube" className="hover:text-white transition-colors">
-                        {tr("Cube E-Bikes")}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/merk/stromer" className="hover:text-white transition-colors">
-                        {tr("Stromer Speed Pedelecs")}
-                      </Link>
-                    </li>
+                    {popularBrands.map((brand) => (
+                      <li key={brand}>
+                        <Link to={`/merk/${brandSlug(brand)}`} className="hover:text-white transition-colors">
+                          {brand} {tr("E-Bikes")}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 

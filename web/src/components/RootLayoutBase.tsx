@@ -4,6 +4,7 @@ import { SiteShell } from '@/components/SiteShell';
 import { LocaleProvider } from '@/i18n/locale';
 import type { Locale } from '@/i18n/config';
 import { tx } from '@/lib/seo';
+import { POPULAR_BRANDS } from '@/data/ebikes';
 import '@/app/globals.css';
 
 const jakarta = Plus_Jakarta_Sans({ variable: '--font-jakarta', subsets: ['latin'] });
@@ -44,7 +45,7 @@ export function RootLayoutBase({ locale, children }: { locale: Locale; children:
       <body className="min-h-full flex flex-col">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_LD) }} />
         <LocaleProvider locale={locale}>
-          <SiteShell>{children}</SiteShell>
+          <SiteShell popularBrands={POPULAR_BRANDS}>{children}</SiteShell>
         </LocaleProvider>
       </body>
     </html>

@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ALL_BRANDS } from '@/data/ebikes';
+import { BRANDS_WITH_PRODUCTS } from '@/data/ebikes';
 import { BrandPage } from '@/views/BrandPage';
 import { brandSlug as slugify, pageMeta, tx } from '@/lib/seo';
 
 type Props = { params: Promise<{ brandSlug: string }> };
 
 export function generateStaticParams() {
-  return ALL_BRANDS.map((b) => ({ brandSlug: slugify(b) }));
+  return BRANDS_WITH_PRODUCTS.map((b) => ({ brandSlug: slugify(b) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { brandSlug } = await params;
-  const brand = ALL_BRANDS.find((b) => slugify(b) === brandSlug);
+  const brand = BRANDS_WITH_PRODUCTS.find((b) => slugify(b) === brandSlug);
   if (!brand) return {};
   const fill = (s: string) => tx('en', s).replace('{brand}', brand);
   return {
@@ -24,6 +24,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { brandSlug } = await params;
-  if (!ALL_BRANDS.some((b) => slugify(b) === brandSlug)) notFound();
+  if (!BRANDS_WITH_PRODUCTS.some((b) => slugify(b) === brandSlug)) notFound();
   return <BrandPage />;
 }

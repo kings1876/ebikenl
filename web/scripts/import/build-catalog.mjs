@@ -34,6 +34,8 @@ function interpret(specs = {}, name = '') {
     else if (/specialized/i.test(motorText)) out.motormerk = 'Specialized';
     else if (/stromer/i.test(motorText)) out.motormerk = 'Stromer';
     else if (/avinox/i.test(motorText)) out.motormerk = 'Avinox';
+    // mid-drive systems as named by the brand; hub motors (Bosch Hub Line, Stromer) are left unset
+    if (!/hub line|stromer|cyro|syno/i.test(motorText) && /bosch|shimano|yamaha|brose|fazua|syncdrive|^tq\b|pinion|avinox/i.test(motorText)) out.motorpositie = 'Middenmotor';
     const nm = /(\d{2,3})\s?Nm/i.exec(motorText);
     if (nm) out.motorTorqueNm = +nm[1];
   }
@@ -69,7 +71,7 @@ function interpret(specs = {}, name = '') {
     out.gewichtKg = parseFloat(wkg[1].replace(',', '.'));
     out.gewichtKlasse = out.gewichtKg < 20 ? 'Onder 20 kg' : out.gewichtKg <= 25 ? '20-25 kg' : 'Meer dan 25 kg';
   }
-  if (/speed|45\s?km/i.test(name + ' ' + all)) out.maximaleSnelheid = '45 km/u';
+  if (/s-?pedelec|speed[- ]pedelec|line speed|45\s?km/i.test(name + ' ' + all)) out.maximaleSnelheid = '45 km/u';
   else out.maximaleSnelheid = '25 km/u'; // EU pedelec class; speed pedelecs are named as such by the brands
   out.opvouwbaar = /vouw|fold/i.test(name) ? 'Ja' : 'Nee';
   return out;

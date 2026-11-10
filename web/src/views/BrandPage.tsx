@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
-import { PRODUCTS, ALL_BRANDS } from '../data/ebikes';
+import { PRODUCTS, BRANDS_WITH_PRODUCTS } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -14,9 +14,9 @@ export const BrandPage: React.FC = () => {
 
   const { brandSlug } = useParams<{ brandSlug: string }>();
 
-  // Find matching brand from ALL_BRANDS
+  // Find matching brand from BRANDS_WITH_PRODUCTS
   const matchedBrand = useMemo(() => {
-    return ALL_BRANDS.find(
+    return BRANDS_WITH_PRODUCTS.find(
       (b) => b.toLowerCase().replace(/[^a-z0-9]+/g, '-') === brandSlug?.toLowerCase()
     );
   }, [brandSlug]);
@@ -136,7 +136,7 @@ export const BrandPage: React.FC = () => {
           {tr("Bekijk ook andere A-merken in onze collectie:")}
         </h3>
         <div className="flex flex-wrap gap-2 text-xs font-semibold">
-          {ALL_BRANDS.filter((b) => b !== matchedBrand).map((b) => (
+          {BRANDS_WITH_PRODUCTS.filter((b) => b !== matchedBrand).map((b) => (
             <Link
               key={b}
               to={`/merk/${b.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
