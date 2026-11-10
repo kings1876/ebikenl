@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/lib/router';
-import { TAXONOMY_CATEGORIES, ALL_BRANDS } from '../data/ebikes';
+import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS, CATEGORY_SLUG_TO_MAIN } from '../data/ebikes';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Database, Layers, Tag, Filter, Globe, Code, ArrowRight } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
+
+const MAIN_TO_SLUG = Object.fromEntries(Object.entries(CATEGORY_SLUG_TO_MAIN).map(([slug, main]) => [main, slug]));
 
 export const TaxonomyPage: React.FC = () => {
   const tr = useTr();
@@ -54,7 +56,7 @@ export const TaxonomyPage: React.FC = () => {
           {tr("E-BIKE-TEKOOP.NL Taxonomie Specificatie")}
         </h1>
         <p className="text-xs text-slate-500 mt-0.5">
-          {tr("Distributeur taxonomie, product-level velden, attributen en SEO regels")}
+          {tr("Taxonomie, product-level velden, attributen en SEO regels")}
         </p>
       </div>
 
@@ -63,7 +65,7 @@ export const TaxonomyPage: React.FC = () => {
         <div className="flex items-center gap-2 px-6 pt-4 border-b border-slate-200 bg-slate-50/50 overflow-x-auto text-xs font-semibold">
           {[
             { key: 'categories', label: '1. Categorieën (Hiërarchie)' },
-            { key: 'brands', label: '2. Merken (24 A-Merken)' },
+            { key: 'brands', label: '2. Merken' },
             { key: 'attributes', label: '3. Attributen (16 Filters)' },
             { key: 'tags', label: '4. Tags (13 Thema\'s)' },
             { key: 'fields', label: '5. Product-Level Fields' },
@@ -91,12 +93,12 @@ export const TaxonomyPage: React.FC = () => {
                 {tr("Hiërarchische structuur voor productcategorieën en subcategorieën in WooCommerce:")}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {TAXONOMY_CATEGORIES.map((cat) => (
+                {ACTIVE_TAXONOMY_CATEGORIES.map((cat) => (
                   <div key={cat.main} className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
                     <div className="font-bold text-slate-900 text-sm flex items-center justify-between">
                       <span>{tr(cat.main)}</span>
                       <Link
-                        to={`/categorie/${cat.main.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        to={`/categorie/${MAIN_TO_SLUG[cat.main]}`}
                         className="text-[11px] text-blue-600 hover:underline flex items-center gap-0.5"
                       >
                         <span>{tr("Bekijk")}</span>
@@ -107,7 +109,7 @@ export const TaxonomyPage: React.FC = () => {
                       {cat.subs.map((sub) => (
                         <li key={sub}>
                           <Link
-                            to={`/categorie/${cat.main.toLowerCase().replace(/[^a-z0-9]+/g, '-')}?sub=${encodeURIComponent(sub)}`}
+                            to={`/categorie/${MAIN_TO_SLUG[cat.main]}?sub=${encodeURIComponent(sub)}`}
                             className="hover:text-blue-600"
                           >
                             └─ {tr(sub)}
@@ -124,10 +126,10 @@ export const TaxonomyPage: React.FC = () => {
           {activeTab === 'brands' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                {tr("24 A-Merken via distributeur, elk met een eigen geoptimaliseerde merkpagina:")}
+                {tr("Merken in ons assortiment, elk met een eigen merkpagina:")}
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {ALL_BRANDS.map((brand) => (
+                {BRANDS_WITH_PRODUCTS.map((brand) => (
                   <Link
                     key={brand}
                     to={`/merk/${brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
