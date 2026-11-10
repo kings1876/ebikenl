@@ -142,7 +142,7 @@ export const CartDrawer: React.FC = () => {
                     </div>
 
                     <div className="text-xs font-bold text-slate-900 tabular-nums">
-                      {formatEur(item.product.price * item.quantity)}
+                      {formatEur((item.product.price ?? 0) * item.quantity)}
                     </div>
                   </div>
                 </div>

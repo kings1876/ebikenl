@@ -60,22 +60,22 @@ export type Brand =
   | 'Babboe'
   | 'Urban Arrow';
 
-export type Doelgroep = 'Dames (lage instap)' | 'Heren (diamant)' | 'Unisex (middeninstap)' | 'Kinderen';
-export type Motorpositie = 'Middenmotor' | 'Voorwielmotor' | 'Achterwielmotor';
-export type Motormerk = 'Bosch' | 'Shimano STEPS' | 'Yamaha' | 'Brose' | 'Fazua' | 'Bafang';
-export type Accucapaciteit = '400 Wh' | '500 Wh' | '625 Wh' | '750 Wh' | '1000 Wh of meer';
-export type Actieradius = 'Tot 60 km' | '60-100 km' | '100-150 km' | '150 km of meer';
-export type Framemaat = '46 cm' | '50 cm' | '53 cm' | '56 cm' | '59 cm' | '61 cm';
-export type Versnelling = 'Naafschakeling' | 'Derailleur' | 'Stepless (Enviolo)' | 'Single speed';
-export type Aandrijving = 'Ketting' | 'Riem';
-export type Remtype = 'Rollerbrake' | 'V-brake' | 'Schijfrem' | 'Hydraulische schijfrem';
-export type Wielmaat = '20 inch' | '24 inch' | '26 inch' | '27,5 inch' | '28 inch' | '29 inch';
-export type GewichtKlasse = 'Onder 20 kg' | '20-25 kg' | 'Meer dan 25 kg';
-export type Kleur = 'Zwart' | 'Wit' | 'Grijs' | 'Blauw' | 'Groen' | 'Rood' | 'Beige' | 'Overig';
-export type MaximaleSnelheid = '25 km/u' | '45 km/u';
-export type Opvouwbaar = 'Ja' | 'Nee';
-export type Leverbaarheid = 'Op voorraad' | '3-5 werkdagen' | '2-4 weken' | 'Op bestelling';
-export type MaxGebruikersgewicht = '120 kg' | '130 kg' | '150 kg';
+export type Doelgroep = string;
+export type Motorpositie = string;
+export type Motormerk = string;
+export type Accucapaciteit = string;
+export type Actieradius = string;
+export type Framemaat = string;
+export type Versnelling = string;
+export type Aandrijving = string;
+export type Remtype = string;
+export type Wielmaat = string;
+export type GewichtKlasse = string;
+export type Kleur = string;
+export type MaximaleSnelheid = string;
+export type Opvouwbaar = string;
+export type Leverbaarheid = string;
+export type MaxGebruikersgewicht = string;
 
 export type ProductTag =
   | 'Woon-werkverkeer'
@@ -96,7 +96,7 @@ export interface TrustpilotReview {
   id: string;
   author: string;
   city: string;
-  rating: number; // 1-5
+  rating?: number; // 1-5
   date: string;
   title: string;
   content: string;
@@ -112,7 +112,7 @@ export interface Product {
   model: string;
   category: MainCategory;
   subCategory: SubCategory;
-  price: number; // in EUR incl 21% BTW
+  price: number; // in EUR incl 21% BTW (imported products always carry a sourced price, see priceInfo)
   originalPrice?: number;
   image: string;
   galleryImages: string[];
@@ -120,56 +120,61 @@ export interface Product {
   shortDescription: string;
   
   // Attributes (filters)
-  doelgroep: Doelgroep;
-  motorpositie: Motorpositie;
-  motormerk: Motormerk;
-  motorModel: string;
-  motorTorqueNm: number;
-  accucapaciteit: Accucapaciteit;
-  accuWhNumber: number;
-  actieradius: Actieradius;
-  framematen: Framemaat[];
-  versnelling: Versnelling;
-  versnellingDetail: string;
-  aandrijving: Aandrijving;
-  remtype: Remtype;
-  wielmaat: Wielmaat;
-  gewichtKlasse: GewichtKlasse;
-  gewichtKg: number;
-  kleuren: Kleur[];
-  maximaleSnelheid: MaximaleSnelheid;
-  opvouwbaar: Opvouwbaar;
-  leverbaarheid: Leverbaarheid;
-  maxGebruikersgewicht: MaxGebruikersgewicht;
+  doelgroep?: Doelgroep;
+  motorpositie?: Motorpositie;
+  motormerk?: Motormerk;
+  motorModel?: string;
+  motorTorqueNm?: number;
+  accucapaciteit?: Accucapaciteit;
+  accuWhNumber?: number;
+  actieradius?: Actieradius;
+  framematen?: Framemaat[];
+  versnelling?: Versnelling;
+  versnellingDetail?: string;
+  aandrijving?: Aandrijving;
+  remtype?: Remtype;
+  wielmaat?: Wielmaat;
+  gewichtKlasse?: GewichtKlasse;
+  gewichtKg?: number;
+  kleuren?: Kleur[];
+  maximaleSnelheid?: MaximaleSnelheid;
+  opvouwbaar?: Opvouwbaar;
+  leverbaarheid?: Leverbaarheid;
+  maxGebruikersgewicht?: MaxGebruikersgewicht;
   
   // Tags
   tags: ProductTag[];
   
   // Product-level fields
-  ean: string;
-  sku: string;
-  warranty: {
+  ean?: string;
+  sku?: string;
+  warranty?: {
     frame: string;
     battery: string;
     motor: string;
   };
-  en15194Certified: boolean;
+  en15194Certified?: boolean;
   speedPedelecRequirements?: {
     licensePlateRequired: boolean;
     helmetRequired: boolean;
     drivingLicense: string;
   };
-  shipping: {
+  shipping?: {
     weightKg: number;
     boxDimensions: string;
     assembledDeliveryAvailable: boolean;
     assembledDeliveryIncluded: boolean;
   };
 
+  // Provenance (imported catalogue)
+  source?: { brandUrl: string; retrieved: string };
+  priceInfo?: { source: string; retrieved: string; originalAmount?: number; originalCurrency?: string; fxRate?: number; note?: string };
+  specs?: Record<string, string>;
+
   // Trustpilot stats
   reviews: TrustpilotReview[];
-  rating: number;
-  reviewCount: number;
+  rating?: number;
+  reviewCount?: number;
 }
 
 export interface FilterState {

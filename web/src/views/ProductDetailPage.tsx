@@ -35,10 +35,10 @@ export const ProductDetailPage: React.FC = () => {
   const product = PRODUCTS.find((p) => p.slug === slug);
 
   const [selectedFramemaat, setSelectedFramemaat] = useState<Framemaat>(
-    product?.framematen[0] || '50 cm'
+    product?.framematen?.[0] || '50 cm'
   );
   const [selectedKleur, setSelectedKleur] = useState<Kleur>(
-    product?.kleuren[0] || 'Zwart'
+    product?.kleuren?.[0] || 'Zwart'
   );
   const [selectedImage, setSelectedImage] = useState<string>(product?.image || '');
   const [assemblyOption, setAssemblyOption] = useState<
@@ -51,8 +51,8 @@ export const ProductDetailPage: React.FC = () => {
   useEffect(() => {
     if (product) {
       setSelectedImage(product.image);
-      setSelectedFramemaat(product.framematen[0] || '50 cm');
-      setSelectedKleur(product.kleuren[0] || 'Zwart');
+      setSelectedFramemaat(product.framematen?.[0] || '50 cm');
+      setSelectedKleur(product.kleuren?.[0] || 'Zwart');
       window.scrollTo(0, 0);
     }
   }, [product]);
@@ -151,7 +151,7 @@ export const ProductDetailPage: React.FC = () => {
           )}
 
           {/* Trustpilot Banner Strip */}
-          <div className="p-4 bg-emerald-50/70 rounded-xl border border-emerald-200/60 flex items-center justify-between text-xs">
+          {product.reviewCount ? (<div className="p-4 bg-emerald-50/70 rounded-xl border border-emerald-200/60 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2.5">
               <div className="w-5 h-5 bg-[#00b67a] text-white flex items-center justify-center rounded-[2px] text-xs font-bold">
                 ★
@@ -160,7 +160,7 @@ export const ProductDetailPage: React.FC = () => {
               <span className="text-slate-600">{tr("· Uitstekend (")}{tr(product.reviewCount)} {tr("geverifieerde reviews)")}</span>
             </div>
             <span className="text-emerald-700 font-semibold hidden sm:inline">{tr("✓ Geverifieerde aankoop")}</span>
-          </div>
+          </div>) : null}
 
           {/* Detailed Description */}
           <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
@@ -231,7 +231,7 @@ export const ProductDetailPage: React.FC = () => {
               {tr("Kies Framemaat")}
             </label>
             <div className="grid grid-cols-4 gap-2">
-              {product.framematen.map((maat) => (
+              {(product.framematen ?? []).map((maat) => (
                 <button
                   key={maat}
                   onClick={() => setSelectedFramemaat(maat)}
@@ -257,7 +257,7 @@ export const ProductDetailPage: React.FC = () => {
               {tr("Kleur:")} <span className="font-normal text-slate-600">{tr(selectedKleur)}</span>
             </label>
             <div className="flex items-center gap-2">
-              {product.kleuren.map((kleur) => (
+              {(product.kleuren ?? []).map((kleur) => (
                 <button
                   key={kleur}
                   onClick={() => setSelectedKleur(kleur)}
@@ -424,8 +424,8 @@ export const ProductDetailPage: React.FC = () => {
         <div className="flex items-center gap-3 border-b border-slate-200 overflow-x-auto">
           {[
             { key: 'specificaties', label: 'Volledige Specificaties' },
-            { key: 'garantie', label: 'Fabrieksgarantie & Certificering' },
-            { key: 'reviews', label: `Reviews (${product.reviewCount})` },
+            ...(product.warranty ? [{ key: 'garantie', label: 'Fabrieksgarantie & Certificering' }] : []),
+            ...(product.reviewCount ? [{ key: 'reviews', label: `Reviews (${product.reviewCount})` }] : []),
             { key: 'verzending', label: 'Bezorging & Montage' }
           ].map((tab) => (
             <button
@@ -444,81 +444,41 @@ export const ProductDetailPage: React.FC = () => {
 
         {/* Tab 1: Specificaties */}
         {activeTab === 'specificaties' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 text-xs">
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Merk & Model")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.brand)} {tr(product.model)}</span>
+          <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 text-xs">
+              <div className="flex justify-between gap-4 py-2 border-b border-slate-100">
+                <span className="text-slate-500">{tr("Merk & Model")}</span>
+                <span className="font-semibold text-slate-900 text-right">{tr(product.brand)} {tr(product.model)}</span>
+              </div>
+              {Object.entries(product.specs ?? {}).filter(([, v]) => v && v !== '-').map(([k, v]) => (
+                <div key={k} className="flex justify-between gap-4 py-2 border-b border-slate-100">
+                  <span className="text-slate-500 shrink-0">{tr(k)}</span>
+                  <span className="font-semibold text-slate-900 text-right">{v}</span>
+                </div>
+              ))}
             </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Motormerk & Type")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.motormerk)} ({tr(product.motorModel)})</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Motorpositie")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.motorpositie)}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Motorkoppel")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.motorTorqueNm)} {tr("Nm")}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Accucapaciteit")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.accucapaciteit)} ({tr(product.accuWhNumber)} {tr("Wh)")}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Actieradius")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.actieradius)}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Versnellingssysteem")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.versnelling)} ({tr(product.versnellingDetail)})</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Aandrijving")}</span>
-              <span className="font-semibold text-slate-900">{product.aandrijving === 'Riem' ? tr("Gates Carbon Riem (Onderhoudsvrij)") : tr("Ketting")}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Remsysteem")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.remtype)}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Wielmaat")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.wielmaat)}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Gewicht")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.gewichtKg)} {tr("kg (")}{tr(product.gewichtKlasse)})</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Max. toelaatbaar gewicht")}</span>
-              <span className="font-semibold text-slate-900">{tr(product.maxGebruikersgewicht)}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("EAN / GTIN Barcode")}</span>
-              <span className="font-mono text-slate-900">{tr(product.ean)}</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-slate-100">
-              <span className="text-slate-500">{tr("Fabrikant-SKU")}</span>
-              <span className="font-mono text-slate-900">{tr(product.sku)}</span>
-            </div>
+            {product.source && (
+              <p className="text-[11px] text-slate-500">
+                {tr("Bron specificaties: officiële website van de fabrikant (opgehaald")} {product.source.retrieved}{tr("). Specificaties en prijs kunnen zonder voorafgaande kennisgeving wijzigen.")}
+              </p>
+            )}
           </div>
         )}
 
-        {/* Tab 2: Garantie */}
         {activeTab === 'garantie' && (
           <div className="space-y-4 text-xs">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                 <div className="text-slate-500">{tr("Framegarantie")}</div>
-                <div className="font-bold text-slate-900 text-sm mt-1">{tr(product.warranty.frame)}</div>
+                <div className="font-bold text-slate-900 text-sm mt-1">{tr((product.warranty?.frame ?? "-"))}</div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                 <div className="text-slate-500">{tr("Accugarantie")}</div>
-                <div className="font-bold text-slate-900 text-sm mt-1">{tr(product.warranty.battery)}</div>
+                <div className="font-bold text-slate-900 text-sm mt-1">{tr((product.warranty?.battery ?? "-"))}</div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                 <div className="text-slate-500">{tr("Motorgarantie")}</div>
-                <div className="font-bold text-slate-900 text-sm mt-1">{tr(product.warranty.motor)}</div>
+                <div className="font-bold text-slate-900 text-sm mt-1">{tr((product.warranty?.motor ?? "-"))}</div>
               </div>
             </div>
             <div className="flex items-center gap-2 text-slate-700 pt-2">
@@ -569,8 +529,8 @@ export const ProductDetailPage: React.FC = () => {
                 <span>{tr("Bezorging & Transport")}</span>
               </div>
               <ul className="space-y-1.5 text-slate-600">
-                <li><strong>{tr("Transportgewicht:")}</strong> {tr(product.shipping.weightKg)} {tr("kg")}</li>
-                <li><strong>{tr("Doosafmetingen:")}</strong> {tr(product.shipping.boxDimensions)}</li>
+                <li><strong>{tr("Transportgewicht:")}</strong> {tr((product.shipping?.weightKg ?? "-"))} {tr("kg")}</li>
+                <li><strong>{tr("Doosafmetingen:")}</strong> {tr((product.shipping?.boxDimensions ?? "-"))}</li>
                 <li><strong>{tr("Bezorging:")}</strong> {tr("Gratis in heel Nederland")}</li>
               </ul>
             </div>

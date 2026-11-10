@@ -39,7 +39,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-  const cartTotal = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  const cartTotal = cart.reduce((sum, item) => sum + (item.product.price ?? 0) * item.quantity, 0);
 
   const addToCart = (
     product: Product,
@@ -76,8 +76,8 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const quickAddToCart = (product: Product) => {
     addToCart(
       product,
-      product.framematen[0] || '50 cm',
-      product.kleuren[0] || 'Zwart',
+      product.framematen?.[0] || '50 cm',
+      product.kleuren?.[0] || 'Zwart',
       '100% Rijklaar thuisbezorgd'
     );
   };

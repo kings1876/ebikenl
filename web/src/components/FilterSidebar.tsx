@@ -90,7 +90,8 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     'Yamaha',
     'Brose',
     'Fazua',
-    'Bafang'
+    'Bafang',
+    'Giant SyncDrive'
   ];
 
   const ACCU_OPTIONS: Accucapaciteit[] = [

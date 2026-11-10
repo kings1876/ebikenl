@@ -38,7 +38,7 @@ export const HomePage: React.FC = () => {
   const featuredProducts = useMemo(
     () =>
       PRODUCTS.filter((p) => p.category === 'Elektrische fietsen')
-        .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)
+        .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0) || (b.reviewCount ?? 0) - (a.reviewCount ?? 0))
         .slice(0, 6),
     []
   );

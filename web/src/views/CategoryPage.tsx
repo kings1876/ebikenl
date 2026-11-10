@@ -78,20 +78,20 @@ export const CategoryPage: React.FC = () => {
       if (filters.category !== 'Alle' && p.category !== filters.category) return false;
       if (filters.subCategory !== 'Alle' && p.subCategory !== filters.subCategory) return false;
       if (filters.brands.length > 0 && !filters.brands.includes(p.brand)) return false;
-      if (filters.doelgroep.length > 0 && !filters.doelgroep.includes(p.doelgroep)) return false;
-      if (filters.motorpositie.length > 0 && !filters.motorpositie.includes(p.motorpositie)) return false;
-      if (filters.motormerk.length > 0 && !filters.motormerk.includes(p.motormerk)) return false;
-      if (filters.accucapaciteit.length > 0 && !filters.accucapaciteit.includes(p.accucapaciteit)) return false;
+      if (filters.doelgroep.length > 0 && !filters.doelgroep.includes(p.doelgroep ?? "")) return false;
+      if (filters.motorpositie.length > 0 && !filters.motorpositie.includes(p.motorpositie ?? "")) return false;
+      if (filters.motormerk.length > 0 && !filters.motormerk.includes(p.motormerk ?? "")) return false;
+      if (filters.accucapaciteit.length > 0 && !filters.accucapaciteit.includes(p.accucapaciteit ?? "")) return false;
       if (filters.tags.length > 0) {
         if (!p.tags.some((t) => filters.tags.includes(t))) return false;
       }
-      if (p.price > filters.maxPrice) return false;
+      if ((p.price ?? 0) > filters.maxPrice) return false;
       return true;
     }).sort((a, b) => {
-      if (filters.sortBy === 'prijs-laag-hoog') return a.price - b.price;
-      if (filters.sortBy === 'prijs-hoog-laag') return b.price - a.price;
-      if (filters.sortBy === 'beoordeling') return b.rating - a.rating;
-      return b.reviewCount - a.reviewCount;
+      if (filters.sortBy === 'prijs-laag-hoog') return (a.price ?? 0) - (b.price ?? 0);
+      if (filters.sortBy === 'prijs-hoog-laag') return (b.price ?? 0) - (a.price ?? 0);
+      if (filters.sortBy === 'beoordeling') return (b.rating ?? 0) - (a.rating ?? 0);
+      return (b.reviewCount ?? 0) - (a.reviewCount ?? 0);
     });
   }, [filters]);
 

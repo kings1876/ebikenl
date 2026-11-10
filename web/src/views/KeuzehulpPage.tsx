@@ -30,8 +30,8 @@ export const KeuzehulpPage: React.FC = () => {
       if (answers.gebruik === 'gezin' && p.subCategory !== 'Bakfietsen' && !p.tags.includes('Gezinsfiets')) return false;
       if (answers.gebruik === 'sportief' && p.subCategory !== 'Elektrische mountainbikes' && !p.tags.includes('Sportief')) return false;
 
-      if (answers.instap === 'laag' && !p.doelgroep.includes('lage instap')) return false;
-      if (answers.instap === 'diamant' && !p.doelgroep.includes('diamant')) return false;
+      if (answers.instap === 'laag' && !(p.doelgroep ?? "").includes('lage instap')) return false;
+      if (answers.instap === 'diamant' && !(p.doelgroep ?? "").includes('diamant')) return false;
       if (answers.instap === 'vouw' && p.opvouwbaar !== 'Ja') return false;
 
       if (answers.aandrijving === 'riem' && p.aandrijving !== 'Riem') return false;

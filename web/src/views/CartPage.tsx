@@ -130,10 +130,10 @@ export const CartPage: React.FC = () => {
 
                     <div className="text-right">
                       <div className="text-base font-extrabold text-slate-900 tabular-nums">
-                        {formatEur(item.product.price * item.quantity)}
+                        {formatEur((item.product.price ?? 0) * item.quantity)}
                       </div>
                       <div className="text-[11px] text-slate-400">
-                        {formatEur(item.product.price)} {tr("p.st.")}
+                        {formatEur((item.product.price ?? 0))} {tr("p.st.")}
                       </div>
                     </div>
 

@@ -27,7 +27,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
 
   // Filter matching products
   const matchingProducts = PRODUCTS.filter((p) => {
-    if (landing.priceMax && p.price > landing.priceMax) return false;
+    if (landing.priceMax && (p.price ?? 0) > landing.priceMax) return false;
     if (landing.matchFilter.motormerk && p.motormerk !== landing.matchFilter.motormerk) return false;
     if (landing.matchFilter.motorpositie && p.motorpositie !== landing.matchFilter.motorpositie) return false;
     if (landing.matchFilter.doelgroep && p.doelgroep !== landing.matchFilter.doelgroep) return false;

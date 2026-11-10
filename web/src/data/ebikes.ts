@@ -1,3 +1,4 @@
+import catalogData from './catalog.json';
 import { Product, MainCategory, SubCategory, Brand, TrustpilotReview } from '../types/ebike';
 
 export const TAXONOMY_CATEGORIES: { main: MainCategory; subs: SubCategory[] }[] = [
@@ -110,8 +111,8 @@ export const SITE_TRUSTPILOT_REVIEWS: TrustpilotReview[] = [
   }
 ];
 
-export const PRODUCTS: Product[] = [
-];
+// Imported from the manufacturers' own product pages (see scripts/import). Never edit by hand.
+export const PRODUCTS: Product[] = catalogData as unknown as Product[];
 
 // Landingspagina config from SEO Rules
 export interface LandingPageDef {

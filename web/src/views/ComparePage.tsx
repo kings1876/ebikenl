@@ -128,8 +128,8 @@ export const ComparePage: React.FC = () => {
                 { label: 'Wielmaat', key: (p: Product) => p.wielmaat },
                 { label: 'Gewicht', key: (p: Product) => `${p.gewichtKg} kg` },
                 { label: 'Max. gebruikersgewicht', key: (p: Product) => p.maxGebruikersgewicht },
-                { label: 'Fabrieksgarantie Frame', key: (p: Product) => p.warranty.frame },
-                { label: 'Fabrieksgarantie Accu', key: (p: Product) => p.warranty.battery },
+                { label: 'Fabrieksgarantie Frame', key: (p: Product) => (p.warranty?.frame ?? "-") },
+                { label: 'Fabrieksgarantie Accu', key: (p: Product) => (p.warranty?.battery ?? "-") },
                 { label: 'EN 15194 Gecertificeerd', key: (p: Product) => p.en15194Certified ? 'Ja' : 'Nee' },
                 { label: 'Levertijd', key: (p: Product) => p.leverbaarheid }
               ].map((row, idx) => (

@@ -458,7 +458,7 @@ export const CheckoutPage: React.FC = () => {
                   </div>
                 </div>
                 <span className="font-bold tabular-nums text-slate-900">
-                  {formatEur(item.product.price * item.quantity)}
+                  {formatEur((item.product.price ?? 0) * item.quantity)}
                 </span>
               </div>
             ))}

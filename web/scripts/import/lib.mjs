@@ -82,7 +82,13 @@ export async function politeFetch(url, opts = {}) {
   const wait = Math.max(0, (lastHit.get(host) || 0) + DELAY_MS - Date.now());
   if (wait) await sleep(wait);
   lastHit.set(host, Date.now());
-  const res = await fetch(url, { headers: { 'user-agent': UA, accept: opts.accept || 'text/html,application/xhtml+xml,application/xml,*/*', 'accept-language': 'nl-NL,nl;q=0.9,en;q=0.5' }, redirect: 'follow', signal: AbortSignal.timeout(30000) });
+  let res;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    res = await fetch(url, { headers: { 'user-agent': UA, accept: opts.accept || 'text/html,application/xhtml+xml,application/xml,*/*', 'accept-language': 'nl-NL,nl;q=0.9,en;q=0.5' }, redirect: 'follow', signal: AbortSignal.timeout(30000) });
+    if (res.status !== 429 && res.status !== 503) break;
+    await sleep(3000 * (attempt + 1)); // back off when the site asks us to slow down
+  }
+  lastHit.set(host, Date.now());
   return res;
 }
 
@@ -94,6 +100,8 @@ export async function fetchText(url, opts) {
 
 /** Extract all <loc> URLs from a sitemap or sitemap index (supports .gz). */
 export async function sitemapUrls(url, depth = 0) {
+  const cacheFile = process.env.RAW ? path.join(process.env.RAW, "sitemaps", Buffer.from(url).toString("base64url").slice(-80) + ".json") : null;
+  if (cacheFile && fs.existsSync(cacheFile)) return JSON.parse(fs.readFileSync(cacheFile, "utf8"));
   const res = await politeFetch(url);
   if (!res.ok) throw new Error(`${res.status} ${url}`);
   let buf = Buffer.from(await res.arrayBuffer());
@@ -103,8 +111,10 @@ export async function sitemapUrls(url, depth = 0) {
   if (/<sitemapindex/i.test(xml) && depth < 2) {
     const out = [];
     for (const l of locs) out.push(...(await sitemapUrls(l, depth + 1)));
+    if (cacheFile) writeJson(cacheFile, out);
     return out;
   }
+  if (cacheFile) writeJson(cacheFile, locs);
   return locs;
 }
 

@@ -103,7 +103,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className="flex items-center gap-1" title={tr("Motormerk en koppel")}>
             <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
             <span className="font-medium">{tr(product.motormerk)}</span>
-            {product.motorTorqueNm > 0 && <span className="text-slate-400">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
+            {(product.motorTorqueNm ?? 0) > 0 && <span className="text-slate-400">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
           <div className="flex items-center gap-1" title={tr("Accucapaciteit")}>
@@ -111,16 +111,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <span>{tr(product.accucapaciteit)}</span>
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
-          <span className="text-slate-600">{product.doelgroep.split(' ')[0]}</span>
+          <span className="text-slate-600">{product.doelgroep?.split(' ')[0]}</span>
         </div>
 
         {/* Trustpilot snippet & Price */}
         <div className="mt-auto pt-1">
           <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
-            <div className="flex items-center gap-1">
-              <span className="text-[#00b67a] font-bold">★ 4.8</span>
-              <span className="text-slate-400">({product.reviewCount || 24})</span>
-            </div>
+            {product.reviewCount ? (<div className="flex items-center gap-1"><span className="text-[#00b67a] font-bold">★ {product.rating?.toFixed(1)}</span><span className="text-slate-400">({product.reviewCount})</span></div>) : (<span />)}
             <span className="text-[11px] text-slate-500 font-mono">
               ≈ {eurToCrypto(product.price, 'BTC')} {tr("BTC")}
             </span>
