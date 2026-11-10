@@ -1,0 +1,6 @@
+{
+  "name": "E-BIKE-TEKOOP.NL - Premium Elektrische Fietsen",
+  "description": "De grootste online e-bike speciaalzaak van Nederland. Nieuwe elektrische fietsen van A-merken met fabrieksgarantie, directe levering, iDEAL, SEPA bankoverschrijving en crypto betalingen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
