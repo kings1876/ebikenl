@@ -48,7 +48,6 @@
   "100% Rijklaar thuisbezorgd": "100% delivered ready to ride",
   "iDEAL, SEPA & Crypto (BTC/ETH/USDT)": "iDEAL, SEPA & Crypto (BTC/ETH/USDT)",
   "Trustpilot ★★★★★ 4.8": "Trustpilot ★★★★★ 4.8",
-  "Klantenservice: 085 - 200 78 90": "Customer service: 085 - 200 78 90",
   "E-BIKE-TEKOOP": "E-BIKE-TEKOOP",
   ".NL": ".NL",
   "Elektrische Fietsen": "Electric Bikes",
@@ -92,7 +91,6 @@
   "iDEAL (Direct via internetbankieren)": "iDEAL (directly via online banking)",
   "SEPA Bankoverschrijving": "SEPA bank transfer",
   "Crypto (BTC / ETH / USDT)": "Crypto (BTC / ETH / USDT)",
-  "Telefoon: 085 - 200 78 90 (Ma - Za)": "Phone: 085 - 200 78 90 (Mon - Sat)",
   "KvK: 84920194 | BTW: NL863492810B01": "CoC (KvK): 84920194 | VAT: NL863492810B01",
   "E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.": "E-BIKE-TEKOOP.NL. All prices include 21% VAT.",
   "Taxonomie & Architectuur": "Taxonomy & Architecture",
@@ -131,7 +129,6 @@
   "Prijzen inclusief 21% BTW en rijklaarmaken": "Prices include 21% VAT and ready-to-ride preparation",
   "Momenteel worden nieuwe": "New models are currently being",
   "modellen toegevoegd.": "models are being added.",
-  "Neem contact op met onze klantenservice (085 - 200 78 90) voor specifieke modelaanvragen.": "Contact our customer service (085 - 200 78 90) for specific model requests.",
   "Bekijk alle e-bikes op voorraad": "View all e-bikes in stock",
   "Bekijk ook andere A-merken in onze collectie:": "Also see other premium brands in our collection:",
   "artikel(en) in je overzicht": "item(s) in your overview",
@@ -766,5 +763,8 @@
   "Bericht versturen": "Send message",
   "Kopieer": "Copy",
   "Gekopieerd": "Copied",
-  "Vragen over een e-bike of je bestelling? Neem contact op met E-BIKE-TEKOOP.NL via het formulier of mail naar verkoop@e-bike-tekoop.nl.": "Questions about an e-bike or your order? Contact E-BIKE-TEKOOP.NL via the form or email verkoop@e-bike-tekoop.nl."
+  "Vragen over een e-bike of je bestelling? Neem contact op met E-BIKE-TEKOOP.NL via het formulier of mail naar verkoop@e-bike-tekoop.nl.": "Questions about an e-bike or your order? Contact E-BIKE-TEKOOP.NL via the form or email verkoop@e-bike-tekoop.nl.",
+  "Klantenservice:": "Customer service:",
+  "E-mail:": "Email:",
+  "Mail onze klantenservice voor specifieke modelaanvragen:": "Email our customer service for specific model requests:"
 }

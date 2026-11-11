@@ -24,7 +24,6 @@ export const REPLY = {
   channels: {
     /** Where orders and enquiries arrive and where customers can reply. */
     email: 'verkoop@e-bike-tekoop.nl',
-    phone: '085 - 200 78 90',
     /** Digits with country code, e.g. '31612345678'. Empty = WhatsApp features stay hidden. */
     whatsapp: '',
   },

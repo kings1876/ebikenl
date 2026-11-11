@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle, Mail, Phone } from 'lucide-react';
+import { CheckCircle, Mail } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { useLocale, useTr } from '@/i18n/locale';
 import { REPLY } from '@/config/reply';
@@ -42,15 +42,11 @@ export const ContactPage: React.FC = () => {
         <p className="mt-1 text-sm text-slate-600">{tr('Vragen over een e-bike of over je bestelling? Stuur ons een bericht.')}</p>
       </div>
 
-      <div className="grid gap-3 text-sm sm:grid-cols-2">
+      <div className="grid gap-3 text-sm">
         <a href={`mailto:${REPLY.channels.email}`} className="flex min-h-11 items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-800 hover:border-blue-300">
           <Mail className="h-5 w-5 text-blue-600" />
           {REPLY.channels.email}
         </a>
-        <div className="flex min-h-11 items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-800">
-          <Phone className="h-5 w-5 text-blue-600" />
-          {REPLY.channels.phone}
-        </div>
       </div>
 
       {done ? (

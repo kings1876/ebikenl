@@ -9,6 +9,7 @@ import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { ShieldCheck, ArrowLeft } from 'lucide-react';
 import { brandIntro } from '../lib/brandCopy';
 import { useTr, useLocale } from '@/i18n/locale';
+import { REPLY } from '@/config/reply';
 
 export const BrandPage: React.FC = () => {
   const tr = useTr();
@@ -106,7 +107,7 @@ export const BrandPage: React.FC = () => {
               {tr("Momenteel worden nieuwe")} {tr(matchedBrand)} {tr("modellen toegevoegd.")}
             </p>
             <p className="text-xs text-slate-500">
-              {tr("Neem contact op met onze klantenservice (085 - 200 78 90) voor specifieke modelaanvragen.")}
+              {tr("Mail onze klantenservice voor specifieke modelaanvragen:")} <a className="underline font-semibold" href={`mailto:${REPLY.channels.email}`}>{REPLY.channels.email}</a>
             </p>
             <Link
               to="/categorie/elektrische-fietsen"

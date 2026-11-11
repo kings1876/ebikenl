@@ -281,7 +281,7 @@ export const CheckoutPage: React.FC = () => {
 
           {error && (
             <p role="alert" className="text-xs text-red-600">
-              {error} <a className="underline font-semibold" href={`mailto:${REPLY.channels.email}`}>{REPLY.channels.email}</a> · {REPLY.channels.phone}
+              {error} <a className="underline font-semibold" href={`mailto:${REPLY.channels.email}`}>{REPLY.channels.email}</a>
             </p>
           )}
 

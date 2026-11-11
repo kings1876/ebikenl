@@ -9,6 +9,7 @@ import { CreditCard, Building, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
 import { brandSlug } from '@/lib/seo';
+import { REPLY } from '@/config/reply';
 
 export function SiteShell({ children, popularBrands = [] }: { children: React.ReactNode; popularBrands?: string[] }) {
   const tr = useTr();
@@ -124,7 +125,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                       <span>{tr("Crypto (BTC / ETH / USDT)")}</span>
                     </li>
                     <li className="pt-2 text-[11px] text-slate-400">
-                      {tr("Telefoon: 085 - 200 78 90 (Ma - Za)")}
+                      {tr("E-mail:")} <a href={`mailto:${REPLY.channels.email}`} className="hover:text-white underline">{REPLY.channels.email}</a>
                     </li>
                     <li className="text-[11px] text-slate-400">
                       {tr("KvK: 84920194 | BTW: NL863492810B01")}

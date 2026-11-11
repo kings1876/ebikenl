@@ -6,6 +6,7 @@ import { ShoppingBag, Scale, Compass, Layers } from 'lucide-react';
 import { formatEur } from '../utils/format';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
+import { REPLY } from '@/config/reply';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { Logo } from './Logo';
 
@@ -38,7 +39,7 @@ export const Header: React.FC = () => {
             <span className="text-slate-400">·</span>
             <span className="font-semibold text-white">{tr("Trustpilot ★★★★★ 4.8")}</span>
             <span className="text-slate-400">·</span>
-            <span>{tr("Klantenservice: 085 - 200 78 90")}</span>
+            <span>{tr("Klantenservice:")} <a href={`mailto:${REPLY.channels.email}`} className="whitespace-nowrap hover:text-white underline-offset-2 hover:underline">{REPLY.channels.email}</a></span>
           </div>
         </div>
       </div>
