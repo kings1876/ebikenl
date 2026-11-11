@@ -1,7 +1,7 @@
 // ONE handler for orders and contact enquiries (by formName). Both channels save to the dashboard best-effort and email the shop;
 // an order also always emails the customer a confirmation (no payment details, those come from the dashboard later).
 import { PRODUCTS } from '@/data/catalog';
-import { ORDER_REF_RE } from '@/lib/reply/order';
+import { ORDER_REF_RE, discountFor } from '@/lib/reply/order';
 import { REPLY } from '@/config/reply';
 import { getOrder, saveOrder } from '@/lib/reply/orderStore';
 import { generateEnquiryId, saveEnquiry } from '@/lib/reply/enquiryStore';
@@ -104,6 +104,9 @@ async function handleOrder(body: Record<string, unknown>, locale: Locale) {
     /* store unavailable: carry on, the email path still works */
   }
 
+  const subtotal = items.reduce((s, i) => s + i.lineTotal, 0);
+  const discount = discountFor(methodId, subtotal);
+
   const order: StoredOrder = {
     orderNumber,
     locale,
@@ -113,7 +116,9 @@ async function handleOrder(body: Record<string, unknown>, locale: Locale) {
     address: { street, postalCode, city },
     company: body.isFietsplan ? clean(body.companyName, 120) || undefined : undefined,
     items,
-    amountDue: items.reduce((s, i) => s + i.lineTotal, 0),
+    subtotal,
+    discount: discount || undefined,
+    amountDue: Math.round((subtotal - discount) * 100) / 100,
     paymentMethod: methodId,
     notes: clean(body.notes, 1000) || undefined,
     status: 'pending',

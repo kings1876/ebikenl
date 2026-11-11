@@ -49,6 +49,9 @@ export default function OrderDetail({ params }: { params: Promise<{ id: string }
         <Card title="Order">
           <p className="text-sm text-slate-300">Placed {when(order.createdAt)} · {order.locale === 'en' ? 'English' : 'Dutch'}</p>
           <p className="text-sm text-slate-300">Preferred payment: {methodLabel(order.paymentMethod, 'en')}</p>
+          {order.discount ? (
+            <p className="mt-2 text-sm text-emerald-300">Crypto discount {eur(order.discount)} applied to a subtotal of {eur(order.subtotal ?? order.amountDue + order.discount)}</p>
+          ) : null}
           <p className="mt-2 text-2xl font-extrabold text-white">{eur(order.amountDue)}</p>
           {order.notes && <p className="mt-2 text-sm text-slate-400">Notes: {order.notes}</p>}
         </Card>

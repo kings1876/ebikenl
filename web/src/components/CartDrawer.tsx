@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
-import { formatEur, eurToCrypto, calculateVat } from '../utils/format';
+import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { X, Trash2, ShoppingBag, Truck, ShieldCheck, ArrowRight, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 
@@ -176,9 +176,9 @@ export const CartDrawer: React.FC = () => {
               <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 pt-1">
                 <span className="flex items-center gap-1">
                   <Coins className="w-3 h-3 text-amber-500" />
-                  <span>{tr("Crypto prijs:")}</span>
+                  <span>{tr("Crypto prijs")} (-{CRYPTO_DISCOUNT_PCT}%):</span>
                 </span>
-                <span>≈ {eurToCrypto(cartTotal, 'BTC')} {tr("BTC ·")} {eurToCrypto(cartTotal, 'USDT')} {tr("USDT")}</span>
+                <span>{formatEurWithCents(cryptoPrice(cartTotal))} ≈ {eurToCrypto(cryptoPrice(cartTotal), 'BTC')} {tr("BTC ·")} {eurToCrypto(cryptoPrice(cartTotal), 'USDT')} {tr("USDT")}</span>
               </div>
             </div>
 

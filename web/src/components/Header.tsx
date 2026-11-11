@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
             <span className="hidden md:inline text-slate-400">·</span>
             <span className="hidden md:inline">{tr("100% Rijklaar thuisbezorgd")}</span>
             <span className="hidden md:inline text-slate-400">·</span>
-            <span className="hidden md:inline">{tr("iDEAL, SEPA & Crypto (BTC/ETH/USDT)")}</span>
+            <span className="hidden md:inline">{tr("iDEAL, SEPA & Crypto (BTC/USDT/ETH, -10%)")}</span>
           </div>
           <div className="flex items-center gap-3">
             <LocaleSwitcher />

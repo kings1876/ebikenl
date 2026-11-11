@@ -122,7 +122,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                     </li>
                     <li className="flex items-center gap-1.5">
                       <Coins className="w-3.5 h-3.5 text-amber-400" />
-                      <span>{tr("Crypto (BTC / ETH / USDT)")}</span>
+                      <span>{tr("Crypto (BTC / USDT / ETH, -10%)")}</span>
                     </li>
                     <li className="pt-2 text-[11px] text-slate-400">
                       {tr("E-mail:")} <a href={`mailto:${REPLY.channels.email}`} className="hover:text-white underline">{REPLY.channels.email}</a>

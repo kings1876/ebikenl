@@ -62,7 +62,10 @@ const itemsTable = (order: StoredOrder, locale: Locale, showFlags: boolean) => {
 <td align="right" style="padding:8px 0;border-bottom:1px solid ${RULE};font-size:13px;color:${INK};white-space:nowrap">${money(i.lineTotal, locale)}</td></tr>`,
     )
     .join('');
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}<tr><td style="padding:10px 0;font-size:14px;font-weight:700;color:${INK}">${L(locale, 'Totaal incl. btw', 'Total incl. VAT')}</td><td align="right" style="padding:10px 0;font-size:16px;font-weight:700;color:${ACCENT}">${money(order.amountDue, locale)}</td></tr></table>`;
+  const discountRows = order.discount
+    ? `<tr><td style="padding:8px 0;font-size:13px;color:${SOFT}">${L(locale, 'Subtotaal', 'Subtotal')}</td><td align="right" style="padding:8px 0;font-size:13px;color:${SOFT}">${money(order.subtotal ?? order.amountDue + order.discount, locale)}</td></tr><tr><td style="padding:0 0 8px;font-size:13px;color:#047857">${L(locale, `Crypto-korting (${Math.round(REPLY.cryptoDiscount * 100)}%)`, `Crypto discount (${Math.round(REPLY.cryptoDiscount * 100)}%)`)}</td><td align="right" style="padding:0 0 8px;font-size:13px;color:#047857">&minus;${money(order.discount, locale)}</td></tr>`
+    : '';
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}${discountRows}<tr><td style="padding:10px 0;font-size:14px;font-weight:700;color:${INK}">${L(locale, 'Totaal incl. btw', 'Total incl. VAT')}</td><td align="right" style="padding:10px 0;font-size:16px;font-weight:700;color:${ACCENT}">${money(order.amountDue, locale)}</td></tr></table>`;
 };
 
 const addressLine = (o: StoredOrder) => `${o.address.street}, ${o.address.postalCode} ${o.address.city}`;

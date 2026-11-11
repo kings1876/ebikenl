@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
-import { formatEur, calculateVat } from '../utils/format';
+import { formatEur, formatEurWithCents, calculateVat, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { CreditCard, Building, Coins, Mail, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useLocale, useTr } from '@/i18n/locale';
-import { makeOrderNumber } from '@/lib/reply/order';
+import { discountFor, makeOrderNumber } from '@/lib/reply/order';
 import { REPLY } from '@/config/reply';
 
 type MethodId = 'ideal' | 'bank' | 'crypto';
@@ -15,7 +15,7 @@ type MethodId = 'ideal' | 'bank' | 'crypto';
 const METHODS: { id: MethodId; icon: React.ReactNode; title: string; hint: string }[] = [
   { id: 'ideal', icon: <CreditCard className="w-5 h-5 text-pink-600" />, title: 'iDEAL (betaallink)', hint: 'Je ontvangt een betaallink per e-mail' },
   { id: 'bank', icon: <Building className="w-5 h-5 text-blue-700" />, title: 'SEPA Bankoverschrijving', hint: 'Vooraf overboeken met onze rekeninggegevens' },
-  { id: 'crypto', icon: <Coins className="w-5 h-5 text-amber-500" />, title: 'Crypto (BTC / ETH / USDT)', hint: 'Je ontvangt het adres en netwerk per e-mail' },
+  { id: 'crypto', icon: <Coins className="w-5 h-5 text-amber-500" />, title: 'Crypto (BTC / USDT / ETH)', hint: 'Je ontvangt het adres en netwerk per e-mail' },
 ];
 
 export const CheckoutPage: React.FC = () => {
@@ -32,6 +32,8 @@ export const CheckoutPage: React.FC = () => {
   const { exclVat, vatAmount } = calculateVat(cartTotal);
 
   const [paymentMethod, setPaymentMethod] = useState<MethodId>('ideal');
+  const discount = discountFor(paymentMethod, cartTotal);
+  const payable = Math.round((cartTotal - discount) * 100) / 100;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -87,7 +89,7 @@ export const CheckoutPage: React.FC = () => {
       });
       if (!res.ok) throw new Error(String(res.status));
       clearCart();
-      navigate(`/bestelling-bevestigd/${orderNumber}`, { state: { paymentMethod, cartTotal, email: formData.email } });
+      navigate(`/bestelling-bevestigd/${orderNumber}`, { state: { paymentMethod, cartTotal: payable, email: formData.email } });
     } catch {
       setError(tr('Je bestelling is niet verstuurd. Probeer het opnieuw, of mail ons op') as string);
     }
@@ -226,7 +228,7 @@ export const CheckoutPage: React.FC = () => {
                   <input type="radio" name="payment" value={m.id} checked={paymentMethod === m.id} onChange={() => setPaymentMethod(m.id)} className="sr-only" />
                   {m.icon}
                   <span>
-                    <span className="font-bold text-slate-900 text-sm block">{tr(m.title)}</span>
+                    <span className="font-bold text-slate-900 text-sm block">{tr(m.title)}{m.id === 'crypto' && <span className="ml-2 rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-800 align-middle">-{CRYPTO_DISCOUNT_PCT}%</span>}</span>
                     <span className="text-xs text-slate-500">{tr(m.hint)}</span>
                   </span>
                 </label>
@@ -270,9 +272,15 @@ export const CheckoutPage: React.FC = () => {
               <span>{tr("Verzendkosten en levertijd:")}</span>
               <span className="text-slate-700 font-semibold text-right">{tr("bevestigen we per e-mail")}</span>
             </div>
+            {discount > 0 && (
+              <div className="flex justify-between text-emerald-700 font-semibold">
+                <span>{tr("Crypto-korting")} ({CRYPTO_DISCOUNT_PCT}%):</span>
+                <span className="tabular-nums font-mono">-{formatEurWithCents(discount)}</span>
+              </div>
+            )}
             <div className="flex justify-between text-base font-extrabold text-slate-900 pt-2 border-t border-slate-200">
               <span>{tr("Totaal incl. BTW:")}</span>
-              <span className="tabular-nums text-blue-700">{formatEur(cartTotal)}</span>
+              <span className="tabular-nums text-blue-700">{discount > 0 ? formatEurWithCents(payable) : formatEur(payable)}</span>
             </div>
           </div>
 

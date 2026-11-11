@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from '@/lib/router';
 import { SITE_TRUSTPILOT_REVIEWS } from '../data/ebikes';
 import { Product, ProductCardData, Framemaat, Kleur } from '../types/ebike';
-import { formatEur, eurToCrypto, calculateVat } from '../utils/format';
+import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ProductCard, thumbOf } from '../components/ProductCard';
 import { useShop } from '../context/ShopContext';
@@ -223,10 +223,10 @@ export const ProductDetailPage: React.FC<{ product: Product; related: ProductCar
             <div className="mt-3 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs font-mono text-slate-600">
               <div className="flex items-center gap-1.5">
                 <Coins className="w-3.5 h-3.5 text-amber-500" />
-                <span>{tr("Betaal met Crypto:")}</span>
+                <span>{tr("Betaal met Crypto")} (-{CRYPTO_DISCOUNT_PCT}%):</span>
               </div>
               <div className="font-medium text-slate-900">
-                ≈ {eurToCrypto(product.price, 'BTC')} {tr("BTC ·")} {eurToCrypto(product.price, 'USDT')} {tr("USDT")}
+                {formatEurWithCents(cryptoPrice(product.price))} ≈ {eurToCrypto(cryptoPrice(product.price), 'BTC')} {tr("BTC ·")} {eurToCrypto(cryptoPrice(product.price), 'USDT')} {tr("USDT")}
               </div>
             </div>
           </div>

@@ -4,6 +4,10 @@ import type { PaymentMethod } from '@/config/reply';
 import type { Locale } from '@/i18n/config';
 import type { PaymentField } from './types';
 
+/** Crypto discount for a given payment method and subtotal, rounded to cents. 0 for every other method. */
+export const discountFor = (methodId: string, subtotal: number): number =>
+  methodId === 'crypto' ? Math.round(subtotal * REPLY.cryptoDiscount * 100) / 100 : 0;
+
 export const ORDER_REF_RE = new RegExp(`^${REPLY.orderPrefix}-[A-Z0-9]{4,8}$`);
 
 /**
@@ -50,7 +54,8 @@ const titleCase = (s: string) => s.replace(/\S+/g, (w) => w[0].toUpperCase() + w
  * 3. neither: the whole line becomes "Detail" (numbered when there are several), so a bare wallet address still gets a copy button
  */
 export function parsePaymentDetail(text: string): PaymentField[] {
-  const lines = String(text || '').split('\n').map((l) => l.trim()).filter(Boolean);
+  // A bare "Label:" with nothing after it (e.g. an unfilled "Amount:") is dropped rather than shown as an empty field.
+  const lines = String(text || '').split('\n').map((l) => l.trim()).filter((l) => l && !/^[^:]+:$/.test(l));
   let unlabeled = 0;
   return lines.map((line) => {
     const colonIdx = line.indexOf(':');

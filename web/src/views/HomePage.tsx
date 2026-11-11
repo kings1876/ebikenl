@@ -106,7 +106,7 @@ export const HomePage: React.FC = () => {
                 <span>·</span>
                 <span className="flex items-center gap-1">
                   <Coins className="w-3.5 h-3.5 text-amber-500" />
-                  <span>{tr("Crypto (BTC / ETH / USDT)")}</span>
+                  <span>{tr("Crypto (BTC / USDT / ETH, -10%)")}</span>
                 </span>
               </div>
             </div>

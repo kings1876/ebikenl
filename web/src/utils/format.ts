@@ -1,3 +1,10 @@
+import { REPLY } from '@/config/reply';
+
+export const CRYPTO_DISCOUNT_PCT = Math.round(REPLY.cryptoDiscount * 100);
+
+/** Price when paying in crypto (BTC / USDT), after the crypto discount. */
+export const cryptoPrice = (eur: number): number => Math.round(eur * (1 - REPLY.cryptoDiscount) * 100) / 100;
+
 export function formatEur(amount: number): string {
   return new Intl.NumberFormat('nl-NL', {
     style: 'currency',

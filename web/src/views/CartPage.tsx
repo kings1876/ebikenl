@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
-import { formatEur, eurToCrypto, calculateVat } from '../utils/format';
+import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ShoppingBag, Trash2, ArrowRight, Truck, ShieldCheck, ArrowLeft, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
@@ -181,9 +181,9 @@ export const CartPage: React.FC = () => {
               <div className="pt-2 text-[11px] font-mono text-slate-500 flex items-center justify-between">
                 <span className="flex items-center gap-1">
                   <Coins className="w-3 h-3 text-amber-500" />
-                  <span>{tr("Crypto equivalent:")}</span>
+                  <span>{tr("Met crypto")} (-{CRYPTO_DISCOUNT_PCT}%):</span>
                 </span>
-                <span>≈ {eurToCrypto(cartTotal, 'BTC')} {tr("BTC")}</span>
+                <span>{formatEurWithCents(cryptoPrice(cartTotal))} ≈ {eurToCrypto(cryptoPrice(cartTotal), 'BTC')} {tr("BTC")}</span>
               </div>
             </div>
 

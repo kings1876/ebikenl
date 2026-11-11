@@ -8,7 +8,11 @@ import { REPLY } from '@/config/reply';
 import { paymentMethodParts, paymentTermsLines, parsePaymentDetail } from '@/lib/reply/order';
 import type { StoredOrder } from '@/lib/reply/types';
 
-const PLACEHOLDER = 'Account name: E-BIKE-TEKOOP.NL\nIBAN: NL00 BANK 0000 0000 00\nReference: EBT-XXXXXX';
+const PLACEHOLDERS: Record<string, string> = {
+  ideal: 'Payment link: https://…',
+  bank: 'Account name: E-BIKE-TEKOOP.NL\nIBAN: NL00 BANK 0000 0000 00\nReference: EBT-XXXXXX',
+  crypto: 'Amount: 0.0000 BTC (or USDT)\nWallet address: …\nNetwork: Bitcoin (or the USDT network)',
+};
 
 export default function SendPaymentEmail() {
   const id = useQueryId();
@@ -29,6 +33,11 @@ export default function SendPaymentEmail() {
       }
     });
   }, [api, id]);
+
+  const fillCoin = (coinId: string) => {
+    const w = REPLY.cryptoWallets.find((c) => c.id === coinId);
+    if (w) setDetail([`Coin: ${w.label}`, `Wallet address: ${w.address}`, `Network: ${w.network}`, 'Amount: '].join('\n'));
+  };
 
   const fields = useMemo(() => parsePaymentDetail(detail), [detail]);
   const parts = order ? paymentMethodParts(methodId, order.amountDue, order.orderNumber, order.locale) : null;
@@ -75,11 +84,21 @@ export default function SendPaymentEmail() {
       </Card>
 
       <Card title="2. Paste the real payment details">
+        {methodId === 'crypto' && (
+          <div className="mb-3 flex flex-wrap items-center gap-2">
+            <span className="text-xs text-slate-400">Fill in the address for:</span>
+            {REPLY.cryptoWallets.map((c) => (
+              <button key={c.id} type="button" onClick={() => fillCoin(c.id)} className="rounded-full bg-slate-800 px-3 py-1.5 text-xs font-bold text-slate-200 hover:text-white">
+                {c.label}
+              </button>
+            ))}
+          </div>
+        )}
         <textarea
           value={detail}
           onChange={(e) => setDetail(e.target.value)}
           rows={6}
-          placeholder={PLACEHOLDER}
+          placeholder={PLACEHOLDERS[methodId] ?? PLACEHOLDERS.bank}
           aria-label="Payment details, one Label: value per line"
           className="w-full rounded-lg border border-slate-700 bg-slate-950 p-3 font-mono text-sm text-white placeholder:text-slate-600"
         />
@@ -111,6 +130,10 @@ export default function SendPaymentEmail() {
           </div>
         )}
       </Card>
+
+      {methodId === 'crypto' && fields.length > 0 && !fields.some((f) => /amount|bedrag/i.test(f.label)) && (
+        <Notice>Add the amount in crypto, for example <code>Amount: 0.0123 BTC</code>. The customer needs it to pay the discounted total of {eur(order.amountDue)}.</Notice>
+      )}
 
       {result && <Notice tone={result.tone}>{result.text}</Notice>}
       <PrimaryButton onClick={send} disabled={busy || fields.length === 0}>{busy ? 'Sending…' : 'Send email to customer'}</PrimaryButton>

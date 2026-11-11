@@ -36,6 +36,10 @@ export interface StoredOrder {
   address: { street: string; postalCode: string; city: string };
   company?: string;
   items: OrderItem[];
+  /** Sum of the lines before any discount. */
+  subtotal?: number;
+  /** Crypto discount in EUR (0 or absent for other payment methods). */
+  discount?: number;
   amountDue: number;
   paymentMethod: string;
   notes?: string;

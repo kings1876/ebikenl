@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from '@/lib/router';
 import { ProductCardData } from '../types/ebike';
-import { formatEur, eurToCrypto } from '../utils/format';
+import { formatEur, eurToCrypto, cryptoPrice } from '../utils/format';
 import { Battery, Zap, Truck, Scale, Plus } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
@@ -138,7 +138,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
           <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
             {product.reviewCount ? (<div className="flex items-center gap-1"><span className="text-[#00b67a] font-bold">★ {product.rating?.toFixed(1)}</span><span className="text-slate-500">({product.reviewCount})</span></div>) : (<span />)}
             <span className="text-[11px] text-slate-500 font-mono">
-              ≈ {eurToCrypto(product.price, 'BTC')} {tr("BTC")}
+              ≈ {eurToCrypto(cryptoPrice(product.price), 'BTC')} {tr("BTC")}
             </span>
           </div>
 
