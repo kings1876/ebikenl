@@ -24,6 +24,7 @@ import {
   ArrowLeft
 } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
+import { subHref } from '../lib/seoCopy';
 
 export const ProductDetailPage: React.FC = () => {
   const tr = useTr();
@@ -107,7 +108,7 @@ export const ProductDetailPage: React.FC = () => {
       <Breadcrumbs
         items={[
           { label: 'Elektrische fietsen', path: '/categorie/elektrische-fietsen' },
-          { label: product.subCategory, path: `/categorie/elektrische-fietsen?sub=${encodeURIComponent(product.subCategory)}` },
+          { label: product.subCategory, path: subHref(product.subCategory) },
           { label: product.brand, path: `/merk/${product.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` },
           { label: `${product.model}` }
         ]}
@@ -141,7 +142,7 @@ export const ProductDetailPage: React.FC = () => {
                 >
                   <img
                     src={img}
-                    alt={tr("Thumbnail")}
+                    alt={`${product.title} (${tr("foto")} ${idx + 1})`}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />

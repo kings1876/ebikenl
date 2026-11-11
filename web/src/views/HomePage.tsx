@@ -16,6 +16,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
+import { subHref } from '../lib/seoCopy';
 
 const BIKE_TYPES = [
   { sub: 'Stadsfietsen', blurb: 'Comfortabel en betrouwbaar voor woon-werkverkeer en dagelijks gebruik.' },
@@ -189,7 +190,7 @@ export const HomePage: React.FC = () => {
           {BIKE_TYPES.map((t) => (
             <Link
               key={t.sub}
-              to={`/categorie/elektrische-fietsen?sub=${encodeURIComponent(t.sub)}`}
+              to={subHref(t.sub)}
               className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-md transition-all"
             >
               <div className="font-bold text-slate-900 font-display group-hover:text-blue-600">{tr(t.sub)}</div>

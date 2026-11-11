@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { useParams, useSearchParams } from '@/lib/router';
+import { useParams, Link } from '@/lib/router';
+import { SUB_COPY, CATEGORY_INTRO, subSlug } from '../lib/seoCopy';
 import { PRODUCTS, ACTIVE_TAXONOMY_CATEGORIES } from '../data/ebikes';
 import { ProductCard } from '../components/ProductCard';
 import { FilterSidebar } from '../components/FilterSidebar';
@@ -11,12 +12,12 @@ import { FilterState, MainCategory, SubCategory } from '../types/ebike';
 import { SlidersHorizontal } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 
-export const CategoryPage: React.FC = () => {
+// Subcategories are real routes (/categorie/<slug>/<sub>), so they render on the server and can be indexed.
+export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCategory }) => {
   const tr = useTr();
 
   const { categorySlug } = useParams<{ categorySlug: string }>();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const subCategoryParam = searchParams.get('sub');
+  const subCategoryParam = subCategory ?? null;
 
   // Map categorySlug to MainCategory
   const currentCategory: MainCategory = useMemo(() => {
@@ -109,6 +110,7 @@ export const CategoryPage: React.FC = () => {
   };
 
   const categoryData = ACTIVE_TAXONOMY_CATEGORIES.find((c) => c.main === currentCategory);
+  const subCopy = subCategoryParam ? SUB_COPY[subCategoryParam] : undefined;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
@@ -122,45 +124,39 @@ export const CategoryPage: React.FC = () => {
       {/* Category Header */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
-          {subCategoryParam ? `${tr(subCategoryParam)} (${tr(currentCategory)})` : tr(currentCategory)}
+          {tr(subCopy?.h1 ?? 'Elektrische fiets kopen: nieuwe e-bikes vergelijken')}
         </h1>
-        <p className="text-sm text-slate-600 mt-1 max-w-2xl">
-          {tr("Nieuwe modellen van officiële topmerken met fabrieksgarantie. Direct rijklaar leverbaar aan huis.")}
+        <p className="text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
+          {tr(subCopy?.intro ?? CATEGORY_INTRO)}
         </p>
 
-        {/* Subcategory pills */}
+        {/* Subcategory pills: real links, so crawlers can follow them */}
         {categoryData && categoryData.subs.length > 0 && (
-          <div className="flex items-center gap-2 mt-4 overflow-x-auto pb-1 text-xs font-semibold">
-            <button
-              onClick={() => {
-                setSearchParams({});
-                setFilters({ ...filters, subCategory: 'Alle' });
-              }}
+          <nav aria-label={tr("Subcategorieën")} className="flex items-center gap-2 mt-4 overflow-x-auto pb-1 text-xs font-semibold">
+            <Link
+              to={`/categorie/${categorySlug}`}
               className={`px-3 py-1.5 rounded-lg border transition-colors ${
-                filters.subCategory === 'Alle'
+                !subCategoryParam
                   ? 'bg-blue-600 text-white border-blue-600'
                   : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
               }`}
             >
               {tr("Alle (")}{tr(categoryData.main)})
-            </button>
+            </Link>
             {categoryData.subs.map((sub) => (
-              <button
+              <Link
                 key={sub}
-                onClick={() => {
-                  setSearchParams({ sub });
-                  setFilters({ ...filters, subCategory: sub });
-                }}
+                to={sub === 'Speed pedelecs' ? '/speed-pedelecs' : `/categorie/${categorySlug}/${subSlug(sub)}`}
                 className={`px-3 py-1.5 rounded-lg border transition-colors whitespace-nowrap ${
-                  filters.subCategory === sub
+                  subCategoryParam === sub
                     ? 'bg-blue-600 text-white border-blue-600'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
                 {tr(sub)}
-              </button>
+              </Link>
             ))}
-          </div>
+          </nav>
         )}
       </div>
 

@@ -6,6 +6,7 @@ import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS, CATEGORY_SLUG_TO_MAIN
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Database, Layers, Tag, Filter, Globe, Code, ArrowRight } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
+import { subHref } from '../lib/seoCopy';
 
 const MAIN_TO_SLUG = Object.fromEntries(Object.entries(CATEGORY_SLUG_TO_MAIN).map(([slug, main]) => [main, slug]));
 
@@ -109,7 +110,7 @@ export const TaxonomyPage: React.FC = () => {
                       {cat.subs.map((sub) => (
                         <li key={sub}>
                           <Link
-                            to={`/categorie/${MAIN_TO_SLUG[cat.main]}?sub=${encodeURIComponent(sub)}`}
+                            to={subHref(sub, MAIN_TO_SLUG[cat.main])}
                             className="hover:text-blue-600"
                           >
                             └─ {tr(sub)}

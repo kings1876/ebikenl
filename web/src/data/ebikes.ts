@@ -171,7 +171,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'Elektrische Damesfietsen',
     subtitle: 'Comfortabele lage instap, stabiel frame en veilige balans.',
     h1: 'Elektrische Damesfiets met Lage Instap Kopen',
-    metaTitle: 'Elektrische fiets met lage instap | Damesfiets | E-BIKE-TEKOOP.NL',
+    metaTitle: 'Elektrische fiets met lage instap | E-BIKE-TEKOOP.NL',
     metaDescription: 'Elektrische damesfietsen met lage instap van onder meer Cube, Winora, Batavus en Specialized. Vergelijk modellen en adviesprijzen.',
     matchFilter: { doelgroep: 'Dames (lage instap)' },
     highlightPoints: [
@@ -186,8 +186,8 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'E-bike onder €2000',
     subtitle: 'Kwaliteit en A-merk garantie binnen een toegankelijk budget.',
     h1: 'Nieuwe Elektrische Fietsen onder de €2.000,-',
-    metaTitle: 'Elektrische fiets onder €2.000 | Betaalbare e-bikes | E-BIKE-TEKOOP.NL',
-    metaDescription: 'Nieuwe elektrische fietsen tot €2.000 van onder meer Tenways, Cube en Sushi Bikes. Bekijk modellen en adviesprijzen.',
+    metaTitle: 'Elektrische fiets onder €2.000 | E-BIKE-TEKOOP.NL',
+    metaDescription: 'Nieuwe elektrische fietsen tot €2.000 van onder meer Tenways, Cube en Sushi Bikes. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: {},
     priceMax: 2000,
     highlightPoints: [
@@ -203,7 +203,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     subtitle: 'Tot 40% fiscaal voordeel via je werkgever met het Nationaal Fietsplan.',
     h1: 'E-bike via het Fietsplan (WKR) van je Werkgever',
     metaTitle: 'E-bike via fietsplan van je werkgever | E-BIKE-TEKOOP.NL',
-    metaDescription: 'Een nieuwe elektrische fiets kopen via het fietsplan van je werkgever? Bekijk het aanbod en vergelijk modellen en adviesprijzen.',
+    metaDescription: 'Een nieuwe elektrische fiets kopen via het fietsplan van je werkgever? Bekijk het aanbod en vergelijk modellen, motoren en adviesprijzen.',
     matchFilter: {},
     highlightPoints: [
       'Betaal vanuit je brutoloon en bespaar tot 40% op de aankoopprijs',
@@ -217,8 +217,8 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'Speed Pedelecs (45 km/u)',
     subtitle: 'Snel, emissievrij forenzen. Het slimme alternatief voor de file.',
     h1: 'Speed Pedelec 45 km/u Kopen | Direct met Kenteken',
-    metaTitle: 'Speed pedelec kopen | Snelle e-bikes tot 45 km/u | E-BIKE-TEKOOP.NL',
-    metaDescription: 'Speed pedelecs met motorondersteuning tot 45 km/u, onder meer van Stromer en Cube. Bekijk modellen en specificaties.',
+    metaTitle: 'Speed pedelec kopen: e-bike tot 45 km/u | E-BIKE-TEKOOP.NL',
+    metaDescription: 'Speed pedelecs met motorondersteuning tot 45 km/u, onder meer van Stromer en Cube. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: { maximaleSnelheid: '45 km/u' },
     highlightPoints: [
       'RDW-geregistreerd geel bromfietskenteken door ons verzorgd',

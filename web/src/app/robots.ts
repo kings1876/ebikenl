@@ -1,6 +1,7 @@
+import { SITE_URL } from '@/lib/seo';
 import type { MetadataRoute } from 'next';
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://e-bike-tekoop.vercel.app';
+const SITE = SITE_URL;
 
 export default function robots(): MetadataRoute.Robots {
   return {

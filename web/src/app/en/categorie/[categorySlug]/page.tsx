@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { CategoryPage } from '@/views/CategoryPage';
+import { JsonLd } from '@/components/JsonLd';
 import { CATEGORY_META, pageMeta } from '@/lib/seo';
-import { ACTIVE_CATEGORY_SLUGS } from '@/data/ebikes';
+import { breadcrumbLd } from '@/lib/jsonld';
+import { ACTIVE_CATEGORY_SLUGS, CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
 
 type Props = { params: Promise<{ categorySlug: string }> };
 
@@ -21,8 +22,9 @@ export default async function Page({ params }: Props) {
   const { categorySlug } = await params;
   if (!ACTIVE_CATEGORY_SLUGS.includes(categorySlug)) notFound();
   return (
-    <Suspense>
+    <>
+      <JsonLd data={breadcrumbLd('en', [{ name: CATEGORY_SLUG_TO_MAIN[categorySlug], path: `/categorie/${categorySlug}` }])} />
       <CategoryPage />
-    </Suspense>
+    </>
   );
 }
