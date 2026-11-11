@@ -6,7 +6,7 @@ keyword: "beste elektrische fiets 2026"
 type: commercial
 date: 2026-11-11
 updated: 2026-11-11
-image: /images/catalog/cube-kathmandu-hybrid-slx-800-2.webp
+image: /images/catalog/cube-kathmandu-hybrid-slx-800-1.webp
 imageAlt: "Cube Kathmandu Hybrid SLX 800, een elektrische trekkingfiets uit onze selectie voor de beste elektrische fiets 2026"
 products: cube-aruba-hybrid-600, cube-kathmandu-hybrid-slx-800, giant-trance-advanced-eplus-2-2027, cube-nuroad-hybrid-c-62-slt-400x, cube-longtail-hybrid-deluxe-800, tenways-ago-air
 category: /categorie/elektrische-fietsen
