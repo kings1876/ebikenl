@@ -1,0 +1,1086 @@
+{
+ "notCarried": [
+  {
+   "kw": "sparta elektrische fiets",
+   "intent": "IT",
+   "vol": 4400,
+   "kd": 25,
+   "cpc": 0.25,
+   "sf": 5,
+   "results": "166"
+  },
+  {
+   "kw": "lidl elektrische fiets",
+   "intent": "I",
+   "vol": 3600,
+   "kd": 21,
+   "cpc": 0.39,
+   "sf": 6,
+   "results": "114"
+  },
+  {
+   "kw": "vogue elektrische fiets",
+   "intent": "I",
+   "vol": 2900,
+   "kd": 17,
+   "cpc": 0.2,
+   "sf": 4,
+   "results": "n/a"
+  },
+  {
+   "kw": "koga e bike",
+   "intent": "IT",
+   "vol": 2900,
+   "kd": 15,
+   "cpc": 0.23,
+   "sf": 6,
+   "results": "166"
+  },
+  {
+   "kw": "sparta e bike",
+   "intent": "IT",
+   "vol": 2400,
+   "kd": 22,
+   "cpc": 0.26,
+   "sf": 5,
+   "results": "n/a"
+  },
+  {
+   "kw": "elektrische fiets qwic",
+   "intent": "IT",
+   "vol": 1600,
+   "kd": 23,
+   "cpc": 0.23,
+   "sf": 6,
+   "results": "166"
+  },
+  {
+   "kw": "qwic elektrische fiets",
+   "intent": "TN",
+   "vol": 1600,
+   "kd": 13,
+   "cpc": 0.23,
+   "sf": 5,
+   "results": "121"
+  },
+  {
+   "kw": "altec elektrische fiets",
+   "intent": "I",
+   "vol": 1300,
+   "kd": 19,
+   "cpc": 0.19,
+   "sf": 7,
+   "results": "170"
+  },
+  {
+   "kw": "flyer elektrische fiets",
+   "intent": "I",
+   "vol": 1300,
+   "kd": 19,
+   "cpc": 0.19,
+   "sf": 5,
+   "results": "167"
+  },
+  {
+   "kw": "popal elektrische fiets",
+   "intent": "I",
+   "vol": 1300,
+   "kd": 16,
+   "cpc": 0.3,
+   "sf": 6,
+   "results": "170"
+  },
+  {
+   "kw": "rih elektrische fiets",
+   "intent": "N",
+   "vol": 1300,
+   "kd": 19,
+   "cpc": 0.19,
+   "sf": 6,
+   "results": "n/a"
+  },
+  {
+   "kw": "sparta elektrische fiets dames",
+   "intent": "IT",
+   "vol": 1300,
+   "kd": 23,
+   "cpc": 0.24,
+   "sf": 5,
+   "results": "163"
+  },
+  {
+   "kw": "flyer e bike",
+   "intent": "I",
+   "vol": 1300,
+   "kd": 18,
+   "cpc": 0.16,
+   "sf": 4,
+   "results": "168"
+  },
+  {
+   "kw": "cowboy elektrische fiets",
+   "intent": "N",
+   "vol": 1000,
+   "kd": 23,
+   "cpc": 0.83,
+   "sf": 7,
+   "results": "170"
+  },
+  {
+   "kw": "elektrische fiets rih",
+   "intent": "N",
+   "vol": 1000,
+   "kd": 19,
+   "cpc": 0.19,
+   "sf": 5,
+   "results": "170"
+  },
+  {
+   "kw": "pegasus elektrische fiets",
+   "intent": "IT",
+   "vol": 1000,
+   "kd": 17,
+   "cpc": 0.25,
+   "sf": 6,
+   "results": "196"
+  },
+  {
+   "kw": "amslod elektrische fiets",
+   "intent": "I",
+   "vol": 880,
+   "kd": 8,
+   "cpc": 0.53,
+   "sf": 7,
+   "results": "189"
+  },
+  {
+   "kw": "cortina u4 elektrische fiets",
+   "intent": "I",
+   "vol": 880,
+   "kd": 22,
+   "cpc": 0.38,
+   "sf": 4,
+   "results": "166"
+  },
+  {
+   "kw": "elektrische fiets amslod",
+   "intent": "I",
+   "vol": 880,
+   "kd": 11,
+   "cpc": 0.53,
+   "sf": 7,
+   "results": "187"
+  },
+  {
+   "kw": "elektrische fiets pegasus",
+   "intent": "C",
+   "vol": 880,
+   "kd": 18,
+   "cpc": 0.25,
+   "sf": 7,
+   "results": "201"
+  },
+  {
+   "kw": "elektrische fiets popal",
+   "intent": "I",
+   "vol": 880,
+   "kd": 21,
+   "cpc": 0.3,
+   "sf": 5,
+   "results": "172"
+  },
+  {
+   "kw": "e bike flyer",
+   "intent": "I",
+   "vol": 880,
+   "kd": 17,
+   "cpc": 0.16,
+   "sf": 4,
+   "results": "169"
+  },
+  {
+   "kw": "fiets sparta elektrisch",
+   "intent": "I",
+   "vol": 720,
+   "kd": 25,
+   "cpc": 0.28,
+   "sf": 6,
+   "results": "199"
+  },
+  {
+   "kw": "gazelle e-bike",
+   "intent": "C",
+   "vol": 720,
+   "kd": 22,
+   "cpc": 0.27,
+   "sf": 5,
+   "results": "n/a"
+  },
+  {
+   "kw": "pegasus e bike",
+   "intent": "I",
+   "vol": 720,
+   "kd": 12,
+   "cpc": 0.25,
+   "sf": 5,
+   "results": "n/a"
+  },
+  {
+   "kw": "veloretti e bike",
+   "intent": "TN",
+   "vol": 720,
+   "kd": 20,
+   "cpc": 0,
+   "sf": 7,
+   "results": "171"
+  },
+  {
+   "kw": "vogue elektrische bakfiets",
+   "intent": "I",
+   "vol": 590,
+   "kd": 11,
+   "cpc": 0.43,
+   "sf": 5,
+   "results": "181"
+  },
+  {
+   "kw": "aanbieding elektrische fiets gazelle",
+   "intent": "I",
+   "vol": 590,
+   "kd": 25,
+   "cpc": 0.27,
+   "sf": 5,
+   "results": "174"
+  },
+  {
+   "kw": "cortina elektrische fiets u4",
+   "intent": "I",
+   "vol": 590,
+   "kd": 19,
+   "cpc": 0.38,
+   "sf": 4,
+   "results": "173"
+  },
+  {
+   "kw": "gazelle orange elektrische fiets",
+   "intent": "C",
+   "vol": 590,
+   "kd": 23,
+   "cpc": 0.26,
+   "sf": 7,
+   "results": "197"
+  },
+  {
+   "kw": "rih omega elektrische fiets",
+   "intent": "IT",
+   "vol": 590,
+   "kd": 16,
+   "cpc": 0.24,
+   "sf": 5,
+   "results": "170"
+  },
+  {
+   "kw": "union elektrische fiets",
+   "intent": "I",
+   "vol": 590,
+   "kd": 13,
+   "cpc": 0.51,
+   "sf": 6,
+   "results": "176"
+  },
+  {
+   "kw": "vogue e bike",
+   "intent": "C",
+   "vol": 590,
+   "kd": 18,
+   "cpc": 0.32,
+   "sf": 6,
+   "results": "184"
+  },
+  {
+   "kw": "cortina common elektrische fiets",
+   "intent": "I",
+   "vol": 480,
+   "kd": 19,
+   "cpc": 0.39,
+   "sf": 3,
+   "results": "161"
+  },
+  {
+   "kw": "elektrische fiets action",
+   "intent": "I",
+   "vol": 480,
+   "kd": 20,
+   "cpc": 0.45,
+   "sf": 4,
+   "results": "10"
+  },
+  {
+   "kw": "elektrische fiets cowboy",
+   "intent": "NC",
+   "vol": 480,
+   "kd": 23,
+   "cpc": 0.69,
+   "sf": 6,
+   "results": "n/a"
+  },
+  {
+   "kw": "elektrische fiets union",
+   "intent": "I",
+   "vol": 480,
+   "kd": 14,
+   "cpc": 0.51,
+   "sf": 5,
+   "results": "175"
+  },
+  {
+   "kw": "elektrische flyer fiets",
+   "intent": "IC",
+   "vol": 480,
+   "kd": 17,
+   "cpc": 0.19,
+   "sf": 5,
+   "results": "173"
+  },
+  {
+   "kw": "gazelle elektrische fiets orange",
+   "intent": "C",
+   "vol": 480,
+   "kd": 23,
+   "cpc": 0.26,
+   "sf": 5,
+   "results": "174"
+  },
+  {
+   "kw": "koga elektrische fiets dames",
+   "intent": "IT",
+   "vol": 480,
+   "kd": 23,
+   "cpc": 0.24,
+   "sf": 6,
+   "results": "172"
+  },
+  {
+   "kw": "union fiets elektrisch",
+   "intent": "IT",
+   "vol": 480,
+   "kd": 13,
+   "cpc": 0.51,
+   "sf": 6,
+   "results": "166"
+  },
+  {
+   "kw": "vogue elektrische fiets middenmotor",
+   "intent": "IC",
+   "vol": 480,
+   "kd": 10,
+   "cpc": 0.19,
+   "sf": 5,
+   "results": "169"
+  },
+  {
+   "kw": "e bike vogue",
+   "intent": "I",
+   "vol": 480,
+   "kd": 18,
+   "cpc": 0.32,
+   "sf": 4,
+   "results": "173"
+  },
+  {
+   "kw": "e-bike sparta",
+   "intent": "C",
+   "vol": 480,
+   "kd": 24,
+   "cpc": 0.3,
+   "sf": 5,
+   "results": "190"
+  },
+  {
+   "kw": "prophete e bike",
+   "intent": "I",
+   "vol": 480,
+   "kd": 17,
+   "cpc": 0.38,
+   "sf": 6,
+   "results": "167"
+  },
+  {
+   "kw": "bakfiets elektrisch vogue",
+   "intent": "I",
+   "vol": 390,
+   "kd": 10,
+   "cpc": 0.61,
+   "sf": 6,
+   "results": "177"
+  },
+  {
+   "kw": "aldi elektrische fiets",
+   "intent": "I",
+   "vol": 390,
+   "kd": 16,
+   "cpc": 0.35,
+   "sf": 7,
+   "results": "150"
+  },
+  {
+   "kw": "cortina u1 elektrische fiets",
+   "intent": "IC",
+   "vol": 390,
+   "kd": 14,
+   "cpc": 0.49,
+   "sf": 5,
+   "results": "168"
+  },
+  {
+   "kw": "cortina u5 elektrische fiets",
+   "intent": "I",
+   "vol": 390,
+   "kd": 20,
+   "cpc": 0.59,
+   "sf": 6,
+   "results": "168"
+  },
+  {
+   "kw": "elektrische fiets bij aldi",
+   "intent": "C",
+   "vol": 390,
+   "kd": 18,
+   "cpc": 0.35,
+   "sf": 5,
+   "results": "144"
+  },
+  {
+   "kw": "elektrische fiets dames sparta",
+   "intent": "C",
+   "vol": 390,
+   "kd": 19,
+   "cpc": 0.29,
+   "sf": 5,
+   "results": "198"
+  },
+  {
+   "kw": "elektrische fiets gazelle middenmotor",
+   "intent": "C",
+   "vol": 390,
+   "kd": 23,
+   "cpc": 0.24,
+   "sf": 5,
+   "results": "197"
+  },
+  {
+   "kw": "elektrische fiets van aldi",
+   "intent": "C",
+   "vol": 390,
+   "kd": 15,
+   "cpc": 0.35,
+   "sf": 5,
+   "results": "88"
+  },
+  {
+   "kw": "elektrische rih fiets",
+   "intent": "N",
+   "vol": 390,
+   "kd": 16,
+   "cpc": 0.19,
+   "sf": 7,
+   "results": "n/a"
+  },
+  {
+   "kw": "handleiding display gazelle elektrische fiets",
+   "intent": "I",
+   "vol": 390,
+   "kd": 23,
+   "cpc": 0,
+   "sf": 6,
+   "results": "104"
+  },
+  {
+   "kw": "lidl.elektrische fiets",
+   "intent": "C",
+   "vol": 390,
+   "kd": 23,
+   "cpc": 0.34,
+   "sf": 6,
+   "results": "158"
+  },
+  {
+   "kw": "multicycle elektrische fiets",
+   "intent": "C",
+   "vol": 390,
+   "kd": 8,
+   "cpc": 0.34,
+   "sf": 6,
+   "results": "168"
+  },
+  {
+   "kw": "sparta elektrische fiets oud model",
+   "intent": "I",
+   "vol": 390,
+   "kd": 14,
+   "cpc": 0.3,
+   "sf": 5,
+   "results": "159"
+  },
+  {
+   "kw": "veloretti elektrische fiets dames",
+   "intent": "TN",
+   "vol": 390,
+   "kd": 24,
+   "cpc": 0.23,
+   "sf": 6,
+   "results": "174"
+  },
+  {
+   "kw": "veloretti fiets elektrisch",
+   "intent": "TN",
+   "vol": 390,
+   "kd": 20,
+   "cpc": 0.2,
+   "sf": 6,
+   "results": "n/a"
+  }
+ ],
+ "info": [
+  {
+   "kw": "helmplicht elektrische fiets",
+   "intent": "I",
+   "vol": 720,
+   "kd": 20,
+   "cpc": 0.04,
+   "sf": 4,
+   "results": "n/a"
+  },
+  {
+   "kw": "elektrische vouwfiets test consumentenbond",
+   "intent": "I",
+   "vol": 720,
+   "kd": 22,
+   "cpc": 0.34,
+   "sf": 5,
+   "results": "101"
+  },
+  {
+   "kw": "speed pedelec verzekering",
+   "intent": "I",
+   "vol": 720,
+   "kd": 17,
+   "cpc": 0.58,
+   "sf": 5,
+   "results": "105"
+  },
+  {
+   "kw": "wat is een goede elektrische fiets",
+   "intent": "I",
+   "vol": 590,
+   "kd": 25,
+   "cpc": 0.41,
+   "sf": 4,
+   "results": "136"
+  },
+  {
+   "kw": "verzekeren speed pedelec",
+   "intent": "I",
+   "vol": 590,
+   "kd": 14,
+   "cpc": 0.58,
+   "sf": 5,
+   "results": "106"
+  },
+  {
+   "kw": "elektrische bakfiets verzekeren",
+   "intent": "I",
+   "vol": 480,
+   "kd": 14,
+   "cpc": 1.3,
+   "sf": 5,
+   "results": "174"
+  },
+  {
+   "kw": "fiets elektrisch test",
+   "intent": "C",
+   "vol": 480,
+   "kd": 12,
+   "cpc": 0.39,
+   "sf": 4,
+   "results": "116K"
+  },
+  {
+   "kw": "helmplicht e bike",
+   "intent": "I",
+   "vol": 480,
+   "kd": 20,
+   "cpc": 0.13,
+   "sf": 5,
+   "results": "186"
+  },
+  {
+   "kw": "verzekering speed pedelec",
+   "intent": "I",
+   "vol": 480,
+   "kd": 14,
+   "cpc": 0.58,
+   "sf": 5,
+   "results": "106"
+  },
+  {
+   "kw": "wat is een speed pedelec",
+   "intent": "I",
+   "vol": 480,
+   "kd": 23,
+   "cpc": 0.07,
+   "sf": 5,
+   "results": "126"
+  },
+  {
+   "kw": "e bike verzekeren",
+   "intent": "I",
+   "vol": 390,
+   "kd": 14,
+   "cpc": 2.29,
+   "sf": 5,
+   "results": "158"
+  },
+  {
+   "kw": "speed pedelec verzekering vergelijken",
+   "intent": "C",
+   "vol": 390,
+   "kd": 11,
+   "cpc": 0.69,
+   "sf": 5,
+   "results": "102"
+  },
+  {
+   "kw": "helmplicht elektrische fiets 2026",
+   "intent": "I",
+   "vol": 320,
+   "kd": 16,
+   "cpc": 0,
+   "sf": 7,
+   "results": "116"
+  },
+  {
+   "kw": "wat is de beste elektrische fiets met lage instap",
+   "intent": "I",
+   "vol": 320,
+   "kd": 18,
+   "cpc": 0.32,
+   "sf": 6,
+   "results": "174"
+  },
+  {
+   "kw": "verzekering elektrische bakfiets",
+   "intent": "I",
+   "vol": 260,
+   "kd": 14,
+   "cpc": 1.3,
+   "sf": 4,
+   "results": "319K"
+  },
+  {
+   "kw": "hoe lang gaat een elektrische fiets mee",
+   "intent": "I",
+   "vol": 260,
+   "kd": 12,
+   "cpc": 0,
+   "sf": 6,
+   "results": "135"
+  },
+  {
+   "kw": "wat is de beste elektrische fiets voor ouderen",
+   "intent": "I",
+   "vol": 260,
+   "kd": 11,
+   "cpc": 0.4,
+   "sf": 5,
+   "results": "116"
+  },
+  {
+   "kw": "allianz e bike verzekering",
+   "intent": "I",
+   "vol": 260,
+   "kd": 7,
+   "cpc": 0.73,
+   "sf": 4,
+   "results": "106"
+  },
+  {
+   "kw": "elektrische bakfiets verzekering",
+   "intent": "I",
+   "vol": 210,
+   "kd": 12,
+   "cpc": 1.83,
+   "sf": 4,
+   "results": "165"
+  },
+  {
+   "kw": "subsidie elektrische bakfiets",
+   "intent": "I",
+   "vol": 210,
+   "kd": 15,
+   "cpc": 0,
+   "sf": 3,
+   "results": "1.6K"
+  },
+  {
+   "kw": "beste elektrische fiets met kinderzitje",
+   "intent": "I",
+   "vol": 210,
+   "kd": 14,
+   "cpc": 0.46,
+   "sf": 5,
+   "results": "164"
+  },
+  {
+   "kw": "elektrische fiets helmplicht",
+   "intent": "I",
+   "vol": 210,
+   "kd": 15,
+   "cpc": 0.05,
+   "sf": 7,
+   "results": "n/a"
+  },
+  {
+   "kw": "hoe werkt een elektrische fiets",
+   "intent": "I",
+   "vol": 210,
+   "kd": 10,
+   "cpc": 0.11,
+   "sf": 7,
+   "results": "122"
+  },
+  {
+   "kw": "rivena elektrische fiets review",
+   "intent": "N",
+   "vol": 210,
+   "kd": 18,
+   "cpc": 2.04,
+   "sf": 6,
+   "results": "167"
+  },
+  {
+   "kw": "subsidie elektrische fiets",
+   "intent": "I",
+   "vol": 210,
+   "kd": 10,
+   "cpc": 0,
+   "sf": 4,
+   "results": "161"
+  },
+  {
+   "kw": "e bike test 2025",
+   "intent": "I",
+   "vol": 210,
+   "kd": 25,
+   "cpc": 0.32,
+   "sf": 4,
+   "results": "189"
+  },
+  {
+   "kw": "e bike verzekering unive",
+   "intent": "N",
+   "vol": 210,
+   "kd": 24,
+   "cpc": 0.4,
+   "sf": 4,
+   "results": "n/a"
+  },
+  {
+   "kw": "helmplicht e bikes",
+   "intent": "I",
+   "vol": 210,
+   "kd": 15,
+   "cpc": 0.13,
+   "sf": 5,
+   "results": "190"
+  },
+  {
+   "kw": "verzekering e bike",
+   "intent": "I",
+   "vol": 210,
+   "kd": 24,
+   "cpc": 1.56,
+   "sf": 5,
+   "results": "178"
+  },
+  {
+   "kw": "wat is een e bike",
+   "intent": "I",
+   "vol": 210,
+   "kd": 12,
+   "cpc": 0.43,
+   "sf": 8,
+   "results": "n/a"
+  },
+  {
+   "kw": "wa verzekering speed pedelec",
+   "intent": "I",
+   "vol": 210,
+   "kd": 21,
+   "cpc": 0.58,
+   "sf": 5,
+   "results": "108"
+  },
+  {
+   "kw": "display elektrische fiets vervangen kosten",
+   "intent": "I",
+   "vol": 170,
+   "kd": 10,
+   "cpc": 0.3,
+   "sf": 6,
+   "results": "108"
+  },
+  {
+   "kw": "elektrische fiets gestolen verzekering",
+   "intent": "I",
+   "vol": 170,
+   "kd": 19,
+   "cpc": 0.97,
+   "sf": 6,
+   "results": "113"
+  },
+  {
+   "kw": "hillmiles milecity 1 elektrische fiets review",
+   "intent": "IT",
+   "vol": 170,
+   "kd": 10,
+   "cpc": 0.63,
+   "sf": 5,
+   "results": "104"
+  },
+  {
+   "kw": "hoe lang gaat accu elektrische fiets mee",
+   "intent": "I",
+   "vol": 170,
+   "kd": 10,
+   "cpc": 0.11,
+   "sf": 5,
+   "results": "133"
+  },
+  {
+   "kw": "hoe lang gaat een accu mee van een elektrische fiets",
+   "intent": "I",
+   "vol": 170,
+   "kd": 8,
+   "cpc": 0.1,
+   "sf": 6,
+   "results": "130"
+  },
+  {
+   "kw": "hoe lang gaat een accu van een elektrische fiets mee",
+   "intent": "I",
+   "vol": 170,
+   "kd": 11,
+   "cpc": 0.11,
+   "sf": 6,
+   "results": "132"
+  },
+  {
+   "kw": "tweedehands elektrische fiets verzekeren",
+   "intent": "I",
+   "vol": 170,
+   "kd": 13,
+   "cpc": 1.6,
+   "sf": 6,
+   "results": "109"
+  },
+  {
+   "kw": "wat kost accu elektrische fiets",
+   "intent": "I",
+   "vol": 170,
+   "kd": 16,
+   "cpc": 0.16,
+   "sf": 5,
+   "results": "169"
+  },
+  {
+   "kw": "wat kost accu voor elektrische fiets",
+   "intent": "I",
+   "vol": 170,
+   "kd": 15,
+   "cpc": 0.13,
+   "sf": 4,
+   "results": "109"
+  },
+  {
+   "kw": "wat kost een accu van een elektrische fiets",
+   "intent": "I",
+   "vol": 170,
+   "kd": 15,
+   "cpc": 0.13,
+   "sf": 5,
+   "results": "112"
+  },
+  {
+   "kw": "wat kost een accu voor een elektrische fiets",
+   "intent": "I",
+   "vol": 170,
+   "kd": 21,
+   "cpc": 0.13,
+   "sf": 7,
+   "results": "112"
+  },
+  {
+   "kw": "wat kost een accu voor elektrische fiets",
+   "intent": "I",
+   "vol": 170,
+   "kd": 23,
+   "cpc": 0.13,
+   "sf": 6,
+   "results": "111"
+  },
+  {
+   "kw": "elektrische vouwfiets test",
+   "intent": "I",
+   "vol": 170,
+   "kd": 15,
+   "cpc": 0.38,
+   "sf": 6,
+   "results": "183"
+  },
+  {
+   "kw": "crivit urban e bike review",
+   "intent": "I",
+   "vol": 170,
+   "kd": 13,
+   "cpc": 0.38,
+   "sf": 6,
+   "results": "151"
+  },
+  {
+   "kw": "goedkoopste e bike verzekering",
+   "intent": "I",
+   "vol": 170,
+   "kd": 25,
+   "cpc": 1.08,
+   "sf": 5,
+   "results": "165"
+  },
+  {
+   "kw": "unive e bike verzekering",
+   "intent": "TN",
+   "vol": 170,
+   "kd": 24,
+   "cpc": 0.4,
+   "sf": 5,
+   "results": "109"
+  },
+  {
+   "kw": "wat is de beste e bike",
+   "intent": "I",
+   "vol": 170,
+   "kd": 23,
+   "cpc": 0.33,
+   "sf": 4,
+   "results": "190"
+  },
+  {
+   "kw": "pedelec verzekering",
+   "intent": "I",
+   "vol": 170,
+   "kd": 19,
+   "cpc": 0.7,
+   "sf": 6,
+   "results": "168"
+  },
+  {
+   "kw": "speed pedelec verzekering verplicht",
+   "intent": "I",
+   "vol": 170,
+   "kd": 17,
+   "cpc": 0,
+   "sf": 5,
+   "results": "105"
+  },
+  {
+   "kw": "achterband elektrische fiets vervangen kosten",
+   "intent": "I",
+   "vol": 140,
+   "kd": 7,
+   "cpc": 0.39,
+   "sf": 7,
+   "results": "106"
+  },
+  {
+   "kw": "achterwiel elektrische fiets vervangen kosten",
+   "intent": "I",
+   "vol": 140,
+   "kd": 11,
+   "cpc": 0.44,
+   "sf": 7,
+   "results": "106"
+  },
+  {
+   "kw": "beste elektrische fiets test aankoop",
+   "intent": "T",
+   "vol": 140,
+   "kd": 23,
+   "cpc": 0.36,
+   "sf": 3,
+   "results": "137"
+  },
+  {
+   "kw": "carratt elektrische fiets review",
+   "intent": "C",
+   "vol": 140,
+   "kd": 24,
+   "cpc": 0.72,
+   "sf": 4,
+   "results": "173"
+  },
+  {
+   "kw": "fongers elektrische fiets review",
+   "intent": "I",
+   "vol": 140,
+   "kd": 20,
+   "cpc": 0.98,
+   "sf": 5,
+   "results": "166"
+  },
+  {
+   "kw": "hoe werkt elektrische fiets",
+   "intent": "I",
+   "vol": 140,
+   "kd": 12,
+   "cpc": 0.11,
+   "sf": 7,
+   "results": "123"
+  },
+  {
+   "kw": "stokvis elektrische fiets review",
+   "intent": "C",
+   "vol": 140,
+   "kd": 23,
+   "cpc": 1.01,
+   "sf": 6,
+   "results": "163"
+  },
+  {
+   "kw": "vouwfiets elektrisch test",
+   "intent": "C",
+   "vol": 140,
+   "kd": 18,
+   "cpc": 0.38,
+   "sf": 6,
+   "results": "181"
+  },
+  {
+   "kw": "crivit urban e-bike review",
+   "intent": "I",
+   "vol": 140,
+   "kd": 19,
+   "cpc": 0.5,
+   "sf": 6,
+   "results": "154"
+  },
+  {
+   "kw": "e bike verzekering enra",
+   "intent": "N",
+   "vol": 140,
+   "kd": 15,
+   "cpc": 0.3,
+   "sf": 3,
+   "results": "103"
+  }
+ ]
+}
