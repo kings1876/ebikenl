@@ -5,7 +5,7 @@ import { Link } from '@/lib/router';
 import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
 import { CartDrawer } from '@/components/CartDrawer';
-import { CreditCard, Building, Coins } from 'lucide-react';
+import { CreditCard, Building, Coins, Mail } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
 import { brandSlug } from '@/lib/seo';
@@ -124,8 +124,9 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                       <Coins className="w-3.5 h-3.5 text-amber-400" />
                       <span>{tr("Crypto (BTC / ETH / USDT)")}</span>
                     </li>
-                    <li className="pt-2 text-[11px] text-slate-400">
-                      {tr("E-mail:")} <a href={`mailto:${REPLY.channels.email}`} className="hover:text-white underline">{REPLY.channels.email}</a>
+                    <li className="pt-3">
+                      <div className="text-[11px] text-slate-400">{tr("Vragen of bestelling? Mail ons:")}</div>
+                      <a href={`mailto:${REPLY.channels.email}`} className="mt-1 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-blue-300"><Mail className="w-4 h-4 text-blue-400" aria-hidden="true" />{REPLY.channels.email}</a>
                     </li>
                     <li className="text-[11px] text-slate-400">
                       {tr("KvK: 84920194 | BTW: NL863492810B01")}

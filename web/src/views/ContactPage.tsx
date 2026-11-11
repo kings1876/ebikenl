@@ -43,8 +43,8 @@ export const ContactPage: React.FC = () => {
       </div>
 
       <div className="grid gap-3 text-sm">
-        <a href={`mailto:${REPLY.channels.email}`} className="flex min-h-11 items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 font-semibold text-slate-800 hover:border-blue-300">
-          <Mail className="h-5 w-5 text-blue-600" />
+        <a href={`mailto:${REPLY.channels.email}`} className="flex min-h-14 items-center gap-3 rounded-xl bg-blue-600 p-5 text-base font-bold text-white shadow-sm hover:bg-blue-700 sm:text-lg">
+          <Mail className="h-6 w-6 shrink-0" aria-hidden="true" />
           {REPLY.channels.email}
         </a>
       </div>

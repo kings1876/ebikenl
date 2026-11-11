@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link, useLocation } from '@/lib/router';
-import { ShoppingBag, Scale, Compass, Layers } from 'lucide-react';
+import { ShoppingBag, Scale, Compass, Layers, Mail } from 'lucide-react';
 import { formatEur } from '../utils/format';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
@@ -39,7 +39,8 @@ export const Header: React.FC = () => {
             <span className="text-slate-400">·</span>
             <span className="font-semibold text-white">{tr("Trustpilot ★★★★★ 4.8")}</span>
             <span className="text-slate-400">·</span>
-            <span>{tr("Klantenservice:")} <a href={`mailto:${REPLY.channels.email}`} className="whitespace-nowrap hover:text-white underline-offset-2 hover:underline">{REPLY.channels.email}</a></span>
+            <span className="hidden lg:inline">{tr("Klantenservice:")}</span>
+            <a href={`mailto:${REPLY.channels.email}`} className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-blue-600 px-3 py-1 font-bold text-white hover:bg-blue-500"><Mail className="w-3.5 h-3.5" aria-hidden="true" />{REPLY.channels.email}</a>
           </div>
         </div>
       </div>
