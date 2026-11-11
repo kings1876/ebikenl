@@ -22,7 +22,12 @@ const nextConfig: NextConfig = {
     },
   },
   async redirects() {
-    return ['', '/en'].flatMap((prefix) =>
+    // The blog is Dutch only; English visitors land on the Dutch article instead of a 404.
+    const blog = [
+      { source: '/en/blog', destination: '/blog', permanent: false },
+      { source: '/en/blog/:slug', destination: '/blog/:slug', permanent: false },
+    ];
+    const oldSubs = ['', '/en'].flatMap((prefix) =>
       Object.entries(OLD_SUB_REDIRECTS).map(([sub, destination]) => ({
         source: `${prefix}/categorie/elektrische-fietsen`,
         has: [{ type: 'query' as const, key: 'sub', value: sub }],
@@ -30,6 +35,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
     );
+    return [...blog, ...oldSubs];
   },
   async headers() {
     return [

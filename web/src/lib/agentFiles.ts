@@ -4,6 +4,7 @@ import { PRODUCTS, BRANDS_WITH_PRODUCTS, ACTIVE_TAXONOMY_CATEGORIES } from '@/da
 import { SITE_URL, SITE_NAME, brandSlug, LANDING_SLUGS } from '@/lib/seo';
 import { SUB_COPY, subSlug } from '@/lib/seoCopy';
 import { SEO_LANDING_PAGES } from '@/data/ebikes';
+import { getAllPosts, TYPE_LABEL } from '@/lib/blog/posts';
 
 const abs = (p: string) => `${SITE_URL}${p}`;
 const eur = (n: number) => `€${n.toLocaleString('nl-NL')}`;
@@ -40,6 +41,14 @@ export function llmsTxt(): string {
   }
   lines.push(`- [E-bike keuzehulp](${abs('/keuzehulp')}): a short questionnaire that suggests a model`);
   lines.push('');
+
+  const posts = getAllPosts();
+  if (posts.length) {
+    lines.push('## Blog', '');
+    lines.push(`- [E-bike blog](${abs('/blog')}): buying guides, comparisons and explainers (Dutch)`);
+    for (const p of posts) lines.push(`- [${p.h1}](${abs(`/blog/${p.slug}`)}): ${TYPE_LABEL[p.type].toLowerCase()}, ${p.keyword}`);
+    lines.push('');
+  }
 
   lines.push('## Optional', '');
   lines.push(`- [Sitemap](${abs('/sitemap.xml')}): every page, with product images`);

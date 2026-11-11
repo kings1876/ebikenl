@@ -84,6 +84,15 @@ export const Header: React.FC = () => {
           </Link>
 
           <Link
+            to="/blog"
+            className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
+              isActive('/blog') ? 'text-blue-600 font-semibold' : ''
+            }`}
+          >
+            {tr("Blog")}
+          </Link>
+
+          <Link
             to="/keuzehulp"
             className={`flex items-center gap-1.5 whitespace-nowrap shrink-0 transition-colors ${
               isActive('/keuzehulp')
@@ -166,6 +175,14 @@ export const Header: React.FC = () => {
           }`}
         >
           {tr("Fietsplan (WKR)")}
+        </Link>
+        <Link
+          to="/blog"
+          className={`whitespace-nowrap hover:text-blue-600 ${
+            isActive('/blog') ? 'text-blue-600 font-semibold' : ''
+          }`}
+        >
+          {tr("Blog")}
         </Link>
         <Link
           to="/keuzehulp"

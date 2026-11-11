@@ -143,6 +143,10 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                     {tr("Vergelijk E-bikes")}
                   </Link>
                   <span>·</span>
+                  <Link to="/blog" className="hover:text-white">
+                    {tr("Blog")}
+                  </Link>
+                  <span>·</span>
                   <Link to="/contact" className="hover:text-white">
                     {tr("Contact")}
                   </Link>

@@ -4,6 +4,7 @@ import { ACTIVE_CATEGORY_SLUGS, ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS
 import { SITE_URL, LANDING_SLUGS, brandSlug } from '@/lib/seo';
 import { SUB_COPY, subSlug } from '@/lib/seoCopy';
 import { withLocale } from '@/i18n/config';
+import { getAllPosts } from '@/lib/blog/posts';
 
 const SITE = SITE_URL;
 
@@ -37,7 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  return entries.flatMap(({ path, images, lastModified }) =>
+  // Blog posts exist in Dutch only, so no English alternates are listed for them.
+  const blog = [
+    { url: `${SITE}/blog`, lastModified: new Date(Math.max(...getAllPosts().map((p) => +new Date(p.updated)), +LATEST)) },
+    ...getAllPosts().map((p) => ({ url: `${SITE}/blog/${p.slug}`, lastModified: new Date(p.updated), images: [`${SITE}${p.image}`] })),
+  ];
+
+  const localized = entries.flatMap(({ path, images, lastModified }) =>
     (['nl', 'en'] as const).map((locale) => ({
       url: `${SITE}${withLocale(path, locale)}`,
       lastModified,
@@ -50,4 +57,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })),
   );
+  return [...localized, ...blog];
 }
