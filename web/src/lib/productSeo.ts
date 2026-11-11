@@ -1,7 +1,7 @@
 // Product <title> and meta description: fixed shape, always within Google's display limits.
 import type { Locale } from '@/i18n/config';
 import type { Product } from '@/types/ebike';
-import { PRODUCTS } from '@/data/ebikes';
+import { PRODUCTS } from '@/data/catalog';
 
 const fit = (text: string, max: number) => {
   if (text.length <= max) return text;

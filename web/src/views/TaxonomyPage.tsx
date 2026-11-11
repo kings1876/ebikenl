@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/lib/router';
-import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS, CATEGORY_SLUG_TO_MAIN } from '../data/ebikes';
+import { CATEGORY_SLUG_TO_MAIN } from '../data/ebikes';
+import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS } from '../data/slim';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Database, Layers, Tag, Filter, Globe, Code, ArrowRight } from 'lucide-react';
 import { useTr } from '@/i18n/locale';

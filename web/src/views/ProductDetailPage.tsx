@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from '@/lib/router';
-import { PRODUCTS, SITE_TRUSTPILOT_REVIEWS } from '../data/ebikes';
-import { Product, Framemaat, Kleur } from '../types/ebike';
+import { Link, useNavigate } from '@/lib/router';
+import { SITE_TRUSTPILOT_REVIEWS } from '../data/ebikes';
+import { Product, ProductCardData, Framemaat, Kleur } from '../types/ebike';
 import { formatEur, eurToCrypto, calculateVat } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { ProductCard } from '../components/ProductCard';
+import { ProductCard, thumbOf } from '../components/ProductCard';
 import { useShop } from '../context/ShopContext';
 import {
   Battery,
@@ -26,14 +26,12 @@ import {
 import { useTr } from '@/i18n/locale';
 import { subHref } from '../lib/seoCopy';
 
-export const ProductDetailPage: React.FC = () => {
+// The server route passes the one product (and a few related cards) so the full catalogue is not shipped to the browser.
+export const ProductDetailPage: React.FC<{ product: Product; related: ProductCardData[] }> = ({ product, related }) => {
   const tr = useTr();
 
-  const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { addToCart, toggleCompare, isCompared } = useShop();
-
-  const product = PRODUCTS.find((p) => p.slug === slug);
 
   const [selectedFramemaat, setSelectedFramemaat] = useState<Framemaat>(
     product?.framematen?.[0] || '50 cm'
@@ -79,9 +77,7 @@ export const ProductDetailPage: React.FC = () => {
   const wkrSavings = Math.round(product.price * (taxBracket / 100));
   const netPrice = product.price - wkrSavings;
 
-  const relatedProducts = PRODUCTS.filter(
-    (p) => p.id !== product.id && (p.brand === product.brand || p.subCategory === product.subCategory)
-  ).slice(0, 3);
+  const relatedProducts = related;
 
   const getMaatAdvice = (maat: Framemaat) => {
     switch (maat) {
@@ -121,9 +117,14 @@ export const ProductDetailPage: React.FC = () => {
           <div className="aspect-4/3 w-full bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex items-center justify-center p-6 shadow-xs">
             <img
               src={selectedImage}
+              width={1200}
+              height={900}
               alt={product.title}
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 
@@ -141,10 +142,14 @@ export const ProductDetailPage: React.FC = () => {
                   }`}
                 >
                   <img
-                    src={img}
+                    src={thumbOf(img)}
+                    width={96}
+                    height={72}
                     alt={`${product.title} (${tr("foto")} ${idx + 1})`}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </button>
               ))}

@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
-import { Product } from '../types/ebike';
+import { ProductCardData } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Trash2, Plus, ShoppingBag, ArrowLeft } from 'lucide-react';
@@ -64,7 +64,7 @@ export const ComparePage: React.FC = () => {
             {/* Header Cards Row */}
             <div className="grid grid-cols-5 gap-6 pb-6 border-b border-slate-200">
               <div className="col-span-1 flex flex-col justify-end">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                   {tr("Model Overzicht")}
                 </span>
               </div>
@@ -116,22 +116,22 @@ export const ComparePage: React.FC = () => {
             {/* Spec Attributes */}
             <div className="divide-y divide-slate-100 text-xs">
               {[
-                { label: 'Type / Categorie', key: (p: Product) => p.subCategory },
-                { label: 'Doelgroep / Instap', key: (p: Product) => p.doelgroep },
-                { label: 'Motormerk & Type', key: (p: Product) => `${p.motormerk} (${p.motorModel})` },
-                { label: 'Motorkoppel', key: (p: Product) => `${p.motorTorqueNm} Nm` },
-                { label: 'Accucapaciteit', key: (p: Product) => `${p.accucapaciteit} (${p.accuWhNumber} Wh)` },
-                { label: 'Actieradius', key: (p: Product) => p.actieradius },
-                { label: 'Aandrijving', key: (p: Product) => p.aandrijving },
-                { label: 'Versnelling', key: (p: Product) => p.versnellingDetail },
-                { label: 'Remtype', key: (p: Product) => p.remtype },
-                { label: 'Wielmaat', key: (p: Product) => p.wielmaat },
-                { label: 'Gewicht', key: (p: Product) => `${p.gewichtKg} kg` },
-                { label: 'Max. gebruikersgewicht', key: (p: Product) => p.maxGebruikersgewicht },
-                { label: 'Fabrieksgarantie Frame', key: (p: Product) => (p.warranty?.frame ?? "-") },
-                { label: 'Fabrieksgarantie Accu', key: (p: Product) => (p.warranty?.battery ?? "-") },
-                { label: 'EN 15194 Gecertificeerd', key: (p: Product) => p.en15194Certified ? 'Ja' : 'Nee' },
-                { label: 'Levertijd', key: (p: Product) => p.leverbaarheid }
+                { label: 'Type / Categorie', key: (p: ProductCardData) => p.subCategory },
+                { label: 'Doelgroep / Instap', key: (p: ProductCardData) => p.doelgroep },
+                { label: 'Motormerk & Type', key: (p: ProductCardData) => `${p.motormerk} (${p.motorModel})` },
+                { label: 'Motorkoppel', key: (p: ProductCardData) => `${p.motorTorqueNm} Nm` },
+                { label: 'Accucapaciteit', key: (p: ProductCardData) => `${p.accucapaciteit} (${p.accuWhNumber} Wh)` },
+                { label: 'Actieradius', key: (p: ProductCardData) => p.actieradius },
+                { label: 'Aandrijving', key: (p: ProductCardData) => p.aandrijving },
+                { label: 'Versnelling', key: (p: ProductCardData) => p.versnellingDetail },
+                { label: 'Remtype', key: (p: ProductCardData) => p.remtype },
+                { label: 'Wielmaat', key: (p: ProductCardData) => p.wielmaat },
+                { label: 'Gewicht', key: (p: ProductCardData) => `${p.gewichtKg} kg` },
+                { label: 'Max. gebruikersgewicht', key: (p: ProductCardData) => p.maxGebruikersgewicht },
+                { label: 'Fabrieksgarantie Frame', key: (p: ProductCardData) => (p.warranty?.frame ?? "-") },
+                { label: 'Fabrieksgarantie Accu', key: (p: ProductCardData) => (p.warranty?.battery ?? "-") },
+                { label: 'EN 15194 Gecertificeerd', key: (p: ProductCardData) => p.en15194Certified ? 'Ja' : 'Nee' },
+                { label: 'Levertijd', key: (p: ProductCardData) => p.leverbaarheid }
               ].map((row, idx) => (
                 <div key={idx} className="grid grid-cols-5 gap-6 py-2.5 items-center">
                   <div className="col-span-1 font-semibold text-slate-500">

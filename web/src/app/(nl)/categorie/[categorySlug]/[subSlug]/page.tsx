@@ -5,7 +5,8 @@ import { JsonLd } from '@/components/JsonLd';
 import { pageMeta } from '@/lib/seo';
 import { breadcrumbLd } from '@/lib/jsonld';
 import { SUB_COPY, subSlug } from '@/lib/seoCopy';
-import { ACTIVE_TAXONOMY_CATEGORIES, CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
+import { CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
+import { ACTIVE_TAXONOMY_CATEGORIES } from '@/data/catalog';
 import type { SubCategory } from '@/types/ebike';
 
 type Props = { params: Promise<{ categorySlug: string; subSlug: string }> };

@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useParams, Link } from '@/lib/router';
 import { SUB_COPY, CATEGORY_INTRO, subSlug } from '../lib/seoCopy';
-import { PRODUCTS, ACTIVE_TAXONOMY_CATEGORIES } from '../data/ebikes';
+import { CARD_PRODUCTS as PRODUCTS, ACTIVE_TAXONOMY_CATEGORIES } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { FilterSidebar } from '../components/FilterSidebar';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -198,6 +198,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
           <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-200 text-xs text-slate-500">
             <span>{tr(filteredProducts.length)} {tr("producten gevonden")}</span>
             <select
+              aria-label={tr("Sorteren")}
               value={filters.sortBy}
               onChange={(e) => setFilters({ ...filters, sortBy: e.target.value as any })}
               className="bg-white border border-slate-200 rounded-lg p-1.5 text-xs text-slate-700"
@@ -210,8 +211,8 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {pageProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {pageProducts.map((product, i) => (
+              <ProductCard key={product.id} product={product} priority={i < 2} headingLevel="h2" />
             ))}
           </div>
           <Pagination page={currentPage} totalItems={filteredProducts.length} onPageChange={goToPage} />

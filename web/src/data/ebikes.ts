@@ -1,4 +1,3 @@
-import catalogData from './catalog.json';
 import { Product, MainCategory, SubCategory, Brand, TrustpilotReview } from '../types/ebike';
 
 export const TAXONOMY_CATEGORIES: { main: MainCategory; subs: SubCategory[] }[] = [
@@ -111,14 +110,6 @@ export const SITE_TRUSTPILOT_REVIEWS: TrustpilotReview[] = [
   }
 ];
 
-// Imported from the manufacturers' own product pages (see scripts/import). Never edit by hand.
-export const PRODUCTS: Product[] = catalogData as unknown as Product[];
-
-// Brands and categories are only shown (menus, filters, routes, sitemap) once they hold products.
-const brandCount = (b: Brand) => PRODUCTS.filter((p) => p.brand === b).length;
-export const BRANDS_WITH_PRODUCTS: Brand[] = ALL_BRANDS.filter((b) => brandCount(b) > 0);
-export const POPULAR_BRANDS: Brand[] = [...BRANDS_WITH_PRODUCTS].sort((a, b) => brandCount(b) - brandCount(a)).slice(0, 3);
-
 export const CATEGORY_SLUG_TO_MAIN: Record<string, MainCategory> = {
   'elektrische-fietsen': 'Elektrische fietsen',
   'accus-en-opladers': "Accu's & opladers",
@@ -126,15 +117,6 @@ export const CATEGORY_SLUG_TO_MAIN: Record<string, MainCategory> = {
   onderdelen: 'Onderdelen',
   service: 'Service',
 };
-export const ACTIVE_CATEGORY_SLUGS: string[] = Object.entries(CATEGORY_SLUG_TO_MAIN)
-  .filter(([, main]) => PRODUCTS.some((p) => p.category === main))
-  .map(([slug]) => slug);
-
-export const ACTIVE_TAXONOMY_CATEGORIES = TAXONOMY_CATEGORIES.filter((c) => PRODUCTS.some((p) => p.category === c.main)).map((c) => ({
-  ...c,
-  subs: c.subs.filter((sub) => PRODUCTS.some((p) => p.category === c.main && p.subCategory === sub)),
-}));
-
 // Landingspagina config from SEO Rules
 export interface LandingPageDef {
   id: string;

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
-import { PRODUCTS, BRANDS_WITH_PRODUCTS } from '../data/ebikes';
+import { CARD_PRODUCTS as PRODUCTS, BRANDS_WITH_PRODUCTS } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -121,8 +121,8 @@ export const BrandPage: React.FC = () => {
         ) : (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {pageProducts.map((p) => (
-                <ProductCard key={p.id} product={p} />
+              {pageProducts.map((p, i) => (
+                <ProductCard key={p.id} product={p} priority={i < 2} headingLevel="h2" />
               ))}
             </div>
             <Pagination page={currentPage} totalItems={brandProducts.length} onPageChange={goToPage} />
@@ -132,7 +132,7 @@ export const BrandPage: React.FC = () => {
 
       {/* Other Brands Quick Links */}
       <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
-        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+        <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
           {tr("Bekijk ook andere A-merken in onze collectie:")}
         </h3>
         <div className="flex flex-wrap gap-2 text-xs font-semibold">

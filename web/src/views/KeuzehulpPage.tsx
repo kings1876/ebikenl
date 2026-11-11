@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/lib/router';
-import { PRODUCTS } from '../data/ebikes';
+import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
 import { Product } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -241,7 +241,7 @@ export const KeuzehulpPage: React.FC = () => {
                   {tr(topMatch.title)}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  {tr(topMatch.shortDescription)}
+                  {tr(topMatch.subCategory)}{topMatch.motorModel ? ` · ${topMatch.motorModel}` : ''}{topMatch.accuWhNumber ? ` · ${topMatch.accuWhNumber} Wh` : ''}
                 </p>
 
                 <div className="pt-2 flex items-center justify-between">

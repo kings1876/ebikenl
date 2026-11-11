@@ -2,7 +2,8 @@
 
 import React, { useMemo, useEffect } from 'react';
 import { Link } from '@/lib/router';
-import { PRODUCTS, TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
+import { TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
+import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { TrustpilotWidget } from '../components/TrustpilotWidget';
 import {
@@ -114,7 +115,14 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative aspect-16/10 rounded-2xl overflow-hidden shadow-xl border border-slate-200 group">
                 <img
-                  src="/images/ebike_hero_lifestyle_1794286792478.jpg"
+                  src="/images/hero-lifestyle-800.webp"
+                  srcSet="/images/hero-lifestyle-800.webp 800w, /images/hero-lifestyle-1280.webp 1280w"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  width={1280}
+                  height={714}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   alt={tr("E-BIKE-TEKOOP.NL Premium Commuter E-Bike in Amsterdam")}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
@@ -139,7 +147,7 @@ export const HomePage: React.FC = () => {
       {/* Curated Theme Links with Real URLs */}
       <section className="bg-slate-100/70 border-b border-slate-200 py-3 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto text-xs font-semibold text-slate-700">
-          <span className="text-slate-400 shrink-0 uppercase tracking-wider text-[11px]">
+          <span className="text-slate-600 shrink-0 uppercase tracking-wider text-[11px]">
             {tr("Populaire Thema's:")}
           </span>
           <div className="flex items-center gap-2">
@@ -252,7 +260,7 @@ export const HomePage: React.FC = () => {
           >
             <Compass className="w-6 h-6" />
             <div className="font-bold font-display">{tr("Weet je niet welke e-bike?")}</div>
-            <p className="text-xs text-blue-100 leading-relaxed">
+            <p className="text-xs text-white leading-relaxed">
               {tr("Beantwoord een paar vragen en vind in 1 minuut jouw ideale fiets.")}
             </p>
           </Link>

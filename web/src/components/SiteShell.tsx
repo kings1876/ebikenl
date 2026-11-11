@@ -123,10 +123,10 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                       <Coins className="w-3.5 h-3.5 text-amber-400" />
                       <span>{tr("Crypto (BTC / ETH / USDT)")}</span>
                     </li>
-                    <li className="pt-2 text-[11px] text-slate-500">
+                    <li className="pt-2 text-[11px] text-slate-400">
                       {tr("Telefoon: 085 - 200 78 90 (Ma - Za)")}
                     </li>
-                    <li className="text-[11px] text-slate-500">
+                    <li className="text-[11px] text-slate-400">
                       {tr("KvK: 84920194 | BTW: NL863492810B01")}
                     </li>
                   </ul>

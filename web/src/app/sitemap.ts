@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
-import { ACTIVE_CATEGORY_SLUGS, ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS, PRODUCTS, CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
+import { CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
+import { ACTIVE_CATEGORY_SLUGS, ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS, PRODUCTS } from '@/data/catalog';
 import { SITE_URL, LANDING_SLUGS, brandSlug } from '@/lib/seo';
 import { SUB_COPY, subSlug } from '@/lib/seoCopy';
 import { withLocale } from '@/i18n/config';

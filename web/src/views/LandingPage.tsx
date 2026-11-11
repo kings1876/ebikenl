@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
-import { SEO_LANDING_PAGES, PRODUCTS, LandingPageDef } from '../data/ebikes';
+import { SEO_LANDING_PAGES, LandingPageDef } from '../data/ebikes';
+import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -110,8 +111,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pageProducts.map((p) => (
-            <ProductCard key={p.id} product={p} />
+          {pageProducts.map((p, i) => (
+            <ProductCard key={p.id} product={p} priority={i < 2} headingLevel="h2" />
           ))}
         </div>
         <Pagination page={currentPage} totalItems={matchingProducts.length} onPageChange={goToPage} />

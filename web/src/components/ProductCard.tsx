@@ -2,24 +2,37 @@
 
 import React from 'react';
 import { Link } from '@/lib/router';
-import { Product } from '../types/ebike';
+import { ProductCardData } from '../types/ebike';
 import { formatEur, eurToCrypto } from '../utils/format';
 import { Battery, Zap, Truck, Scale, Plus } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
 
 interface ProductCardProps {
-  product: Product;
+  product: ProductCardData;
+  /** true for the first cards on a page: loaded eagerly so the largest image is not lazy-loaded */
+  priority?: boolean;
+  /** heading level of the card title; lists under an h1 use 'h2' so no level is skipped */
+  headingLevel?: 'h2' | 'h3';
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+/** 480px-wide variant of a catalogue image (made by scripts/data/make-images.mjs) */
+export const thumbOf = (src: string) => src.replace(/\.webp$/, '-sm.webp');
+
+export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = false, headingLevel = 'h3' }) => {
+  const Heading = headingLevel;
   const tr = useTr();
 
   const { quickAddToCart, toggleCompare, isCompared } = useShop();
   const compared = isCompared(product.id);
 
   return (
-    <div className="group relative flex flex-col bg-white rounded-xl border border-slate-200/90 overflow-hidden hover:border-slate-300 hover:shadow-md transition-all duration-200">
+    <div
+      className={`group relative flex flex-col bg-white rounded-xl border border-slate-200/90 overflow-hidden hover:border-slate-300 hover:shadow-md transition-all duration-200 ${
+        // cards below the first ones are laid out only when they scroll into view (cheaper first paint on long lists)
+        priority ? '' : '[content-visibility:auto] [contain-intrinsic-size:auto_440px]'
+      }`}
+    >
       {/* Top action row inside card */}
       <div className="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
         {/* Availability / Tag as clean text */}
@@ -65,11 +78,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         className="relative aspect-4/3 w-full bg-slate-50 overflow-hidden flex items-center justify-center p-4 group-hover:bg-slate-100/60 transition-colors"
       >
         <img
-          src={product.image}
+          src={thumbOf(product.image)}
+          srcSet={`${thumbOf(product.image)} 480w, ${product.image} 1200w`}
+          sizes="(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 92vw"
+          width={480}
+          height={360}
           alt={product.title}
           referrerPolicy="no-referrer"
           className="w-full h-full object-contain object-center transform group-hover:scale-102 transition-transform duration-300"
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
         />
       </Link>
 
@@ -88,7 +107,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
 
         {/* Title linking to dedicated PDP */}
-        <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 leading-snug mb-2">
+        <Heading className="text-sm font-semibold text-slate-900 line-clamp-2 leading-snug mb-2">
           <Link
             to={`/product/${product.slug}`}
             className="hover:text-blue-600 transition-colors"
@@ -96,14 +115,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           >
             {tr(product.title)}
           </Link>
-        </h3>
+        </Heading>
 
         {/* Key Specs unboxed metadata */}
         <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600 mb-4 py-2 border-y border-slate-100">
           <div className="flex items-center gap-1" title={tr("Motormerk en koppel")}>
             <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
             <span className="font-medium">{tr(product.motormerk)}</span>
-            {(product.motorTorqueNm ?? 0) > 0 && <span className="text-slate-400">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
+            {(product.motorTorqueNm ?? 0) > 0 && <span className="text-slate-500">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
           <div className="flex items-center gap-1" title={tr("Accucapaciteit")}>
@@ -117,7 +136,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Trustpilot snippet & Price */}
         <div className="mt-auto pt-1">
           <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
-            {product.reviewCount ? (<div className="flex items-center gap-1"><span className="text-[#00b67a] font-bold">★ {product.rating?.toFixed(1)}</span><span className="text-slate-400">({product.reviewCount})</span></div>) : (<span />)}
+            {product.reviewCount ? (<div className="flex items-center gap-1"><span className="text-[#00b67a] font-bold">★ {product.rating?.toFixed(1)}</span><span className="text-slate-500">({product.reviewCount})</span></div>) : (<span />)}
             <span className="text-[11px] text-slate-500 font-mono">
               ≈ {eurToCrypto(product.price, 'BTC')} {tr("BTC")}
             </span>
@@ -130,12 +149,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                   {formatEur(product.price)}
                 </span>
                 {product.originalPrice && product.originalPrice > product.price && (
-                  <span className="text-xs text-slate-400 line-through tabular-nums">
+                  <span className="text-xs text-slate-500 line-through tabular-nums">
                     {formatEur(product.originalPrice)}
                   </span>
                 )}
               </div>
-              <span className="text-[10px] text-slate-400 block -mt-0.5">
+              <span className="text-[10px] text-slate-500 block -mt-0.5">
                 {tr("incl. 21% BTW · Rijklaar leverbaar")}
               </span>
             </div>

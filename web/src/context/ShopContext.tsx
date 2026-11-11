@@ -1,26 +1,26 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Product, CartItem, Framemaat, Kleur } from '../types/ebike';
+import { ProductCardData, CartItem, Framemaat, Kleur } from '../types/ebike';
 
 interface ShopContextType {
   cart: CartItem[];
   cartCount: number;
   cartTotal: number;
   addToCart: (
-    product: Product,
+    product: ProductCardData,
     selectedFramemaat: Framemaat,
     selectedKleur: Kleur,
     assemblyOption?: '100% Rijklaar thuisbezorgd' | 'In fabrieksdoos (90% gemonteerd)'
   ) => void;
-  quickAddToCart: (product: Product) => void;
+  quickAddToCart: (product: ProductCardData) => void;
   updateQuantity: (index: number, quantity: number) => void;
   removeFromCart: (index: number) => void;
   clearCart: () => void;
   
   // Compare state
-  comparedProducts: Product[];
-  toggleCompare: (product: Product) => void;
+  comparedProducts: ProductCardData[];
+  toggleCompare: (product: ProductCardData) => void;
   removeFromCompare: (productId: string) => void;
   clearCompare: () => void;
   isCompared: (productId: string) => boolean;
@@ -35,14 +35,14 @@ const ShopContext = createContext<ShopContextType | undefined>(undefined);
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  const [comparedProducts, setComparedProducts] = useState<Product[]>([]);
+  const [comparedProducts, setComparedProducts] = useState<ProductCardData[]>([]);
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   const cartTotal = cart.reduce((sum, item) => sum + (item.product.price ?? 0) * item.quantity, 0);
 
   const addToCart = (
-    product: Product,
+    product: ProductCardData,
     selectedFramemaat: Framemaat,
     selectedKleur: Kleur,
     assemblyOption: '100% Rijklaar thuisbezorgd' | 'In fabrieksdoos (90% gemonteerd)' = '100% Rijklaar thuisbezorgd'
@@ -73,7 +73,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsCartDrawerOpen(true);
   };
 
-  const quickAddToCart = (product: Product) => {
+  const quickAddToCart = (product: ProductCardData) => {
     addToCart(
       product,
       product.framematen?.[0] || '50 cm',
@@ -100,7 +100,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setCart([]);
   };
 
-  const toggleCompare = (product: Product) => {
+  const toggleCompare = (product: ProductCardData) => {
     setComparedProducts((prev) => {
       if (prev.some((p) => p.id === product.id)) {
         return prev.filter((p) => p.id !== product.id);

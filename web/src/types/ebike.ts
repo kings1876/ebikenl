@@ -209,8 +209,17 @@ export interface FilterState {
   sortBy: 'populariteit' | 'prijs-laag-hoog' | 'prijs-hoog-laag' | 'nieuw' | 'beoordeling';
 }
 
+// The fields shop listings, filters, cart and compare need. Full product data is only loaded on product pages.
+export type ProductCardData = Pick<
+  Product,
+  | 'id' | 'slug' | 'title' | 'brand' | 'model' | 'category' | 'subCategory' | 'price' | 'originalPrice' | 'image' | 'tags' | 'rating' | 'reviewCount'
+  | 'doelgroep' | 'motorpositie' | 'motormerk' | 'motorModel' | 'motorTorqueNm' | 'accucapaciteit' | 'accuWhNumber' | 'actieradius' | 'aandrijving'
+  | 'remtype' | 'versnellingDetail' | 'wielmaat' | 'gewichtKg' | 'maximaleSnelheid' | 'opvouwbaar' | 'leverbaarheid' | 'maxGebruikersgewicht'
+  | 'warranty' | 'framematen' | 'kleuren' | 'en15194Certified'
+>;
+
 export interface CartItem {
-  product: Product;
+  product: ProductCardData;
   quantity: number;
   selectedFramemaat: Framemaat;
   selectedKleur: Kleur;

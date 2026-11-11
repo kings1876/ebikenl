@@ -4,7 +4,8 @@ import { CategoryPage } from '@/views/CategoryPage';
 import { JsonLd } from '@/components/JsonLd';
 import { CATEGORY_META, pageMeta } from '@/lib/seo';
 import { breadcrumbLd } from '@/lib/jsonld';
-import { ACTIVE_CATEGORY_SLUGS, CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
+import { CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
+import { ACTIVE_CATEGORY_SLUGS } from '@/data/catalog';
 
 type Props = { params: Promise<{ categorySlug: string }> };
 

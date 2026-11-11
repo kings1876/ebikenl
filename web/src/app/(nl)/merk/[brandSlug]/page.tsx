@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { BRANDS_WITH_PRODUCTS } from '@/data/ebikes';
+import { BRANDS_WITH_PRODUCTS } from '@/data/catalog';
 import { BrandPage } from '@/views/BrandPage';
 import { JsonLd } from '@/components/JsonLd';
 import { brandSlug as slugify, pageMeta, tx } from '@/lib/seo';
