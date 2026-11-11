@@ -131,14 +131,50 @@ export function enquiryNotificationEmail(e: StoredEnquiry) {
   const url = adminUrl(`/admin/enquiries/${encodeURIComponent(e.id)}`);
   const body = `
 ${field('From', `${escapeHtml(e.name)}<br>${encEmail(escapeHtml(e.email))}${e.phone ? `<br>${escapeHtml(e.phone)}` : ''}`)}
+${e.product ? field('Requested model', `${escapeHtml(e.product.name)}<br><span style="color:${SOFT}">${money(e.product.price, 'en')}${e.product.indicative ? ' (indicative price: confirm before quoting)' : ''}</span>`) : ''}
+${e.source ? field('Came from', escapeHtml(e.source)) : ''}
 ${field('Message', escapeHtml(e.message).replace(/\n/g, '<br>'), 18)}
 ${button(url, 'Reply in Dashboard')}`;
+  const isQuote = e.kind === 'quote';
   return {
     to: '',
     replyTo: e.email,
-    subject: `New enquiry from ${e.name}`,
-    text: `New enquiry from ${e.name} (${e.email}):\n\n${e.message}\n\nReply: ${url}`,
-    html: shell({ eyebrow: 'New enquiry', title: e.name, meta: new Date(e.createdAt).toLocaleString('en-GB'), body }),
+    subject: isQuote ? `Quote request${e.product ? `: ${e.product.name}` : ''} (${e.name})` : `New enquiry from ${e.name}`,
+    text: `${isQuote ? 'Quote request' : 'New enquiry'} from ${e.name} (${e.email})${e.product ? ` about ${e.product.name}` : ''}:\n\n${e.message}\n\nReply: ${url}`,
+    html: shell({ eyebrow: isQuote ? 'Quote request' : 'New enquiry', title: e.name, meta: new Date(e.createdAt).toLocaleString('en-GB'), body }),
+  };
+}
+
+/** To the visitor right after a quote request: confirms receipt and sets honest expectations about price. */
+export function quoteConfirmationEmail(e: StoredEnquiry) {
+  const locale = e.locale;
+  const model = e.product ? e.product.name : '';
+  const showMessage = e.message && !e.message.startsWith('Quote request for');
+  const body = `
+<p style="margin:0 0 14px;font-size:14px;color:${INK};line-height:1.6">${L(locale, `Hallo ${escapeHtml(e.name)}, bedankt voor je aanvraag.`, `Hello ${escapeHtml(e.name)}, thank you for your request.`)}</p>
+${callout(
+  L(
+    locale,
+    `We hebben je aanvraag ${model ? `voor de <strong>${escapeHtml(model)}</strong> ` : ''}ontvangen en sturen je een vrijblijvende prijsopgave per e-mail. Sommige prijzen op onze website zijn indicatief; in de offerte bevestigen we de definitieve prijs.`,
+    `We received your request ${model ? `for the <strong>${escapeHtml(model)}</strong> ` : ''}and will email you a no-obligation quote. Some prices on our website are indicative; the quote confirms the final price.`,
+  ),
+)}
+${showMessage ? field(L(locale, 'Jouw bericht', 'Your message'), `<span style="color:${SOFT}">${escapeHtml(e.message).replace(/\n/g, '<br>')}</span>`, 0) : ''}
+<p style="margin:18px 0 0;font-size:12px;color:${SOFT};line-height:1.6">${L(
+    locale,
+    `Je kunt altijd antwoorden op deze e-mail of mailen naar <a href="mailto:${encEmail(REPLY.channels.email)}" style="color:${ACCENT}">${encEmail(REPLY.channels.email)}</a>.`,
+    `You can always reply to this email or write to <a href="mailto:${encEmail(REPLY.channels.email)}" style="color:${ACCENT}">${encEmail(REPLY.channels.email)}</a>.`,
+  )}</p>`;
+  return {
+    to: e.email,
+    replyTo: REPLY.channels.email,
+    subject: L(locale, 'Je offerteaanvraag is ontvangen', 'Your quote request has been received'),
+    text: L(
+      locale,
+      `Bedankt voor je aanvraag${model ? ` voor de ${model}` : ''}. We sturen je een vrijblijvende prijsopgave per e-mail.`,
+      `Thank you for your request${model ? ` for the ${model}` : ''}. We will email you a no-obligation quote.`,
+    ),
+    html: shell({ eyebrow: REPLY.headerTagline[locale], title: L(locale, 'Aanvraag ontvangen', 'Request received'), body }),
   };
 }
 

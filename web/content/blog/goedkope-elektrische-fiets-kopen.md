@@ -56,6 +56,8 @@ Een paar onderdelen bepalen je veiligheid en het gebruiksgemak. Daarop bespaar j
 
 **Service.** Een goedkope fiets die je niet kunt laten repareren, is duurder dan hij lijkt. Vraag naar onderdelen, onderhoud en garantie voor de accu. Zo weet je wat er gebeurt als iets kapotgaat.
 
+[[cta]]
+
 ## De accu: let op de capaciteit
 
 Meer over de capaciteit in Wh lees je in ons artikel over de [e-bike accu](/blog/e-bike-accu-capaciteit-en-levensduur). Het verschil tussen een naaf- en een middenmotor staat in onze vergelijking van [middenmotor of naafmotor](/blog/middenmotor-of-naafmotor).

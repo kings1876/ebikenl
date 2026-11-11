@@ -6,7 +6,7 @@ import { useAdmin } from '@/components/admin/AdminApp';
 import { Card, NOT_CONFIGURED, StatusBadge, when } from '@/components/admin/ui';
 import type { StoredEnquiry } from '@/lib/reply/types';
 
-const FILTERS = ['all', 'new', 'replied'] as const;
+const FILTERS = ['all', 'quotes', 'new', 'replied'] as const;
 
 export default function EnquiriesPage() {
   const { api } = useAdmin();
@@ -28,7 +28,7 @@ export default function EnquiriesPage() {
     };
   }, [api]);
 
-  const shown = items.filter((e) => filter === 'all' || e.status === filter);
+  const shown = items.filter((e) => filter === 'all' || (filter === 'quotes' ? e.kind === 'quote' : e.status === filter));
 
   return (
     <div className="space-y-5">
@@ -56,6 +56,7 @@ export default function EnquiriesPage() {
                 <Link href={`/admin/enquiries/${encodeURIComponent(e.id)}`} className="flex flex-wrap items-center gap-3 py-3 hover:bg-slate-800/40">
                   <span className="min-w-0 flex-1">
                     <span className="text-sm font-bold text-white">{e.name}</span>
+                    {e.kind === 'quote' && <span className="ml-2 rounded-full bg-blue-500/15 px-2 py-0.5 text-[11px] font-bold text-blue-300">Quote{e.product ? `: ${e.product.name}` : ''}</span>}
                     <span className="block truncate text-xs text-slate-500">{e.message}</span>
                   </span>
                   <span className="text-xs text-slate-500">{when(e.createdAt)}</span>

@@ -6,7 +6,7 @@ import { REPLY } from '@/config/reply';
 import { getOrder, saveOrder } from '@/lib/reply/orderStore';
 import { generateEnquiryId, saveEnquiry } from '@/lib/reply/enquiryStore';
 import { contactInbox, orderInbox, sendMailBatch } from '@/lib/reply/mailer';
-import { enquiryNotificationEmail, orderConfirmationEmail, orderNotificationEmail } from '@/lib/reply/emailTemplates';
+import { enquiryNotificationEmail, orderConfirmationEmail, orderNotificationEmail, quoteConfirmationEmail } from '@/lib/reply/emailTemplates';
 import type { OrderItem, StoredEnquiry, StoredOrder } from '@/lib/reply/types';
 import type { Locale } from '@/i18n/config';
 
@@ -27,6 +27,7 @@ export async function POST(request: Request) {
   const locale: Locale = body.locale === 'en' ? 'en' : 'nl';
 
   if (body.formName === 'contact') return handleContact(body, locale);
+  if (body.formName === 'quote') return handleQuote(body, locale);
   if (body.formName === 'order') return handleOrder(body, locale);
   return bad('unknown-form');
 }
@@ -56,6 +57,47 @@ async function handleContact(body: Record<string, unknown>, locale: Locale) {
   }
   const mail = enquiryNotificationEmail(enquiry);
   const [shop] = await sendMailBatch([{ ...mail, to: contactInbox() }]);
+
+  if (!saved && !shop.sent) return Response.json({ ok: false, error: 'unavailable' }, { status: 503 });
+  return Response.json({ ok: true });
+}
+
+// Free quote request from a blog post or product page: stored as an enquiry (kind 'quote'), mailed to the shop and confirmed to the visitor.
+async function handleQuote(body: Record<string, unknown>, locale: Locale) {
+  const name = clean(body.name, 120);
+  const email = clean(body.email, 200);
+  const message = clean(body.message, 2000);
+  const source = clean(body.source, 160);
+  const productSlug = clean(body.product, 160);
+  const product = productSlug ? byId.get(productSlug) ?? PRODUCTS.find((p) => p.slug === productSlug) : undefined;
+  if (!name || !EMAIL_RE.test(email)) return bad('invalid-fields');
+  if (productSlug && !product) return bad('unknown-product');
+  if (!product && message.length < 5) return bad('invalid-fields');
+  if (source && !source.startsWith('/')) return bad('invalid-source');
+
+  const enquiry: StoredEnquiry = {
+    id: generateEnquiryId(),
+    locale,
+    name,
+    email,
+    phone: clean(body.phone, 40) || undefined,
+    message: message || (product ? `Quote request for ${product.brand} ${product.model}` : ''),
+    kind: 'quote',
+    source: source || undefined,
+    product: product
+      ? { slug: product.slug, name: `${product.brand} ${product.model}`, price: product.price, indicative: Boolean(product.priceInfo?.originalCurrency) && product.priceInfo?.originalCurrency !== 'EUR' }
+      : undefined,
+    status: 'new',
+    createdAt: new Date().toISOString(),
+  };
+
+  let saved = false;
+  try {
+    saved = await saveEnquiry(enquiry);
+  } catch (err) {
+    console.error('quote save failed:', err instanceof Error ? err.message : 'unknown');
+  }
+  const [shop] = await sendMailBatch([{ ...enquiryNotificationEmail(enquiry), to: contactInbox() }, quoteConfirmationEmail(enquiry)]);
 
   if (!saved && !shop.sent) return Response.json({ ok: false, error: 'unavailable' }, { status: 503 });
   return Response.json({ ok: true });

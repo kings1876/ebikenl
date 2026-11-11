@@ -49,6 +49,8 @@ In de winter is zout op de weg een vijand van metalen onderdelen. Spoel de fiets
 
 ![Cube Aruba Hybrid 600 elektrische stadsfiets met Shimano Nexus naafschakeling](/images/catalog/cube-aruba-hybrid-600-1.webp "De Cube Aruba Hybrid 600 heeft een Shimano Nexus-naaf met vijf versnellingen, die weinig onderhoud vraagt.")
 
+[[cta]]
+
 ## Ketting, riem en schakeling
 
 De aandrijving is het onderdeel dat het meest slijt. Bij een middenmotor loopt het koppel van de motor via de ketting en de tandwielen. Een versleten ketting rekt uit en beschadigt de tandwielen. Laat je ketting daarom regelmatig meten met een kettingmeter en vervang hem op tijd. Dat is goedkoper dan het vervangen van ketting, cassette en kettingblad samen.

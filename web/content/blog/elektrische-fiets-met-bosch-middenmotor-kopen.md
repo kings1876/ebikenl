@@ -51,6 +51,8 @@ Woon je in een vlak gebied en rijd je vooral korte ritten, dan is 60 tot 75 Nm r
 
 Rijd je vaak met bagage, op lange hellingen of op onverhard terrein, dan is 90 tot 120 Nm prettig. De [Kalkhoff Entice 3 Season](/product/kalkhoff-entice-3-season) is een trekkingmodel met een Performance Line CX Smart System-motor van 120 Nm en een accu van 540 Wh. Een e-mountainbike zoals de [Scott Aspect eRIDE 900 Wave](/product/scott-aspect-eride-900-wave) heeft ook een CX-motor en een accu van 800 Wh.
 
+[[cta]]
+
 ## Accu (Wh): hoeveel bereik past bij jou?
 
 De accu bepaalt hoe ver je komt. In onze catalogus liggen de Bosch-accu's tussen 360 en 800 Wh, met een middelste waarde van 720 Wh. Als vuistregel geldt dat een accu van 400 Wh geschikt is voor korte en middellange ritten, en dat 600 tot 800 Wh past bij lange ritten of veel hellingen.

@@ -8,6 +8,9 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import { PostCard } from '@/components/blog/PostCard';
 import { ProductPicks } from '@/components/blog/ProductPicks';
+import { BlogCta } from '@/components/blog/BlogCta';
+import { QuoteForm } from '@/components/blog/QuoteForm';
+import { CARD_PRODUCTS } from '@/data/slim';
 import { breadcrumbLd } from '@/lib/jsonld';
 import { articleLd } from '@/lib/blog/jsonld';
 import { renderMarkdown } from '@/lib/blog/markdown';
@@ -55,7 +58,11 @@ export default async function Page({ params }: Props) {
   const all = getAllPosts();
   const picks = <ProductPicks slugs={post.products} category={post.category} categoryLabel={post.categoryLabel} />;
   const hasMarker = post.body.includes('[[picks]]');
-  const { nodes, headings } = await renderMarkdown(post.body, picks);
+  const { nodes, headings } = await renderMarkdown(post.body, picks, { cta: <BlogCta /> });
+  const quoteOptions = post.products
+    .map((slug) => CARD_PRODUCTS.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p))
+    .map((p) => ({ slug: p.slug, label: p.title }));
   const size = await heroSize(post.image);
 
   const candidates = post.related.length ? post.related.map((s) => all.find((p) => p.slug === s)) : all.filter((p) => p.type === post.type);
@@ -79,6 +86,11 @@ export default async function Page({ params }: Props) {
             </p>
           </header>
 
+          <p className="flex flex-wrap gap-2 pb-2 text-xs font-bold">
+            <a href="#bestellen" className="inline-flex min-h-11 items-center rounded-full bg-blue-600 px-4 text-white hover:bg-blue-700">Bestel direct</a>
+            <a href="#offerte" className="inline-flex min-h-11 items-center rounded-full border border-blue-300 bg-blue-50 px-4 text-blue-800 hover:bg-blue-100">Gratis offerte</a>
+          </p>
+
           <figure className="my-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={post.image} alt={post.imageAlt} width={size.width} height={size.height} loading="eager" fetchPriority="high" decoding="async" className="w-full rounded-2xl border border-slate-200 bg-white object-contain" style={{ aspectRatio: size.width ? `${size.width} / ${size.height}` : '4 / 3' }} />
@@ -99,6 +111,7 @@ export default async function Page({ params }: Props) {
 
           <div>{nodes}</div>
           {!hasMarker && picks}
+          <QuoteForm source={`/blog/${post.slug}`} options={quoteOptions} />
         </article>
 
         {related.length > 0 && (

@@ -53,6 +53,8 @@ Een maattabel op basis van je lichaamslengte geeft een eerste indicatie. Gebruik
 
 Deze tabel is een gemiddelde. Mensen met dezelfde lengte kunnen een verschillende beenlengte of armlengte hebben. Meet daarom ook je binnenbeenlengte.
 
+[[cta]]
+
 ## De binnenbeenlengte meten
 
 Je binnenbeenlengte is een nauwkeuriger maat dan je lichaamslengte. Meet haar zo: ga zonder schoenen met je rug tegen een muur staan, met je voeten ongeveer 15 centimeter uit elkaar. Klem een boek of een liniaal tussen je benen, zo hoog als een zadel, en meet de afstand van de vloer tot de bovenkant van het boek.

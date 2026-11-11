@@ -50,6 +50,8 @@ De tabel hieronder laat de zeven grootste merken zien. De prijzen zijn de laagst
 
 Cube heeft 66 modellen en dekt bijna elk type: e-MTB (22), trekking (13), stad (11), gravel en race (11), vouw (4), bak (3) en één speed pedelec. Bijna alle modellen hebben een Bosch-middenmotor. De prijzen zijn alle indicatief. Wie veel keuze wil binnen één merk, vindt die hier. Lees meer in onze gids over een [Cube elektrische fiets kopen](/blog/cube-elektrische-fiets-kopen) of bekijk alle [Cube e-bikes](/merk/cube). Een voorbeeld is de [Cube Touring Hybrid ONE 600](/product/cube-touring-hybrid-one-600).
 
+[[cta]]
+
 ## Giant en Liv: stad en trekking
 
 Giant heeft 57 modellen, waarvan 41 stadsfietsen, tien trekkingfietsen en zes e-MTB's. Het merk gebruikt vooral eigen SyncDrive-motoren (37 modellen) en motoren van Yamaha (20). Alle prijzen zijn fabrikantprijzen in euro, wat de prijsvergelijking eenvoudiger maakt. Het middelste prijsniveau ligt rond €3.600, lager dan bij de meeste andere grote merken.

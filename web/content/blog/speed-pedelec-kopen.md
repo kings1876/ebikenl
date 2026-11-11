@@ -53,6 +53,8 @@ Dit is de regel waar veel kopers over struikelen. Met een speed pedelec mag je n
 
 Je rijdt dus vaak mee met het autoverkeer. Dat past bij wie zelfverzekerd in het verkeer rijdt en een route heeft met veel wegen buiten de bebouwde kom. Binnen een stad is een speed pedelec minder handig, omdat je veel snelheid moet inhouden. De [Unive](https://www.unive.nl/bromfietsverzekering/speed-pedelec/regels) geeft een overzicht van boetes en verzekering. Controleer vooral je eigen route voor je een keuze maakt.
 
+[[cta]]
+
 ## Helm en uitrusting
 
 Op een speed pedelec is een helm verplicht. Je kunt kiezen tussen een goedgekeurde bromfietshelm en een speciale speed pedelec-helm met de markering NTA 8776:2016. Kijk bij aanschaf naar het keurmerk. Een gewone fietshelm voldoet niet.

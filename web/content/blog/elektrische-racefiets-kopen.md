@@ -52,6 +52,8 @@ Het voordeel van zo'n kleine motor is het gewicht en het gevoel. De fiets blijft
 
 Meer over de Bosch-lijnen lees je in onze gids over een [elektrische fiets met Bosch middenmotor kopen](/blog/elektrische-fiets-met-bosch-middenmotor-kopen).
 
+[[cta]]
+
 ## Accu en bereik
 
 De accu's zijn klein: tussen 290 en 400 Wh, met een middelste waarde van 400 Wh. De Scott Fastlane en de BMC Teammachine hebben 290 Wh. De Cube Nulane en Nuroad hebben 400 Wh.

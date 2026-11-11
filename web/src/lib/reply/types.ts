@@ -58,6 +58,11 @@ export interface StoredEnquiry {
   email: string;
   phone?: string;
   message: string;
+  /** 'quote' = free quote request from the blog or a product page; absent on older records means a plain contact message. */
+  kind?: 'contact' | 'quote';
+  /** Page the visitor submitted the form on, e.g. /blog/e-mtb-kopen. */
+  source?: string;
+  product?: { slug: string; name: string; price: number; indicative: boolean };
   status: 'new' | 'replied';
   createdAt: string;
   repliedAt?: string;

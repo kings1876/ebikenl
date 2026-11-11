@@ -35,7 +35,7 @@ function plain(body) {
   return body
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/\[\[picks\]\]/g, ' ')
+    .replace(/\[\[(?:picks|cta)\]\]/g, ' ')
     .replace(/^\s*\|?\s*:?-{2,}[\s|:-]*$/gm, ' ')
     .replace(/[#>*_`|]/g, ' ');
 }

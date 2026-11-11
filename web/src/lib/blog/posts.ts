@@ -47,7 +47,7 @@ export function countWords(markdown: string): number {
   const text = markdown
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/\[\[picks\]\]/g, ' ')
+    .replace(/\[\[(?:picks|cta)\]\]/g, ' ')
     .replace(/[#>*_`|]/g, ' ')
     .replace(/^\s*[-:]+\s*$/gm, ' ');
   return text.split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;

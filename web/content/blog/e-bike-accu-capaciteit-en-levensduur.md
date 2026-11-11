@@ -59,6 +59,8 @@ Fabrikanten geven vaak een bereik als bandbreedte. Reken niet op het maximum, ma
 
 ![Cube Aruba Hybrid 600 elektrische stadsfiets met een e-bike accu van 600 Wh](/images/catalog/cube-aruba-hybrid-600-2.webp "De Cube Aruba Hybrid 600 heeft een accu van 600 Wh, voldoende voor de meeste woon-werkritten.")
 
+[[cta]]
+
 ## Welke e-bike accu past bij jou?
 
 Kies de capaciteit op basis van je gebruik. Een paar richtlijnen helpen.

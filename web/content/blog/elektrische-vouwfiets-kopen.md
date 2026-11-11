@@ -48,6 +48,8 @@ Dat voel je niet bij het rijden, want de motor draagt het gewicht. Je voelt het 
 
 Vraag jezelf dus af hoe vaak je de fiets moet tillen. Gebruik je hem vooral thuis en op de weg, dan is het gewicht geen probleem. Moet je hem dagelijks een perron op, kies dan een zo licht mogelijk model en oefen met tillen voor je bestelt. Meet ook je kofferbak, want een opgevouwen e-bike van 25 kilo past niet in elke auto.
 
+[[cta]]
+
 ## Wielmaat en rijgedrag
 
 Alle vier de modellen hebben 20 inch wielen. Dat is een goede middenweg tussen een compact pakket en een stabiel rijgevoel. Fietsen met 16 inch wielen vouwen kleiner, maar rijden onrustiger bij hoge snelheid en op slechte wegen. Met 20 inch heb je meer grip en een rustiger stuur.

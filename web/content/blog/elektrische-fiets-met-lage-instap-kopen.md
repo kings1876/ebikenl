@@ -68,6 +68,8 @@ Kies bij voorkeur hydraulische schijfremmen. Die remmen goed bij regen en vragen
 
 E-bikes zijn zwaarder dan gewone fietsen. De lage-instapmodellen met bekend gewicht wegen in onze catalogus tussen de 19 en 30 kilo, met een middelste waarde van ongeveer 27 kilo. Dat voel je pas als je de fiets moet tillen of een stalling in moet rijden. Denk dus na over je stalling: als je een trap of hoge stoep moet nemen, kies dan een lichter model.
 
+[[cta]]
+
 ## Elektrische fiets met lage instap voor ouderen
 
 Veel zoekers vragen specifiek naar een elektrische fiets met lage instap voor ouderen. Voor die groep zijn andere punten extra belangrijk dan voor een sportieve fietser.

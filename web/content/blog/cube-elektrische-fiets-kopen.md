@@ -55,6 +55,8 @@ Op elke productpagina zie je twee getallen: Nm en Wh. Ze bepalen samen hoe de fi
 
 Er is ook een lichte instap in de reeks. De [Cube Editor Hybrid ONE 360 FE](/product/cube-editor-hybrid-one-360-fe) is de goedkoopste Cube in onze catalogus. Hij gebruikt een Bosch Hub Line-motor van 45 Nm en een accu van 360 Wh. Dat past bij korte ritten in een vlakke omgeving, maar niet bij lange afstanden of heuvels.
 
+[[cta]]
+
 ## Framemaat en instap: zo kies je goed
 
 Een goede maat is belangrijker dan een extra versnelling. Trekking- en stadsmodellen van Cube hebben maten in centimeters, bijvoorbeeld 50, 54, 58 en 62. Mountainbikes en gravelmodellen gebruiken vaak S, M, L en XL. Elk model toont de beschikbare maten op de productpagina.

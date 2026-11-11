@@ -65,7 +65,7 @@ export interface Rendered {
 }
 
 /** `picks` is rendered where the [[picks]] marker stands (or appended by the caller when the marker is absent). */
-export async function renderMarkdown(body: string, picks: ReactNode, opts: { firstImageEager?: boolean } = {}): Promise<Rendered> {
+export async function renderMarkdown(body: string, picks: ReactNode, opts: { firstImageEager?: boolean; cta?: ReactNode } = {}): Promise<Rendered> {
   const lines = body.replace(/\r\n/g, '\n').split('\n');
   const nodes: ReactNode[] = [];
   const headings: Heading[] = [];
@@ -79,6 +79,7 @@ export async function renderMarkdown(body: string, picks: ReactNode, opts: { fir
     if (!line.trim()) { i++; continue; }
 
     if (line.trim() === '[[picks]]') { nodes.push(<div key={k()}>{picks}</div>); i++; continue; }
+    if (line.trim() === '[[cta]]') { nodes.push(<div key={k()}>{opts.cta}</div>); i++; continue; }
 
     const h = line.match(/^(#{2,3})\s+(.*)$/);
     if (h) {
@@ -154,7 +155,7 @@ export async function renderMarkdown(body: string, picks: ReactNode, opts: { fir
     }
 
     const para: string[] = [];
-    while (i < lines.length && lines[i].trim() && !/^(#{2,3}\s|!\[|\s*[-*]\s|\s*\d+\.\s|>|\[\[picks\]\])/.test(lines[i]) && !(lines[i].includes('|') && lines[i + 1]?.match(/^\s*\|?\s*:?-{2,}/))) para.push(lines[i++]);
+    while (i < lines.length && lines[i].trim() && !/^(#{2,3}\s|!\[|\s*[-*]\s|\s*\d+\.\s|>|\[\[(?:picks|cta)\]\])/.test(lines[i]) && !(lines[i].includes('|') && lines[i + 1]?.match(/^\s*\|?\s*:?-{2,}/))) para.push(lines[i++]);
     if (!para.length) para.push(lines[i++]); // safety: a line no block rule recognises is rendered as text, never loops
     nodes.push(<p key={k()} className="my-5 text-[17px] leading-8 text-slate-700">{inline(para.join(' '), `p${key}`)}</p>);
   }

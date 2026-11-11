@@ -46,6 +46,8 @@ Er zijn een paar regels die vaak worden vergeten. Je mag geen elektronisch appar
 
 Een helm is voor volwassenen op een gewone e-bike niet verplicht. Het is wel aan te raden, zeker bij hogere snelheden en in druk verkeer. Op [Kom veilig thuis](https://www.komveiligthuis.nl/fietshelm) vind je meer informatie over fietshelmen.
 
+[[cta]]
+
 ## Helmplicht voor jongeren: wat verandert er?
 
 De Rijksoverheid meldt dat het kabinet een helmplicht voorbereidt voor fatbikes en andere e-bikes voor mensen onder de 18. Dat plan werd op 28 augustus 2025 aangekondigd en moet nog worden goedgekeurd door de Tweede en Eerste Kamer. De stand van zaken kan inmiddels veranderd zijn. Controleer daarom de actuele regels op de website van de Rijksoverheid voor je een beslissing neemt.

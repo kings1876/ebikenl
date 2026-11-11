@@ -68,6 +68,16 @@ async function check(urlPath, expect) {
 
   const words = main.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ').split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
   if (expect.article && words < 1400) errs.push(`only ${words} words rendered`);
+  if (expect.article) {
+    // conversion blocks: order cards, mid-article call to action, quote form
+    if (!html.includes('id="bestellen"')) errs.push('no order section (#bestellen)');
+    if (!html.includes('id="offerte"')) errs.push('no quote form (#offerte)');
+    const orderButtons = (html.match(/Direct bestellen/g) || []).length;
+    if (orderButtons < 4) errs.push(`only ${orderButtons} "Direct bestellen" buttons`);
+    if (!html.includes('Weet je al welk model je wilt')) errs.push('no mid-article call to action');
+    if (!/<input[^>]*type="email"[^>]*required/.test(html) && !/<input[^>]*required[^>]*type="email"/.test(html)) errs.push('quote form has no required email field');
+    if (/Op voorraad|Direct leverbaar|Rijklaar leverbaar|Gratis bezorging/i.test(main)) errs.push('stock or delivery claim in the article area');
+  }
   if (errs.length) failed++;
   console.log(`${errs.length ? 'FAIL' : 'PASS'} ${urlPath} title:${title.length} desc:${desc.length} words:${words} ld:${types.join('+')} links:${hrefs.length}`);
   for (const e of errs) console.log(`     - ${e}`);

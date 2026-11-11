@@ -50,6 +50,8 @@ De Cargo Line is gebouwd voor zware belasting en heeft veel koppel bij het wegri
 
 Bij de andere modellen, zoals de Tenways Cargo One en de Batavus Fier, noemt de fabrikant geen merk of koppel in de gegevens die wij hebben. Vraag in dat geval naar de motorgegevens voordat je koopt. Een bakfiets zonder helder koppel is lastig te vergelijken.
 
+[[cta]]
+
 ## Accu en bereik
 
 De accu's van onze bakfietsen liggen tussen 500 en 960 Wh, met een middelste waarde van 725 Wh. Dat is een stuk groter dan bij gewone stadsfietsen. Een zwaar beladen fiets verbruikt meer energie, en je rijdt dagelijks vaak meer kilometers dan je denkt: school, werk, boodschappen en terug.

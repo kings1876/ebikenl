@@ -48,6 +48,8 @@ De tabel hieronder zet de belangrijkste eigenschappen naast elkaar. Het zijn alg
 
 De prijs en het gewicht zijn de punten waarop een naafmotor wint. Voor klimmen, bagage en een natuurlijk gevoel wint de middenmotor.
 
+[[cta]]
+
 ## Wat zie je in onze catalogus?
 
 In onze catalogus is dit het beeld. Bij 306 van de 399 modellen staat de middenmotor in de specificaties. Het zijn vooral Bosch-, Yamaha-, Giant- en Shimano-modellen. Bij de andere 93 modellen is de motorpositie in onze gegevens niet vermeld, bijvoorbeeld bij Specialized en Stromer, die hun eigen motoren gebruiken. Controleer die positie op de productpagina of bij de fabrikant.

@@ -34,6 +34,17 @@ export default function EnquiryDetail({ params }: { params: Promise<{ id: string
         {enquiry.phone && <p className="text-sm text-slate-300">{enquiry.phone}</p>}
         <p className="mt-1 text-xs text-slate-500">{when(enquiry.createdAt)} · {enquiry.locale === 'en' ? 'English' : 'Dutch'}</p>
       </Card>
+      {(enquiry.kind === 'quote' || enquiry.source) && (
+        <Card title={enquiry.kind === 'quote' ? 'Quote request' : 'Source'}>
+          {enquiry.product && (
+            <p className="text-sm text-slate-200">
+              <Link className="underline" href={`/product/${enquiry.product.slug}`} target="_blank">{enquiry.product.name}</Link>
+              <span className="ml-2 text-slate-400">€{enquiry.product.price.toLocaleString('nl-NL')}{enquiry.product.indicative ? ' (indicative price: confirm before quoting)' : ''}</span>
+            </p>
+          )}
+          {enquiry.source && <p className="mt-1 text-xs text-slate-500">Came from {enquiry.source}</p>}
+        </Card>
+      )}
       <Card title="Message">
         <p className="whitespace-pre-wrap text-sm text-slate-200">{enquiry.message}</p>
       </Card>

@@ -54,6 +54,8 @@ Bosch is veruit het meest gekozen merk, vooral met de Performance Line CX. Meer 
 
 Let bij het vergelijken op het koppel in Nm. Voor een e-MTB is 85 Nm een bruikbare ondergrens. Waarden van 100 tot 130 Nm gebruik je vooral op steile, technische klimmen. Meer koppel geeft meer hulp, maar vraagt ook meer van je accu.
 
+[[cta]]
+
 ## Accu en gewicht
 
 De accu's van onze e-MTB's liggen tussen 360 en 900 Wh. De middelste waarde is 800 Wh, dus dat is de standaard. Een grotere accu geeft meer bereik op lange tochten met veel hoogtemeters. Een kleinere accu maakt de fiets lichter en wendbaarder.

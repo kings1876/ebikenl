@@ -52,6 +52,8 @@ De **krachtsensor** meet hoe hard je op de pedalen drukt. Met die informatie kan
 
 Goedkopere systemen gebruiken vooral de eerste twee sensoren. De hulp komt dan vaak met een lichte vertraging of voelt meer als een duw. Betere systemen gebruiken ook een krachtsensor. Welke sensoren een model heeft, staat meestal in de omschrijving van de fabrikant.
 
+[[cta]]
+
 ## Nm en Wh: wat betekenen de getallen?
 
 Op de productpagina zie je twee getallen die je helpen vergelijken.

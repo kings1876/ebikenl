@@ -53,6 +53,8 @@ Voor dagelijks gebruik in de stad kies je comfort, een lage onderhoudsbehoefte e
 
 Wil je minder uitgeven? Dan is de [Giant Entour E+ 1 LST](/product/giant-entour-eplus-1-lst-2027) een alternatief met een SyncDrive Core3-motor van 75 Nm. De accu is met 375 Wh kleiner, dus dit past bij korte ritten. Meer over lage-instapmodellen lees je in onze gids over een [elektrische fiets met lage instap kopen](/blog/elektrische-fiets-met-lage-instap-kopen).
 
+[[cta]]
+
 ## Beste elektrische fiets 2026 voor lange afstanden
 
 Rijd je veel kilometers of neem je bagage mee? Dan zijn een sterke motor en een grote accu belangrijker dan gewicht. De [Cube Kathmandu Hybrid SLX 800](/product/cube-kathmandu-hybrid-slx-800) heeft een Bosch Performance Line CX-motor van 120 Nm, een accu van 800 Wh en een elektronische Shimano XT Di2-schakeling. Dat is een stevige basis voor lange dagtochten.
