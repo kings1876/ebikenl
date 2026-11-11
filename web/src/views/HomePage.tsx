@@ -107,21 +107,23 @@ export const HomePage: React.FC = () => {
 
             {/* Right Column: Hero Visual Asset */}
             <div className="lg:col-span-6">
-              <div className="relative aspect-16/10 rounded-2xl overflow-hidden shadow-xl border border-slate-200 group">
-                <img
-                  src="/images/hero-lifestyle-800.webp"
-                  srcSet="/images/hero-lifestyle-800.webp 800w, /images/hero-lifestyle-1280.webp 1280w"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  width={1280}
-                  height={714}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  alt={tr("E-BIKE-TEKOOP.NL Premium Commuter E-Bike in Amsterdam")}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+              <div className="flex flex-col lg:aspect-16/10 rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white group">
+                <div className="aspect-4/3 lg:aspect-auto min-h-0 lg:flex-1 bg-white">
+                  <img
+                    src="/images/hero-product-800.webp"
+                    srcSet="/images/hero-product-800.webp 800w, /images/hero-product-1200.webp 1200w"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    width={1200}
+                    height={900}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    alt={tr("Cube Kathmandu Hybrid Deluxe EXC 800 elektrische fiets")}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain group-hover:scale-102 transition-transform duration-500"
+                  />
+                </div>
+                <div className="bg-slate-900 px-6 py-4 text-white">
                   <div className="text-xs uppercase tracking-wider font-semibold text-blue-300">
                     {tr("Nieuw in het assortiment")}
                   </div>
