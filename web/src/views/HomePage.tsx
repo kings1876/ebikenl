@@ -64,8 +64,8 @@ export const HomePage: React.FC = () => {
               </div>
 
               <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 leading-[1.1] font-display">
-                {tr("Nieuwe E-Bikes van A-Merken.")}{' '}
-                <span className="text-blue-600 block mt-1">{tr("100% Rijklaar Geleverd.")}</span>
+                {tr("Elektrische fiets kopen:")}{' '}
+                <span className="text-blue-600 block mt-1">{tr("nieuwe e-bikes van bekende merken")}</span>
               </h1>
 
               <p className="text-base text-slate-600 max-w-xl leading-relaxed">
@@ -173,7 +173,7 @@ export const HomePage: React.FC = () => {
               to="/fietsplan-e-bikes"
               className="px-3 py-1 bg-white hover:bg-blue-50 hover:text-blue-600 rounded-lg border border-slate-200 shrink-0 transition-colors"
             >
-              {tr("Fietsplan & WKR (tot 40% voordeel)")}
+              {tr("Fietsplan & WKR")}
             </Link>
             <Link
               to="/speed-pedelecs"
@@ -219,7 +219,7 @@ export const HomePage: React.FC = () => {
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight font-display">
               {tr("Populaire e-bikes")}
             </h2>
-            <p className="text-xs text-slate-500 mt-0.5">{tr("Onze best beoordeelde modellen")}</p>
+            <p className="text-xs text-slate-500 mt-0.5">{tr("Een selectie uit ons assortiment")}</p>
           </div>
           <Link
             to="/categorie/elektrische-fietsen"
@@ -242,7 +242,7 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-2">
             <ShieldCheck className="w-6 h-6 text-blue-600" />
-            <div className="font-bold text-slate-900 font-display">{tr("Alleen nieuwe A-merken")}</div>
+            <div className="font-bold text-slate-900 font-display">{tr("Alleen nieuwe e-bikes")}</div>
             <p className="text-xs text-slate-600 leading-relaxed">
               {tr("Uitsluitend nieuwe e-bikes van bekende merken, met de fabrieksgarantie van de fabrikant.")}
             </p>

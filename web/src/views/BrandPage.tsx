@@ -6,11 +6,13 @@ import { CARD_PRODUCTS as PRODUCTS, BRANDS_WITH_PRODUCTS } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
-import { ShieldCheck, Truck, ArrowLeft } from 'lucide-react';
-import { useTr } from '@/i18n/locale';
+import { ShieldCheck, ArrowLeft } from 'lucide-react';
+import { brandIntro } from '../lib/brandCopy';
+import { useTr, useLocale } from '@/i18n/locale';
 
 export const BrandPage: React.FC = () => {
   const tr = useTr();
+  const locale = useLocale();
 
   const { brandSlug } = useParams<{ brandSlug: string }>();
 
@@ -60,7 +62,7 @@ export const BrandPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
       <Breadcrumbs
         items={[
-          { label: 'Merken', path: '/taxonomie' },
+          { label: 'Merken' },
           { label: matchedBrand }
         ]}
       />
@@ -74,7 +76,7 @@ export const BrandPage: React.FC = () => {
           {tr(matchedBrand)} {tr("Elektrische Fietsen")}
         </h1>
         <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-          {tr("Bekijk het actuele aanbod nieuwe")} {tr(matchedBrand)} {tr("e-bikes. Alle modellen zijn nieuw en worden met de fabrieksgarantie van de fabrikant geleverd.")}
+          {brandIntro(matchedBrand, brandProducts, locale)}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-3 text-xs text-slate-400 border-t border-slate-800">
@@ -83,12 +85,7 @@ export const BrandPage: React.FC = () => {
             <span>{tr("Fabrieksgarantie van de fabrikant")}</span>
           </span>
           <span>·</span>
-          <span className="flex items-center gap-1.5 text-white">
-            <Truck className="w-4 h-4 text-blue-400" />
-            <span>{tr("100% Rijklaar bezorgd aan huis")}</span>
-          </span>
-          <span>·</span>
-          <span>{tr("Betaling via iDEAL, SEPA & Crypto")}</span>
+          <span>{tr("Vergelijk specificaties en adviesprijzen per model")}</span>
         </div>
       </div>
 
@@ -96,10 +93,10 @@ export const BrandPage: React.FC = () => {
       <div ref={gridTop} className="scroll-mt-24">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-900">
-            {tr(matchedBrand)} {tr("Modellen op Voorraad (")}{tr(brandProducts.length)})
+            {tr(matchedBrand)} {tr("Modellen (")}{tr(brandProducts.length)})
           </h2>
           <span className="text-xs text-slate-500">
-            {tr("Prijzen inclusief 21% BTW en rijklaarmaken")}
+            {tr("Prijzen inclusief 21% BTW")}
           </span>
         </div>
 

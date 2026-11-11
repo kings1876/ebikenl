@@ -136,76 +136,76 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     id: 'landing-bosch-middenmotor',
     slug: 'bosch-middenmotor',
     title: 'Bosch Middenmotor E-bikes',
-    subtitle: 'Krachtig, betrouwbaar en stil. De nummer 1 motorkeuze in Nederland.',
-    h1: 'Elektrische Fietsen met Bosch Middenmotor',
+    subtitle: 'E-bikes met Bosch middenmotor: de motor zit bij de trapas, wat zorgt voor een natuurlijke trapondersteuning en een laag zwaartepunt.',
+    h1: 'Elektrische fiets met middenmotor (Bosch)',
     metaTitle: 'Elektrische fiets met middenmotor (Bosch) | E-BIKE-TEKOOP.NL',
     metaDescription: 'E-bikes met Bosch middenmotor van onder meer Cube, Kalkhoff, Scott en Winora. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: { motormerk: 'Bosch', motorpositie: 'Middenmotor' },
     highlightPoints: [
-      'Stille en natuurlijke trapondersteuning met 3-sensor technologie',
-      'Actieradius tot 180 km met 750 Wh PowerTube accu',
-      'Compatibel met Bosch Smart System en eBike Flow app'
+      'Middenmotor bij de trapas: natuurlijke trapondersteuning en een laag zwaartepunt',
+      'Bosch-systemen in verschillende uitvoeringen, zoals Active Line, Performance Line en Cargo Line',
+      'Vergelijk accu, motorkoppel en adviesprijs per model'
     ]
   },
   {
     id: 'landing-damesfietsen',
     slug: 'elektrische-damesfiets',
     title: 'Elektrische Damesfietsen',
-    subtitle: 'Comfortabele lage instap, stabiel frame en veilige balans.',
-    h1: 'Elektrische Damesfiets met Lage Instap Kopen',
+    subtitle: 'Een lage instap maakt op- en afstappen eenvoudig. Vergelijk elektrische damesfietsen op motor, accu en prijs.',
+    h1: 'Elektrische fiets met lage instap kopen',
     metaTitle: 'Elektrische fiets met lage instap | E-BIKE-TEKOOP.NL',
     metaDescription: 'Elektrische damesfietsen met lage instap van onder meer Cube, Winora, Batavus en Specialized. Vergelijk modellen en adviesprijzen.',
     matchFilter: { doelgroep: 'Dames (lage instap)' },
     highlightPoints: [
-      'Moeiteloos op- en afstappen door ruime lage instap',
-      'Rechtop zittende comfortabele fietshouding',
-      'Ideaal voor boodschappen, toertochten en woon-werkverkeer'
+      'Lage instap: gemakkelijk op- en afstappen',
+      'Rechtop zitten voor comfort in de stad en op toertochten',
+      'Vergelijk framemaat, motor en accu per model'
     ]
   },
   {
     id: 'landing-onder-2000',
     slug: 'e-bike-onder-2000',
     title: 'E-bike onder €2000',
-    subtitle: 'Kwaliteit en A-merk garantie binnen een toegankelijk budget.',
-    h1: 'Nieuwe Elektrische Fietsen onder de €2.000,-',
+    subtitle: 'Nieuwe e-bikes tot €2.000 van onder meer Tenways, Cube en Sushi Bikes.',
+    h1: 'Elektrische fiets onder €2.000',
     metaTitle: 'Elektrische fiets onder €2.000 | E-BIKE-TEKOOP.NL',
     metaDescription: 'Nieuwe elektrische fietsen tot €2.000 van onder meer Tenways, Cube en Sushi Bikes. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: {},
     priceMax: 2000,
     highlightPoints: [
-      'Inclusief 2 jaar volledige fabrieksgarantie op accu en motor',
-      'Prijzen inclusief 21% BTW en rijklaar afmontage',
-      'Gunstig te verrekenen via het zakelijk fietsplan (WKR)'
+      'Adviesprijzen tot €2.000, inclusief BTW',
+      'Vergelijk motor, accu en gewicht per model',
+      'Let bij een lage prijs op accucapaciteit en motor: die bepalen bereik en kracht'
     ]
   },
   {
     id: 'landing-fietsplan',
     slug: 'fietsplan-e-bikes',
     title: 'Fietsplan & WKR E-bikes',
-    subtitle: 'Tot 40% fiscaal voordeel via je werkgever met het Nationaal Fietsplan.',
-    h1: 'E-bike via het Fietsplan (WKR) van je Werkgever',
+    subtitle: 'Veel werkgevers bieden een fietsplan. Bekijk hier de e-bikes en bepaal welk model past.',
+    h1: 'E-bike kopen via het fietsplan van je werkgever',
     metaTitle: 'E-bike via fietsplan van je werkgever | E-BIKE-TEKOOP.NL',
     metaDescription: 'Een nieuwe elektrische fiets kopen via het fietsplan van je werkgever? Bekijk het aanbod en vergelijk modellen, motoren en adviesprijzen.',
     matchFilter: {},
     highlightPoints: [
-      'Betaal vanuit je brutoloon en bespaar tot 40% op de aankoopprijs',
-      'Direct geldige WKR-factuur met uitsplitsing van accessoires en slot',
-      'Geschikt voor alle bekende leasemaatschappijen en fietsplanplatforms'
+      'Vraag je werkgever naar de voorwaarden van het fietsplan',
+      'Voorwaarden en voordeel verschillen per werkgever',
+      'Vergelijk modellen en adviesprijzen om je keuze te maken'
     ]
   },
   {
     id: 'landing-speed-pedelecs',
     slug: 'speed-pedelecs',
     title: 'Speed Pedelecs (45 km/u)',
-    subtitle: 'Snel, emissievrij forenzen. Het slimme alternatief voor de file.',
-    h1: 'Speed Pedelec 45 km/u Kopen | Direct met Kenteken',
+    subtitle: 'Een speed pedelec ondersteunt tot 45 km/u en is bedoeld voor langere woon-werkritten.',
+    h1: 'Speed pedelec kopen: e-bike tot 45 km/u',
     metaTitle: 'Speed pedelec kopen: e-bike tot 45 km/u | E-BIKE-TEKOOP.NL',
     metaDescription: 'Speed pedelecs met motorondersteuning tot 45 km/u, onder meer van Stromer en Cube. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: { maximaleSnelheid: '45 km/u' },
     highlightPoints: [
-      'RDW-geregistreerd geel bromfietskenteken door ons verzorgd',
-      'Accu’s tot 1000Wh voor bereik van meer dan 100 km bij 45 km/u',
-      'Onderhoudsvrije Gates riemaandrijving en Pinion / Enviolo naven'
+      'Ondersteuning tot 45 km/u (brommerklasse)',
+      'Voor een speed pedelec gelden aparte regels: kenteken, verzekering en helmplicht',
+      'Vergelijk motor, accu en gewicht per model'
     ]
   }
 ];
