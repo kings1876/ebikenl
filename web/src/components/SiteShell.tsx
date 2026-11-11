@@ -134,7 +134,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                 <div>
                   © {new Date().getFullYear()} {tr("E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.")}
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                   <Link to="/taxonomie" className="text-slate-400 hover:text-white underline">
                     {tr("Taxonomie & Architectuur")}
                   </Link>

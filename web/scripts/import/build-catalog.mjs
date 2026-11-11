@@ -66,9 +66,9 @@ function interpret(specs = {}, name = '') {
   else if (/584|27[.,]5/i.test(wheels)) out.wielmaat = '27,5 inch';
   else if (/559|\b26\b/i.test(wheels)) out.wielmaat = '26 inch';
   else if (/\b29\b/i.test(wheels)) out.wielmaat = '29 inch';
-  const wkg = /(\d{1,2}[.,]?\d?)\s?kg/i.exec(specs.Gewicht || '');
+  const wkg = /(\d{1,3}(?:[.,]\d{1,3})?)\s?kg/i.exec(specs.Gewicht || ''); // "21.487 kg" must read as 21.5, not 487
   if (wkg) {
-    out.gewichtKg = parseFloat(wkg[1].replace(',', '.'));
+    out.gewichtKg = Math.round(parseFloat(wkg[1].replace(',', '.')) * 10) / 10;
     out.gewichtKlasse = out.gewichtKg < 20 ? 'Onder 20 kg' : out.gewichtKg <= 25 ? '20-25 kg' : 'Meer dan 25 kg';
   }
   if (/s-?pedelec|speed[- ]pedelec|line speed|45\s?km/i.test(name + ' ' + all)) out.maximaleSnelheid = '45 km/u';
