@@ -13,12 +13,12 @@ const outfit = Outfit({ variable: '--font-outfit', subsets: ['latin'] });
 export function rootMetadata(locale: Locale) {
   return {
     title: {
-      default: tx(locale, 'E-BIKE-TEKOOP.NL | Nieuwe elektrische fietsen van A-merken'),
+      default: tx(locale, 'Elektrische fiets kopen | Nieuwe e-bikes van Cube, Giant, Scott'),
       template: '%s | E-BIKE-TEKOOP.NL',
     },
     description: tx(
       locale,
-      'Nieuwe elektrische fietsen van A-merken met fabrieksgarantie en snelle levering. Betaal met iDEAL, bankoverschrijving of crypto.',
+      'Vergelijk nieuwe elektrische fietsen van Cube, Giant, Scott, Specialized en Kalkhoff. Bekijk modellen, specificaties en adviesprijzen op één plek.',
     ),
     applicationName: 'E-BIKE-TEKOOP.NL',
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://e-bike-tekoop.vercel.app'),

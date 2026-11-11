@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { brandSlug } = await params;
   const brand = BRANDS_WITH_PRODUCTS.find((b) => slugify(b) === brandSlug);
   if (!brand) return {};
-  const fill = (s: string) => tx('nl', s).replace('{brand}', brand);
+  const fill = (s: string) => tx('nl', s).replace(/\{brand\}/g, brand);
   return {
-    ...pageMeta('nl', `/merk/${brandSlug}`, { title: '{brand} elektrische fietsen kopen' }),
-    title: fill('{brand} elektrische fietsen kopen'),
-    description: fill('Nieuwe {brand} e-bikes met fabrieksgarantie en snelle levering.'),
+    ...pageMeta('nl', `/merk/${brandSlug}`, { title: '{brand} elektrische fiets kopen' }),
+    title: fill('{brand} elektrische fiets kopen'),
+    description: fill('Bekijk alle {brand} e-bikes: modellen, specificaties en adviesprijzen. Nieuw en met fabrieksgarantie.'),
   };
 }
 

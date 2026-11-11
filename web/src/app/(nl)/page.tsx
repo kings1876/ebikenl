@@ -3,9 +3,9 @@ import { HomePage } from '@/views/HomePage';
 import { pageMeta } from '@/lib/seo';
 
 export const metadata: Metadata = pageMeta('nl', '/', {
-  title: 'E-BIKE-TEKOOP.NL | Nieuwe elektrische fietsen van A-merken',
+  title: 'Elektrische fiets kopen | Nieuwe e-bikes van Cube, Giant, Scott',
   absoluteTitle: true,
-  description: 'Nieuwe elektrische fietsen van A-merken met fabrieksgarantie en snelle levering. Betaal met iDEAL, bankoverschrijving of crypto.',
+  description: 'Vergelijk nieuwe elektrische fietsen van Cube, Giant, Scott, Specialized en Kalkhoff. Bekijk modellen, specificaties en adviesprijzen op één plek.',
 });
 
 export default function Page() {

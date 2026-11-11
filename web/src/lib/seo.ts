@@ -37,8 +37,8 @@ export function pageMeta(locale: Locale, path: string, o: PageMetaOptions): Meta
 
 export const CATEGORY_META: Record<string, { title: string; description: string }> = {
   'elektrische-fietsen': {
-    title: 'Elektrische fietsen kopen',
-    description: 'Nieuwe elektrische fietsen van A-merken: stads-, trekking-, mountain-, vouw- en bakfietsen met fabrieksgarantie.',
+    title: 'Elektrische fiets kopen: nieuwe e-bikes vergelijken',
+    description: 'Beste elektrische fietsen op een rij: stads-, trekking-, mountain-, vouw- en bakfietsen, ook met middenmotor. Vergelijk modellen en adviesprijzen.',
   },
   'accus-en-opladers': {
     title: "E-bike accu's & opladers",
