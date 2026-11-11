@@ -9,7 +9,6 @@ import { TrustpilotWidget } from '../components/TrustpilotWidget';
 import {
   Compass,
   ArrowRight,
-  CreditCard,
   Building,
   Coins,
   ShieldCheck,
@@ -94,11 +93,6 @@ export const HomePage: React.FC = () => {
               {/* Payment methods trust bar */}
               <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-4 text-xs text-slate-500">
                 <span className="font-semibold text-slate-700">{tr("Betaalopties:")}</span>
-                <span className="flex items-center gap-1">
-                  <CreditCard className="w-3.5 h-3.5 text-pink-600" />
-                  <span>{tr("iDEAL")}</span>
-                </span>
-                <span>·</span>
                 <span className="flex items-center gap-1">
                   <Building className="w-3.5 h-3.5 text-blue-700" />
                   <span>{tr("Bankoverschrijving")}</span>

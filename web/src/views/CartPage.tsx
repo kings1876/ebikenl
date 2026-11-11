@@ -199,7 +199,7 @@ export const CartPage: React.FC = () => {
             <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-500 space-y-1.5">
               <div className="flex items-center gap-1.5 text-slate-700 font-semibold">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>{tr("Veilig betalen met iDEAL, SEPA & Crypto")}</span>
+                <span>{tr("Veilig betalen met bankoverschrijving & Crypto")}</span>
               </div>
               <div>{tr("✓ 14 dagen wettelijk bedenkrecht")}</div>
               <div>{tr("✓ Fabrieksgarantie tot 10 jaar op frame")}</div>

@@ -9,7 +9,6 @@ import { paymentMethodParts, paymentTermsLines, parsePaymentDetail } from '@/lib
 import type { StoredOrder } from '@/lib/reply/types';
 
 const PLACEHOLDERS: Record<string, string> = {
-  ideal: 'Payment link: https://…',
   bank: 'Account name: E-BIKE-TEKOOP.NL\nIBAN: NL00 BANK 0000 0000 00\nReference: EBT-XXXXXX',
   crypto: 'Amount: 0.0000 BTC (or USDT)\nWallet address: …\nNetwork: Bitcoin (or the USDT network)',
 };

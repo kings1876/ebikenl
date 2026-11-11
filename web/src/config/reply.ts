@@ -42,20 +42,8 @@ export const REPLY = {
   ],
   paymentMethods: [
     {
-      id: 'ideal',
-      label: { nl: 'iDEAL (betaallink)', en: 'iDEAL (payment link)' },
-      opening: {
-        nl: 'Betaal {amount} via iDEAL met onderstaande betaallink en vermeld ordernummer {ref}.',
-        en: 'Pay {amount} via iDEAL using the payment link below and quote order number {ref}.',
-      },
-      closing: {
-        nl: 'Zodra we je betaling zien, bevestigen we je bestelling per e-mail.',
-        en: 'As soon as we see your payment, we confirm your order by email.',
-      },
-    },
-    {
       id: 'bank',
-      label: { nl: 'SEPA bankoverschrijving', en: 'SEPA bank transfer' },
+      label: { nl: 'Bankoverschrijving', en: 'Bank transfer' },
       opening: {
         nl: 'Maak {amount} over naar onderstaande rekening en vermeld ordernummer {ref} als betaalkenmerk.',
         en: 'Transfer {amount} to the account below and use order number {ref} as the payment reference.',

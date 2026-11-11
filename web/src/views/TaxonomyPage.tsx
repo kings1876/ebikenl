@@ -241,7 +241,7 @@ export const TaxonomyPage: React.FC = () => {
                   <div><strong>{tr("Taal:")}</strong> {tr("Nederlands (nl_NL)")}</div>
                   <div><strong>{tr("Valuta:")}</strong> {tr("EUR (€ incl. 21% BTW)")}</div>
                   <div><strong>{tr("Land:")}</strong> {tr("Nederland")}</div>
-                  <div><strong>{tr("Betaling:")}</strong> {tr("iDEAL + SEPA + Crypto (BTC/USDT/ETH)")}</div>
+                  <div><strong>{tr("Betaling:")}</strong> {tr("Bankoverschrijving + Crypto (BTC/USDT/ETH)")}</div>
                 </div>
               </div>
             </div>

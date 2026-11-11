@@ -5,7 +5,7 @@ import { Link } from '@/lib/router';
 import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
 import { CartDrawer } from '@/components/CartDrawer';
-import { CreditCard, Building, Coins } from 'lucide-react';
+import { Building, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
 import { brandSlug } from '@/lib/seo';
@@ -113,12 +113,8 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                   </div>
                   <ul className="space-y-2 text-slate-400">
                     <li className="flex items-center gap-1.5">
-                      <CreditCard className="w-3.5 h-3.5 text-pink-500" />
-                      <span>{tr("iDEAL (Direct via internetbankieren)")}</span>
-                    </li>
-                    <li className="flex items-center gap-1.5">
                       <Building className="w-3.5 h-3.5 text-blue-400" />
-                      <span>{tr("SEPA Bankoverschrijving")}</span>
+                      <span>{tr("Bankoverschrijving")}</span>
                     </li>
                     <li className="flex items-center gap-1.5">
                       <Coins className="w-3.5 h-3.5 text-amber-400" />

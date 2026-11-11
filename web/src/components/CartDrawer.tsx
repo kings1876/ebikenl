@@ -204,7 +204,7 @@ export const CartDrawer: React.FC = () => {
             <div className="flex items-center justify-center gap-4 text-[11px] text-slate-500 pt-1">
               <span className="flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>{tr("iDEAL · SEPA · Crypto")}</span>
+                <span>{tr("Bankoverschrijving · Crypto")}</span>
               </span>
               <span>·</span>
               <span className="text-[#00b67a] font-semibold">{tr("Trustpilot 4.8")}</span>

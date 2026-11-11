@@ -778,5 +778,9 @@
   "Crypto (BTC / USDT / ETH, -10%)": "Crypto (BTC / USDT / ETH, -10%)",
   "iDEAL, SEPA & Crypto (BTC/USDT/ETH, -10%)": "iDEAL, SEPA & Crypto (BTC/USDT/ETH, -10%)",
   "iDEAL + SEPA + Crypto (BTC/USDT/ETH)": "iDEAL + SEPA + Crypto (BTC/USDT/ETH)",
-  "Crypto (BTC / USDT / ETH)": "Crypto (BTC / USDT / ETH)"
+  "Crypto (BTC / USDT / ETH)": "Crypto (BTC / USDT / ETH)",
+  "Bankoverschrijving & Crypto (BTC/USDT/ETH, -10%)": "Bank transfer & Crypto (BTC/USDT/ETH, -10%)",
+  "Bankoverschrijving · Crypto": "Bank transfer · Crypto",
+  "Veilig betalen met bankoverschrijving & Crypto": "Pay securely by bank transfer & crypto",
+  "Bankoverschrijving + Crypto (BTC/USDT/ETH)": "Bank transfer + Crypto (BTC/USDT/ETH)"
 }

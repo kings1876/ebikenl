@@ -5,16 +5,15 @@ import { useNavigate, Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
 import { formatEur, formatEurWithCents, calculateVat, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { CreditCard, Building, Coins, Mail, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Building, Coins, Mail, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useLocale, useTr } from '@/i18n/locale';
 import { discountFor, makeOrderNumber } from '@/lib/reply/order';
 import { REPLY } from '@/config/reply';
 
-type MethodId = 'ideal' | 'bank' | 'crypto';
+type MethodId = 'bank' | 'crypto';
 
 const METHODS: { id: MethodId; icon: React.ReactNode; title: string; hint: string }[] = [
-  { id: 'ideal', icon: <CreditCard className="w-5 h-5 text-pink-600" />, title: 'iDEAL (betaallink)', hint: 'Je ontvangt een betaallink per e-mail' },
-  { id: 'bank', icon: <Building className="w-5 h-5 text-blue-700" />, title: 'SEPA Bankoverschrijving', hint: 'Vooraf overboeken met onze rekeninggegevens' },
+  { id: 'bank', icon: <Building className="w-5 h-5 text-blue-700" />, title: 'Bankoverschrijving', hint: 'Vooraf overboeken met onze rekeninggegevens' },
   { id: 'crypto', icon: <Coins className="w-5 h-5 text-amber-500" />, title: 'Crypto (BTC / USDT / ETH)', hint: 'Je ontvangt het adres en netwerk per e-mail' },
 ];
 
@@ -31,7 +30,7 @@ export const CheckoutPage: React.FC = () => {
 
   const { exclVat, vatAmount } = calculateVat(cartTotal);
 
-  const [paymentMethod, setPaymentMethod] = useState<MethodId>('ideal');
+  const [paymentMethod, setPaymentMethod] = useState<MethodId>('bank');
   const discount = discountFor(paymentMethod, cartTotal);
   const payable = Math.round((cartTotal - discount) * 100) / 100;
   const [isSubmitting, setIsSubmitting] = useState(false);
