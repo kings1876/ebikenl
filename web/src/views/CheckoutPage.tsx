@@ -3,23 +3,24 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
-import { formatEur, eurToCrypto, calculateVat } from '../utils/format';
+import { formatEur, calculateVat } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import {
-  CreditCard,
-  Building,
-  Coins,
-  Copy,
-  Clock,
-  ShieldCheck,
-  CheckCircle,
-  ArrowRight,
-  ArrowLeft
-} from 'lucide-react';
-import { useTr } from '@/i18n/locale';
+import { CreditCard, Building, Coins, Mail, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
+import { useLocale, useTr } from '@/i18n/locale';
+import { makeOrderNumber } from '@/lib/reply/order';
+import { REPLY } from '@/config/reply';
+
+type MethodId = 'ideal' | 'bank' | 'crypto';
+
+const METHODS: { id: MethodId; icon: React.ReactNode; title: string; hint: string }[] = [
+  { id: 'ideal', icon: <CreditCard className="w-5 h-5 text-pink-600" />, title: 'iDEAL (betaallink)', hint: 'Je ontvangt een betaallink per e-mail' },
+  { id: 'bank', icon: <Building className="w-5 h-5 text-blue-700" />, title: 'SEPA Bankoverschrijving', hint: 'Vooraf overboeken met onze rekeninggegevens' },
+  { id: 'crypto', icon: <Coins className="w-5 h-5 text-amber-500" />, title: 'Crypto (BTC / ETH / USDT)', hint: 'Je ontvangt het adres en netwerk per e-mail' },
+];
 
 export const CheckoutPage: React.FC = () => {
   const tr = useTr();
+  const locale = useLocale();
 
   const { cart, cartTotal, clearCart } = useShop();
   const navigate = useNavigate();
@@ -30,77 +31,67 @@ export const CheckoutPage: React.FC = () => {
 
   const { exclVat, vatAmount } = calculateVat(cartTotal);
 
-  const [paymentMethod, setPaymentMethod] = useState<'ideal' | 'bank' | 'crypto'>('ideal');
-  const [selectedBank, setSelectedBank] = useState<string>('rabobank');
-  const [cryptoAsset, setCryptoAsset] = useState<'BTC' | 'ETH' | 'USDT'>('BTC');
-  const [cryptoAddressCopied, setCryptoAddressCopied] = useState(false);
-  const [ibanCopied, setIbanCopied] = useState(false);
-  const [countdown, setCountdown] = useState(900);
+  const [paymentMethod, setPaymentMethod] = useState<MethodId>('ideal');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  // Customer shipping details
   const [formData, setFormData] = useState({
-    firstName: 'Jan',
-    lastName: 'de Vries',
-    email: 'jandevries@example.nl',
-    phone: '06 12345678',
-    street: 'Keizersgracht 421',
-    postalCode: '1016 EK',
-    city: 'Amsterdam',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    street: '',
+    postalCode: '',
+    city: '',
     isFietsplan: false,
-    companyName: 'Tech Solutions B.V.',
-    notes: 'Graag bellen voor levering'
+    companyName: '',
+    notes: '',
+    botcheck: '',
   });
 
-  const CRYPTO_WALLETS = {
-    BTC: 'bc1q9x37uvh84e9q7df6m6aekn534u8g5970c93r42',
-    ETH: '0x71C...8B3428909eAf2c34a1b53B1A2b10',
-    USDT: 'TYj23Pqm...8eA9xL7yK6wQ2z'
-  };
-
-  useEffect(() => {
-    if (paymentMethod === 'crypto') {
-      const timer = setInterval(() => {
-        setCountdown((prev) => (prev > 0 ? prev - 1 : 900));
-      }, 1000);
-      return () => clearInterval(timer);
-    }
-  }, [paymentMethod]);
-
-  const copyToClipboard = (text: string, type: 'crypto' | 'iban') => {
-    navigator.clipboard?.writeText(text);
-    if (type === 'crypto') {
-      setCryptoAddressCopied(true);
-      setTimeout(() => setCryptoAddressCopied(false), 2000);
-    } else {
-      setIbanCopied(true);
-      setTimeout(() => setIbanCopied(false), 2000);
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      const orderId = `EBK-${new Date().getFullYear()}-${Math.floor(10000 + Math.random() * 90000)}`;
-      clearCart();
-      setIsSubmitting(false);
-      navigate(`/bestelling-bevestigd/${orderId}`, {
-        state: {
-          formData,
+    setError('');
+    // The number is minted here (client side) so the same one appears in the dashboard and in every email.
+    const orderNumber = makeOrderNumber();
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          formName: 'order',
+          locale,
+          orderNumber,
           paymentMethod,
-          cryptoAsset,
-          cartTotal,
-          itemsCount: cart.length
-        }
+          botcheck: formData.botcheck,
+          customer: {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            street: formData.street,
+            postalCode: formData.postalCode,
+            city: formData.city,
+          },
+          isFietsplan: formData.isFietsplan,
+          companyName: formData.companyName,
+          notes: formData.notes,
+          items: cart.map((item) => ({
+            id: item.product.id,
+            size: item.selectedFramemaat,
+            color: item.selectedKleur,
+            quantity: item.quantity,
+          })),
+        }),
       });
-    }, 1000);
-  };
-
-  const formatSeconds = (sec: number) => {
-    const m = Math.floor(sec / 60);
-    const s = sec % 60;
-    return `${m}:${s < 10 ? '0' : ''}${s}`;
+      if (!res.ok) throw new Error(String(res.status));
+      clearCart();
+      navigate(`/bestelling-bevestigd/${orderNumber}`, { state: { paymentMethod, cartTotal, email: formData.email } });
+    } catch {
+      setError(tr('Je bestelling is niet verstuurd. Probeer het opnieuw, of mail ons op') as string);
+    }
+    setIsSubmitting(false);
   };
 
   if (cart.length === 0) {
@@ -119,6 +110,9 @@ export const CheckoutPage: React.FC = () => {
     );
   }
 
+  const field = 'w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600';
+  const set = (key: keyof typeof formData) => (e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, [key]: e.target.value });
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
       <Breadcrumbs
@@ -133,12 +127,11 @@ export const CheckoutPage: React.FC = () => {
           {tr("Veilig Afrekenen")}
         </h1>
         <p className="text-xs text-slate-500 mt-0.5">
-          {tr("Nederlandse webshop · Prijzen incl. 21% BTW · 100% Rijklaar bezorgd aan huis")}
+          {tr("Nederlandse webshop · Prijzen incl. 21% BTW")}
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Column: Details & Payment (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
           {/* 1. Klant & Bezorgadres */}
           <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
@@ -148,74 +141,32 @@ export const CheckoutPage: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-3 text-xs">
               <div>
-                <label className="block text-slate-600 mb-1">{tr("Voornaam *")}</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.firstName}
-                  onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-first" className="block text-slate-600 mb-1">{tr("Voornaam *")}</label>
+                <input id="co-first" type="text" required autoComplete="given-name" value={formData.firstName} onChange={set('firstName')} className={field} />
               </div>
               <div>
-                <label className="block text-slate-600 mb-1">{tr("Achternaam *")}</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.lastName}
-                  onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-last" className="block text-slate-600 mb-1">{tr("Achternaam *")}</label>
+                <input id="co-last" type="text" required autoComplete="family-name" value={formData.lastName} onChange={set('lastName')} className={field} />
               </div>
               <div>
-                <label className="block text-slate-600 mb-1">{tr("E-mailadres (voor factuur) *")}</label>
-                <input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-email" className="block text-slate-600 mb-1">{tr("E-mailadres (voor bevestiging en betaalgegevens) *")}</label>
+                <input id="co-email" type="email" required autoComplete="email" value={formData.email} onChange={set('email')} className={field} />
               </div>
               <div>
-                <label className="block text-slate-600 mb-1">{tr("Telefoonnummer (voor bezorgafspraak) *")}</label>
-                <input
-                  type="tel"
-                  required
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-phone" className="block text-slate-600 mb-1">{tr("Telefoonnummer (voor bezorgafspraak) *")}</label>
+                <input id="co-phone" type="tel" required autoComplete="tel" value={formData.phone} onChange={set('phone')} className={field} />
               </div>
               <div className="col-span-2">
-                <label className="block text-slate-600 mb-1">{tr("Straat en huisnummer *")}</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.street}
-                  onChange={(e) => setFormData({ ...formData, street: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-street" className="block text-slate-600 mb-1">{tr("Straat en huisnummer *")}</label>
+                <input id="co-street" type="text" required autoComplete="street-address" value={formData.street} onChange={set('street')} className={field} />
               </div>
               <div>
-                <label className="block text-slate-600 mb-1">{tr("Postcode *")}</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.postalCode}
-                  onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-zip" className="block text-slate-600 mb-1">{tr("Postcode *")}</label>
+                <input id="co-zip" type="text" required autoComplete="postal-code" value={formData.postalCode} onChange={set('postalCode')} className={field} />
               </div>
               <div>
-                <label className="block text-slate-600 mb-1">{tr("Woonplaats *")}</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.city}
-                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                  className="w-full p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                />
+                <label htmlFor="co-city" className="block text-slate-600 mb-1">{tr("Woonplaats *")}</label>
+                <input id="co-city" type="text" required autoComplete="address-level2" value={formData.city} onChange={set('city')} className={field} />
               </div>
             </div>
 
@@ -233,217 +184,59 @@ export const CheckoutPage: React.FC = () => {
 
               {formData.isFietsplan && (
                 <div className="mt-2.5 p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs">
-                  <label className="block text-slate-700 mb-1 font-medium">{tr("Bedrijfsnaam / Werkgever")}</label>
+                  <label htmlFor="co-company" className="block text-slate-700 mb-1 font-medium">{tr("Bedrijfsnaam / Werkgever")}</label>
                   <input
+                    id="co-company"
                     type="text"
+                    autoComplete="organization"
                     value={formData.companyName}
-                    onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                    onChange={set('companyName')}
                     className="w-full p-2 rounded-lg border border-amber-300 bg-white"
-                    placeholder={tr("Bedrijfsnaam B.V.")}
+                    placeholder={tr("Bedrijfsnaam B.V.") as string}
                   />
                 </div>
               )}
             </div>
-          </div>
 
-          {/* 2. Betaalmethoden (iDEAL, SEPA, Crypto) */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
-            <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
-              {tr("2. Kies Betaalmethode")}
-            </h2>
-
-            <div className="space-y-3">
-              {/* iDEAL */}
-              <div
-                onClick={() => setPaymentMethod('ideal')}
-                className={`p-4 rounded-xl border-2 cursor-pointer transition-colors ${
-                  paymentMethod === 'ideal'
-                    ? 'border-blue-600 bg-blue-50/40'
-                    : 'border-slate-200 hover:border-slate-300'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <CreditCard className="w-5 h-5 text-pink-600" />
-                    <div>
-                      <span className="font-bold text-slate-900 text-sm block">
-                        {tr("iDEAL (Direct via internetbankieren)")}
-                      </span>
-                      <span className="text-xs text-slate-500">
-                        {tr("Veilig, snel en direct bevestigd")}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-bold text-pink-700 bg-pink-100 px-2 py-0.5 rounded">
-                    {tr("Meest gekozen")}
-                  </span>
-                </div>
-
-                {paymentMethod === 'ideal' && (
-                  <div className="mt-3 pt-3 border-t border-blue-200 text-xs">
-                    <label className="block text-slate-600 mb-1.5 font-medium">
-                      {tr("Selecteer je bank:")}
-                    </label>
-                    <select
-                      value={selectedBank}
-                      onChange={(e) => setSelectedBank(e.target.value)}
-                      className="w-full p-2.5 rounded-lg border border-slate-200 bg-white font-medium"
-                    >
-                      <option value="rabobank">{tr("Rabobank")}</option>
-                      <option value="ing">{tr("ING")}</option>
-                      <option value="abnamro">{tr("ABN AMRO")}</option>
-                      <option value="sns">{tr("SNS Bank")}</option>
-                      <option value="asn">{tr("ASN Bank")}</option>
-                      <option value="regiobank">{tr("RegioBank")}</option>
-                      <option value="bunq">{tr("bunq")}</option>
-                      <option value="knab">{tr("Knab")}</option>
-                      <option value="revolut">{tr("Revolut")}</option>
-                    </select>
-                  </div>
-                )}
-              </div>
-
-              {/* SEPA Bankoverschrijving */}
-              <div
-                onClick={() => setPaymentMethod('bank')}
-                className={`p-4 rounded-xl border-2 cursor-pointer transition-colors ${
-                  paymentMethod === 'bank'
-                    ? 'border-blue-600 bg-blue-50/40'
-                    : 'border-slate-200 hover:border-slate-300'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Building className="w-5 h-5 text-blue-700" />
-                  <div>
-                    <span className="font-bold text-slate-900 text-sm block">
-                      {tr("SEPA Bankoverschrijving")}
-                    </span>
-                    <span className="text-xs text-slate-500">
-                      {tr("Vooraf overboeken via factuur of internetbankieren")}
-                    </span>
-                  </div>
-                </div>
-
-                {paymentMethod === 'bank' && (
-                  <div className="mt-3 pt-3 border-t border-blue-200 text-xs space-y-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
-                    <div className="flex justify-between items-center">
-                      <span className="text-slate-500">{tr("IBAN:")}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono font-bold text-slate-900">
-                          {tr("NL91 ABNA 0412 3456 78")}
-                        </span>
-                        <button
-                          type="button"
-                          onClick={() => copyToClipboard('NL91ABNA0412345678', 'iban')}
-                          className="p-1 hover:bg-slate-200 rounded text-slate-600"
-                        >
-                          <Copy className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                    </div>
-                    {ibanCopied && (
-                      <span className="text-[10px] text-emerald-600 block text-right font-medium">
-                        {tr("✓ IBAN gekopieerd")}
-                      </span>
-                    )}
-                    <div className="flex justify-between">
-                      <span className="text-slate-500">{tr("Ten name van:")}</span>
-                      <span className="font-bold text-slate-900">{tr("E-BIKE-TEKOOP.NL B.V.")}</span>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Crypto Gateway */}
-              <div
-                onClick={() => setPaymentMethod('crypto')}
-                className={`p-4 rounded-xl border-2 cursor-pointer transition-colors ${
-                  paymentMethod === 'crypto'
-                    ? 'border-amber-500 bg-amber-50/40'
-                    : 'border-slate-200 hover:border-slate-300'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Coins className="w-5 h-5 text-amber-500" />
-                    <div>
-                      <span className="font-bold text-slate-900 text-sm block">
-                        {tr("Crypto Betaling (BTC, ETH, USDT)")}
-                      </span>
-                      <span className="text-xs text-slate-500">
-                        {tr("Live wisselkoers via distributeur gateway")}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">
-                    {tr("Web3 Gateway")}
-                  </span>
-                </div>
-
-                {paymentMethod === 'crypto' && (
-                  <div className="mt-3 pt-3 border-t border-amber-200 text-xs space-y-3 bg-white p-3 rounded-lg border border-slate-200">
-                    <div className="flex items-center justify-between">
-                      <span className="text-slate-600 font-medium">{tr("Kies coin:")}</span>
-                      <div className="flex items-center gap-1.5">
-                        {(['BTC', 'ETH', 'USDT'] as const).map((coin) => (
-                          <button
-                            key={coin}
-                            type="button"
-                            onClick={() => setCryptoAsset(coin)}
-                            className={`px-3 py-1 rounded text-xs font-bold transition-colors ${
-                              cryptoAsset === coin
-                                ? 'bg-amber-500 text-white'
-                                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                            }`}
-                          >
-                            {tr(coin)}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="p-3 bg-slate-50 rounded-lg flex items-center justify-between font-mono">
-                      <div>
-                        <div className="text-[11px] text-slate-500">{tr("Te voldoen bedrag:")}</div>
-                        <div className="text-base font-bold text-slate-900">
-                          {eurToCrypto(cartTotal, cryptoAsset)} {tr(cryptoAsset)}
-                        </div>
-                      </div>
-                      <div className="text-right text-[11px] text-amber-600 font-semibold flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5" />
-                        <span>{tr("Koers vast:")} {formatSeconds(countdown)}</span>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[11px] text-slate-500 mb-1">
-                        {tr("Stortingsadres (")}{tr(cryptoAsset)}):
-                      </label>
-                      <div className="flex items-center gap-2 bg-slate-50 p-2 rounded border border-slate-200 font-mono text-[11px] break-all">
-                        <span className="flex-1 text-slate-800">{CRYPTO_WALLETS[cryptoAsset]}</span>
-                        <button
-                          type="button"
-                          onClick={() => copyToClipboard(CRYPTO_WALLETS[cryptoAsset], 'crypto')}
-                          className="p-1 hover:bg-slate-200 rounded text-slate-600 shrink-0"
-                        >
-                          <Copy className="w-4 h-4" />
-                        </button>
-                      </div>
-                      {cryptoAddressCopied && (
-                        <span className="text-[10px] text-emerald-600 block mt-1 font-medium">
-                          {tr("✓ Adres gekopieerd")}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
+            <div className="text-xs">
+              <label htmlFor="co-notes" className="block text-slate-600 mb-1">{tr("Opmerking (optioneel)")}</label>
+              <input id="co-notes" type="text" maxLength={500} value={formData.notes} onChange={set('notes')} className={field} />
             </div>
           </div>
+
+          {/* 2. Voorkeur betaalmethode */}
+          <fieldset className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+            <legend className="text-sm font-bold text-slate-900 uppercase tracking-wider float-left w-full">
+              {tr("2. Kies Betaalmethode")}
+            </legend>
+
+            <div className="p-3 bg-blue-50 rounded-xl border border-blue-100 text-xs text-slate-700 flex items-start gap-2 clear-both">
+              <Mail className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+              <span>{tr("Je betaalt nog niet op deze pagina. Na je bestelling mailen we je de betaalgegevens voor de gekozen methode. Je bestelling is definitief zodra de betaling is ontvangen.")}</span>
+            </div>
+
+            <div className="space-y-3">
+              {METHODS.map((m) => (
+                <label
+                  key={m.id}
+                  className={`flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
+                    paymentMethod === m.id ? 'border-blue-600 bg-blue-50/40' : 'border-slate-200 hover:border-slate-300'
+                  }`}
+                >
+                  <input type="radio" name="payment" value={m.id} checked={paymentMethod === m.id} onChange={() => setPaymentMethod(m.id)} className="sr-only" />
+                  {m.icon}
+                  <span>
+                    <span className="font-bold text-slate-900 text-sm block">{tr(m.title)}</span>
+                    <span className="text-xs text-slate-500">{tr(m.hint)}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
         </div>
 
         {/* Right Column: Order Summary (5 cols) */}
-        <div className="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5 sticky top-24">
+        <div className="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5 lg:sticky lg:top-24">
           <h2 className="text-base font-bold text-slate-900">{tr("Overzicht Artikelen (")}{tr(cart.length)})</h2>
 
           <div className="divide-y divide-slate-100 max-h-60 overflow-y-auto pr-1">
@@ -473,15 +266,24 @@ export const CheckoutPage: React.FC = () => {
               <span>{tr("21% Nederlandse BTW:")}</span>
               <span className="tabular-nums font-mono">{formatEur(vatAmount)}</span>
             </div>
-            <div className="flex justify-between">
-              <span>{tr("Bezorging & 100% rijklaar:")}</span>
-              <span className="text-emerald-700 font-bold">{tr("Gratis")}</span>
+            <div className="flex justify-between gap-4">
+              <span>{tr("Verzendkosten en levertijd:")}</span>
+              <span className="text-slate-700 font-semibold text-right">{tr("bevestigen we per e-mail")}</span>
             </div>
             <div className="flex justify-between text-base font-extrabold text-slate-900 pt-2 border-t border-slate-200">
               <span>{tr("Totaal incl. BTW:")}</span>
               <span className="tabular-nums text-blue-700">{formatEur(cartTotal)}</span>
             </div>
           </div>
+
+          {/* honeypot: hidden from people, filled in by simple bots */}
+          <input tabIndex={-1} autoComplete="off" aria-hidden="true" value={formData.botcheck} onChange={set('botcheck')} className="hidden" name="botcheck" />
+
+          {error && (
+            <p role="alert" className="text-xs text-red-600">
+              {error} <a className="underline font-semibold" href={`mailto:${REPLY.channels.email}`}>{REPLY.channels.email}</a> · {REPLY.channels.phone}
+            </p>
+          )}
 
           <button
             type="submit"
@@ -492,7 +294,7 @@ export const CheckoutPage: React.FC = () => {
               <span>{tr("Bestelling wordt verwerkt...")}</span>
             ) : (
               <>
-                <span>{tr("Bestelling Plaatsen & Betalen")}</span>
+                <span>{tr("Bestelling plaatsen")}</span>
                 <ArrowRight className="w-4 h-4" />
               </>
             )}

@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: Entry[] = [
     '/',
     '/keuzehulp',
+    '/contact',
     ...ACTIVE_CATEGORY_SLUGS.map((s) => `/categorie/${s}`),
     ...subPaths,
     ...BRANDS_WITH_PRODUCTS.map((b) => `/merk/${brandSlug(b)}`),
