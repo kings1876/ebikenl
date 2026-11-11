@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { HomePage } from '@/views/HomePage';
 import { pageMeta } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
+import { HomeBlog } from '@/components/blog/HomeBlog';
 import { websiteLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = pageMeta('en', '/', {
@@ -15,6 +16,7 @@ export default function Page() {
     <>
       <JsonLd data={websiteLd('en')} />
       <HomePage />
+      <HomeBlog locale="en" />
     </>
   );
 }
