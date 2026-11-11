@@ -78,6 +78,8 @@ Kijk ook naar de standaard. Een stabiele middenstandaard is bij een bakfiets bel
 
 ## Onderhoud en slijtage
 
+Meer over onderhoud in het algemeen lees je in ons artikel over [e-bike onderhoud](/blog/e-bike-onderhoud). Over de accu zelf gaat onze gids over de [e-bike accu](/blog/e-bike-accu-capaciteit-en-levensduur).
+
 Een bakfiets werkt hard. De remmen, banden en aandrijving dragen meer gewicht dan bij een gewone fiets, dus ze slijten sneller. Controleer de remblokjes regelmatig, houd de banden op spanning en laat de ketting of riem jaarlijks nakijken. Bij een traploze naaf hoef je zelden iets bij te stellen, maar de kabel mag niet uitrekken.
 
 Laad de accu volgens de handleiding en laat hem niet maandenlang leeg staan. Een bakfiets staat vaak buiten, dus een beschutte plek of een afdekhoes helpt tegen weer en vocht. Vraag voor je koopt waar je terecht kunt voor onderhoud en onderdelen. Bij een cargofiets is dat belangrijker dan bij een stadsfiets, omdat de onderdelen specifieker zijn.

@@ -66,6 +66,8 @@ Let op de accu als je de fiets in het ov wilt meenemen. Sommige vervoerders hebb
 
 ## Schakeling en remmen
 
+Meer over onderhoud lees je in ons artikel over [e-bike onderhoud](/blog/e-bike-onderhoud). Hoe een accu werkt, leggen we uit in onze gids over de [e-bike accu](/blog/e-bike-accu-capaciteit-en-levensduur).
+
 Je kiest in onze catalogus tussen twee schakelingen. De Cube Compact Hybrid 540 en Fold Hybrid 540 hebben een Shimano Cues-kettingschakeling met negen versnellingen. De Deluxe-uitvoeringen hebben een Shimano Nexus-naaf met vijf versnellingen.
 
 De naafschakeling is de beste keuze als je de fiets vaak vouwt of tilt. Er zitten geen losse onderdelen aan de buitenkant en je schakelt ook stilstaand. De kettingschakeling geeft meer versnellingen en is een logische keuze als je veel hellingen hebt. Alle vier hebben Shimano hydraulische schijfremmen, wat prettig is bij een fiets met kleine wielen en veel gewicht.

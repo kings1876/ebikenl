@@ -58,6 +58,8 @@ Een paar onderdelen bepalen je veiligheid en het gebruiksgemak. Daarop bespaar j
 
 ## De accu: let op de capaciteit
 
+Meer over de capaciteit in Wh lees je in ons artikel over de [e-bike accu](/blog/e-bike-accu-capaciteit-en-levensduur). Het verschil tussen een naaf- en een middenmotor staat in onze vergelijking van [middenmotor of naafmotor](/blog/middenmotor-of-naafmotor).
+
 De accu is het duurste onderdeel van een e-bike. Een kleine accu geeft minder bereik, maar kost ook minder. Voor korte stadsritten van 10 tot 20 kilometer is 360 tot 400 Wh vaak genoeg. Een accu van 500 Wh of meer geeft meer vrijheid. De Tenways AGO AIR heeft 560 Wh, en de Giant AnyTour E+ 3 heeft 625 Wh. Dat is veel voor deze prijsklasse.
 
 Bereken je behoefte zo: een e-bike gebruikt grofweg 6 tot 12 Wh per kilometer. Met een accu van 400 Wh rijd je dan ongeveer 35 tot 65 kilometer. Dat is een schatting, geen garantie. Wind, gewicht, terrein en ondersteuningsstand maken veel verschil.

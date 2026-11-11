@@ -66,7 +66,7 @@ Kies bij voorkeur hydraulische schijfremmen. Die remmen goed bij regen en vragen
 
 ### Gewicht
 
-E-bikes zijn zwaarder dan gewone fietsen. De lage-instapmodellen met bekend gewicht wegen in onze catalogus tussen de 23 en 30 kilo, met een middelste waarde van ongeveer 28 kilo. Dat voel je pas als je de fiets moet tillen of een stalling in moet rijden. Denk dus na over je stalling: als je een trap of hoge stoep moet nemen, kies dan een lichter model.
+E-bikes zijn zwaarder dan gewone fietsen. De lage-instapmodellen met bekend gewicht wegen in onze catalogus tussen de 19 en 30 kilo, met een middelste waarde van ongeveer 27 kilo. Dat voel je pas als je de fiets moet tillen of een stalling in moet rijden. Denk dus na over je stalling: als je een trap of hoge stoep moet nemen, kies dan een lichter model.
 
 ## Elektrische fiets met lage instap voor ouderen
 
@@ -96,7 +96,7 @@ Dat verschil is belangrijk. Een indicatieve prijs kan afwijken van de Nederlands
 
 ## Checklist voor je een elektrische fiets met lage instap koopt
 
-1. Meet je stalling: past een fiets van ongeveer 28 kilo makkelijk naar binnen?
+1. Meet je stalling: past een fiets van ongeveer 27 kilo makkelijk naar binnen?
 2. Bepaal je gebruik en de gemiddelde afstand, en kies daarbij de accu.
 3. Kies een motor die past bij je route: 60 tot 75 Nm voor vlak, meer voor heuvels.
 4. Kies een naafschakeling als je weinig onderhoud wilt.

@@ -93,6 +93,8 @@ Regel ook de verzekering op tijd. Zonder WA-verzekering mag je niet rijden, en v
 
 ## Remmen, banden en onderhoud bij 45 km/u
 
+Algemene onderhoudstips staan in ons artikel over [e-bike onderhoud](/blog/e-bike-onderhoud). De regels voor gewone e-bikes en speed pedelecs naast elkaar lees je in onze uitleg over [e-bike regels in Nederland](/blog/e-bike-regels-nederland).
+
 Een speed pedelec rijdt harder en is zwaarder dan een gewone fiets. Daardoor slijten remmen en banden sneller. Kies een model met krachtige hydraulische schijfremmen, controleer de remblokjes regelmatig en let op de bandenspanning. Een band die te zacht staat, kost energie en vergroot de remweg.
 
 Ook de ketting of riem verdient aandacht. Bij een riemaandrijving hoef je niet te smeren, maar je controleert wel de spanning en de staat van de riem. Bij een ketting is regelmatig schoonmaken en smeren nodig. Laat de fiets jaarlijks nakijken door een vakkundige fietsenmaker die ervaring heeft met speed pedelecs.

@@ -58,7 +58,7 @@ Let bij het vergelijken op het koppel in Nm. Voor een e-MTB is 85 Nm een bruikba
 
 De accu's van onze e-MTB's liggen tussen 360 en 900 Wh. De middelste waarde is 800 Wh, dus dat is de standaard. Een grotere accu geeft meer bereik op lange tochten met veel hoogtemeters. Een kleinere accu maakt de fiets lichter en wendbaarder.
 
-Het gewicht ligt volgens de opgegeven specificaties tussen 16 en 34 kilo, met een middelste waarde van circa 24,5 kilo. Een zware e-MTB rijdt stabiel bergaf, maar is lastiger te tillen of mee te nemen op een fietsendrager. Controleer ook het maximale totaalgewicht van de fiets, zodat jij en je bagage erop passen.
+Het gewicht ligt volgens de opgegeven specificaties tussen 19 en 29 kilo, met een middelste waarde van circa 24,5 kilo. Een zware e-MTB rijdt stabiel bergaf, maar is lastiger te tillen of mee te nemen op een fietsendrager. Controleer ook het maximale totaalgewicht van de fiets, zodat jij en je bagage erop passen.
 
 Wil je extra bereik? Sommige merken bieden een tweede accu aan, ook wel range extender genoemd. Controleer of dat voor jouw model kan voor je kiest.
 
