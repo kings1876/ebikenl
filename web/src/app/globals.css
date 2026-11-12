@@ -2,7 +2,7 @@
 
 @theme inline {
   --font-sans: var(--font-jakarta);
-  --font-display: var(--font-outfit);
+  --font-display: var(--font-jakarta);
 }
 
 @layer base {
@@ -14,7 +14,7 @@
   }
 
   h1, h2, h3, .font-display {
-    font-family: var(--font-outfit), var(--font-jakarta), sans-serif;
+    font-family: var(--font-jakarta), system-ui, sans-serif;
   }
 }
 

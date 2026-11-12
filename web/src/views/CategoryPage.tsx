@@ -7,12 +7,19 @@ import { ACTIVE_TAXONOMY_CATEGORIES } from '../data/facets';
 import { useCatalog } from '@/lib/useCatalog';
 import type { ListingSeed } from '@/lib/listingSeed';
 import { ProductCard } from '../components/ProductCard';
-import { FilterSidebar } from '../components/FilterSidebar';
+import dynamic from 'next/dynamic';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { FilterState, MainCategory, SubCategory } from '../types/ebike';
 import { SlidersHorizontal } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
+
+// The filter panel loads after first paint: it is interactive-only, so it stays out of the page's critical JavaScript.
+// The placeholder keeps its column from collapsing, so nothing else moves when it arrives.
+const FilterSidebar = dynamic(() => import('../components/FilterSidebar').then((m) => m.FilterSidebar), {
+  ssr: false,
+  loading: () => <div className="min-h-[40rem]" aria-hidden="true" />,
+});
 
 // Subcategories are real routes (/categorie/<slug>/<sub>), so they render on the server and can be indexed.
 export const CategoryPage: React.FC<{ subCategory?: SubCategory; seed: ListingSeed }> = ({ subCategory, seed }) => {

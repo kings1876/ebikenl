@@ -5,7 +5,7 @@ import NextLink from 'next/link';
 import { Link } from '@/lib/router';
 import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
-import { CartDrawer } from '@/components/CartDrawer';
+import { LazyCartDrawer } from '@/components/LazyCartDrawer';
 import { Building, Coins } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
@@ -22,7 +22,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
           <Header />
 
           {/* Slide-over quick cart drawer */}
-          <CartDrawer />
+          <LazyCartDrawer />
 
           <main className="flex-1">{children}</main>
 
