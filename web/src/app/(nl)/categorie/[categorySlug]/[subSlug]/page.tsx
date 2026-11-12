@@ -8,6 +8,7 @@ import { SUB_COPY, subSlug } from '@/lib/seoCopy';
 import { CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
 import { ACTIVE_TAXONOMY_CATEGORIES, PRODUCTS } from '@/data/catalog';
 import { ModelIndex } from '@/components/ModelIndex';
+import { InfoBlock } from '@/components/InfoBlock';
 import { tx } from '@/lib/seo';
 import type { SubCategory } from '@/types/ebike';
 import { categorySeed } from '@/lib/listingSeed';
@@ -50,6 +51,7 @@ export default async function Page({ params }: Props) {
       />
       <CategoryPage subCategory={hit.sub as SubCategory} seed={categorySeed(CATEGORY_SLUG_TO_MAIN[categorySlug], hit.sub as SubCategory)} />
       <ModelIndex locale="nl" groupBy="brand" title={tx('nl', hit.sub)} products={PRODUCTS.filter((p) => p.subCategory === hit.sub)} />
+      <InfoBlock locale="nl" />
     </>
   );
 }
