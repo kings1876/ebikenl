@@ -3,6 +3,7 @@
 // Client half of ModelIndex: the same markup, but props are a compact list instead of a server-rendered tree,
 // so the page's framework payload does not carry a second copy of every link and class name.
 import Link from 'next/link';
+import { StaticHtml } from '@/components/StaticHtml';
 import { withLocale } from '@/i18n/config';
 import { useLocale, useTr } from '@/i18n/locale';
 
@@ -20,7 +21,7 @@ export function ModelIndexList({ items, translateGroups, title }: { items: Model
         {tr('Alle modellen')}: {title} ({items.length})
       </h2>
       <p className="mt-1 text-sm text-slate-600">{tr("Elk model met zijn adviesprijs. Specificaties en foto's vind je op de productpagina.")}</p>
-      <div className="mt-5 columns-1 gap-8 sm:columns-2 lg:columns-3">
+      <StaticHtml className="mt-5 columns-1 gap-8 sm:columns-2 lg:columns-3">
         {[...groups.entries()].map(([group, list]) => (
           <div key={group} className="mb-6 break-inside-avoid">
             <h3 className="text-sm font-bold text-slate-900">{translateGroups ? tr(group) : group}</h3>
@@ -36,7 +37,7 @@ export function ModelIndexList({ items, translateGroups, title }: { items: Model
             </ul>
           </div>
         ))}
-      </div>
+      </StaticHtml>
     </section>
   );
 }

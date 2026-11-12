@@ -5,6 +5,7 @@ import NextLink from 'next/link';
 import { Link } from '@/lib/router';
 import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
+import { StaticHtml } from '@/components/StaticHtml';
 import { LazyCartDrawer } from '@/components/LazyCartDrawer';
 import { Building, Coins } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
@@ -27,7 +28,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
           <main className="flex-1">{children}</main>
 
           {/* Global Dutch E-Commerce Footer */}
-          <footer className="bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
+          <StaticHtml as="footer" className="below bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {/* Col 1: About E-BIKE-TEKOOP.NL */}
@@ -156,7 +157,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                 </div>
               </div>
             </div>
-          </footer>
+          </StaticHtml>
         </div>
     </ShopProvider>
   );

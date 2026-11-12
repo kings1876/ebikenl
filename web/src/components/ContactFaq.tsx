@@ -1,6 +1,7 @@
 'use client';
 
 // Short answers to the questions customers email about most. Every answer repeats what the checkout and order emails already say.
+import { StaticHtml } from '@/components/StaticHtml';
 import { useTr } from '@/i18n/locale';
 import type { Locale } from '@/i18n/config';
 
@@ -20,14 +21,14 @@ export function ContactFaq({ locale }: { locale?: Locale }) {
   return (
     <section aria-labelledby="contact-faq-heading" className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
       <h2 id="contact-faq-heading" className="font-display text-xl font-extrabold tracking-tight text-slate-900">{tr('Veelgestelde vragen')}</h2>
-      <dl className="mt-4 grid gap-4 md:grid-cols-2">
+      <StaticHtml as="dl" className="mt-4 grid gap-4 md:grid-cols-2">
         {FAQ.map(({ q, a }) => (
           <div key={q} className="rounded-xl border border-slate-200 bg-white p-4">
             <dt className="text-sm font-bold text-slate-900">{tr(q)}</dt>
             <dd className="mt-1 text-sm text-slate-700">{tr(a)}</dd>
           </div>
         ))}
-      </dl>
+      </StaticHtml>
     </section>
   );
 }
