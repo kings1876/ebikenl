@@ -6,7 +6,7 @@ import { SITE_TRUSTPILOT_REVIEWS } from '../data/ebikes';
 import { Product, ProductCardData, Framemaat, Kleur } from '../types/ebike';
 import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { ProductCard, thumbOf } from '../components/ProductCard';
+import { ProductCard, thumbOf, midOf } from '../components/ProductCard';
 import { ProductFaq } from '../components/ProductFaq';
 import { useShop } from '../context/ShopContext';
 import {
@@ -118,6 +118,8 @@ export const ProductDetailPage: React.FC<{ product: Product; related: ProductCar
           <div className="aspect-4/3 w-full bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex items-center justify-center p-6 shadow-xs">
             <img
               src={selectedImage}
+              srcSet={midOf(selectedImage) ? `${midOf(selectedImage)} 800w, ${selectedImage} 1200w` : undefined}
+              sizes="(min-width: 1024px) 50vw, 92vw"
               width={1200}
               height={900}
               alt={product.title}
