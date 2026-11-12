@@ -1,5 +1,6 @@
 'use client';
 
+import { StaticHtml } from '@/components/StaticHtml';
 import type { Product } from '@/types/ebike';
 import { useTr } from '@/i18n/locale';
 import { formatEur, formatEurWithCents, cryptoPrice } from '@/utils/format';
@@ -89,7 +90,7 @@ export function ProductFaq({ product }: { product: Product }) {
   ];
 
   return (
-    <section aria-labelledby="faq-heading" className="faq">
+    <StaticHtml as="section" className="faq">
       <h2 id="faq-heading">{fill(tr('Veelgestelde vragen over de {title}'), vars)}</h2>
       <dl>
         {items.map(({ q, a }) => (
@@ -105,6 +106,6 @@ export function ProductFaq({ product }: { product: Product }) {
           <li key={s}>{tr(s)}</li>
         ))}
       </ol>
-    </section>
+    </StaticHtml>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
+import { StaticHtml } from '@/components/StaticHtml';
 import type { ListingStats } from '@/lib/listingStats';
 import { useLocale, useTr } from '@/i18n/locale';
 
@@ -136,13 +137,13 @@ export function ListingGuide({ name, stats }: { name: string; stats: ListingStat
   if (stats.n === 0) return null;
   return (
     <section aria-labelledby="guide-heading">
-      <div className="faq">
+      <StaticHtml className="faq">
         <h2 id="guide-heading">{fill(tr('{name}: prijzen, motoren en keuzetips'), vars)}</h2>
         <Paragraphs items={[...facts, ...advice]} vars={vars} />
         <TypeList stats={stats} />
         <h2>{tr('Veelgestelde vragen')}</h2>
         <FaqList />
-      </div>
+      </StaticHtml>
     </section>
   );
 }
@@ -151,7 +152,7 @@ export function ListingGuide({ name, stats }: { name: string; stats: ListingStat
 // Each part is its own section with its own heading; none of them needs the others.
 const Part = ({ id, children }: { id: string; children: ReactNode }) => (
   <section aria-labelledby={id} className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-    <div className="faq">{children}</div>
+    <StaticHtml className="faq">{children}</StaticHtml>
   </section>
 );
 
