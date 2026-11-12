@@ -110,7 +110,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug, seed }) =>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {pageProducts.map((p, i) => (
-            <ProductCard key={p.id} product={p} priority={i < 2} headingLevel="h2" />
+            <ProductCard key={p.id} product={p} priority={false} headingLevel="h2" />
           ))}
         </div>
         <Pagination page={currentPage} totalItems={total} onPageChange={goToPage} />
