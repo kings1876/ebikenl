@@ -1,5 +1,7 @@
 'use client';
 
+import { ListingGuide } from '@/components/ListingGuide';
+import type { ListingStats } from '@/lib/listingStats';
 import React, { useEffect } from 'react';
 import { Link } from '@/lib/router';
 import { TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
@@ -29,7 +31,7 @@ const BIKE_TYPES = [
   { sub: 'Kinder- & jongerenfietsen', blurb: 'Veilige elektrische fietsen voor jongeren.' }
 ];
 
-export const HomePage: React.FC<{ featuredProducts: ProductCardData[] }> = ({ featuredProducts }) => {
+export const HomePage: React.FC<{ featuredProducts: ProductCardData[]; stats: ListingStats }> = ({ featuredProducts, stats }) => {
   const tr = useTr();
 
   useEffect(() => {
@@ -254,6 +256,8 @@ export const HomePage: React.FC<{ featuredProducts: ProductCardData[] }> = ({ fe
           </Link>
         </div>
       </section>
+
+      <ListingGuide name={tr('Ons assortiment')} stats={stats} />
 
       {/* Trustpilot Social Proof Widget Section */}
       <TrustpilotWidget variant="full" />

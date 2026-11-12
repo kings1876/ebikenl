@@ -4,6 +4,9 @@ import { BRANDS_WITH_PRODUCTS, PRODUCTS } from '@/data/catalog';
 import { ModelIndex } from '@/components/ModelIndex';
 import { InfoBlock } from '@/components/InfoBlock';
 import { brandProducts } from '@/lib/listingSeed';
+import { brandIntro } from '@/lib/brandCopy';
+import { PAGE_SIZE } from '@/lib/listing';
+import { listingStats } from '@/lib/listingStats';
 import { BrandPage } from '@/views/BrandPage';
 import { JsonLd } from '@/components/JsonLd';
 import { brandSlug as slugify, pageMeta, tx } from '@/lib/seo';
@@ -34,7 +37,7 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <JsonLd data={breadcrumbLd('en', [{ name: brand, path: `/merk/${brandSlug}` }])} />
-      <BrandPage products={brandProducts(brand)} />
+      <BrandPage products={brandProducts(brand).slice(0, PAGE_SIZE)} total={brandProducts(brand).length} intro={brandIntro(brand, brandProducts(brand), 'en')} stats={listingStats(brandProducts(brand))} />
       <ModelIndex locale="en" groupBy="subCategory" title={brand} products={PRODUCTS.filter((p) => p.brand === brand)} />
       <InfoBlock locale="en" />
     </>

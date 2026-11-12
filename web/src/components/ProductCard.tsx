@@ -59,7 +59,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
             toggleCompare(product);
           }}
           className={compared ? 'pc-cmp pc-cmp-on' : 'pc-cmp pc-cmp-off'}
-          title={compared ? 'Verwijder uit vergelijking' : 'Vergelijk deze e-bike'}
           aria-label={tr("Vergelijk model")}
         >
           <Scale className="w-3.5 h-3.5" />
@@ -78,10 +77,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
           width={480}
           height={360}
           alt={product.title}
-          referrerPolicy="no-referrer"
           className="pc-img"
           loading={priority ? 'eager' : 'lazy'}
-          fetchPriority={priority ? 'high' : 'auto'}
+          fetchPriority={priority ? 'high' : undefined}
           decoding="async"
         />
       </Link>
@@ -105,7 +103,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
           <Link
             to={`/product/${product.slug}`}
             className="pc-link"
-            title={product.title}
           >
             {tr(product.title)}
           </Link>
@@ -113,13 +110,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
 
         {/* Key Specs unboxed metadata */}
         <div className="pc-specs">
-          <div className="pc-spec" title={tr("Motormerk en koppel")}>
+          <div className="pc-spec">
             <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
             <span className="font-medium">{tr(product.motormerk)}</span>
             {(product.motorTorqueNm ?? 0) > 0 && <span className="text-slate-500">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
-          <div className="pc-spec" title={tr("Accucapaciteit")}>
+          <div className="pc-spec">
             <Battery className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
             <span>{tr(product.accucapaciteit)}</span>
           </div>
@@ -159,7 +156,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
                 quickAddToCart(product);
               }}
               className="pc-add"
-              title={tr("Voeg toe aan winkelwagen")}
               aria-label={tr("Snel toevoegen")}
             >
               <Plus className="w-4 h-4" />

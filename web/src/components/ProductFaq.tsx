@@ -18,7 +18,8 @@ export function ProductFaq({ product }: { product: Product }) {
   const sizes = (product.framematen ?? []).join(', ');
   const motor = product.motormerk && product.motormerk !== ('Geen' as never) ? String(product.motormerk) : '';
   const vars = {
-    title: String(tr(product.title)),
+    // the model name without its spec list ("Stromer ST3", not "Stromer ST3, SYNO Drive II (820 W), 983 Wh")
+    title: String(tr(product.title.split(', ')[0])),
     brand: String(tr(product.brand)),
     sub: String(tr(product.subCategory)),
     price: formatEur(product.price),
@@ -26,6 +27,10 @@ export function ProductFaq({ product }: { product: Product }) {
     sizes,
     motor,
     battery: product.accucapaciteit ? String(product.accucapaciteit) : '',
+    model: product.motorModel ?? '',
+    torque: product.motorTorqueNm ? String(product.motorTorqueNm) : '',
+    wh: product.accuWhNumber ? String(product.accuWhNumber) : '',
+    kg: product.gewichtKg ? String(product.gewichtKg) : '',
   };
 
   const items: { q: string; a: string | string[] }[] = [
@@ -49,6 +54,19 @@ export function ProductFaq({ product }: { product: Product }) {
         'Zet de fiets op de vergelijkpagina naast andere modellen, of gebruik de keuzehulp om te zien welke e-bike bij jouw gebruik past.',
       ],
     },
+    ...(motor
+      ? [
+          {
+            q: 'Welke motor en accu heeft de {title}?',
+            a: [
+              vars.model ? 'De {title} heeft een {motor}-motor ({model}).' : 'De {title} heeft een {motor}-motor.',
+              vars.torque ? 'De motor levert {torque} Nm koppel.' : '',
+              vars.wh ? 'De accu heeft een capaciteit van {wh} Wh.' : '',
+              vars.kg ? 'Het gewicht van de fiets is {kg} kg.' : '',
+            ],
+          },
+        ]
+      : []),
     {
       q: 'Hoe wordt de {title} bezorgd?',
       a: 'We leveren gratis in heel Nederland. Bij 100% rijklaar bezorgen belt de bezorger 30 minuten van tevoren, stelt hij zadel en stuur op jouw lengte af en legt hij de boordcomputer en de accu uit. Kies je de fabrieksdoos, dan is de fiets voor 90% gemonteerd en monteer je zelf het voorwiel, het stuur en de pedalen.',
@@ -61,6 +79,9 @@ export function ProductFaq({ product }: { product: Product }) {
       q: 'Hoe betaal ik voor de {title}?',
       a: 'Je betaalt per bankoverschrijving of met crypto (BTC, USDT of ETH). Na je bestelling ontvang je de betaalgegevens en een bevestiging met je ordernummer per e-mail. Je hoeft geen account aan te maken.',
     },
+    { q: "Is de {title} nieuw?", a: "Ja. Alle e-bikes die we verkopen zijn nieuw, van bekende merken, en worden geleverd met de fabrieksgarantie van {brand}." },
+    { q: "Wat zit er in de prijs van de {title}?", a: "De prijs van {price} is inclusief 21% BTW en gratis bezorging in heel Nederland. Kies je 100% rijklaar bezorgen, dan is de fiets afgesteld op jouw lengte en klaar om te rijden." },
+    { q: "Kan ik de {title} vergelijken met andere e-bikes?", a: "Ja. Voeg de fiets met de vergelijkknop toe aan de vergelijking en zet hem naast andere modellen om motor, accu, gewicht en prijs te vergelijken. Twijfel je welke e-bike bij je past, gebruik dan de keuzehulp." },
     {
       q: 'Kan ik de {title} via mijn werkgever kopen?',
       a: 'Ja, via een fietsplan (WKR) vraag je de fiets aan via je werkgever. De factuur voldoet aan de eisen voor WKR, FiscFree en Hellorider. Op de pagina Fietsplan lees je hoe het werkt en wat het je scheelt.',

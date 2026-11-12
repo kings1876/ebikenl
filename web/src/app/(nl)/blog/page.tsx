@@ -7,6 +7,9 @@ import { blogLd } from '@/lib/blog/jsonld';
 import { getAllPosts } from '@/lib/blog/posts';
 import type { PostType } from '@/lib/blog/posts';
 import { SITE_NAME, SITE_URL } from '@/lib/seo';
+import { ListingGuide } from '@/components/ListingGuide';
+import { listingStats } from '@/lib/listingStats';
+import { CARD_PRODUCTS } from '@/data/slim';
 
 const TITLE = 'Elektrische fiets blog: koopgidsen, vergelijkingen en uitleg';
 const DESCRIPTION = 'Praktische koopgidsen, vergelijkingen en uitleg over elektrische fietsen: motor, accu, framemaat, regels en welk model bij je past.';
@@ -51,6 +54,7 @@ export default function Page() {
             </section>
           );
         })}
+        <ListingGuide name="Ons assortiment" stats={listingStats(CARD_PRODUCTS)} />
       </div>
     </>
   );

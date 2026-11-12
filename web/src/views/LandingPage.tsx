@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
 import { SEO_LANDING_PAGES, LandingPageDef } from '../data/ebikes';
 import { useCatalog } from '@/lib/useCatalog';
+import { ListingGuide } from '@/components/ListingGuide';
 import { matchesLanding } from '@/lib/landingMatch';
 import type { ListingSeed } from '@/lib/listingSeed';
 import { ProductCard } from '../components/ProductCard';
@@ -115,6 +116,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug, seed }) =>
         </div>
         <Pagination page={currentPage} totalItems={total} onPageChange={goToPage} />
       </div>
+      <ListingGuide name={tr(landing.title)} stats={seed.stats} />
     </div>
   );
 };
