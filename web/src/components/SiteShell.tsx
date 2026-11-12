@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import NextLink from 'next/link';
 import { Link } from '@/lib/router';
 import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
@@ -8,7 +9,7 @@ import { CartDrawer } from '@/components/CartDrawer';
 import { Building, Coins } from 'lucide-react';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
-import { brandSlug } from '@/lib/seo';
+import { brandSlug } from '@/lib/slug';
 import { REPLY } from '@/config/reply';
 
 export function SiteShell({ children, popularBrands = [] }: { children: React.ReactNode; popularBrands?: string[] }) {
@@ -31,7 +32,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {/* Col 1: About E-BIKE-TEKOOP.NL */}
                 <div className="space-y-3">
-                  <Link
+                  <Link prefetch={false}
                     to="/"
                     className="text-lg block"
                   >
@@ -53,32 +54,32 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                   </div>
                   <ul className="space-y-2">
                     <li>
-                      <Link to="/bosch-middenmotor" className="hover:text-white transition-colors">
+                      <Link prefetch={false} to="/bosch-middenmotor" className="hover:text-white transition-colors">
                         {tr("Bosch Middenmotor E-bikes")}
                       </Link>
                     </li>
                     <li>
-                      <Link to="/elektrische-damesfiets" className="hover:text-white transition-colors">
+                      <Link prefetch={false} to="/elektrische-damesfiets" className="hover:text-white transition-colors">
                         {tr("Elektrische Damesfietsen (Lage instap)")}
                       </Link>
                     </li>
                     <li>
-                      <Link to="/e-bike-onder-2000" className="hover:text-white transition-colors">
+                      <Link prefetch={false} to="/e-bike-onder-2000" className="hover:text-white transition-colors">
                         {tr("E-bike onder €2.000")}
                       </Link>
                     </li>
                     <li>
-                      <Link to="/fietsplan-e-bikes" className="hover:text-white transition-colors">
+                      <Link prefetch={false} to="/fietsplan-e-bikes" className="hover:text-white transition-colors">
                         {tr("Fietsplan & WKR Leasen")}
                       </Link>
                     </li>
                     <li>
-                      <Link to="/speed-pedelecs" className="hover:text-white transition-colors">
+                      <Link prefetch={false} to="/speed-pedelecs" className="hover:text-white transition-colors">
                         {tr("Speed Pedelecs (45 km/u)")}
                       </Link>
                     </li>
                     <li>
-                      <Link to="/keuzehulp" className="text-blue-400 hover:text-blue-300 font-semibold">
+                      <Link prefetch={false} to="/keuzehulp" className="text-blue-400 hover:text-blue-300 font-semibold">
                         {tr("Online E-Bike Keuzehulp")}
                       </Link>
                     </li>
@@ -92,13 +93,13 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                   </div>
                   <ul className="space-y-2">
                     <li>
-                      <Link to="/categorie/elektrische-fietsen" className="hover:text-white transition-colors">
+                      <Link prefetch={false} to="/categorie/elektrische-fietsen" className="hover:text-white transition-colors">
                         {tr("Elektrische Fietsen")}
                       </Link>
                     </li>
                     {popularBrands.map((brand) => (
                       <li key={brand}>
-                        <Link to={`/merk/${brandSlug(brand)}`} className="hover:text-white transition-colors">
+                        <Link prefetch={false} to={`/merk/${brandSlug(brand)}`} className="hover:text-white transition-colors">
                           {brand} {tr("E-Bikes")}
                         </Link>
                       </li>
@@ -135,23 +136,23 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                   © {new Date().getFullYear()} {tr("E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.")}
                 </div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                  <Link to="/taxonomie" className="text-slate-400 hover:text-white underline">
+                  <Link prefetch={false} to="/taxonomie" className="text-slate-400 hover:text-white underline">
                     {tr("Taxonomie & Architectuur")}
                   </Link>
                   <span>·</span>
-                  <Link to="/vergelijken" className="hover:text-white">
+                  <Link prefetch={false} to="/vergelijken" className="hover:text-white">
                     {tr("Vergelijk E-bikes")}
                   </Link>
                   <span>·</span>
-                  <Link to="/blog" className="hover:text-white">
+                  <NextLink prefetch={false} href="/blog" className="hover:text-white">
                     {tr("Blog")}
-                  </Link>
+                  </NextLink>
                   <span>·</span>
-                  <Link to="/contact" className="hover:text-white">
+                  <Link prefetch={false} to="/contact" className="hover:text-white">
                     {tr("Contact")}
                   </Link>
                   <span>·</span>
-                  <Link to="/winkelwagen" className="hover:text-white">
+                  <Link prefetch={false} to="/winkelwagen" className="hover:text-white">
                     {tr("Winkelwagen")}
                   </Link>
                   <span>·</span>

@@ -15,7 +15,7 @@ const TYPE_EN: Record<string, string> = { Stadsfietsen: 'electric city bike', Tr
 export function productMeta(p: Product, locale: Locale) {
   const en = locale === 'en';
   // a few models exist in two variants under one name: add the model code so titles stay unique
-  const sameName = PRODUCTS.filter((x) => x.brand === p.brand && x.model === p.model).length > 1;
+  const sameName = PRODUCTS.filter((x) => x.brand === p.brand && x.model.toLowerCase() === p.model.toLowerCase()).length > 1;
   const name = `${p.brand} ${p.model}${sameName ? ' ' + p.slug.split('-').pop()!.toUpperCase() : ''}`;
   // keep the brand suffix (" | E-BIKE-TEKOOP.NL", 19 chars) only when the whole title still fits in 60
   const base = fit(name, 53);

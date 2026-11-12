@@ -21,7 +21,7 @@ export function ProductPicks({ slugs, category, categoryLabel }: { slugs: string
       </p>
       <PickGrid picks={picks} />
       <p className="mt-6 text-center">
-        <Link href={category} className="inline-flex min-h-11 items-center rounded-xl border border-blue-300 bg-white px-5 text-sm font-bold text-blue-800 hover:bg-blue-50">
+        <Link prefetch={false} href={category} className="inline-flex min-h-11 items-center rounded-xl border border-blue-300 bg-white px-5 text-sm font-bold text-blue-800 hover:bg-blue-50">
           Bekijk alle {categoryLabel}
         </Link>
       </p>

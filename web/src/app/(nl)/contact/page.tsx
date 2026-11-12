@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { ContactPage } from '@/views/ContactPage';
 import { pageMeta } from '@/lib/seo';
+import { InfoBlock } from '@/components/InfoBlock';
 
 export const metadata: Metadata = pageMeta('nl', '/contact', {
   title: 'Contact',
@@ -8,5 +9,10 @@ export const metadata: Metadata = pageMeta('nl', '/contact', {
 });
 
 export default function Page() {
-  return <ContactPage />;
+  return (
+    <>
+      <ContactPage />
+      <InfoBlock locale="nl" />
+    </>
+  );
 }

@@ -25,7 +25,7 @@ function Switcher() {
       {(['nl', 'en'] as const).map((l, i) => (
         <span key={l} className="flex items-center gap-1">
           {i > 0 && <span className="text-slate-500">|</span>}
-          <NextLink
+          <NextLink prefetch={false}
             href={hrefFor(l)}
             hrefLang={l}
             lang={l}

@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useMemo, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from '@/lib/router';
 import { TRUSTPILOT_OVERALL_SCORE } from '../data/ebikes';
-import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
+import type { ProductCardData } from '../types/ebike';
 import { ProductCard } from '../components/ProductCard';
 import { TrustpilotWidget } from '../components/TrustpilotWidget';
 import {
@@ -29,20 +29,12 @@ const BIKE_TYPES = [
   { sub: 'Kinder- & jongerenfietsen', blurb: 'Veilige elektrische fietsen voor jongeren.' }
 ];
 
-export const HomePage: React.FC = () => {
+export const HomePage: React.FC<{ featuredProducts: ProductCardData[] }> = ({ featuredProducts }) => {
   const tr = useTr();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const featuredProducts = useMemo(
-    () =>
-      PRODUCTS.filter((p) => p.category === 'Elektrische fietsen')
-        .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0) || (b.reviewCount ?? 0) - (a.reviewCount ?? 0))
-        .slice(0, 6),
-    []
-  );
 
   return (
     <div className="space-y-8">

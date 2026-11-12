@@ -1,7 +1,6 @@
-import type { ReactNode } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import { SiteShell } from '@/components/SiteShell';
-import { LocaleProvider } from '@/i18n/locale';
 import type { Locale } from '@/i18n/config';
 import { SITE_URL, tx } from '@/lib/seo';
 import { POPULAR_BRANDS } from '@/data/catalog';
@@ -38,14 +37,15 @@ const ORGANIZATION_LD = {
   logo: `${SITE_URL}/apple-icon.png`,
 };
 
-export function RootLayoutBase({ locale, children }: { locale: Locale; children: ReactNode }) {
+// The provider is passed in by each locale's layout so the English dictionary only ever reaches /en pages.
+export function RootLayoutBase({ locale, Provider, children }: { locale: Locale; Provider: ComponentType<{ children: ReactNode }>; children: ReactNode }) {
   return (
     <html lang={locale} className={`${jakarta.variable} ${outfit.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_LD) }} />
-        <LocaleProvider locale={locale}>
+        <Provider>
           <SiteShell popularBrands={POPULAR_BRANDS}>{children}</SiteShell>
-        </LocaleProvider>
+        </Provider>
       </body>
     </html>
   );

@@ -70,7 +70,7 @@ export const CATEGORY_META: Record<string, { title: string; description: string 
   },
 };
 
-export const brandSlug = (b: string) => b.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+export { brandSlug } from './slug';
 
 export const LANDING_SLUGS = [
   'bosch-middenmotor',

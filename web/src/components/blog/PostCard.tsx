@@ -8,7 +8,7 @@ export function PostCard({ post, minutes, headingLevel = 'h2' }: { post: PostMet
   const Heading = headingLevel;
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-shadow hover:shadow-md">
-      <Link href={`/blog/${post.slug}`} className="block aspect-[4/3] overflow-hidden bg-white" tabIndex={-1} aria-hidden="true">
+      <Link prefetch={false} href={`/blog/${post.slug}`} className="block aspect-[4/3] overflow-hidden bg-white" tabIndex={-1} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={thumb(post.image)} alt="" width={480} height={360} loading="lazy" decoding="async" className="h-full w-full object-contain p-2 transition-transform group-hover:scale-[1.02]" />
       </Link>
@@ -19,7 +19,7 @@ export function PostCard({ post, minutes, headingLevel = 'h2' }: { post: PostMet
           <span className="font-semibold normal-case tracking-normal text-slate-500">{minutes} min leestijd</span>
         </div>
         <Heading className="font-display text-lg font-extrabold leading-snug text-slate-900">
-          <Link href={`/blog/${post.slug}`} className="hover:text-blue-700">{post.h1}</Link>
+          <Link prefetch={false} href={`/blog/${post.slug}`} className="hover:text-blue-700">{post.h1}</Link>
         </Heading>
         <p className="line-clamp-3 text-sm leading-relaxed text-slate-600">{post.description}</p>
       </div>

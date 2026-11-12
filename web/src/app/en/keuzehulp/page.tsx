@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { KeuzehulpPage } from '@/views/KeuzehulpPage';
 import { pageMeta } from '@/lib/seo';
+import { InfoBlock } from '@/components/InfoBlock';
 
 export const metadata: Metadata = pageMeta('en', '/keuzehulp', {
   title: 'E-bike keuzehulp: vind jouw ideale fiets',
@@ -8,5 +9,10 @@ export const metadata: Metadata = pageMeta('en', '/keuzehulp', {
 });
 
 export default function Page() {
-  return <KeuzehulpPage />;
+  return (
+    <>
+      <KeuzehulpPage />
+      <InfoBlock locale="en" />
+    </>
+  );
 }

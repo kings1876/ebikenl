@@ -23,7 +23,7 @@ export function HomeBlog({ locale = 'nl' }: { locale?: Locale }) {
           <h2 id="home-blog-heading" className="font-display text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">{t.heading}</h2>
           <p className="mt-1 text-sm text-slate-600">{t.intro}</p>
         </div>
-        <Link href="/blog" className="text-sm font-bold text-blue-700 underline underline-offset-2 hover:text-blue-900">{t.all}</Link>
+        <Link prefetch={false} href="/blog" className="text-sm font-bold text-blue-700 underline underline-offset-2 hover:text-blue-900">{t.all}</Link>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3" lang="nl">
         {posts.map((p) => (

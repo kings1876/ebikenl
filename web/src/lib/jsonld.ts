@@ -1,5 +1,5 @@
-// Schema.org builders. Only facts the site really has: no ratings or reviews, and an Offer only where the
-// price is the manufacturer's own EUR list price (converted/indicative prices stay out of structured data).
+// Schema.org builders. Only facts the site really has: no invented ratings or reviews. Every product carries an
+// Offer with the price the shop shows (for converted prices the page itself says the price is indicative).
 import { SITE_URL, SITE_NAME, tx } from './seo';
 import { withLocale } from '@/i18n/config';
 import type { Locale } from '@/i18n/config';
@@ -31,7 +31,6 @@ export function websiteLd(locale: Locale) {
 }
 
 export function productLd(p: Product, locale: Locale) {
-  const manufacturerEur = p.priceInfo?.originalCurrency === 'EUR';
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -41,8 +40,6 @@ export function productLd(p: Product, locale: Locale) {
     image: p.galleryImages.map((src) => `${SITE_URL}${src}`),
     description: tx(locale, p.description),
     brand: { '@type': 'Brand', name: p.brand },
-    ...(manufacturerEur
-      ? { offers: { '@type': 'Offer', url: abs(`/product/${p.slug}`, locale), price: p.price, priceCurrency: 'EUR', itemCondition: 'https://schema.org/NewCondition' } }
-      : {}),
+    offers: { '@type': 'Offer', url: abs(`/product/${p.slug}`, locale), price: p.price, priceCurrency: 'EUR', itemCondition: 'https://schema.org/NewCondition' },
   };
 }

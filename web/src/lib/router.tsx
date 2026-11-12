@@ -20,7 +20,8 @@ type LinkProps = Omit<ComponentProps<typeof NextLink>, 'href'> & { to: string };
 
 export function Link({ to, ...rest }: LinkProps) {
   const locale = useLocale();
-  return <NextLink href={withLocale(to, locale)} {...rest} />;
+  // No automatic prefetch: a listing has dozens of links and prefetching each one downloads their JavaScript up front.
+  return <NextLink href={withLocale(to, locale)} prefetch={false} {...rest} />;
 }
 
 const STATE_KEY = 'ebt:nav-state';

@@ -34,7 +34,7 @@ function inline(text: string, keyBase: string): ReactNode[] {
             {m[1]}
           </a>
         ) : (
-          <Link key={key} href={href} className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900">
+          <Link prefetch={false} key={key} href={href} className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900">
             {m[1]}
           </Link>
         ),

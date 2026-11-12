@@ -123,7 +123,7 @@ export default async function Page({ params }: Props) {
               ))}
             </div>
             <p className="mt-6 text-center">
-              <Link href="/blog" className="text-sm font-bold text-blue-700 underline underline-offset-2 hover:text-blue-900">Alle artikelen</Link>
+              <Link prefetch={false} href="/blog" className="text-sm font-bold text-blue-700 underline underline-offset-2 hover:text-blue-900">Alle artikelen</Link>
             </p>
           </section>
         )}

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import NextLink from 'next/link';
 import { Link, useLocation } from '@/lib/router';
 import { ShoppingBag, Scale, Compass, Layers } from 'lucide-react';
 import { formatEur } from '../utils/format';
@@ -47,7 +48,7 @@ export const Header: React.FC = () => {
       {/* Main Top Bar adhering strictly to Top Bar Contract */}
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-8 px-4 sm:px-6 lg:px-8 h-18">
         {/* Zone 1: Single text element Brand Zone */}
-        <Link
+        <Link prefetch={false}
           to="/"
           className="text-xl sm:text-2xl shrink-0 hover:opacity-90 transition-opacity"
         >
@@ -56,7 +57,7 @@ export const Header: React.FC = () => {
 
         {/* Zone 2: 4-5 single-line clean nav links with real URLs */}
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700">
-          <Link
+          <Link prefetch={false}
             to="/categorie/elektrische-fietsen"
             className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
               isActive('/categorie') ? 'text-blue-600 font-semibold' : ''
@@ -65,7 +66,7 @@ export const Header: React.FC = () => {
             {tr("Elektrische Fietsen")}
           </Link>
 
-          <Link
+          <Link prefetch={false}
             to="/bosch-middenmotor"
             className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
               isActive('/bosch-middenmotor') ? 'text-blue-600 font-semibold' : ''
@@ -74,7 +75,7 @@ export const Header: React.FC = () => {
             {tr("Bosch Middenmotor")}
           </Link>
 
-          <Link
+          <Link prefetch={false}
             to="/fietsplan-e-bikes"
             className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
               isActive('/fietsplan-e-bikes') ? 'text-blue-600 font-semibold' : ''
@@ -83,16 +84,16 @@ export const Header: React.FC = () => {
             {tr("Fietsplan (WKR)")}
           </Link>
 
-          <Link
-            to="/blog"
+          <NextLink prefetch={false}
+            href="/blog"
             className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
               isActive('/blog') ? 'text-blue-600 font-semibold' : ''
             }`}
           >
             {tr("Blog")}
-          </Link>
+          </NextLink>
 
-          <Link
+          <Link prefetch={false}
             to="/keuzehulp"
             className={`flex items-center gap-1.5 whitespace-nowrap shrink-0 transition-colors ${
               isActive('/keuzehulp')
@@ -104,7 +105,7 @@ export const Header: React.FC = () => {
             <span>{tr("Keuzehulp")}</span>
           </Link>
 
-          <Link
+          <Link prefetch={false}
             to="/taxonomie"
             className={`flex items-center gap-1 whitespace-nowrap shrink-0 text-xs px-2 py-1 rounded border transition-colors ${
               isActive('/taxonomie')
@@ -121,7 +122,7 @@ export const Header: React.FC = () => {
         {/* Zone 3: 1 primary action */}
         <div className="flex items-center gap-3 shrink-0">
           {comparedProducts.length > 0 && (
-            <Link
+            <Link prefetch={false}
               to="/vergelijken"
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors whitespace-nowrap"
             >
@@ -130,7 +131,7 @@ export const Header: React.FC = () => {
             </Link>
           )}
 
-          <Link
+          <Link prefetch={false}
             to="/winkelwagen"
             className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm hover:shadow active:scale-[0.99]"
             aria-label={tr("Winkelwagen openen")}
@@ -152,7 +153,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile navigation row with distinct URLs */}
       <div className="lg:hidden flex items-center justify-between px-4 py-2 border-t border-slate-100 bg-slate-50/70 overflow-x-auto text-xs font-medium text-slate-700 gap-4">
-        <Link
+        <Link prefetch={false}
           to="/categorie/elektrische-fietsen"
           className={`whitespace-nowrap hover:text-blue-600 ${
             isActive('/categorie') ? 'text-blue-600 font-semibold' : ''
@@ -160,7 +161,7 @@ export const Header: React.FC = () => {
         >
           {tr("Elektrische Fietsen")}
         </Link>
-        <Link
+        <Link prefetch={false}
           to="/bosch-middenmotor"
           className={`whitespace-nowrap hover:text-blue-600 ${
             isActive('/bosch-middenmotor') ? 'text-blue-600 font-semibold' : ''
@@ -168,7 +169,7 @@ export const Header: React.FC = () => {
         >
           {tr("Bosch Middenmotor")}
         </Link>
-        <Link
+        <Link prefetch={false}
           to="/fietsplan-e-bikes"
           className={`whitespace-nowrap hover:text-blue-600 ${
             isActive('/fietsplan-e-bikes') ? 'text-blue-600 font-semibold' : ''
@@ -176,15 +177,15 @@ export const Header: React.FC = () => {
         >
           {tr("Fietsplan (WKR)")}
         </Link>
-        <Link
-          to="/blog"
+        <NextLink prefetch={false}
+          href="/blog"
           className={`whitespace-nowrap hover:text-blue-600 ${
             isActive('/blog') ? 'text-blue-600 font-semibold' : ''
           }`}
         >
           {tr("Blog")}
-        </Link>
-        <Link
+        </NextLink>
+        <Link prefetch={false}
           to="/keuzehulp"
           className={`whitespace-nowrap text-blue-600 font-semibold ${
             isActive('/keuzehulp') ? 'underline' : ''
@@ -192,7 +193,7 @@ export const Header: React.FC = () => {
         >
           {tr("Keuzehulp")}
         </Link>
-        <Link
+        <Link prefetch={false}
           to="/taxonomie"
           className={`whitespace-nowrap text-slate-500 ${
             isActive('/taxonomie') ? 'font-bold text-slate-900' : ''

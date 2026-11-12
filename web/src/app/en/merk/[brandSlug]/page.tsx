@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { BRANDS_WITH_PRODUCTS } from '@/data/catalog';
+import { BRANDS_WITH_PRODUCTS, PRODUCTS } from '@/data/catalog';
+import { ModelIndex } from '@/components/ModelIndex';
+import { InfoBlock } from '@/components/InfoBlock';
 import { BrandPage } from '@/views/BrandPage';
 import { JsonLd } from '@/components/JsonLd';
 import { brandSlug as slugify, pageMeta, tx } from '@/lib/seo';
@@ -32,6 +34,8 @@ export default async function Page({ params }: Props) {
     <>
       <JsonLd data={breadcrumbLd('en', [{ name: brand, path: `/merk/${brandSlug}` }])} />
       <BrandPage />
+      <ModelIndex locale="en" groupBy="subCategory" title={brand} products={PRODUCTS.filter((p) => p.brand === brand)} />
+      <InfoBlock locale="en" />
     </>
   );
 }

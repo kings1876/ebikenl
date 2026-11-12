@@ -6,7 +6,9 @@ import { pageMeta } from '@/lib/seo';
 import { breadcrumbLd } from '@/lib/jsonld';
 import { SUB_COPY, subSlug } from '@/lib/seoCopy';
 import { CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
-import { ACTIVE_TAXONOMY_CATEGORIES } from '@/data/catalog';
+import { ACTIVE_TAXONOMY_CATEGORIES, PRODUCTS } from '@/data/catalog';
+import { ModelIndex } from '@/components/ModelIndex';
+import { tx } from '@/lib/seo';
 import type { SubCategory } from '@/types/ebike';
 
 type Props = { params: Promise<{ categorySlug: string; subSlug: string }> };
@@ -46,6 +48,7 @@ export default async function Page({ params }: Props) {
         ])}
       />
       <CategoryPage subCategory={hit.sub as SubCategory} />
+      <ModelIndex locale="nl" groupBy="brand" title={tx('nl', hit.sub)} products={PRODUCTS.filter((p) => p.subCategory === hit.sub)} />
     </>
   );
 }

@@ -5,7 +5,9 @@ import { JsonLd } from '@/components/JsonLd';
 import { CATEGORY_META, pageMeta } from '@/lib/seo';
 import { breadcrumbLd } from '@/lib/jsonld';
 import { CATEGORY_SLUG_TO_MAIN } from '@/data/ebikes';
-import { ACTIVE_CATEGORY_SLUGS } from '@/data/catalog';
+import { ACTIVE_CATEGORY_SLUGS, PRODUCTS } from '@/data/catalog';
+import { ModelIndex } from '@/components/ModelIndex';
+import { tx } from '@/lib/seo';
 
 type Props = { params: Promise<{ categorySlug: string }> };
 
@@ -26,6 +28,7 @@ export default async function Page({ params }: Props) {
     <>
       <JsonLd data={breadcrumbLd('nl', [{ name: CATEGORY_SLUG_TO_MAIN[categorySlug], path: `/categorie/${categorySlug}` }])} />
       <CategoryPage />
+      <ModelIndex locale="nl" groupBy="brand" title={tx('nl', CATEGORY_SLUG_TO_MAIN[categorySlug])} products={PRODUCTS.filter((p) => p.category === CATEGORY_SLUG_TO_MAIN[categorySlug])} />
     </>
   );
 }
