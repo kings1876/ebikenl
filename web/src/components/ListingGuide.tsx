@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import type { ListingStats } from '@/lib/listingStats';
 import { useLocale, useTr } from '@/i18n/locale';
 
@@ -56,15 +57,11 @@ const FAQ: { q: string; a: string }[] = [
   },
 ];
 
-/**
- * Guide text under a listing, written from the facts of the products on it (how many, what they cost, which brands and motors),
- * followed by short answers to the questions buyers ask most. A client component so the text is rendered once in the page's HTML
- * and not a second time in the framework payload; only the numbers travel as props.
- */
-export function ListingGuide({ name, stats }: { name: string; stats: ListingStats }) {
+type GuideData = { vars: Record<string, string | number>; facts: string[]; advice: string[] };
+
+function useGuideData(name: string, stats: ListingStats): GuideData {
   const tr = useTr();
   const locale = useLocale();
-  if (stats.n === 0) return null;
   const eur = (n: number) => `€${n.toLocaleString(locale === 'en' ? 'en-GB' : 'nl-NL')}`;
   const list = (items: [string, number][], translate = false) => items.map(([k, c]) => `${translate ? tr(k) : k} (${c})`).join(', ');
   const vars = {
@@ -80,45 +77,118 @@ export function ListingGuide({ name, stats }: { name: string; stats: ListingStat
     minWh: stats.minWh,
     maxWh: stats.maxWh,
   };
-  const paragraphs = [
+  const facts = [
     stats.n === 1
       ? 'In deze selectie vind je 1 model, met een adviesprijs van {min} inclusief 21% BTW.'
       : 'In deze selectie vind je {n} modellen. De adviesprijzen lopen van {min} tot {max}; de middelste prijs is {median}, inclusief 21% BTW.',
     stats.brands.length > 1 ? 'Merken in deze selectie: {brands}.' : '',
     stats.types.length > 1 ? 'Het aanbod bestaat uit: {types}.' : '',
     stats.motors.length ? 'De motoren komen van {motors}.' : '',
-    stats.maxWh ? 'De accu\'s hebben een capaciteit van {minWh} tot {maxWh} Wh. Een grotere accu geeft meer bereik, maar maakt de fiets ook zwaarder en duurder.' : '',
+    stats.maxWh ? "De accu's hebben een capaciteit van {minWh} tot {maxWh} Wh. Een grotere accu geeft meer bereik, maar maakt de fiets ook zwaarder en duurder." : '',
     stats.audiences.length > 1 ? 'Er zijn modellen voor: {audiences}.' : '',
-    'Kies motor en accu op basis van je route. Voor vlak terrein en korte ritten is een lichte motor met een kleinere accu genoeg. Voor heuvels, zware belading of lange ritten kies je een krachtige motor met een grotere accu. Let ook op de framemaat en de framevorm: een lage instap stapt makkelijker op en af, een diamantframe is stijver en sportiever.',
-    "Vergelijk e-bikes op vier punten: de motor (merk en koppel in Nm), de accu (capaciteit in Wh), het gewicht en het frame. Meer koppel helpt bij heuvels en zware belading, een lichtere fiets rijdt en draagt makkelijker. Zet je favorieten naast elkaar op de vergelijkpagina om de verschillen te zien.",
-    "Op elke productpagina vind je de volledige specificaties, de beschikbare framematen en kleuren en de manier van bezorgen. Staat je vraag er niet bij, mail dan naar verkoop@e-bike-tekoop.nl; we helpen je graag bij het kiezen van het juiste model en de juiste maat.",
-    'Alle e-bikes zijn nieuw en worden gratis bezorgd in heel Nederland. Je betaalt per bankoverschrijving of met crypto (BTC, USDT of ETH) met 10% korting. Twijfel je tussen modellen? Gebruik de keuzehulp of zet e-bikes naast elkaar op de vergelijkpagina.',
   ].filter(Boolean);
+  const advice = [
+    'Kies motor en accu op basis van je route. Voor vlak terrein en korte ritten is een lichte motor met een kleinere accu genoeg. Voor heuvels, zware belading of lange ritten kies je een krachtige motor met een grotere accu. Let ook op de framemaat en de framevorm: een lage instap stapt makkelijker op en af, een diamantframe is stijver en sportiever.',
+    'Vergelijk e-bikes op vier punten: de motor (merk en koppel in Nm), de accu (capaciteit in Wh), het gewicht en het frame. Meer koppel helpt bij heuvels en zware belading, een lichtere fiets rijdt en draagt makkelijker. Zet je favorieten naast elkaar op de vergelijkpagina om de verschillen te zien.',
+    'Op elke productpagina vind je de volledige specificaties, de beschikbare framematen en kleuren en de manier van bezorgen. Staat je vraag er niet bij, mail dan naar verkoop@e-bike-tekoop.nl; we helpen je graag bij het kiezen van het juiste model en de juiste maat.',
+    'Alle e-bikes zijn nieuw en worden gratis bezorgd in heel Nederland. Je betaalt per bankoverschrijving of met crypto (BTC, USDT of ETH) met 10% korting. Twijfel je tussen modellen? Gebruik de keuzehulp of zet e-bikes naast elkaar op de vergelijkpagina.',
+  ];
+  return { vars, facts, advice };
+}
 
+function Paragraphs({ items, vars }: { items: string[]; vars: GuideData['vars'] }) {
+  const tr = useTr();
+  return items.map((p) => (
+    <p key={p} className="mt-3 leading-relaxed">
+      {fill(tr(p), vars)}
+    </p>
+  ));
+}
+
+function TypeList({ stats }: { stats: ListingStats }) {
+  const tr = useTr();
+  if (stats.types.length < 2) return null;
+  return (
+    <ul className="mt-3 list-disc space-y-1 pl-5">
+      {stats.types.map(([t]) => TYPE_INFO[t] && <li key={t}>{tr(TYPE_INFO[t])}</li>)}
+    </ul>
+  );
+}
+
+function FaqList() {
+  const tr = useTr();
+  return (
+    <dl>
+      {FAQ.map(({ q, a }) => (
+        <div key={q}>
+          <dt>{tr(q)}</dt>
+          <dd>{tr(a)}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+/** The guide as one block: facts, buying advice and FAQ together. Used under listings. */
+export function ListingGuide({ name, stats }: { name: string; stats: ListingStats }) {
+  const tr = useTr();
+  const { vars, facts, advice } = useGuideData(name, stats);
+  if (stats.n === 0) return null;
   return (
     <section aria-labelledby="guide-heading">
       <div className="faq">
-      <h2 id="guide-heading">{fill(tr('{name}: prijzen, motoren en keuzetips'), vars)}</h2>
-      {paragraphs.map((p) => (
-        <p key={p} className="mt-3 leading-relaxed">
-          {fill(tr(p), vars)}
-        </p>
-      ))}
-      {stats.types.length > 1 && (
-        <ul className="mt-3 list-disc space-y-1 pl-5">
-          {stats.types.map(([t]) => TYPE_INFO[t] && <li key={t}>{tr(TYPE_INFO[t])}</li>)}
-        </ul>
-      )}
-      <h2>{tr('Veelgestelde vragen')}</h2>
-      <dl>
-        {FAQ.map(({ q, a }) => (
-          <div key={q}>
-            <dt>{tr(q)}</dt>
-            <dd>{tr(a)}</dd>
-          </div>
-        ))}
-      </dl>
+        <h2 id="guide-heading">{fill(tr('{name}: prijzen, motoren en keuzetips'), vars)}</h2>
+        <Paragraphs items={[...facts, ...advice]} vars={vars} />
+        <TypeList stats={stats} />
+        <h2>{tr('Veelgestelde vragen')}</h2>
+        <FaqList />
       </div>
     </section>
+  );
+}
+
+// The same text in three parts, so a page can place them apart (the home page puts one between each of its sections).
+// Each part is its own section with its own heading; none of them needs the others.
+const Part = ({ id, children }: { id: string; children: ReactNode }) => (
+  <section aria-labelledby={id} className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+    <div className="faq">{children}</div>
+  </section>
+);
+
+/** Part 1: the numbers (how many models, prices, brands, motors, batteries) and what each type of bike is for. */
+export function GuideFacts({ name, stats }: { name: string; stats: ListingStats }) {
+  const tr = useTr();
+  const { vars, facts } = useGuideData(name, stats);
+  if (stats.n === 0) return null;
+  return (
+    <Part id="guide-facts">
+      <h2 id="guide-facts">{fill(tr('{name} in het kort'), vars)}</h2>
+      <Paragraphs items={facts} vars={vars} />
+      <TypeList stats={stats} />
+    </Part>
+  );
+}
+
+/** Part 2: how to choose, compare, and order. */
+export function GuideAdvice({ name, stats }: { name: string; stats: ListingStats }) {
+  const tr = useTr();
+  const { vars, advice } = useGuideData(name, stats);
+  if (stats.n === 0) return null;
+  return (
+    <Part id="guide-advice">
+      <h2 id="guide-advice">{tr('Zo kies je de juiste e-bike')}</h2>
+      <Paragraphs items={advice} vars={vars} />
+    </Part>
+  );
+}
+
+/** Part 3: the questions buyers ask most. */
+export function GuideFaq() {
+  const tr = useTr();
+  return (
+    <Part id="guide-faq">
+      <h2 id="guide-faq">{tr('Veelgestelde vragen')}</h2>
+      <FaqList />
+    </Part>
   );
 }

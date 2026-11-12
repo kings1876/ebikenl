@@ -873,5 +873,7 @@
   "De {title} heeft een {motor}-motor.": "The {title} has a {motor} motor.",
   "De motor levert {torque} Nm koppel.": "The motor delivers {torque} Nm of torque.",
   "De accu heeft een capaciteit van {wh} Wh.": "The battery has a capacity of {wh} Wh.",
-  "Het gewicht van de fiets is {kg} kg.": "The bike weighs {kg} kg."
+  "Het gewicht van de fiets is {kg} kg.": "The bike weighs {kg} kg.",
+  "{name} in het kort": "{name} at a glance",
+  "Zo kies je de juiste e-bike": "How to choose the right e-bike"
 }

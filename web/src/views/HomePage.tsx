@@ -1,6 +1,6 @@
 'use client';
 
-import { ListingGuide } from '@/components/ListingGuide';
+import { GuideAdvice, GuideFacts, GuideFaq } from '@/components/ListingGuide';
 import type { ListingStats } from '@/lib/listingStats';
 import React, { useEffect } from 'react';
 import { Link } from '@/lib/router';
@@ -227,6 +227,9 @@ export const HomePage: React.FC<{ featuredProducts: ProductCardData[]; stats: Li
       </section>
       )}
 
+      {/* Part 1 of the guide: the assortment in numbers */}
+      <GuideFacts name={tr('Ons assortiment')} stats={stats} />
+
       {/* Why us */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -257,10 +260,14 @@ export const HomePage: React.FC<{ featuredProducts: ProductCardData[]; stats: Li
         </div>
       </section>
 
-      <ListingGuide name={tr('Ons assortiment')} stats={stats} />
+      {/* Part 2: how to choose */}
+      <GuideAdvice name={tr('Ons assortiment')} stats={stats} />
 
       {/* Trustpilot Social Proof Widget Section */}
       <TrustpilotWidget variant="full" />
+
+      {/* Part 3: frequently asked questions */}
+      <GuideFaq />
     </div>
   );
 };
