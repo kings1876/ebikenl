@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from '@/lib/router';
 import { ProductCardData } from '../types/ebike';
 import { formatEur, eurToCrypto, cryptoPrice } from '../utils/format';
-import { Battery, Zap, Truck, Scale, Plus } from 'lucide-react';
+import { Battery, Zap, Truck, Scale, Plus } from '@/components/icons';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
 

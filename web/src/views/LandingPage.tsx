@@ -7,7 +7,7 @@ import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
-import { CheckCircle, Tag, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { CheckCircle, Tag, ArrowRight, ShieldCheck, Zap } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 interface LandingPageProps {

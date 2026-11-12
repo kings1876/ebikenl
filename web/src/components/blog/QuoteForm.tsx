@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { CheckCircle, Mail } from 'lucide-react';
+import { CheckCircle, Mail } from '@/components/icons';
 
 export const QUOTE_EVENT = 'blog:quote';
 

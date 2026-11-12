@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MessageSquareQuote, ShoppingBag } from 'lucide-react';
+import { MessageSquareQuote, ShoppingBag } from '@/components/icons';
 import { QUOTE_EVENT } from './QuoteForm';
 
 /** Mid-article call to action: jump to the order cards or to the free quote form. */

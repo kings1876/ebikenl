@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
 import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
-import { X, Trash2, ShoppingBag, Truck, ShieldCheck, ArrowRight, Coins } from 'lucide-react';
+import { X, Trash2, ShoppingBag, Truck, ShieldCheck, ArrowRight, Coins } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 export const CartDrawer: React.FC = () => {

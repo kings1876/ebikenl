@@ -5,7 +5,7 @@ import { useNavigate, Link } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
 import { formatEur, formatEurWithCents, calculateVat, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { Building, Coins, Mail, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Building, Coins, Mail, ShieldCheck, ArrowRight, ArrowLeft } from '@/components/icons';
 import { useLocale, useTr } from '@/i18n/locale';
 import { discountFor, makeOrderNumber } from '@/lib/reply/order';
 import { REPLY } from '@/config/reply';

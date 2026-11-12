@@ -9,7 +9,7 @@ import { FilterSidebar } from '../components/FilterSidebar';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { FilterState, MainCategory, SubCategory } from '../types/ebike';
-import { SlidersHorizontal } from 'lucide-react';
+import { SlidersHorizontal } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 // Subcategories are real routes (/categorie/<slug>/<sub>), so they render on the server and can be indexed.

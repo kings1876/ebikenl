@@ -6,7 +6,7 @@ import { useShop } from '../context/ShopContext';
 import { ProductCardData } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { Trash2, Plus, ShoppingBag, ArrowLeft } from 'lucide-react';
+import { Trash2, Plus, ShoppingBag, ArrowLeft } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 export const ComparePage: React.FC = () => {

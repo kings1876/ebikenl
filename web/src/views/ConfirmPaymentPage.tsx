@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle } from '@/components/icons';
 import { useLocale, useTr } from '@/i18n/locale';
 import { useQueryParam } from '@/lib/useQueryParam';
 

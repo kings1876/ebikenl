@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from '@/lib/router';
-import { Battery, ShoppingBag, Zap } from 'lucide-react';
+import { Battery, ShoppingBag, Zap } from '@/components/icons';
 import { useShop } from '@/context/ShopContext';
 import { formatEur } from '@/utils/format';
 import type { ProductCardData } from '@/types/ebike';

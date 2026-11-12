@@ -40,6 +40,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // the icon sprite's file name carries a content hash, so it can be cached for good
+        source: '/:file(icons\\.[0-9a-f]{8}\\.svg)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
         source: '/:path*',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },

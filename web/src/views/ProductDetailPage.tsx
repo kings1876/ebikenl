@@ -22,7 +22,7 @@ import {
   Sparkles,
   ShoppingBag,
   ArrowLeft
-} from 'lucide-react';
+} from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 import { subHref } from '../lib/seoCopy';
 

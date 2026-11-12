@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle, Mail } from 'lucide-react';
+import { CheckCircle, Mail } from '@/components/icons';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { useLocale, useTr } from '@/i18n/locale';
 import { REPLY } from '@/config/reply';

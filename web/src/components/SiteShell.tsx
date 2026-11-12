@@ -6,7 +6,7 @@ import { Link } from '@/lib/router';
 import { ShopProvider } from '@/context/ShopContext';
 import { Header } from '@/components/Header';
 import { CartDrawer } from '@/components/CartDrawer';
-import { Building, Coins } from 'lucide-react';
+import { Building, Coins } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 import { Logo } from './Logo';
 import { brandSlug } from '@/lib/slug';
@@ -136,10 +136,6 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                   © {new Date().getFullYear()} {tr("E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.")}
                 </div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                  <Link prefetch={false} to="/taxonomie" className="text-slate-400 hover:text-white underline">
-                    {tr("Taxonomie & Architectuur")}
-                  </Link>
-                  <span>·</span>
                   <Link prefetch={false} to="/vergelijken" className="hover:text-white">
                     {tr("Vergelijk E-bikes")}
                   </Link>

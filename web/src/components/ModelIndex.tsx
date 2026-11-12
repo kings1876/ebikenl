@@ -29,13 +29,13 @@ export function ModelIndex({ locale, products, groupBy, title }: { locale: Local
         {[...groups.entries()].map(([group, items]) => (
           <div key={group} className="mb-6 break-inside-avoid">
             <h3 className="text-sm font-bold text-slate-900">{groupBy === 'subCategory' ? tx(locale, group) : group}</h3>
-            <ul className="mt-2 space-y-1 text-sm">
+            <ul className="mt-2 space-y-1 text-sm [&_a]:text-blue-700 [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-blue-900">
               {items.map((p) => (
                 <li key={p.slug}>
-                  <Link prefetch={false} href={withLocale(`/product/${p.slug}`, locale)} className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                  <Link prefetch={false} href={withLocale(`/product/${p.slug}`, locale)}>
                     {label(p)}
                   </Link>
-                  <span className="text-slate-600"> · {eur(p.price)}</span>
+                   · {eur(p.price)}
                 </li>
               ))}
             </ul>

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Check, Copy } from 'lucide-react';
+import { Check, Copy } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 /** One payment-detail row with a tap-to-copy button (email clients strip JavaScript, so the copy button lives on this page). */

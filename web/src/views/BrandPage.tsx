@@ -6,7 +6,7 @@ import { CARD_PRODUCTS as PRODUCTS, BRANDS_WITH_PRODUCTS } from '../data/slim';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
-import { ShieldCheck, ArrowLeft } from 'lucide-react';
+import { ShieldCheck, ArrowLeft } from '@/components/icons';
 import { brandIntro } from '../lib/brandCopy';
 import { useTr, useLocale } from '@/i18n/locale';
 import { REPLY } from '@/config/reply';

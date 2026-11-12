@@ -5,7 +5,7 @@ import { Link, useNavigate } from '@/lib/router';
 import { useShop } from '../context/ShopContext';
 import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { ShoppingBag, Trash2, ArrowRight, Truck, ShieldCheck, ArrowLeft, Coins } from 'lucide-react';
+import { ShoppingBag, Trash2, ArrowRight, Truck, ShieldCheck, ArrowLeft, Coins } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 export const CartPage: React.FC = () => {

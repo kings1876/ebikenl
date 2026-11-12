@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useParams, useLocation, Link } from '@/lib/router';
-import { CheckCircle, Mail, ArrowRight } from 'lucide-react';
+import { CheckCircle, Mail, ArrowRight } from '@/components/icons';
 import { formatEur } from '../utils/format';
 import { useTr } from '@/i18n/locale';
 import { methodLabel } from '@/lib/reply/order';

@@ -6,7 +6,7 @@ import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
 import { Product } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
-import { Sparkles, Check, ArrowRight, RotateCcw, Compass, ArrowLeft } from 'lucide-react';
+import { Sparkles, Check, ArrowRight, RotateCcw, Compass, ArrowLeft } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 export const KeuzehulpPage: React.FC = () => {

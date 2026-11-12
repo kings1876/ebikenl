@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from '@/lib/router';
-import { ChevronRight, Home } from 'lucide-react';
+import { ChevronRight, Home } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 export interface BreadcrumbItem {

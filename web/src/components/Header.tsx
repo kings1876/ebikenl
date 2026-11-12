@@ -3,13 +3,23 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { Link, useLocation } from '@/lib/router';
-import { ShoppingBag, Scale, Compass, Layers } from 'lucide-react';
+import { ShoppingBag, Scale, Compass } from '@/components/icons';
 import { formatEur } from '../utils/format';
 import { useShop } from '../context/ShopContext';
 import { useTr } from '@/i18n/locale';
 import { REPLY } from '@/config/reply';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { Logo } from './Logo';
+
+const NAV_LINK = 'whitespace-nowrap shrink-0 transition-colors hover:text-blue-600';
+const ACTIVE = 'text-blue-600 font-semibold';
+// plain: the blog exists in Dutch only, so English pages link to /blog directly instead of through a redirect
+const NAV = [
+  { to: '/categorie/elektrische-fietsen', label: 'Elektrische Fietsen', plain: false },
+  { to: '/bosch-middenmotor', label: 'Bosch Middenmotor', plain: false },
+  { to: '/fietsplan-e-bikes', label: 'Fietsplan (WKR)', plain: false },
+  { to: '/blog', label: 'Blog', plain: true },
+];
 
 export const Header: React.FC = () => {
   const tr = useTr();
@@ -45,82 +55,38 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Top Bar adhering strictly to Top Bar Contract */}
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-8 px-4 sm:px-6 lg:px-8 h-18">
-        {/* Zone 1: Single text element Brand Zone */}
-        <Link prefetch={false}
-          to="/"
-          className="text-xl sm:text-2xl shrink-0 hover:opacity-90 transition-opacity"
-        >
+      {/* One bar: logo, navigation and cart. The navigation wraps onto its own scrollable row below the bar on small screens. */}
+      <div className="max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap items-center justify-between gap-x-8 px-4 sm:px-6 lg:px-8">
+        <Link prefetch={false} to="/" className="h-18 flex items-center text-xl sm:text-2xl shrink-0 hover:opacity-90 transition-opacity">
           <Logo />
         </Link>
 
-        {/* Zone 2: 4-5 single-line clean nav links with real URLs */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700">
-          <Link prefetch={false}
-            to="/categorie/elektrische-fietsen"
-            className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
-              isActive('/categorie') ? 'text-blue-600 font-semibold' : ''
-            }`}
-          >
-            {tr("Elektrische Fietsen")}
-          </Link>
-
-          <Link prefetch={false}
-            to="/bosch-middenmotor"
-            className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
-              isActive('/bosch-middenmotor') ? 'text-blue-600 font-semibold' : ''
-            }`}
-          >
-            {tr("Bosch Middenmotor")}
-          </Link>
-
-          <Link prefetch={false}
-            to="/fietsplan-e-bikes"
-            className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
-              isActive('/fietsplan-e-bikes') ? 'text-blue-600 font-semibold' : ''
-            }`}
-          >
-            {tr("Fietsplan (WKR)")}
-          </Link>
-
-          <NextLink prefetch={false}
-            href="/blog"
-            className={`whitespace-nowrap shrink-0 transition-colors hover:text-blue-600 ${
-              isActive('/blog') ? 'text-blue-600 font-semibold' : ''
-            }`}
-          >
-            {tr("Blog")}
-          </NextLink>
-
-          <Link prefetch={false}
+        <nav
+          aria-label={tr("Hoofdmenu")}
+          className="order-last basis-full -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 border-t border-slate-100 bg-slate-50/70 overflow-x-auto flex items-center justify-between gap-4 text-xs font-medium text-slate-700 lg:order-none lg:basis-auto lg:mx-0 lg:p-0 lg:border-0 lg:bg-transparent lg:overflow-visible lg:justify-start lg:gap-6 lg:text-sm"
+        >
+          {NAV.map(({ to, label, plain }) => (
+            plain ? (
+              <NextLink prefetch={false} key={to} href={to} className={`${NAV_LINK} ${isActive(to) ? ACTIVE : ''}`}>
+                {tr(label)}
+              </NextLink>
+            ) : (
+              <Link prefetch={false} key={to} to={to} className={`${NAV_LINK} ${isActive(to === '/categorie/elektrische-fietsen' ? '/categorie' : to) ? ACTIVE : ''}`}>
+                {tr(label)}
+              </Link>
+            )
+          ))}
+          <Link
+            prefetch={false}
             to="/keuzehulp"
-            className={`flex items-center gap-1.5 whitespace-nowrap shrink-0 transition-colors ${
-              isActive('/keuzehulp')
-                ? 'text-blue-600 font-semibold'
-                : 'text-slate-700 hover:text-blue-600'
-            }`}
+            className={`flex items-center gap-1.5 whitespace-nowrap shrink-0 transition-colors text-blue-600 font-semibold lg:font-medium ${isActive('/keuzehulp') ? 'lg:font-semibold' : 'lg:text-slate-700 lg:hover:text-blue-600'}`}
           >
-            <Compass className="w-4 h-4 text-blue-600" />
+            <Compass className="hidden lg:block w-4 h-4 text-blue-600" />
             <span>{tr("Keuzehulp")}</span>
-          </Link>
-
-          <Link prefetch={false}
-            to="/taxonomie"
-            className={`flex items-center gap-1 whitespace-nowrap shrink-0 text-xs px-2 py-1 rounded border transition-colors ${
-              isActive('/taxonomie')
-                ? 'bg-blue-50 text-blue-700 border-blue-200 font-bold'
-                : 'bg-slate-100 text-slate-600 hover:text-slate-900 border-slate-200'
-            }`}
-            title={tr("Bekijk de complete WooCommerce taxonomie en SEO structuur")}
-          >
-            <Layers className="w-3.5 h-3.5" />
-            <span>{tr("Taxonomie")}</span>
           </Link>
         </nav>
 
-        {/* Zone 3: 1 primary action */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="h-18 flex items-center gap-3 shrink-0">
           {comparedProducts.length > 0 && (
             <Link prefetch={false}
               to="/vergelijken"
@@ -149,58 +115,6 @@ export const Header: React.FC = () => {
             </span>
           </Link>
         </div>
-      </div>
-
-      {/* Mobile navigation row with distinct URLs */}
-      <div className="lg:hidden flex items-center justify-between px-4 py-2 border-t border-slate-100 bg-slate-50/70 overflow-x-auto text-xs font-medium text-slate-700 gap-4">
-        <Link prefetch={false}
-          to="/categorie/elektrische-fietsen"
-          className={`whitespace-nowrap hover:text-blue-600 ${
-            isActive('/categorie') ? 'text-blue-600 font-semibold' : ''
-          }`}
-        >
-          {tr("Elektrische Fietsen")}
-        </Link>
-        <Link prefetch={false}
-          to="/bosch-middenmotor"
-          className={`whitespace-nowrap hover:text-blue-600 ${
-            isActive('/bosch-middenmotor') ? 'text-blue-600 font-semibold' : ''
-          }`}
-        >
-          {tr("Bosch Middenmotor")}
-        </Link>
-        <Link prefetch={false}
-          to="/fietsplan-e-bikes"
-          className={`whitespace-nowrap hover:text-blue-600 ${
-            isActive('/fietsplan-e-bikes') ? 'text-blue-600 font-semibold' : ''
-          }`}
-        >
-          {tr("Fietsplan (WKR)")}
-        </Link>
-        <NextLink prefetch={false}
-          href="/blog"
-          className={`whitespace-nowrap hover:text-blue-600 ${
-            isActive('/blog') ? 'text-blue-600 font-semibold' : ''
-          }`}
-        >
-          {tr("Blog")}
-        </NextLink>
-        <Link prefetch={false}
-          to="/keuzehulp"
-          className={`whitespace-nowrap text-blue-600 font-semibold ${
-            isActive('/keuzehulp') ? 'underline' : ''
-          }`}
-        >
-          {tr("Keuzehulp")}
-        </Link>
-        <Link prefetch={false}
-          to="/taxonomie"
-          className={`whitespace-nowrap text-slate-500 ${
-            isActive('/taxonomie') ? 'font-bold text-slate-900' : ''
-          }`}
-        >
-          {tr("Taxonomie")}
-        </Link>
       </div>
     </header>
   );
