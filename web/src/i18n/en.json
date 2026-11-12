@@ -803,5 +803,22 @@
   "Bankoverschrijving & Crypto (BTC/USDT/ETH, -10%)": "Bank transfer & Crypto (BTC/USDT/ETH, -10%)",
   "Bankoverschrijving · Crypto": "Bank transfer · Crypto",
   "Veilig betalen met bankoverschrijving & Crypto": "Pay securely by bank transfer & crypto",
-  "Bankoverschrijving + Crypto (BTC/USDT/ETH)": "Bank transfer + Crypto (BTC/USDT/ETH)"
+  "Bankoverschrijving + Crypto (BTC/USDT/ETH)": "Bank transfer + Crypto (BTC/USDT/ETH)",
+  "Veelgestelde vragen over de {title}": "Frequently asked questions about the {title}",
+  "Wat kost de {title}?": "How much does the {title} cost?",
+  "De adviesprijs van de {title} is {price} inclusief 21% BTW. Betaal je met crypto (BTC, USDT of ETH), dan krijg je 10% korting en betaal je {crypto}. Bezorging is gratis in heel Nederland.": "The recommended price of the {title} is {price} including 21% VAT. Pay with crypto (BTC, USDT or ETH) and you get 10% off, so you pay {crypto}. Delivery is free throughout the Netherlands.",
+  "Welke framematen zijn er voor de {title}?": "Which frame sizes does the {title} come in?",
+  "De {title} is leverbaar in de maten {sizes}. Zit je tussen twee maten in, kies dan de kleinste voor een rechtopzittende houding en de grotere voor een sportievere zit. Mail ons je lichaamslengte en we adviseren een maat.": "The {title} is available in sizes {sizes}. If you are between two sizes, choose the smaller one for an upright position and the larger one for a sportier ride. Email us your height and we will recommend a size.",
+  "Waarvoor is de {title} geschikt?": "What is the {title} suitable for?",
+  "De {title} van {brand} hoort bij de categorie {sub}.": "The {title} from {brand} belongs to the {sub} category.",
+  "De motor is van {motor} en de accu heeft een capaciteit van {battery}.": "The motor is from {motor} and the battery has a capacity of {battery}.",
+  "Zet de fiets op de vergelijkpagina naast andere modellen, of gebruik de keuzehulp om te zien welke e-bike bij jouw gebruik past.": "Put the bike next to other models on the comparison page, or use the bike finder to see which e-bike suits the way you ride.",
+  "Hoe wordt de {title} bezorgd?": "How is the {title} delivered?",
+  "We leveren gratis in heel Nederland. Bij 100% rijklaar bezorgen belt de bezorger 30 minuten van tevoren, stelt hij zadel en stuur op jouw lengte af en legt hij de boordcomputer en de accu uit. Kies je de fabrieksdoos, dan is de fiets voor 90% gemonteerd en monteer je zelf het voorwiel, het stuur en de pedalen.": "We deliver free throughout the Netherlands. With fully assembled delivery, the courier calls 30 minutes ahead, adjusts the saddle and handlebars to your height and explains the display and the battery. If you choose the factory box, the bike is 90% assembled and you fit the front wheel, handlebars and pedals yourself.",
+  "Welke garantie zit er op de {title}?": "What warranty does the {title} have?",
+  "Alle e-bikes zijn nieuw en worden geleverd met de fabrieksgarantie van {brand}. De voorwaarden voor frame, accu en motor staan in de documentatie van de fabrikant. De fiets voldoet aan EN 15194 en heeft een CE-markering.": "All e-bikes are new and come with the manufacturer warranty from {brand}. The terms for frame, battery and motor are in the manufacturer documentation. The bike complies with EN 15194 and carries the CE mark.",
+  "Hoe betaal ik voor de {title}?": "How do I pay for the {title}?",
+  "Je betaalt per bankoverschrijving of met crypto (BTC, USDT of ETH). Na je bestelling ontvang je de betaalgegevens en een bevestiging met je ordernummer per e-mail. Je hoeft geen account aan te maken.": "You pay by bank transfer or with crypto (BTC, USDT or ETH). After your order you receive the payment details and a confirmation with your order number by email. You do not need to create an account.",
+  "Kan ik de {title} via mijn werkgever kopen?": "Can I buy the {title} through my employer?",
+  "Ja, via een fietsplan (WKR) vraag je de fiets aan via je werkgever. De factuur voldoet aan de eisen voor WKR, FiscFree en Hellorider. Op de pagina Fietsplan lees je hoe het werkt en wat het je scheelt.": "Yes, with a bike plan (WKR) you request the bike through your employer. The invoice meets the requirements for WKR, FiscFree and Hellorider. The Bike plan page explains how it works and what it saves you."
 }

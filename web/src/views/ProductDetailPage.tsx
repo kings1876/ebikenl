@@ -7,6 +7,7 @@ import { Product, ProductCardData, Framemaat, Kleur } from '../types/ebike';
 import { formatEur, formatEurWithCents, eurToCrypto, calculateVat, cryptoPrice, CRYPTO_DISCOUNT_PCT } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ProductCard, thumbOf } from '../components/ProductCard';
+import { ProductFaq } from '../components/ProductFaq';
 import { useShop } from '../context/ShopContext';
 import {
   Battery,
@@ -553,6 +554,8 @@ export const ProductDetailPage: React.FC<{ product: Product; related: ProductCar
           </div>
         )}
       </div>
+
+      <ProductFaq product={product} />
 
       {/* Related Products Section */}
       {relatedProducts.length > 0 && (

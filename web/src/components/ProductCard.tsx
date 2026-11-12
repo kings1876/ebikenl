@@ -28,25 +28,23 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
 
   return (
     <div
-      className={`group relative flex flex-col bg-white rounded-xl border border-slate-200/90 overflow-hidden hover:border-slate-300 hover:shadow-md transition-all duration-200 ${
-        // cards below the first ones are laid out only when they scroll into view (cheaper first paint on long lists)
-        priority ? '' : '[content-visibility:auto] [contain-intrinsic-size:auto_440px]'
-      }`}
+      // cards below the first ones are laid out only when they scroll into view (cheaper first paint on long lists)
+      className={priority ? 'pc group' : 'pc pc-lazy group'}
     >
       {/* Top action row inside card */}
-      <div className="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
+      <div className="pc-top">
         {/* Availability / Tag as clean text */}
         <div className="pointer-events-auto">
           {product.tags.includes('Bestseller') ? (
-            <span className="text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/60">
+            <span className="pc-tag pc-tag-a">
               {tr("Bestseller")}
             </span>
           ) : product.tags.includes('Aanbieding') ? (
-            <span className="text-[11px] font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200/60">
+            <span className="pc-tag pc-tag-r">
               {tr("Aanbieding")}
             </span>
           ) : (
-            <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 flex items-center gap-1">
+            <span className="pc-tag pc-tag-g">
               <Truck className="w-3 h-3" />
               <span>{tr(product.leverbaarheid)}</span>
             </span>
@@ -60,11 +58,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
             e.stopPropagation();
             toggleCompare(product);
           }}
-          className={`pointer-events-auto p-1.5 rounded-lg border transition-colors ${
-            compared
-              ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
-              : 'bg-white/90 backdrop-blur-xs text-slate-500 border-slate-200 hover:text-slate-900 hover:bg-white shadow-xs'
-          }`}
+          className={compared ? 'pc-cmp pc-cmp-on' : 'pc-cmp pc-cmp-off'}
           title={compared ? 'Verwijder uit vergelijking' : 'Vergelijk deze e-bike'}
           aria-label={tr("Vergelijk model")}
         >
@@ -75,7 +69,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
       {/* Image container linking to dedicated PDP */}
       <Link
         to={`/product/${product.slug}`}
-        className="relative aspect-4/3 w-full bg-slate-50 overflow-hidden flex items-center justify-center p-4 group-hover:bg-slate-100/60 transition-colors"
+        className="pc-imgbox"
       >
         <img
           src={thumbOf(product.image)}
@@ -85,7 +79,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
           height={360}
           alt={product.title}
           referrerPolicy="no-referrer"
-          className="w-full h-full object-contain object-center transform group-hover:scale-102 transition-transform duration-300"
+          className="pc-img"
           loading={priority ? 'eager' : 'lazy'}
           fetchPriority={priority ? 'high' : 'auto'}
           decoding="async"
@@ -93,12 +87,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
       </Link>
 
       {/* Content */}
-      <div className="p-4 flex flex-col flex-1">
+      <div className="pc-body">
         {/* Brand & Subcategory with link */}
-        <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-1">
+        <div className="pc-brandrow">
           <Link
             to={`/merk/${product.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-            className="font-bold text-slate-800 tracking-wide uppercase text-[11px] hover:text-blue-600"
+            className="pc-brand"
           >
             {tr(product.brand)}
           </Link>
@@ -107,10 +101,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
         </div>
 
         {/* Title linking to dedicated PDP */}
-        <Heading className="text-sm font-semibold text-slate-900 line-clamp-2 leading-snug mb-2">
+        <Heading className="pc-title">
           <Link
             to={`/product/${product.slug}`}
-            className="hover:text-blue-600 transition-colors"
+            className="pc-link"
             title={product.title}
           >
             {tr(product.title)}
@@ -118,14 +112,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
         </Heading>
 
         {/* Key Specs unboxed metadata */}
-        <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600 mb-4 py-2 border-y border-slate-100">
-          <div className="flex items-center gap-1" title={tr("Motormerk en koppel")}>
+        <div className="pc-specs">
+          <div className="pc-spec" title={tr("Motormerk en koppel")}>
             <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
             <span className="font-medium">{tr(product.motormerk)}</span>
             {(product.motorTorqueNm ?? 0) > 0 && <span className="text-slate-500">({tr(product.motorTorqueNm)}{tr("Nm)")}</span>}
           </div>
           <span aria-hidden="true" className="text-slate-300">·</span>
-          <div className="flex items-center gap-1" title={tr("Accucapaciteit")}>
+          <div className="pc-spec" title={tr("Accucapaciteit")}>
             <Battery className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
             <span>{tr(product.accucapaciteit)}</span>
           </div>
@@ -134,27 +128,27 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
         </div>
 
         {/* Trustpilot snippet & Price */}
-        <div className="mt-auto pt-1">
-          <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
+        <div className="pc-foot">
+          <div className="pc-meta">
             {product.reviewCount ? (<div className="flex items-center gap-1"><span className="text-[#00b67a] font-bold">★ {product.rating?.toFixed(1)}</span><span className="text-slate-500">({product.reviewCount})</span></div>) : (<span />)}
-            <span className="text-[11px] text-slate-500 font-mono">
+            <span className="pc-btc">
               ≈ {eurToCrypto(cryptoPrice(product.price), 'BTC')} {tr("BTC")}
             </span>
           </div>
 
-          <div className="flex items-center justify-between gap-3">
+          <div className="pc-buy">
             <div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-lg font-bold text-slate-900 tabular-nums">
+              <div className="pc-prices">
+                <span className="pc-price">
                   {formatEur(product.price)}
                 </span>
                 {product.originalPrice && product.originalPrice > product.price && (
-                  <span className="text-xs text-slate-500 line-through tabular-nums">
+                  <span className="pc-old">
                     {formatEur(product.originalPrice)}
                   </span>
                 )}
               </div>
-              <span className="text-[10px] text-slate-500 block -mt-0.5">
+              <span className="pc-vat">
                 {tr("incl. 21% BTW · Rijklaar leverbaar")}
               </span>
             </div>
@@ -164,7 +158,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
                 e.preventDefault();
                 quickAddToCart(product);
               }}
-              className="p-2.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white transition-colors"
+              className="pc-add"
               title={tr("Voeg toe aan winkelwagen")}
               aria-label={tr("Snel toevoegen")}
             >
