@@ -11,7 +11,7 @@ imageAlt: "Cube Fold Hybrid Deluxe 540, een opvouwbare elektrische fiets met Bos
 products: cube-fold-hybrid-540, cube-fold-hybrid-deluxe-540, cube-compact-hybrid-540, cube-compact-hybrid-deluxe-540, tenways-cgo-compact, cube-supreme-hybrid-comfort-one-600
 category: /categorie/elektrische-fietsen/vouwfietsen
 categoryLabel: vouwfietsen en compacte e-bikes
-related: elektrische-fiets-met-lage-instap-kopen, cube-elektrische-fiets-kopen, elektrische-fiets-met-bosch-middenmotor-kopen
+related: elektrische-fiets-met-lage-instap-kopen, cube-elektrische-fiets-kopen, framemaat-elektrische-fiets-kiezen
 ---
 
 Elektrische vouwfiets kopen? Dan zoek je een fiets die weinig ruimte inneemt: in de gang, in de kofferbak of in de trein. Een vouwfiets klinkt als de ideale oplossing voor wie een e-bike wil maar weinig plek heeft. Toch zijn er bij het kiezen een paar punten die je vooraf moet kennen, want een elektrische vouwfiets is zwaarder en duurder dan een gewone vouwfiets. In dit artikel lees je wat je kunt verwachten, hoe je gewicht, wielmaat en accu beoordeelt en welke modellen in onze catalogus passen.

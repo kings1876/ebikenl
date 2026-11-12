@@ -11,7 +11,7 @@ imageAlt: "Cube Kathmandu Hybrid ONE11 HPC SLX 800, een elektrische trekkingfiet
 products: cube-supreme-hybrid-comfort-one-600, cube-touring-hybrid-one-600, cube-kathmandu-hybrid-one11-hpc-slx-800, cube-stereo-hybrid-one77-hpc-slx-800, cube-nulane-hybrid-c-62-race-400x-fe, cube-editor-hybrid-one-360-fe
 category: /merk/cube
 categoryLabel: Cube e-bikes
-related: elektrische-fiets-met-bosch-middenmotor-kopen, e-mtb-kopen, trekking-e-bike-kopen
+related: elektrische-fiets-met-bosch-middenmotor-kopen, e-mtb-kopen, elektrische-fiets-merken-vergeleken
 ---
 
 Een Cube elektrische fiets kopen is een logische keuze als je een e-bike zoekt met een brede modellenreeks en een middenmotor van Bosch. Cube is een Duits fietsmerk en maakt e-bikes voor bijna elk gebruik: van een rustige stadsfiets tot een carbon e-mountainbike. In onze catalogus staan 66 Cube-modellen. Dat is veel, en juist daarom helpt een duidelijk plan. In dit artikel lees je welke typen er zijn, waar je op let bij motor, accu en maat, en hoe je de prijzen moet lezen.

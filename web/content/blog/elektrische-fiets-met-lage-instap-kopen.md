@@ -11,7 +11,7 @@ imageAlt: "Winora Tria N8, een elektrische damesfiets met lage instap en Bosch P
 products: cube-supreme-hybrid-comfort-one-600, cube-aruba-hybrid-600, winora-tria-n8-wtfr2, raleigh-captus-rrit1, cube-fold-hybrid-540, cube-supreme-hybrid-deluxe-slx-600
 category: /elektrische-damesfiets
 categoryLabel: e-bikes met lage instap
-related: cube-elektrische-fiets-kopen, elektrische-fiets-met-bosch-middenmotor-kopen, trekking-e-bike-kopen
+related: cube-elektrische-fiets-kopen, elektrische-fiets-met-bosch-middenmotor-kopen, framemaat-elektrische-fiets-kiezen
 ---
 
 Een elektrische fiets met lage instap kopen is voor veel mensen de beste manier om comfortabel en veilig te blijven fietsen. Je stapt gemakkelijk op en af, je staat stabiel bij een stoplicht en je hoeft je been niet over een hoge stang te tillen. In onze catalogus staan 54 modellen met een lage instap. Dat zijn vooral stadsfietsen, maar ook bakfietsen, trekkingfietsen en een vouwfiets. In dit artikel zie je waar je op moet letten, welke keuzes echt verschil maken en welke modellen goed bij een lage instap passen.

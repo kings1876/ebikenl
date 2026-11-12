@@ -11,7 +11,7 @@ imageAlt: "Giant Trance Advanced E+ 2, een volledig geveerde e-MTB (elektrische 
 products: cube-reaction-hybrid-pro-800-fe, giant-stance-eplus-0-2027, giant-trance-advanced-eplus-2-2027, cube-stereo-hybrid-one77-hpc-slx-800, scott-aspect-eride-900-wave, haibike-allmtn-4-hmcu1
 category: /categorie/elektrische-fietsen/elektrische-mountainbikes
 categoryLabel: elektrische mountainbikes
-related: elektrische-fiets-met-bosch-middenmotor-kopen, cube-elektrische-fiets-kopen, trekking-e-bike-kopen
+related: elektrische-fiets-met-bosch-middenmotor-kopen, cube-elektrische-fiets-kopen, elektrische-racefiets-kopen
 ---
 
 E-MTB kopen is een keuze met veel onderdelen: hardtail of fully, motor, accu, veerweg, remmen en maat. Een elektrische mountainbike is namelijk geen gewone mountainbike met een motor erbij. Het frame, de vering en de remmen zijn gebouwd voor het extra gewicht en de extra snelheid. In onze catalogus staan 99 elektrische mountainbikes van zeven merken. Dat is genoeg om te verdwalen. In dit artikel lopen we de keuzes in zeven stappen langs, met voorbeelden uit de catalogus.
