@@ -225,7 +225,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory; seed: ListingSe
 
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {pageProducts.map((product, i) => (
-              <ProductCard key={product.id} product={product} priority={i < 2} headingLevel="h2" />
+              <ProductCard key={product.id} product={product} priority={false} headingLevel="h2" />
             ))}
           </div>
           <Pagination page={currentPage} totalItems={total} onPageChange={goToPage} />
