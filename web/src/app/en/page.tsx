@@ -5,6 +5,8 @@ import { JsonLd } from '@/components/JsonLd';
 import { HomeBlog } from '@/components/blog/HomeBlog';
 import { websiteLd } from '@/lib/jsonld';
 import { featuredHomeProducts } from '@/lib/home';
+import { listingStats } from '@/lib/listingStats';
+import { CARD_PRODUCTS } from '@/data/slim';
 
 export const metadata: Metadata = pageMeta('en', '/', {
   title: 'Elektrische fiets kopen | E-bikes van Cube, Giant, Scott',
@@ -16,7 +18,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={websiteLd('en')} />
-      <HomePage featuredProducts={featuredHomeProducts()} />
+      <HomePage featuredProducts={featuredHomeProducts()} stats={listingStats(CARD_PRODUCTS)} />
       <HomeBlog locale="en" />
     </>
   );

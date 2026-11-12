@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { KeuzehulpPage } from '@/views/KeuzehulpPage';
 import { pageMeta } from '@/lib/seo';
 import { InfoBlock } from '@/components/InfoBlock';
+import { ListingGuide } from '@/components/ListingGuide';
+import { listingStats } from '@/lib/listingStats';
+import { CARD_PRODUCTS } from '@/data/slim';
 
 export const metadata: Metadata = pageMeta('en', '/keuzehulp', {
   title: 'E-bike keuzehulp: vind jouw ideale fiets',
@@ -12,6 +15,9 @@ export default function Page() {
   return (
     <>
       <KeuzehulpPage />
+      <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <ListingGuide name={'Our range'} stats={listingStats(CARD_PRODUCTS)} />
+      </div>
       <InfoBlock locale="en" />
     </>
   );

@@ -5,6 +5,7 @@ import { useParams, Link } from '@/lib/router';
 import { SUB_COPY, CATEGORY_INTRO, subSlug } from '../lib/seoCopy';
 import { ACTIVE_TAXONOMY_CATEGORIES } from '../data/facets';
 import { useCatalog } from '@/lib/useCatalog';
+import { ListingGuide } from '@/components/ListingGuide';
 import type { ListingSeed } from '@/lib/listingSeed';
 import { ProductCard } from '../components/ProductCard';
 import dynamic from 'next/dynamic';
@@ -234,6 +235,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory; seed: ListingSe
           )}
         </div>
       </div>
+      <ListingGuide name={subCategory ? tr(subCategory) : tr('Elektrische fietsen')} stats={seed.stats} />
     </div>
   );
 };

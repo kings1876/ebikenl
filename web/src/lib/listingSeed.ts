@@ -4,11 +4,12 @@ import { CARD_PRODUCTS } from '@/data/slim';
 import { SEO_LANDING_PAGES } from '@/data/ebikes';
 import { PAGE_SIZE, byPopularity } from '@/lib/listing';
 import { matchesLanding } from '@/lib/landingMatch';
+import { listingStats, type ListingStats } from '@/lib/listingStats';
 import type { ProductCardData, SubCategory } from '@/types/ebike';
 
-export type ListingSeed = { products: ProductCardData[]; total: number };
+export type ListingSeed = { products: ProductCardData[]; total: number; stats: ListingStats };
 
-const seed = (list: ProductCardData[]): ListingSeed => ({ products: list.slice(0, PAGE_SIZE), total: list.length });
+const seed = (list: ProductCardData[]): ListingSeed => ({ products: list.slice(0, PAGE_SIZE), total: list.length, stats: listingStats(list) });
 
 export const categorySeed = (category: string, subCategory?: SubCategory): ListingSeed =>
   seed(CARD_PRODUCTS.filter((p) => p.category === category && (!subCategory || p.subCategory === subCategory)).sort(byPopularity));

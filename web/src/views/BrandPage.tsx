@@ -8,13 +8,16 @@ import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
 import { ShieldCheck, ArrowLeft } from '@/components/icons';
-import { brandIntro } from '../lib/brandCopy';
-import { useTr, useLocale } from '@/i18n/locale';
+import { useTr } from '@/i18n/locale';
+import { useCatalog } from '@/lib/useCatalog';
+import { ListingGuide } from '@/components/ListingGuide';
+import type { ListingStats } from '@/lib/listingStats';
 import { REPLY } from '@/config/reply';
 
-export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products: brandProducts }) => {
+// The server sends the first page of the brand's models (`products`), how many there are (`total`) and the intro text
+// (written from the whole brand, in the page's language). The full list arrives later through useCatalog().
+export const BrandPage: React.FC<{ products: ProductCardData[]; total: number; intro: string; stats: ListingStats }> = ({ products: seedProducts, total: seedTotal, intro, stats }) => {
   const tr = useTr();
-  const locale = useLocale();
 
   const { brandSlug } = useParams<{ brandSlug: string }>();
 
@@ -24,6 +27,9 @@ export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products:
       (b) => b.toLowerCase().replace(/[^a-z0-9]+/g, '-') === brandSlug?.toLowerCase()
     );
   }, [brandSlug]);
+
+  const catalog = useCatalog();
+  const brandProducts = useMemo(() => (catalog ? catalog.filter((p) => p.brand === matchedBrand) : null), [catalog, matchedBrand]);
 
   const [page, setPage] = useState(1);
   const gridTop = useRef<HTMLDivElement>(null);
@@ -51,9 +57,10 @@ export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products:
     );
   }
 
-  const totalPages = Math.max(1, Math.ceil(brandProducts.length / PAGE_SIZE));
+  const total = brandProducts ? brandProducts.length : seedTotal;
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
-  const pageProducts = brandProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const pageProducts = brandProducts ? brandProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE) : seedProducts;
   const goToPage = (n: number) => {
     setPage(n);
     gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -77,7 +84,7 @@ export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products:
           {tr(matchedBrand)} {tr("Elektrische Fietsen")}
         </h1>
         <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-          {brandIntro(matchedBrand, brandProducts, locale)}
+          {intro}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-3 text-xs text-slate-400 border-t border-slate-800">
@@ -94,14 +101,14 @@ export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products:
       <div ref={gridTop} className="scroll-mt-24">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-900">
-            {tr(matchedBrand)} {tr("Modellen (")}{tr(brandProducts.length)})
+            {tr(matchedBrand)} {tr("Modellen (")}{tr(total)})
           </h2>
           <span className="text-xs text-slate-500">
             {tr("Prijzen inclusief 21% BTW")}
           </span>
         </div>
 
-        {brandProducts.length === 0 ? (
+        {total === 0 ? (
           <div className="p-12 bg-white rounded-xl border border-slate-200 text-center space-y-3">
             <p className="text-slate-700 font-semibold">
               {tr("Momenteel worden nieuwe")} {tr(matchedBrand)} {tr("modellen toegevoegd.")}
@@ -123,7 +130,7 @@ export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products:
                 <ProductCard key={p.id} product={p} priority={i < 2} headingLevel="h2" />
               ))}
             </div>
-            <Pagination page={currentPage} totalItems={brandProducts.length} onPageChange={goToPage} />
+            <Pagination page={currentPage} totalItems={total} onPageChange={goToPage} />
           </>
         )}
       </div>
@@ -145,6 +152,7 @@ export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products:
           ))}
         </div>
       </div>
+      <ListingGuide name={tr(matchedBrand)} stats={stats} />
     </div>
   );
 };

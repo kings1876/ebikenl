@@ -31,6 +31,49 @@
   }
 }
 
+/* Product card. Short class names instead of long utility lists: every card is repeated 6-12 times per page, in the HTML and again in the
+   framework's payload, and the markup size is what the text-to-HTML ratio is measured against. */
+@layer components {
+  .pc { @apply relative flex flex-col bg-white rounded-xl border border-slate-200/90 overflow-hidden hover:border-slate-300 hover:shadow-md transition-all duration-200; }
+  .pc-lazy { content-visibility: auto; contain-intrinsic-size: auto 440px; }
+  .pc-top { @apply absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none; }
+  .pc-tag { @apply text-[11px] px-2 py-0.5 rounded border; }
+  .pc-tag-a { @apply font-bold text-amber-700 bg-amber-50 border-amber-200/60; }
+  .pc-tag-r { @apply font-bold text-rose-700 bg-rose-50 border-rose-200/60; }
+  .pc-tag-g { @apply font-medium text-emerald-700 bg-emerald-50 border-emerald-200/60 flex items-center gap-1; }
+  .pc-cmp { @apply pointer-events-auto p-1.5 rounded-lg border transition-colors; }
+  .pc-cmp-on { @apply bg-blue-600 text-white border-blue-600 shadow-xs; }
+  .pc-cmp-off { @apply bg-white/90 backdrop-blur-xs text-slate-500 border-slate-200 hover:text-slate-900 hover:bg-white shadow-xs; }
+  .pc-imgbox { @apply relative aspect-4/3 w-full bg-slate-50 overflow-hidden flex items-center justify-center p-4 group-hover:bg-slate-100/60 transition-colors; }
+  .pc-img { @apply w-full h-full object-contain object-center transform group-hover:scale-102 transition-transform duration-300; }
+  .pc-body { @apply p-4 flex flex-col flex-1; }
+  .pc-brandrow { @apply flex items-center gap-1.5 text-xs text-slate-500 mb-1; }
+  .pc-brand { @apply font-bold text-slate-800 tracking-wide uppercase text-[11px] hover:text-blue-600; }
+  .pc-title { @apply text-sm font-semibold text-slate-900 line-clamp-2 leading-snug mb-2; }
+  .pc-link { @apply hover:text-blue-600 transition-colors; }
+  .pc-specs { @apply flex flex-wrap items-center gap-2 text-xs text-slate-600 mb-4 py-2 border-y border-slate-100; }
+  .pc-spec { @apply flex items-center gap-1; }
+  .pc-foot { @apply mt-auto pt-1; }
+  .pc-meta { @apply flex items-center justify-between text-xs text-slate-500 mb-2; }
+  .pc-btc { @apply text-[11px] text-slate-500 font-mono; }
+  .pc-buy { @apply flex items-center justify-between gap-3; }
+  .pc-prices { @apply flex items-baseline gap-2; }
+  .pc-price { @apply text-lg font-bold text-slate-900 tabular-nums; }
+  .pc-old { @apply text-xs text-slate-500 line-through tabular-nums; }
+  .pc-vat { @apply text-[10px] text-slate-500 block -mt-0.5; }
+  .pc-add { @apply p-2.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white transition-colors; }
+}
+
+/* Question-and-answer block on product pages. Styled from one class so the markup carries no utility lists. */
+@layer components {
+  .faq { @apply rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 text-sm text-slate-700; }
+  .faq h2 { @apply font-display text-xl font-extrabold tracking-tight text-slate-900 mt-8 first:mt-0; }
+  .faq dl { @apply mt-4 space-y-4; }
+  .faq dt { @apply font-semibold text-slate-900; }
+  .faq dd { @apply mt-1 leading-relaxed; }
+  .faq ol { @apply mt-3 list-decimal space-y-2 pl-5; }
+}
+
 /* Custom scrollbar for clean horizontal filter bars and drawers */
 ::-webkit-scrollbar {
   width: 6px;
