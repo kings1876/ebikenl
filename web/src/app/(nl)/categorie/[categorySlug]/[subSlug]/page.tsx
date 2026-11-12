@@ -10,6 +10,7 @@ import { ACTIVE_TAXONOMY_CATEGORIES, PRODUCTS } from '@/data/catalog';
 import { ModelIndex } from '@/components/ModelIndex';
 import { tx } from '@/lib/seo';
 import type { SubCategory } from '@/types/ebike';
+import { categorySeed } from '@/lib/listingSeed';
 
 type Props = { params: Promise<{ categorySlug: string; subSlug: string }> };
 
@@ -47,7 +48,7 @@ export default async function Page({ params }: Props) {
           { name: hit.sub as SubCategory, path: `/categorie/${categorySlug}/${slug}` },
         ])}
       />
-      <CategoryPage subCategory={hit.sub as SubCategory} />
+      <CategoryPage subCategory={hit.sub as SubCategory} seed={categorySeed(CATEGORY_SLUG_TO_MAIN[categorySlug], hit.sub as SubCategory)} />
       <ModelIndex locale="nl" groupBy="brand" title={tx('nl', hit.sub)} products={PRODUCTS.filter((p) => p.subCategory === hit.sub)} />
     </>
   );

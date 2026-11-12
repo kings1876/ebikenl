@@ -18,7 +18,7 @@ import {
   MaximaleSnelheid,
   ProductTag
 } from '../types/ebike';
-import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS } from '../data/slim';
+import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS } from '../data/facets';
 import { ChevronDown, ChevronUp, RotateCcw, Search, Check } from '@/components/icons';
 import { formatEur } from '../utils/format';
 import { useTr } from '@/i18n/locale';

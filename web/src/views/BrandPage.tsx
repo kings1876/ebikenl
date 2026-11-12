@@ -2,7 +2,8 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
-import { CARD_PRODUCTS as PRODUCTS, BRANDS_WITH_PRODUCTS } from '../data/slim';
+import { BRANDS_WITH_PRODUCTS } from '../data/facets';
+import type { ProductCardData } from '../types/ebike';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -11,7 +12,7 @@ import { brandIntro } from '../lib/brandCopy';
 import { useTr, useLocale } from '@/i18n/locale';
 import { REPLY } from '@/config/reply';
 
-export const BrandPage: React.FC = () => {
+export const BrandPage: React.FC<{ products: ProductCardData[] }> = ({ products: brandProducts }) => {
   const tr = useTr();
   const locale = useLocale();
 
@@ -50,7 +51,6 @@ export const BrandPage: React.FC = () => {
     );
   }
 
-  const brandProducts = PRODUCTS.filter((p) => p.brand === matchedBrand);
   const totalPages = Math.max(1, Math.ceil(brandProducts.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
   const pageProducts = brandProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);

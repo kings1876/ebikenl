@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/lib/router';
-import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
+import { useCatalog } from '@/lib/useCatalog';
 import { Product } from '../types/ebike';
 import { formatEur } from '../utils/format';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -11,6 +11,8 @@ import { useTr } from '@/i18n/locale';
 
 export const KeuzehulpPage: React.FC = () => {
   const tr = useTr();
+  // the catalogue loads after the page has hydrated; the quiz questions do not need it, only the result step does
+  const PRODUCTS = useCatalog() ?? [];
 
   useEffect(() => {
     window.scrollTo(0, 0);

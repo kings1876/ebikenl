@@ -4,8 +4,8 @@ import React from 'react';
 import { ChevronLeft, ChevronRight } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
-// 12 cards per page: half the DOM to build and hydrate on listing pages. Every model also has a plain link in the model index below the list.
-export const PAGE_SIZE = 12;
+import { PAGE_SIZE } from '@/lib/listing';
+export { PAGE_SIZE };
 
 /** Page numbers to show: first, last, and a window around the current page, with gaps as null. */
 function pageList(current: number, total: number): (number | null)[] {

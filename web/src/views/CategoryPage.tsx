@@ -3,7 +3,9 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useParams, Link } from '@/lib/router';
 import { SUB_COPY, CATEGORY_INTRO, subSlug } from '../lib/seoCopy';
-import { CARD_PRODUCTS as PRODUCTS, ACTIVE_TAXONOMY_CATEGORIES } from '../data/slim';
+import { ACTIVE_TAXONOMY_CATEGORIES } from '../data/facets';
+import { useCatalog } from '@/lib/useCatalog';
+import type { ListingSeed } from '@/lib/listingSeed';
 import { ProductCard } from '../components/ProductCard';
 import { FilterSidebar } from '../components/FilterSidebar';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -13,7 +15,7 @@ import { SlidersHorizontal } from '@/components/icons';
 import { useTr } from '@/i18n/locale';
 
 // Subcategories are real routes (/categorie/<slug>/<sub>), so they render on the server and can be indexed.
-export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCategory }) => {
+export const CategoryPage: React.FC<{ subCategory?: SubCategory; seed: ListingSeed }> = ({ subCategory, seed }) => {
   const tr = useTr();
 
   const { categorySlug } = useParams<{ categorySlug: string }>();
@@ -75,8 +77,11 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
     window.scrollTo(0, 0);
   }, [currentCategory, subCategoryParam]);
 
+  // Until the full catalogue has loaded, the page shows the first page of results the server rendered.
+  const catalog = useCatalog();
   const filteredProducts = useMemo(() => {
-    return PRODUCTS.filter((p) => {
+    if (!catalog) return null;
+    return catalog.filter((p) => {
       if (filters.category !== 'Alle' && p.category !== filters.category) return false;
       if (filters.subCategory !== 'Alle' && p.subCategory !== filters.subCategory) return false;
       if (filters.brands.length > 0 && !filters.brands.includes(p.brand)) return false;
@@ -95,15 +100,16 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
       if (filters.sortBy === 'beoordeling') return (b.rating ?? 0) - (a.rating ?? 0);
       return (b.reviewCount ?? 0) - (a.reviewCount ?? 0);
     });
-  }, [filters]);
+  }, [catalog, filters]);
+  const total = filteredProducts ? filteredProducts.length : seed.total;
 
   const [page, setPage] = useState(1);
   const gridTop = useRef<HTMLDivElement>(null);
   // any change to the result set starts again at page 1
   useEffect(() => setPage(1), [filters]);
-  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
-  const pageProducts = filteredProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const pageProducts = filteredProducts ? filteredProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE) : seed.products;
   const goToPage = (n: number) => {
     setPage(n);
     gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -168,7 +174,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
             filters={filters}
             onFilterChange={setFilters}
             onResetFilters={() => setFilters(initialFilters)}
-            totalProductsCount={filteredProducts.length}
+            totalProductsCount={total}
           />
         </div>
 
@@ -179,7 +185,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
             className="w-full flex items-center justify-center gap-2 p-3 bg-white rounded-xl border border-slate-200 text-xs font-bold text-slate-800"
           >
             <SlidersHorizontal className="w-4 h-4" />
-            <span>{tr("Filters (")}{tr(filteredProducts.length)} {tr("resultaten)")}</span>
+            <span>{tr("Filters (")}{tr(total)} {tr("resultaten)")}</span>
           </button>
           {isMobileFilterOpen && (
             <div className="mt-3">
@@ -187,7 +193,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
                 filters={filters}
                 onFilterChange={setFilters}
                 onResetFilters={() => setFilters(initialFilters)}
-                totalProductsCount={filteredProducts.length}
+                totalProductsCount={total}
               />
             </div>
           )}
@@ -196,7 +202,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
         {/* Products */}
         <div ref={gridTop} className="col-span-12 lg:col-span-9 scroll-mt-24">
           <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-200 text-xs text-slate-500">
-            <span>{tr(filteredProducts.length)} {tr("producten gevonden")}</span>
+            <span>{tr(total)} {tr("producten gevonden")}</span>
             <select
               aria-label={tr("Sorteren")}
               value={filters.sortBy}
@@ -215,8 +221,8 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory }> = ({ subCateg
               <ProductCard key={product.id} product={product} priority={i < 2} headingLevel="h2" />
             ))}
           </div>
-          <Pagination page={currentPage} totalItems={filteredProducts.length} onPageChange={goToPage} />
-          {filteredProducts.length === 0 && (
+          <Pagination page={currentPage} totalItems={total} onPageChange={goToPage} />
+          {total === 0 && (
             <p className="text-sm text-slate-600 py-10 text-center">{tr("Geen modellen gevonden. Het assortiment wordt binnenkort aangevuld.")}</p>
           )}
         </div>

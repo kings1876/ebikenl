@@ -3,7 +3,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from '@/lib/router';
 import { SEO_LANDING_PAGES, LandingPageDef } from '../data/ebikes';
-import { CARD_PRODUCTS as PRODUCTS } from '../data/slim';
+import { useCatalog } from '@/lib/useCatalog';
+import { matchesLanding } from '@/lib/landingMatch';
+import type { ListingSeed } from '@/lib/listingSeed';
 import { ProductCard } from '../components/ProductCard';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Pagination, PAGE_SIZE } from '../components/Pagination';
@@ -12,9 +14,10 @@ import { useTr } from '@/i18n/locale';
 
 interface LandingPageProps {
   customSlug?: string;
+  seed: ListingSeed;
 }
 
-export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
+export const LandingPage: React.FC<LandingPageProps> = ({ customSlug, seed }) => {
   const tr = useTr();
 
   const params = useParams<{ slug?: string }>();
@@ -31,19 +34,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
     setPage(1);
   }, [landing]);
 
-  // Filter matching products
-  const matchingProducts = PRODUCTS.filter((p) => {
-    if (landing.priceMax && (p.price ?? 0) > landing.priceMax) return false;
-    if (landing.matchFilter.motormerk && p.motormerk !== landing.matchFilter.motormerk) return false;
-    if (landing.matchFilter.motorpositie && p.motorpositie !== landing.matchFilter.motorpositie) return false;
-    if (landing.matchFilter.doelgroep && p.doelgroep !== landing.matchFilter.doelgroep) return false;
-    if (landing.matchFilter.maximaleSnelheid && p.maximaleSnelheid !== landing.matchFilter.maximaleSnelheid) return false;
-    return true;
-  });
+  // Until the full catalogue has loaded, the page shows the first page of results the server rendered.
+  const catalog = useCatalog();
+  const matchingProducts = catalog ? catalog.filter((p) => matchesLanding(p, landing)) : null;
+  const total = matchingProducts ? matchingProducts.length : seed.total;
 
-  const totalPages = Math.max(1, Math.ceil(matchingProducts.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
-  const pageProducts = matchingProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const pageProducts = matchingProducts ? matchingProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE) : seed.products;
   const goToPage = (n: number) => {
     setPage(n);
     gridTop.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -103,7 +101,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
       <div ref={gridTop} className="scroll-mt-24">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-900">
-            {tr("Aanbod")} {tr(landing.title)} ({tr(matchingProducts.length)})
+            {tr("Aanbod")} {tr(landing.title)} ({tr(total)})
           </h2>
           <span className="text-xs text-slate-500">
             {tr("100% nieuw, met de fabrieksgarantie van de fabrikant")}
@@ -115,7 +113,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ customSlug }) => {
             <ProductCard key={p.id} product={p} priority={i < 2} headingLevel="h2" />
           ))}
         </div>
-        <Pagination page={currentPage} totalItems={matchingProducts.length} onPageChange={goToPage} />
+        <Pagination page={currentPage} totalItems={total} onPageChange={goToPage} />
       </div>
     </div>
   );

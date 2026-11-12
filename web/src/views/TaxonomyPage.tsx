@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@/lib/router';
 import { CATEGORY_SLUG_TO_MAIN } from '../data/ebikes';
-import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS } from '../data/slim';
+import { ACTIVE_TAXONOMY_CATEGORIES, BRANDS_WITH_PRODUCTS } from '../data/facets';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Database, Layers, Tag, Filter, Globe, Code, ArrowRight } from '@/components/icons';
 import { useTr } from '@/i18n/locale';

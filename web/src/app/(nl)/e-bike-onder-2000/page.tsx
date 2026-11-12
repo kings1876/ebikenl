@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SEO_LANDING_PAGES } from '@/data/ebikes';
 import { LandingPage } from '@/views/LandingPage';
+import { landingSeed } from '@/lib/listingSeed';
 import { pageMeta } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbLd } from '@/lib/jsonld';
@@ -22,7 +23,7 @@ export default function Page() {
   return (
     <>
       {l && <JsonLd data={breadcrumbLd('nl', [{ name: l.title, path: `/${SLUG}` }])} />}
-      <LandingPage customSlug={SLUG} />
+      <LandingPage customSlug={SLUG} seed={landingSeed(SLUG)} />
     </>
   );
 }
