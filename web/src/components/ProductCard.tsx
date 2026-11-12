@@ -19,6 +19,9 @@ interface ProductCardProps {
 /** 480px-wide variant of a catalogue image (made by scripts/data/make-images.mjs) */
 export const thumbOf = (src: string) => src.replace(/\.webp$/, '-sm.webp');
 
+/** 800px-wide variant, made for each product's main image (the `-1` photo) only; null for the others */
+export const midOf = (src: string) => (/-1\.webp$/.test(src) ? src.replace(/\.webp$/, '-md.webp') : null);
+
 export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = false, headingLevel = 'h3' }) => {
   const Heading = headingLevel;
   const tr = useTr();

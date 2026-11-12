@@ -1,5 +1,7 @@
 // Responsive image variants (no runtime optimiser needed, so no image-optimisation quota on the host):
 //  - public/images/catalog/<name>-sm.webp  (480x360) for cards and gallery thumbnails
+//  - public/images/catalog/<name>-1-md.webp  (800x600) for each product's main image: the product page's largest element,
+//    so phones fetch ~30 KB instead of ~60 KB
 //  - public/images/hero-lifestyle-{800,1280}.webp from the original hero photo
 // Re-run after build-catalog.mjs. Existing variants are kept unless --force is passed.
 import fs from 'node:fs';
@@ -18,6 +20,15 @@ for (const f of fs.readdirSync(CATALOG).filter((n) => /\.webp$/.test(n) && !/-sm
   made++;
 }
 console.log('catalog thumbnails written:', made);
+
+let mdMade = 0;
+for (const f of fs.readdirSync(CATALOG).filter((n) => /-1\.webp$/.test(n))) {
+  const out = path.join(CATALOG, f.replace(/\.webp$/, '-md.webp'));
+  if (!force && fs.existsSync(out)) continue;
+  await sharp(path.join(CATALOG, f)).resize(800, 600, { fit: 'inside' }).webp({ quality: 74 }).toFile(out);
+  mdMade++;
+}
+console.log('catalog main-image variants written:', mdMade);
 
 const heroSrc = path.resolve(import.meta.dirname, '..', '..', 'assets', 'originals', 'ebike_hero_lifestyle_1794286792478.jpg');
 if (fs.existsSync(heroSrc)) {

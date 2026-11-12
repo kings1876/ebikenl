@@ -72,6 +72,8 @@
   .faq dt { @apply font-semibold text-slate-900; }
   .faq dd { @apply mt-1 leading-relaxed; }
   .faq ol { @apply mt-3 list-decimal space-y-2 pl-5; }
+  /* Below the fold on every page: the browser skips laying out and painting these blocks until they are about to scroll into view. */
+  .faq, .below { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 }
 
 /* Custom scrollbar for clean horizontal filter bars and drawers */

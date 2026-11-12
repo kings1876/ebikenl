@@ -15,7 +15,7 @@ export function ModelIndexList({ items, translateGroups, title }: { items: Model
   const groups = new Map<string, ModelIndexItem[]>();
   for (const it of items) groups.set(it.group, [...(groups.get(it.group) ?? []), it]);
   return (
-    <section aria-labelledby="model-index-heading" className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+    <section aria-labelledby="model-index-heading" className="below mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
       <h2 id="model-index-heading" className="font-display text-xl font-extrabold tracking-tight text-slate-900">
         {tr('Alle modellen')}: {title} ({items.length})
       </h2>
