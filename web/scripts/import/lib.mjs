@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const UA = 'Mozilla/5.0 (compatible; EbikeTekoopCatalogBot/1.0; +https://e-bike-tekoop.nl)';
+export const UA = 'Mozilla/5.0 (compatible; EbikeTekoopCatalogBot/1.0; +https://ebike-te-koop.nl)';
 export const DELAY_MS = 700; // per-host politeness delay
 
 const robotsCache = new Map();

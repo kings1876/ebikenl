@@ -15,7 +15,7 @@ export interface PaymentMethod {
 }
 
 export const REPLY = {
-  siteName: 'E-BIKE-TEKOOP.NL',
+  siteName: 'EBIKE TE KOOP',
   domain: 'e-bike-tekoop.nl',
   /** Order numbers look like EBT-K3P9QX; also namespaces the Redis keys. */
   orderPrefix: 'EBT',

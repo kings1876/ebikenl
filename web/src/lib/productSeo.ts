@@ -17,10 +17,10 @@ export function productMeta(p: Product, locale: Locale) {
   // a few models exist in two variants under one name: add the model code so titles stay unique
   const sameName = PRODUCTS.filter((x) => x.brand === p.brand && x.model.toLowerCase() === p.model.toLowerCase()).length > 1;
   const name = `${p.brand} ${p.model}${sameName ? ' ' + p.slug.split('-').pop()!.toUpperCase() : ''}`;
-  // keep the brand suffix (" | E-BIKE-TEKOOP.NL", 19 chars) only when the whole title still fits in 60
+  // keep the brand suffix (" | EBIKE TE KOOP", 16 chars) only when the whole title still fits in 60
   const base = fit(name, 53);
   const title = en ? `Buy ${base}` : `${base} kopen`;
-  const absolute = title.length + 19 > 60;
+  const absolute = title.length + 16 > 60;
 
   const motor = p.motorModel?.replace(/\s*,?\s*\d+\s?Nm/i, '').trim();
   const price = p.price.toLocaleString(en ? 'en-GB' : 'nl-NL');

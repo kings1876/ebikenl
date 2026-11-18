@@ -13,18 +13,18 @@ export function rootMetadata(locale: Locale) {
   return {
     title: {
       default: tx(locale, 'Elektrische fiets kopen | E-bikes van Cube, Giant, Scott'),
-      template: '%s | E-BIKE-TEKOOP.NL',
+      template: '%s | EBIKE TE KOOP',
     },
     description: tx(
       locale,
       'Vergelijk nieuwe elektrische fietsen van Cube, Giant, Scott, Specialized en Kalkhoff. Bekijk modellen, specificaties en adviesprijzen op één plek.',
     ),
-    applicationName: 'E-BIKE-TEKOOP.NL',
+    applicationName: 'EBIKE TE KOOP',
     metadataBase: new URL(SITE_URL),
     openGraph: {
       locale: locale === 'en' ? 'en_US' : 'nl_NL',
       type: 'website' as const,
-      siteName: 'E-BIKE-TEKOOP.NL',
+      siteName: 'EBIKE TE KOOP',
     },
   };
 }
@@ -32,7 +32,7 @@ export function rootMetadata(locale: Locale) {
 const ORGANIZATION_LD = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'E-BIKE-TEKOOP.NL',
+  name: 'EBIKE TE KOOP',
   url: SITE_URL,
   logo: `${SITE_URL}/apple-icon.png`,
 };

@@ -32,7 +32,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
 <circle cx="32" cy="32" r="18" fill="none" stroke="#fff" stroke-width="4"/>
 <path d="M35.5 19 24 34.5h7.4L28.5 45 40 29.5h-7.4z" fill="#fff"/>
 </g>
-<text x="350" y="326" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="70" fill="${DARK}">E-BIKE-TEKOOP<tspan fill="${BLUE}">.NL</tspan></text>
+<text xml:space="preserve" x="350" y="326" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="70" fill="${DARK}">EBIKE<tspan fill="${BLUE}"> TE KOOP</tspan></text>
 </svg>`;
 await sharp(Buffer.from(og)).png().toFile(path.join(APP, 'opengraph-image.png'));
 console.log('icons written');

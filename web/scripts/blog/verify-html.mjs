@@ -28,7 +28,7 @@ async function check(urlPath, expect) {
   if (desc.length < 120 || desc.length > 160) errs.push(`description ${desc.length} chars`);
   const h1s = (html.match(/<h1[\s>]/g) || []).length;
   if (h1s !== 1) errs.push(`${h1s} h1 tags`);
-  if (!new RegExp(`<link rel="canonical" href="https://e-bike-tekoop.nl${urlPath}"`).test(html)) errs.push('canonical');
+  if (!new RegExp(`<link rel="canonical" href="https://ebike-te-koop.nl${urlPath}"`).test(html)) errs.push('canonical');
   for (const tag of ['og:title', 'og:description', 'og:image', 'og:url', 'og:type']) if (!html.includes(`property="${tag}"`)) errs.push(`missing ${tag}`);
   for (const tag of ['twitter:card', 'twitter:image']) if (!html.includes(`name="${tag}"`)) errs.push(`missing ${tag}`);
   if (/name="robots" content="[^"]*noindex/.test(html)) errs.push('noindex!');
@@ -89,7 +89,7 @@ for (const s of slugs) await check(`/blog/${s}`, { article: true, crumbs: 3 });
 const sitemap = await (await fetch(origin + '/sitemap.xml')).text();
 const llms = await (await fetch(origin + '/llms.txt')).text();
 for (const s of ['blog', ...slugs.map((x) => `blog/${x}`)]) {
-  if (!new RegExp(`<loc>https://e-bike-tekoop.nl/${s}</loc>`).test(sitemap)) { console.log(`FAIL sitemap misses /${s}`); failed++; }
+  if (!new RegExp(`<loc>https://ebike-te-koop.nl/${s}</loc>`).test(sitemap)) { console.log(`FAIL sitemap misses /${s}`); failed++; }
   if (!llms.includes(`/${s}`)) { console.log(`FAIL llms.txt misses /${s}`); failed++; }
 }
 const redirect = await fetch(origin + '/en/blog', { redirect: 'manual' });

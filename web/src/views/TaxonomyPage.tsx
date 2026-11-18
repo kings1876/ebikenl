@@ -55,7 +55,7 @@ export const TaxonomyPage: React.FC = () => {
           <span>{tr("WooCommerce Data Model")}</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
-          {tr("E-BIKE-TEKOOP.NL Taxonomie Specificatie")}
+          {tr("EBIKE TE KOOP Taxonomie Specificatie")}
         </h1>
         <p className="text-xs text-slate-500 mt-0.5">
           {tr("Taxonomie, product-level velden, attributen en SEO regels")}

@@ -31,7 +31,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
           <StaticHtml as="footer" className="below bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {/* Col 1: About E-BIKE-TEKOOP.NL */}
+                {/* Col 1: About EBIKE TE KOOP */}
                 <div className="space-y-3">
                   <Link prefetch={false}
                     to="/"
@@ -134,7 +134,7 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
 
               <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4 text-[11px]">
                 <div>
-                  © {new Date().getFullYear()} {tr("E-BIKE-TEKOOP.NL. Alle prijzen inclusief 21% BTW.")}
+                  © {new Date().getFullYear()} {tr("EBIKE TE KOOP. Alle prijzen inclusief 21% BTW.")}
                 </div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                   <Link prefetch={false} to="/vergelijken" className="hover:text-white">

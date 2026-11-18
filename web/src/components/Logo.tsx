@@ -14,7 +14,7 @@ export const Logo: React.FC<{ onDark?: boolean; className?: string }> = ({ onDar
   <span className={`inline-flex items-center gap-2.5 font-display font-black tracking-tight whitespace-nowrap ${className}`}>
     <LogoMark className="w-8 h-8 sm:w-9 sm:h-9 shrink-0" />
     <span className={onDark ? 'text-white' : 'text-slate-900'}>
-      E-BIKE-TEKOOP<span className={onDark ? 'text-blue-400' : 'text-blue-600'}>.NL</span>
+      EBIKE<span className={onDark ? 'text-blue-400' : 'text-blue-600'}> TE KOOP</span>
     </span>
   </span>
 );
