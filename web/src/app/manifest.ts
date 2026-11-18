@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'E-BIKE-TEKOOP.NL',
-    short_name: 'E-BIKE-TEKOOP',
+    name: 'EBIKE TE KOOP',
+    short_name: 'EBIKE TE KOOP',
     description: 'Vergelijk nieuwe elektrische fietsen: modellen, specificaties en adviesprijzen.',
     start_url: '/',
     display: 'standalone',

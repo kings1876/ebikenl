@@ -1,5 +1,5 @@
 // How ordering works, in Dutch (translated through tr()/tx()). Shared by the server InfoBlock and the product page's client FAQ.
-export const ORDER_TITLE = 'Zo bestel je bij E-BIKE-TEKOOP.NL';
+export const ORDER_TITLE = 'Zo bestel je bij EBIKE TE KOOP';
 export const ORDER_STEPS = [
   'Kies je model, leg het in de winkelwagen en rond de bestelling af. Je hoeft geen account aan te maken.',
   'Je betaalt per bankoverschrijving of met crypto (BTC, USDT of ETH) met 10% korting. De betaalgegevens ontvang je per e-mail.',

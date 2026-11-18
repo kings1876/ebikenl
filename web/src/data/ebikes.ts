@@ -93,7 +93,7 @@ export const SITE_TRUSTPILOT_REVIEWS: TrustpilotReview[] = [
     rating: 5,
     date: '3 weken geleden',
     title: 'Stromer ST3 Speed Pedelec: brute commuter machine',
-    content: 'Kentekenplaat en tenaamstelling direct geregeld door E-BIKE-TEKOOP.NL. 45 km/u cruisen zonder zweet naar mijn kantoor 32 km verderop. Accu van bijna 1000Wh haalt met gemak de retourtrip.',
+    content: 'Kentekenplaat en tenaamstelling direct geregeld door EBIKE TE KOOP. 45 km/u cruisen zonder zweet naar mijn kantoor 32 km verderop. Accu van bijna 1000Wh haalt met gemak de retourtrip.',
     verified: true,
     productTitle: 'Stromer ST3 Pinion'
   },
@@ -138,7 +138,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'Bosch Middenmotor E-bikes',
     subtitle: 'E-bikes met Bosch middenmotor: de motor zit bij de trapas, wat zorgt voor een natuurlijke trapondersteuning en een laag zwaartepunt.',
     h1: 'Elektrische fiets met middenmotor (Bosch)',
-    metaTitle: 'Elektrische fiets met middenmotor (Bosch) | E-BIKE-TEKOOP.NL',
+    metaTitle: 'Elektrische fiets met middenmotor (Bosch) | EBIKE TE KOOP',
     metaDescription: 'E-bikes met Bosch middenmotor van onder meer Cube, Kalkhoff, Scott en Winora. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: { motormerk: 'Bosch', motorpositie: 'Middenmotor' },
     highlightPoints: [
@@ -153,7 +153,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'Elektrische Damesfietsen',
     subtitle: 'Een lage instap maakt op- en afstappen eenvoudig. Vergelijk elektrische damesfietsen op motor, accu en prijs.',
     h1: 'Elektrische fiets met lage instap kopen',
-    metaTitle: 'Elektrische fiets met lage instap | E-BIKE-TEKOOP.NL',
+    metaTitle: 'Elektrische fiets met lage instap | EBIKE TE KOOP',
     metaDescription: 'Elektrische damesfietsen met lage instap van onder meer Cube, Winora, Batavus en Specialized. Vergelijk modellen en adviesprijzen.',
     matchFilter: { doelgroep: 'Dames (lage instap)' },
     highlightPoints: [
@@ -168,7 +168,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'E-bike onder €2000',
     subtitle: 'Nieuwe e-bikes tot €2.000 van onder meer Tenways, Cube en Sushi Bikes.',
     h1: 'Elektrische fiets onder €2.000',
-    metaTitle: 'Elektrische fiets onder €2.000 | E-BIKE-TEKOOP.NL',
+    metaTitle: 'Elektrische fiets onder €2.000 | EBIKE TE KOOP',
     metaDescription: 'Nieuwe elektrische fietsen tot €2.000 van onder meer Tenways, Cube en Sushi Bikes. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: {},
     priceMax: 2000,
@@ -184,7 +184,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'Fietsplan & WKR E-bikes',
     subtitle: 'Veel werkgevers bieden een fietsplan. Bekijk hier de e-bikes en bepaal welk model past.',
     h1: 'E-bike kopen via het fietsplan van je werkgever',
-    metaTitle: 'E-bike via fietsplan van je werkgever | E-BIKE-TEKOOP.NL',
+    metaTitle: 'E-bike via fietsplan van je werkgever | EBIKE TE KOOP',
     metaDescription: 'Een nieuwe elektrische fiets kopen via het fietsplan van je werkgever? Bekijk het aanbod en vergelijk modellen, motoren en adviesprijzen.',
     matchFilter: {},
     highlightPoints: [
@@ -199,7 +199,7 @@ export const SEO_LANDING_PAGES: LandingPageDef[] = [
     title: 'Speed Pedelecs (45 km/u)',
     subtitle: 'Een speed pedelec ondersteunt tot 45 km/u en is bedoeld voor langere woon-werkritten.',
     h1: 'Speed pedelec kopen: e-bike tot 45 km/u',
-    metaTitle: 'Speed pedelec kopen: e-bike tot 45 km/u | E-BIKE-TEKOOP.NL',
+    metaTitle: 'Speed pedelec kopen: e-bike tot 45 km/u | EBIKE TE KOOP',
     metaDescription: 'Speed pedelecs met motorondersteuning tot 45 km/u, onder meer van Stromer en Cube. Vergelijk motor, accu en adviesprijs per model.',
     matchFilter: { maximaleSnelheid: '45 km/u' },
     highlightPoints: [
