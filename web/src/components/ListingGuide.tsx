@@ -91,7 +91,7 @@ function useGuideData(name: string, stats: ListingStats): GuideData {
   const advice = [
     'Kies motor en accu op basis van je route. Voor vlak terrein en korte ritten is een lichte motor met een kleinere accu genoeg. Voor heuvels, zware belading of lange ritten kies je een krachtige motor met een grotere accu. Let ook op de framemaat en de framevorm: een lage instap stapt makkelijker op en af, een diamantframe is stijver en sportiever.',
     'Vergelijk e-bikes op vier punten: de motor (merk en koppel in Nm), de accu (capaciteit in Wh), het gewicht en het frame. Meer koppel helpt bij heuvels en zware belading, een lichtere fiets rijdt en draagt makkelijker. Zet je favorieten naast elkaar op de vergelijkpagina om de verschillen te zien.',
-    'Op elke productpagina vind je de volledige specificaties, de beschikbare framematen en kleuren en de manier van bezorgen. Staat je vraag er niet bij, mail dan naar verkoop@e-bike-tekoop.nl; we helpen je graag bij het kiezen van het juiste model en de juiste maat.',
+    'Op elke productpagina vind je de volledige specificaties, de beschikbare framematen en kleuren en de manier van bezorgen. Staat je vraag er niet bij, mail dan naar verkoop@ebike-te-koop.nl; we helpen je graag bij het kiezen van het juiste model en de juiste maat.',
     'Alle e-bikes zijn nieuw en worden gratis bezorgd in heel Nederland. Je betaalt per bankoverschrijving of met crypto (BTC, USDT of ETH) met 10% korting. Twijfel je tussen modellen? Gebruik de keuzehulp of zet e-bikes naast elkaar op de vergelijkpagina.',
   ];
   return { vars, facts, advice };

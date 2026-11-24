@@ -16,7 +16,7 @@ export type ServicePage = {
   sections: ServiceSection[];
 };
 
-const EMAIL = 'verkoop@e-bike-tekoop.nl';
+const EMAIL = 'verkoop@ebike-te-koop.nl';
 const NAME = 'EBIKE TE KOOP';
 export const ADDRESS = 'Keizersgracht 123, 1015 CW Amsterdam, Nederland';
 

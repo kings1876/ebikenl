@@ -7,7 +7,7 @@ import NextLink from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import type { ServicePage } from '@/data/service';
 
-const EMAIL = 'verkoop@e-bike-tekoop.nl';
+const EMAIL = 'verkoop@ebike-te-koop.nl';
 
 export type Topic = { slug: string; label: string; description: string };
 export type Qa = { q: string; a: string; slug?: string };
