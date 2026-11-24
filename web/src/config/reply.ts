@@ -31,8 +31,8 @@ export const REPLY = {
   },
   headerTagline: { nl: 'Nieuwe elektrische fietsen', en: 'New electric bikes' } satisfies Bilingual,
   dispatchLine: {
-    nl: 'Levertijd en eventuele verzendkosten bevestigen we per e-mail zodra je betaling binnen is.',
-    en: 'We confirm delivery time and any shipping costs by email as soon as your payment has arrived.',
+    nl: 'Bezorging is gratis in heel Nederland. De levertijd bevestigen we per e-mail zodra je betaling binnen is.',
+    en: 'Delivery is free throughout the Netherlands. We confirm the delivery time by email as soon as your payment has arrived.',
   } satisfies Bilingual,
   /** Receiving addresses for crypto orders. The admin composer pre-fills these; the customer gets them by email after ordering. */
   cryptoWallets: [

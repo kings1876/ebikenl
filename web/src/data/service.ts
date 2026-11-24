@@ -1,7 +1,7 @@
 // Customer-service and policy pages (Dutch only, like the blog). Written for this shop from what the site itself states:
 // payment by bank transfer or crypto, free delivery in the Netherlands, new bikes with manufacturer warranty.
-// Anything that is a business decision rather than a fact (return costs, response times, legal entity) is marked "REVIEW"
-// in a comment and must be confirmed by the owner before the pages go live.
+// Business facts confirmed by the owner on 24 November 2026: the customer pays the direct return costs, delivery in the
+// Netherlands is free, the company details (name, KvK, btw) are correct, and the processors are Vercel, Upstash and Zoho Mail.
 
 export const SERVICE_UPDATED = '24 november 2026';
 
@@ -211,7 +211,6 @@ export const SERVICE_PAGES: ServicePage[] = [
         ul: [
           'Stuur de fiets binnen 14 dagen nadat je ons hebt laten weten dat je herroept terug.',
           'Stuur de e-bike compleet terug, met alle onderdelen en toebehoren, en bij voorkeur in de originele verpakking.',
-          // REVIEW: statutory default is that the consumer pays the direct return costs, provided the trader says so beforehand.
           'De rechtstreekse kosten van het terugsturen zijn voor jouw rekening.',
         ],
       },
@@ -288,7 +287,6 @@ export const SERVICE_PAGES: ServicePage[] = [
         p: [
           `${NAME}, website ebike-te-koop.nl, e-mail ${EMAIL}.`,
           `Vestigingsadres: ${ADDRESS}.`,
-          // REVIEW: add the registered business name if it differs from the shop name.
           'Inschrijving bij de Kamer van Koophandel: 84920194. Btw-nummer: NL863492810B01.',
         ],
       },
@@ -308,7 +306,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       },
       {
         h: 'Artikel 4. Prijzen',
-        p: ['Alle prijzen zijn in euro’s en inclusief 21% btw. Bezorging in Nederland is gratis, tenzij we je vóór je bestelling anders laten weten. Betaal je met crypto, dan krijg je 10% korting op het totaalbedrag.'],
+        p: ['Alle prijzen zijn in euro’s en inclusief 21% btw. Bezorging in Nederland is gratis. Bezorging buiten Nederland is alleen mogelijk na overleg; eventuele kosten daarvan spreken we vóór je bestelling met je af. Betaal je met crypto, dan krijg je 10% korting op het totaalbedrag.'],
       },
       {
         h: 'Artikel 5. Bestelling en overeenkomst',
@@ -394,10 +392,9 @@ export const SERVICE_PAGES: ServicePage[] = [
         h: 'Met wie delen we gegevens?',
         p: [
           'Alleen met partijen die we nodig hebben om je bestelling uit te voeren of de website te laten werken, en alleen voor zover dat nodig is.',
-          'Dat zijn onder meer de bezorger en monteur die je e-bike afleveren, onze hostingpartij (Vercel), een databaseaanbieder waar bestellingen veilig worden opgeslagen (Upstash) en onze e-maildienst. Met deze partijen maken we afspraken over de zorgvuldige omgang met gegevens.',
+          'Dat zijn onder meer de bezorger en monteur die je e-bike afleveren, onze hostingpartij (Vercel), een databaseaanbieder waar bestellingen veilig worden opgeslagen (Upstash) en onze e-maildienst (Zoho Mail). Met deze partijen maken we afspraken over de zorgvuldige omgang met gegevens.',
           'We verkopen je gegevens niet aan anderen en gebruiken ze niet voor reclame van derden.',
-          // REVIEW: confirm the processors listed above and whether any process data outside the EU.
-          'Sommige partijen verwerken gegevens mogelijk buiten de Europese Economische Ruimte. In dat geval zorgen we voor passende waarborgen, zoals standaardcontractbepalingen.',
+          'Vercel, Upstash en Zoho Mail kunnen gegevens verwerken buiten de Europese Economische Ruimte, onder meer in de Verenigde Staten. Voor die doorgifte gelden passende waarborgen, zoals standaardcontractbepalingen.',
         ],
       },
       {

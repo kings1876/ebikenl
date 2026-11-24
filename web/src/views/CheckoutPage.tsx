@@ -268,7 +268,11 @@ export const CheckoutPage: React.FC = () => {
               <span className="tabular-nums font-mono">{formatEur(vatAmount)}</span>
             </div>
             <div className="flex justify-between gap-4">
-              <span>{tr("Verzendkosten en levertijd:")}</span>
+              <span>{tr("Verzendkosten:")}</span>
+              <span className="text-emerald-700 font-bold">{tr("Gratis")}</span>
+            </div>
+            <div className="flex justify-between gap-4">
+              <span>{tr("Levertijd:")}</span>
               <span className="text-slate-700 font-semibold text-right">{tr("bevestigen we per e-mail")}</span>
             </div>
             {discount > 0 && (
