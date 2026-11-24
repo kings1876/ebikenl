@@ -5,6 +5,7 @@ import { SITE_URL, LANDING_SLUGS, brandSlug } from '@/lib/seo';
 import { SUB_COPY, subSlug } from '@/lib/seoCopy';
 import { withLocale } from '@/i18n/config';
 import { getAllPosts } from '@/lib/blog/posts';
+import { SERVICE_PATHS } from '@/data/service';
 
 const SITE = SITE_URL;
 
@@ -44,6 +45,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getAllPosts().map((p) => ({ url: `${SITE}/blog/${p.slug}`, lastModified: new Date(p.updated), images: [`${SITE}${p.image}`] })),
   ];
 
+  // Customer-service and policy pages exist in Dutch only, like the blog, so no English alternates are listed.
+  const service = SERVICE_PATHS.map((path) => ({ url: `${SITE}${path}`, lastModified: LATEST }));
+
   const localized = entries.flatMap(({ path, images, lastModified }) =>
     (['nl', 'en'] as const).map((locale) => ({
       url: `${SITE}${withLocale(path, locale)}`,
@@ -57,5 +61,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })),
   );
-  return [...localized, ...blog];
+  return [...localized, ...blog, ...service];
 }
