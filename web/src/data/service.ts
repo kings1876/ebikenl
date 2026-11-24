@@ -18,6 +18,7 @@ export type ServicePage = {
 
 const EMAIL = 'verkoop@e-bike-tekoop.nl';
 const NAME = 'EBIKE TE KOOP';
+export const ADDRESS = 'Keizersgracht 123, 1015 CW Amsterdam, Nederland';
 
 export const SERVICE_PAGES: ServicePage[] = [
   {
@@ -286,7 +287,8 @@ export const SERVICE_PAGES: ServicePage[] = [
         h: 'Artikel 1. Wie zijn wij?',
         p: [
           `${NAME}, website ebike-te-koop.nl, e-mail ${EMAIL}.`,
-          // REVIEW: add the registered business name and the street address (required for a webshop) before going live.
+          `Vestigingsadres: ${ADDRESS}.`,
+          // REVIEW: add the registered business name if it differs from the shop name.
           'Inschrijving bij de Kamer van Koophandel: 84920194. Btw-nummer: NL863492810B01.',
         ],
       },
@@ -369,7 +371,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     sections: [
       {
         h: 'Wie is verantwoordelijk?',
-        p: [`${NAME} (ebike-te-koop.nl) is verantwoordelijk voor de verwerking van je persoonsgegevens. Je bereikt ons via ${EMAIL}. Kamer van Koophandel: 84920194.`],
+        p: [`${NAME} (ebike-te-koop.nl) is verantwoordelijk voor de verwerking van je persoonsgegevens. Je bereikt ons via ${EMAIL} of op ons vestigingsadres: ${ADDRESS}. Kamer van Koophandel: 84920194.`],
       },
       {
         h: 'Welke gegevens verwerken we?',

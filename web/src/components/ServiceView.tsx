@@ -167,7 +167,7 @@ export function ServiceHome({ faq, topics }: { faq: Qa[]; topics: Topic[] }) {
             <section>
               <h2>Bedrijfsgegevens</h2>
               <p>
-                EBIKE TE KOOP, ebike-te-koop.nl, e-mail {EMAIL}. Kamer van Koophandel: 84920194. Btw-nummer: NL863492810B01. Lees ook onze{' '}
+                EBIKE TE KOOP, Keizersgracht 123, 1015 CW Amsterdam, Nederland, ebike-te-koop.nl, e-mail {EMAIL}. Kamer van Koophandel: 84920194. Btw-nummer: NL863492810B01. Lees ook onze{' '}
                 <NextLink prefetch={false} href="/klantenservice/algemene-voorwaarden">
                   algemene voorwaarden
                 </NextLink>{' '}
