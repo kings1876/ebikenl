@@ -22,7 +22,7 @@ const TITLES = {
 };
 
 const md = [];
-md.push('# Zoekwoordenplan e-bike-tekoop.nl (NL, KD < 26)\n');
+md.push('# Zoekwoordenplan ebike-te-koop.nl (NL, KD < 26)\n');
 md.push(`Bron: Semrush Keyword Magic Tool, database NL (maandvolumes, KD = Semrush Keyword Difficulty). Opgehaald op ${new Date().toISOString().slice(0, 10)}.\n`);
 md.push('## Samenvatting\n');
 md.push(`- **${fmt(rows.length)} zoekwoorden** met KD < 26 die bij het assortiment passen, in \`keywords-nl-kd25.csv\`.`);

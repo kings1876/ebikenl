@@ -9,5 +9,5 @@ export const ORDER_STEPS = [
   'Na je bestelling ontvang je een bevestiging per e-mail met je ordernummer.',
   'Meer weten over accu, motor of framemaat? Lees onze koopgidsen op de blogpagina.',
   'Wil je een e-bike via je werkgever aanvragen? Bekijk dan de pagina Fietsplan (WKR).',
-  'Een vraag over framemaat, accu, motor of levering vooraf? Mail naar verkoop@e-bike-tekoop.nl en we helpen je verder.',
+  'Een vraag over framemaat, accu, motor of levering vooraf? Mail naar verkoop@ebike-te-koop.nl en we helpen je verder.',
 ];

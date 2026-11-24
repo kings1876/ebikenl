@@ -16,7 +16,7 @@ export interface PaymentMethod {
 
 export const REPLY = {
   siteName: 'EBIKE TE KOOP',
-  domain: 'e-bike-tekoop.nl',
+  domain: 'ebike-te-koop.nl',
   /** Order numbers look like EBT-K3P9QX; also namespaces the Redis keys. */
   orderPrefix: 'EBT',
   /** Discount on the order total when the customer pays in crypto (BTC / USDT). 0.1 = 10%. */
@@ -25,7 +25,7 @@ export const REPLY = {
   currency: { code: 'EUR', symbol: '€', locale: 'nl-NL' },
   channels: {
     /** Where orders and enquiries arrive and where customers can reply. */
-    email: 'verkoop@e-bike-tekoop.nl',
+    email: 'verkoop@ebike-te-koop.nl',
     /** Digits with country code, e.g. '31612345678'. Empty = WhatsApp features stay hidden. */
     whatsapp: '',
   },
