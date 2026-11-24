@@ -149,6 +149,27 @@ export function SiteShell({ children, popularBrands = [] }: { children: React.Re
                     {tr("Contact")}
                   </Link>
                   <span>·</span>
+                  {/* Customer-service and policy pages exist in Dutch only, so they are linked directly in both languages. */}
+                  <NextLink prefetch={false} href="/klantenservice" className="hover:text-white">
+                    Klantenservice
+                  </NextLink>
+                  <span>·</span>
+                  <NextLink prefetch={false} href="/klantenservice/algemene-voorwaarden" className="hover:text-white">
+                    Algemene voorwaarden
+                  </NextLink>
+                  <span>·</span>
+                  <NextLink prefetch={false} href="/klantenservice/retourneren" className="hover:text-white">
+                    Retourneren
+                  </NextLink>
+                  <span>·</span>
+                  <NextLink prefetch={false} href="/klantenservice/privacy" className="hover:text-white">
+                    Privacy
+                  </NextLink>
+                  <span>·</span>
+                  <NextLink prefetch={false} href="/klantenservice/cookies" className="hover:text-white">
+                    Cookies
+                  </NextLink>
+                  <span>·</span>
                   <Link prefetch={false} to="/winkelwagen" className="hover:text-white">
                     {tr("Winkelwagen")}
                   </Link>

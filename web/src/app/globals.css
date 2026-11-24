@@ -76,6 +76,24 @@
   .faq, .below { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 }
 
+/* Customer-service and policy pages: the text is styled from one class so the markup carries no utility lists. */
+@layer components {
+  .svc section { @apply mt-8 first:mt-0; }
+  .svc h2 { @apply font-display text-xl font-extrabold tracking-tight text-slate-900; }
+  .svc p { @apply mt-3 text-sm leading-relaxed text-slate-700; }
+  .svc ul, .svc ol { @apply mt-3 space-y-2 pl-5 text-sm leading-relaxed text-slate-700; }
+  .svc ul { @apply list-disc; }
+  .svc ol { @apply list-decimal; }
+  .svc-nav { @apply rounded-2xl border border-slate-200 bg-white p-5; }
+  .svc-nav h2 { @apply font-display text-base font-extrabold text-slate-900; }
+  .svc-nav ul { @apply mt-3 space-y-1.5 text-sm; }
+  .svc-nav a { @apply text-slate-700 hover:text-blue-700; }
+  .svc-nav a[aria-current] { @apply font-semibold text-blue-700; }
+  .svc dl { @apply mt-4 space-y-4; }
+  .svc dt { @apply text-sm font-semibold text-slate-900; }
+  .svc dd { @apply mt-1 text-sm leading-relaxed text-slate-700; }
+}
+
 /* Custom scrollbar for clean horizontal filter bars and drawers */
 ::-webkit-scrollbar {
   width: 6px;
