@@ -53,7 +53,7 @@ export const SUB_COPY: Partial<Record<SubCategory, SubCopy>> = {
 };
 
 export const CATEGORY_INTRO =
-  'Vergelijk nieuwe elektrische fietsen: stads-, trekking-, mountain-, vouw- en bakfietsen, met middenmotor of lichte motor. Filter op merk, motor, accucapaciteit en prijs en bekijk per model de specificaties en adviesprijs.';
+  'Hier vind je alle elektrische fietsen op één plek, van de bekendste elektrische fiets merken zoals Cube, Giant, Scott en Batavus: stads-, trekking-, mountain-, vouw- en bakfietsen, met middenmotor of lichte motor. Met de filters kun je e-bikes vergelijken op merk, motor, accucapaciteit en prijs, en per model zie je de specificaties en adviesprijs.';
 
 /** Link target for a subcategory: its own page, or the landing page where one already exists. */
 export const subHref = (sub: string, categorySlug = 'elektrische-fietsen') =>

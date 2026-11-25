@@ -138,7 +138,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory; seed: ListingSe
       {/* Category Header */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
-          {tr(subCopy?.h1 ?? 'Elektrische fiets kopen: nieuwe e-bikes vergelijken')}
+          {tr(subCopy?.h1 ?? 'Elektrische fietsen: alle merken en modellen')}
         </h1>
         <p className="text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
           {tr(subCopy?.intro ?? CATEGORY_INTRO)}
@@ -210,7 +210,7 @@ export const CategoryPage: React.FC<{ subCategory?: SubCategory; seed: ListingSe
         {/* Products */}
         <div ref={gridTop} className="col-span-12 lg:col-span-9 scroll-mt-24">
           <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-200 text-xs text-slate-500">
-            <span>{tr(total)} {tr("producten gevonden")}</span>
+            <span>{tr(total)} {subCategory ? tr("producten gevonden") : tr("elektrische fietsen gevonden")}</span>
             <select
               aria-label={tr("Sorteren")}
               value={filters.sortBy}

@@ -49,8 +49,10 @@ export function pageMeta(locale: Locale, path: string, o: PageMetaOptions): Meta
 
 export const CATEGORY_META: Record<string, { title: string; description: string }> = {
   'elektrische-fietsen': {
-    title: 'Elektrische fiets kopen: nieuwe e-bikes',
-    description: 'Beste elektrische fietsen op een rij: stads-, trekking-, mountain-, vouw- en bakfietsen, ook met middenmotor. Vergelijk modellen en adviesprijzen.',
+    // Main keyword "elektrische fietsen" (category intent); supporting "elektrische fiets merken" and "e-bikes vergelijken".
+    // "elektrische fiets kopen" belongs to the home page and "beste elektrische fiets" to the blog, so neither is used here.
+    title: 'Elektrische fietsen: alle merken vergelijken',
+    description: 'Alle elektrische fietsen op één plek: stads-, trekking-, mountain-, vouw- en bakfietsen van bekende merken. Vergelijk e-bikes op motor, accu en prijs.',
   },
   'accus-en-opladers': {
     title: "E-bike accu's & opladers",
