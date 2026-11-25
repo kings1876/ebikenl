@@ -79,7 +79,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, priority = fa
           sizes="(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 92vw"
           width={480}
           height={360}
-          alt={product.title}
+          alt={`${product.title}, ${tr('elektrische fiets')}`}
           className="pc-img"
           loading={priority ? 'eager' : 'lazy'}
           fetchPriority={priority ? 'high' : undefined}
