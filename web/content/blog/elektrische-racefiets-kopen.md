@@ -22,6 +22,8 @@ Een elektrische racefiets is een sportfiets met een kleine, lichte motor en een 
 
 Daarmee verschilt hij van een gewone e-bike. Die is gebouwd op comfort en gebruiksgemak, en weegt vaak 25 kilo of meer. Een elektrische racefiets weegt in onze catalogus ongeveer 9 tot 16 kilo, afhankelijk van het model. Dat komt doordat de fabrikanten kiezen voor carbon frames, kleine motoren en accu's van 290 tot 400 Wh.
 
+Zoek je een lichte e-bike voor elke dag, met spatborden en verlichting? Lees dan onze gids over een [lichtgewicht elektrische fiets kopen](/blog/lichtgewicht-elektrische-fiets-kopen).
+
 De ondersteuning werkt, net als bij elke e-bike, tot 25 km/u. Boven die snelheid help je zelf. Een lichte fiets rijdt daardoor ook zonder motor goed door. Meer achtergrond over het gravelconcept vind je op [Wikipedia](https://nl.wikipedia.org/wiki/Gravelbike).
 
 ## Gravel of road: welk type past bij jou?

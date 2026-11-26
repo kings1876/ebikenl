@@ -18,7 +18,7 @@ Middenmotor of naafmotor: het is een van de eerste keuzes bij een elektrische fi
 
 ## Hoe werkt een middenmotor?
 
-Een middenmotor zit in het midden van de fiets, bij de trapas. De motor drijft de ketting of de riem aan, net als je eigen benen. De kracht van de motor loopt daardoor via de versnellingen. Schakel je terug op een helling, dan krijgt de motor een gunstige overbrenging en kan hij veel kracht leveren. Dat verklaart waarom middenmotoren goed klimmen.
+Een middenmotor zit in het midden van de fiets, bij de trapas. De motor drijft de ketting of de riem aan, net als je eigen benen. Meer over fietsen met een riem lees je in onze gids over een [elektrische fiets met riemaandrijving kopen](/blog/elektrische-fiets-met-riemaandrijving-kopen). De kracht van de motor loopt daardoor via de versnellingen. Schakel je terug op een helling, dan krijgt de motor een gunstige overbrenging en kan hij veel kracht leveren. Dat verklaart waarom middenmotoren goed klimmen.
 
 Het gewicht van de motor zit laag en centraal. Dat geeft een stabiele fiets, ook met bagage. Bekende middenmotoren komen van Bosch, Yamaha, Shimano, Giant, Fazua en TQ. In onze catalogus hebben 306 van de 399 modellen een middenmotor. Meer achtergrond over het principe vind je op [Wikipedia](https://nl.wikipedia.org/wiki/Middenmotor).
 
