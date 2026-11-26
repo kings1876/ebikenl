@@ -42,6 +42,8 @@ Een eenvoudige schatting helpt bij het kiezen. Een e-bike gebruikt grofweg 6 tot
 
 Plan je dagtochten van 80 kilometer of meer? Kies dan minimaal 600 Wh en liever 800 Wh. Rijd je vooral 20 tot 30 kilometer per dag? Dan is 400 tot 500 Wh vaak ruim genoeg. Een lichtere accu, zoals de 400 Wh bij de [Scott Passage 30](/product/scott-passage-30), houdt de fiets lichter en handzamer.
 
+Weegt het gewicht van de hele fiets voor jou zwaar? In onze gids over een [lichtgewicht elektrische fiets kopen](/blog/lichtgewicht-elektrische-fiets-kopen) staan de lichtste trekkingfietsen uit onze catalogus.
+
 [[cta]]
 
 ## Schakeling: naaf, ketting of elektronisch

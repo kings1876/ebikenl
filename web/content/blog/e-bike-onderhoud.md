@@ -120,7 +120,7 @@ Een goede aanpak is om kleine zaken zelf te doen, zoals bandenspanning en smeren
 4. Verzorg de accu met de originele lader en een goede bewaarplek.
 5. Laat de fiets jaarlijks nakijken door een vakman.
 
-Wil je een fiets die weinig onderhoud vraagt? Kijk dan naar modellen met een naafschakeling en een riem. Bekijk onze [elektrische fietsen](/categorie/elektrische-fietsen) of gebruik de [keuzehulp](/keuzehulp).
+Wil je een fiets die weinig onderhoud vraagt? Kijk dan naar modellen met een naafschakeling en een riem. Waar je daarbij op let, lees je in onze gids over een [elektrische fiets met riemaandrijving kopen](/blog/elektrische-fiets-met-riemaandrijving-kopen). Bekijk onze [elektrische fietsen](/categorie/elektrische-fietsen) of gebruik de [keuzehulp](/keuzehulp).
 
 ## Veelgestelde vragen
 
