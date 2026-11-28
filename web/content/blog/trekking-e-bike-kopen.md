@@ -58,6 +58,8 @@ De schakeling bepaalt hoeveel onderhoud je hebt en hoe prettig je schakelt. Bij 
 
 Daarnaast zijn er modellen met een riem in plaats van een ketting. Een riem is stil en schoon, en vraagt weinig onderhoud. Een voorbeeld in onze catalogus is de Winora Yakun R5 Pro. Meer over de aandrijving staat op [Wikipedia](https://nl.wikipedia.org/wiki/Riemaandrijving).
 
+Wil je een trekkingfiets met een actieve zithouding en een kettingschakeling? Lees dan ook onze gids over een [sportieve elektrische fiets kopen](/blog/sportieve-elektrische-fiets-kopen).
+
 ## Bagage, verlichting en comfort
 
 Een trekkingfiets staat of valt met het gebruik van bagage. Kijk daarom naar de maximale belasting van de drager. Die staat meestal in kilo's op de productpagina of in de handleiding van de fabrikant. Vergeet niet dat het totaalgewicht van jou, de fiets en de bagage binnen de grens moet blijven die de fabrikant opgeeft.

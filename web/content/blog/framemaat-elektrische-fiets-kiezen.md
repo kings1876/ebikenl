@@ -77,6 +77,8 @@ Controleer bij zo'n fiets of je lengte binnen het bereik valt dat de fabrikant n
 
 ![Cube Compact Hybrid 540 compacte elektrische fiets met eenheidsmaat en 20 inch wielen](/images/catalog/cube-compact-hybrid-540-2.webp "Een compacte e-bike zoals de Cube Compact Hybrid 540 heeft één eenheidsmaat en wordt met zadel en stuurpen afgesteld.")
 
+Ben je kleiner dan gemiddeld? In onze gids over een [kleine elektrische fiets kopen](/blog/kleine-elektrische-fiets-kopen) staan de modellen die leverbaar zijn in maat XS of vanaf 42 cm.
+
 ## Zo controleer je of de fiets past
 
 Een tabel is een start, de proef is de echte test. Let op deze punten als je op de fiets zit.
