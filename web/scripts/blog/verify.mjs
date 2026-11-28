@@ -145,7 +145,7 @@ for (const p of posts) {
 
 if (args.has('--final')) {
   const count = (t) => posts.filter((p) => p.fm?.type === t).length;
-  const want = { transactional: 12, commercial: 3, informational: 5 };
+  const want = { transactional: 14, commercial: 3, informational: 5 };
   for (const [t, n] of Object.entries(want)) if (count(t) !== n) { console.log(`FAIL whole blog: ${count(t)} ${t} posts, expected ${n}`); failed++; }
   const titles = posts.map((p) => p.fm?.title);
   const descs = posts.map((p) => p.fm?.description);

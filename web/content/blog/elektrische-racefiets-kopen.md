@@ -26,6 +26,8 @@ Zoek je een lichte e-bike voor elke dag, met spatborden en verlichting? Lees dan
 
 De ondersteuning werkt, net als bij elke e-bike, tot 25 km/u. Boven die snelheid help je zelf. Een lichte fiets rijdt daardoor ook zonder motor goed door. Meer achtergrond over het gravelconcept vind je op [Wikipedia](https://nl.wikipedia.org/wiki/Gravelbike).
 
+Wil je wel een sportief rijgevoel, maar ook spatborden en verlichting voor elke dag? Dan past een sportieve e-bike misschien beter. Lees onze gids over een [sportieve elektrische fiets kopen](/blog/sportieve-elektrische-fiets-kopen).
+
 ## Gravel of road: welk type past bij jou?
 
 De eerste keuze is waar je rijdt. Een road-model is gemaakt voor asfalt en harde wegen. Een gravelfiets rijdt ook op onverhard terrein, zoals bospaden en zandwegen, en heeft vaak bredere banden en een stabielere geometrie.

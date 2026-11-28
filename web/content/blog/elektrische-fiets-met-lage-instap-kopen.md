@@ -90,6 +90,8 @@ Modellen met een lage instap hebben vaak maten als XS, S, M, L en XL, of maten i
 
 Een goede zithouding herken je aan drie dingen. Je kunt bij stilstand met je voeten de grond raken. Je been is licht gebogen als de trapper onderaan staat. En je armen zijn ontspannen, zonder dat je naar voren hangt. Is een van die drie niet in orde, dan past de maat of de zadelstand niet.
 
+Zoek je een lage instap in een kleine maat? Lees dan onze gids over een [kleine elektrische fiets kopen](/blog/kleine-elektrische-fiets-kopen).
+
 ## Wat kost een elektrische fiets met lage instap?
 
 In onze catalogus lopen de prijzen van modellen met een lage instap van ongeveer €2.250 tot ongeveer €6.500. De middelste prijs ligt rond €3.400. Voor 24 van de 54 modellen is de prijs de adviesprijs van de fabrikant in euro. Voor de overige 30 is het een indicatieve prijs: de Zwitserse adviesprijs omgerekend met de ECB-koers.
